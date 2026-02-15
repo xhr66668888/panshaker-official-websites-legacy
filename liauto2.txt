@@ -1,0 +1,663 @@
+
+<!DOCTYPE html>
+<html lang="zh-hans" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" />
+<link rel="canonical" href="https://ir.lixiang.com/zh-hans/corporate-governance/management/" />
+<meta name="referrer" content="no-referrer" />
+<meta property="og:site_name" content="Li Auto Inc." />
+<meta property="og:type" content="网站" />
+<meta property="og:title" content="公司信息 | Li Auto Inc." />
+<meta property="og:description" content="The Investor Relations website contains information about Li Auto Inc.&#039;s business for stockholders, potential investors, and financial analysts." />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/sites/g/files/knoqqb90086/files/favicon.png" type="image/png" />
+<link rel="alternate" hreflang="en" href="https://ir.lixiang.com/corporate-governance/management" />
+<link rel="alternate" hreflang="zh-hans" href="https://ir.lixiang.com/zh-hans/corporate-governance/management" />
+<link rel="alternate" hreflang="zh-hant" href="https://ir.lixiang.com/zh-hant/corporate-governance/management" />
+
+    <title>公司信息 | Li Auto Inc.</title>
+    <link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/files/css/css_cEyhbKHmUtN8lrSt6mpZjZguw-uk9ttR8nrZf5nG5mQ.css?delta=0&amp;language=zh-hans&amp;theme=nir_pid3704&amp;include=eJyNj9EKwjAMRX9orIKCnxNu2zCLbTLSKOzv7dyLPgi-XQ43yUlS45DtsaLOuaDqMkkxiugc9lCSSv9Grloj7A0b7M5OGQ6KVdM9QFC37mTwIsuYMko3mP9V7-SIlX90G0PIOGlrLIMXlY_dK5bDbw_z0HYWp75JGhIifAivJZ-vp0vQJ5uVzFMf17mF_bsXhx5pRQ" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/files/css/css_xBHNMapvQ7BkL19fei5GjV6CbAwdnnOnr77F84GW3Bk.css?delta=1&amp;language=zh-hans&amp;theme=nir_pid3704&amp;include=eJyNj9EKwjAMRX9orIKCnxNu2zCLbTLSKOzv7dyLPgi-XQ43yUlS45DtsaLOuaDqMkkxiugc9lCSSv9Grloj7A0b7M5OGQ6KVdM9QFC37mTwIsuYMko3mP9V7-SIlX90G0PIOGlrLIMXlY_dK5bDbw_z0HYWp75JGhIifAivJZ-vp0vQJ5uVzFMf17mF_bsXhx5pRQ" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/client/css/ndq-icons.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/client/css/ndq-styles.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/client/css/ndq-toolbar.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/client/css/ndq-filetypes.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/client/css/ndq-common-4_1_0.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/client/css/ndq-overwrite.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/client/css/ndq-responsive.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/client/css/flexslider.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/client/css/fonts.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/foundation/foundation.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/css/galera.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/css/investor.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/css/overwrite-styles.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/css/overwrite-chosen.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/css/toTables.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/css/overwrite-document-request.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/css/overwrite-nir-faq-accordion.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/css/overwrite-ui-dialog.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/css/search-facets.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/css/ndq-global.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/css/ndq-newswires.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/css/style.css?t9cnj5" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/css/styleoverride.css?t9cnj5" />
+<link rel="stylesheet" media="print" href="/sites/g/files/knoqqb90086/files/css/css_wtRO3iwpJ2nPnZuKCRhJf5XsES3hSfRrUTYnT7T5cCI.css?delta=25&amp;language=zh-hans&amp;theme=nir_pid3704&amp;include=eJyNj9EKwjAMRX9orIKCnxNu2zCLbTLSKOzv7dyLPgi-XQ43yUlS45DtsaLOuaDqMkkxiugc9lCSSv9Grloj7A0b7M5OGQ6KVdM9QFC37mTwIsuYMko3mP9V7-SIlX90G0PIOGlrLIMXlY_dK5bDbw_z0HYWp75JGhIifAivJZ-vp0vQJ5uVzFMf17mF_bsXhx5pRQ" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb90086/files/css/css_a9WBl6Ug32MhHgHQ_T_9Ir6POMv6IQ3dfwR7phQKVj4.css?delta=26&amp;language=zh-hans&amp;theme=nir_pid3704&amp;include=eJyNj9EKwjAMRX9orIKCnxNu2zCLbTLSKOzv7dyLPgi-XQ43yUlS45DtsaLOuaDqMkkxiugc9lCSSv9Grloj7A0b7M5OGQ6KVdM9QFC37mTwIsuYMko3mP9V7-SIlX90G0PIOGlrLIMXlY_dK5bDbw_z0HYWp75JGhIifAivJZ-vp0vQJ5uVzFMf17mF_bsXhx5pRQ" />
+
+    <script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.11.7"></script>
+<script src="/sites/g/files/knoqqb90086/files/js/js_WCTcUUK6kyvf9O_1R-UiEcRRCADfABmxtwIIwPS0YSs.js?scope=header&amp;delta=1&amp;language=zh-hans&amp;theme=nir_pid3704&amp;include=eJyFjtsOAjEIRH_IbE008XMILURRLBvKevl7166JlxfDAzPDyYQqDlhR7yGlpfrpBiTLDIpTLYdV_QuObtSxjI07EWaa0XtYTkwS5kAY82Tllt6yI-dJQ84zhunb9uuI-6X1KQY84g2QCIpia4DKHkvLKLTZrbfJLuwuxD28cm4SDNXmh3n5_ycbXvsBNxtsDg"></script>
+
+    
+  </head>
+  <body class="body-sidebars-none nir-node nir-node--type-nir-landing-page nir-node--5846 page-node-5846 path-node page-node-type-nir-landing-page">
+    <div id="skip">
+      <a class="visually-hidden focusable skip-link" href="#main-menu">
+        Skip to main navigation
+      </a>
+    </div>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<header>
+   <div class="top-bar row mobile-expand" id="backtotop">
+      <div class="top-bar-left columns">
+                   <a href="https://www.lixiang.com/">
+                   <img class="logo-en" src="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/client/images/updated/logoEnglish.svg" alt="logo"/>
+          <img class="logo-cn" src="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/client/images/updated/logoCn.png" alt="logo"/>
+         </a>
+
+         <img id="logo-print" src="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/client/images/logo.png" />
+         <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="large">
+            <button class="menu-icon" type="button" aria-label="Open Search" data-toggle></button>
+         </div>
+      </div>
+
+      <div class="top-bar-right columns">
+                     <div id="main-menu">
+                
+
+<nav role="navigation" aria-labelledby="block-siteinvestorrelations-menu" id="block-siteinvestorrelations" class="block--system-menu-blockir block--system-menu-blockir--5846 block--main--system-menu-block--ir block--main--system-menu-block--ir--5846 block--cf4b5854-4a63-4763-b1ea-6d09fe86476f block--cf4b5854-4a63-4763-b1ea-6d09fe86476f--5846 block block-menu navigation block-system-menublock menu--ir">
+                        
+    <h2 class="visually-hidden" id="block-siteinvestorrelations-menu">Site - Investor Relations</h2>
+    
+
+                              <ul data-block-uuid="cf4b5854-4a63-4763-b1ea-6d09fe86476f" class="vertical medium-horizontal menu dropdown-menu dropdown" data-dropdown-menu data-responsive-menu="large-dropdown" >
+                    
+        <li>
+
+            <a href="/zh-hans" data-drupal-link-system-path="&lt;front&gt;">首页</a>
+            </li>
+                
+      <li class="has-submenu">
+
+            <a href="/zh-hans/news" data-drupal-link-system-path="node/5816">新闻活动</a>
+                            <ul class="submenu menu vertical" data-submenu>
+                    
+      <li  class="first">
+
+            <a href="/zh-hans/news" data-drupal-link-system-path="node/5816">新闻发布</a>
+            </li>
+                
+        <li>
+
+            <a href="/zh-hans/events-presentations" data-drupal-link-system-path="node/5821">活动及演示讲稿</a>
+            </li>
+                
+        <li>
+
+            <a href="/zh-hans/shareholder-meetings" data-drupal-link-system-path="node/9386">股东大会</a>
+            </li>
+        </ul>
+  
+            </li>
+                
+      <li class="active-trail has-submenu">
+
+            <a href="/zh-hans/corporate-profile" data-drupal-link-system-path="node/5811">公司信息</a>
+                            <ul class="submenu menu vertical" data-submenu>
+                    
+      <li  class="first">
+
+            <a href="/zh-hans/corporate-profile" data-drupal-link-system-path="node/5811">公司介绍</a>
+            </li>
+                
+        <li>
+
+            <a href="/zh-hans/corporate-governance/governance-overview" data-drupal-link-system-path="node/5836">公司治理</a>
+            </li>
+                
+        <li>
+
+            <a href="/zh-hans/corporate-governance/board-of-directors" data-drupal-link-system-path="node/5841">董事会成员</a>
+            </li>
+                
+        <li class="active-trail">
+
+            <a href="/zh-hans/corporate-governance/management" data-drupal-link-system-path="node/5846" class="is-active" aria-current="page">公司管理层</a>
+            </li>
+        </ul>
+  
+            </li>
+                
+      <li class="has-submenu">
+
+            <a href="/zh-hans/stock-information/stock-quote-chart" data-drupal-link-system-path="node/5911">股票资讯</a>
+                            <ul class="submenu menu vertical" data-submenu>
+                    
+      <li  class="first">
+
+            <a href="/zh-hans/stock-information/stock-quote-chart" data-drupal-link-system-path="node/5911">股票报价及股价图</a>
+            </li>
+                
+        <li>
+
+            <a href="/zh-hans/stock-information/historical-price-lookup" data-drupal-link-system-path="node/5921">历史价格查询</a>
+            </li>
+                
+        <li>
+
+            <a href="/zh-hans/stock-information/investment-calculator" data-drupal-link-system-path="node/5926">投资计算器</a>
+            </li>
+        </ul>
+  
+            </li>
+                
+      <li class="has-submenu">
+
+            <a href="/zh-hans/sec-filings" data-drupal-link-system-path="node/6016">财务信息</a>
+                            <ul class="submenu menu vertical" data-submenu>
+                    
+      <li  class="first">
+
+            <a href="/zh-hans/sec-filings" data-drupal-link-system-path="node/6016">美国证交会公告</a>
+            </li>
+                
+        <li>
+
+            <a href="/zh-hans/hkex-filings" data-drupal-link-system-path="node/7281">香港联交所公告</a>
+            </li>
+                
+        <li>
+
+            <a href="/zh-hans/financial-information/quarterly-results" data-drupal-link-system-path="node/5986">季度业绩</a>
+            </li>
+                
+        <li>
+
+            <a href="/zh-hans/financial-information/financial-reports" data-drupal-link-system-path="node/5881">财务报告</a>
+            </li>
+                
+        <li>
+
+            <a href="/zh-hans/financial-information/analyst-coverage" data-drupal-link-system-path="node/5896">分析师列表</a>
+            </li>
+        </ul>
+  
+            </li>
+                
+      <li class="has-submenu">
+
+            <a href="/zh-hans/esg" data-drupal-link-system-path="node/6501">ESG</a>
+                            <ul class="submenu menu vertical" data-submenu>
+                    
+      <li  class="first">
+
+            <a href="/zh-hans/esg" data-drupal-link-system-path="node/6501">ESG报告</a>
+            </li>
+                
+        <li>
+
+            <a href="/zh-hans/esg-policies" data-drupal-link-system-path="node/9396">ESG政策</a>
+            </li>
+        </ul>
+  
+            </li>
+                
+      <li class="has-submenu">
+
+            <a href="/zh-hans/touzizhechangjianwenti" data-drupal-link-system-path="node/5941">投资者资源</a>
+                            <ul class="submenu menu vertical" data-submenu>
+                    
+      <li  class="first">
+
+            <a href="/zh-hans/touzizhechangjianwenti" data-drupal-link-system-path="node/5941">投资者常见问题</a>
+            </li>
+                
+        <li>
+
+            <a href="/zh-hans/information-request" data-drupal-link-system-path="node/5966">信息咨询</a>
+            </li>
+                
+        <li>
+
+            <a href="/zh-hans/email-alerts" data-drupal-link-system-path="node/5946">邮件订阅</a>
+            </li>
+                
+        <li>
+
+            <a href="/zh-hans/contact-ir" data-drupal-link-system-path="node/5981">投资者关系联络</a>
+            </li>
+        </ul>
+  
+            </li>
+        </ul>
+  
+
+
+    </nav>
+
+
+                                    
+<div class="language-switcher-language-url block--language-blocklanguage-content block--language-blocklanguage-content--5846 block--language--language-block--language-content block--language--language-block--language-content--5846 block--bf285ad1-f37c-44cd-bfe7-731f77afb858 block--bf285ad1-f37c-44cd-bfe7-731f77afb858--5846 block block-language block-language-blocklanguage-content" id="block-languageswitchercontent" role="navigation">
+  
+    
+      <ul class="vertical menu dropdown-menu dropdown" data-dropdown-menu data-responsive-menu="large-dropdown">
+      <li class="has-submenu">
+          <a class="language-selected"></a>
+          <ul class="submenu menu vertical"><li hreflang="en" data-drupal-link-system-path="node/5846" class="en inline-links__item"><a href="/corporate-governance/management" class="language-link" hreflang="en" data-drupal-link-system-path="node/5846">English</a></li><li hreflang="zh-hans" data-drupal-link-system-path="node/5846" class="zh-hans inline-links__item is-active" aria-current="page"><a href="/zh-hans/corporate-governance/management" class="language-link is-active" hreflang="zh-hans" data-drupal-link-system-path="node/5846" aria-current="page">简体中文</a></li><li hreflang="zh-hant" data-drupal-link-system-path="node/5846" class="zh-hant inline-links__item"><a href="/zh-hant/corporate-governance/management" class="language-link" hreflang="zh-hant" data-drupal-link-system-path="node/5846">繁體中文</a></li></ul>
+      </li>
+  </ul>
+  </div>
+
+                            </div>
+         
+      </div>
+
+       <div class="top-bar-language columns">
+                          
+<div class="language-switcher-language-url block--language-blocklanguage-content block--language-blocklanguage-content--5846 block--language--language-block--language-content block--language--language-block--language-content--5846 block--bf285ad1-f37c-44cd-bfe7-731f77afb858 block--bf285ad1-f37c-44cd-bfe7-731f77afb858--5846 block block-language block-language-blocklanguage-content" id="block-languageswitchercontent" role="navigation">
+  
+    
+      <ul class="vertical menu dropdown-menu dropdown" data-dropdown-menu data-responsive-menu="large-dropdown">
+      <li class="has-submenu">
+          <a class="language-selected"></a>
+          <ul class="submenu menu vertical"><li hreflang="en" data-drupal-link-system-path="node/5846" class="en inline-links__item"><a href="/corporate-governance/management" class="language-link" hreflang="en" data-drupal-link-system-path="node/5846">English</a></li><li hreflang="zh-hans" data-drupal-link-system-path="node/5846" class="zh-hans inline-links__item is-active" aria-current="page"><a href="/zh-hans/corporate-governance/management" class="language-link is-active" hreflang="zh-hans" data-drupal-link-system-path="node/5846" aria-current="page">简体中文</a></li><li hreflang="zh-hant" data-drupal-link-system-path="node/5846" class="zh-hant inline-links__item"><a href="/zh-hant/corporate-governance/management" class="language-link" hreflang="zh-hant" data-drupal-link-system-path="node/5846">繁體中文</a></li></ul>
+      </li>
+  </ul>
+  </div>
+
+           
+       </div>
+   </div>
+</header>
+
+
+<section id="banner">
+    <div class="row">
+        <h1>
+                            公司信息
+                    </h1>
+    </div>
+        <div id="secondary-nav" >
+        <div class="row">
+        <div class="columns medium-12 large-12 ">
+            
+
+<nav role="navigation" aria-labelledby="block-sitecorporateinformation-menu" id="block-sitecorporateinformation" class="block--system-menu-blockcorporate-information block--system-menu-blockcorporate-information--5846 block--secondary-nav--system-menu-block--corporate-information block--secondary-nav--system-menu-block--corporate-information--5846 block--f9b1dd6a-34bd-4ab1-a0c5-fe42dd62feaa block--f9b1dd6a-34bd-4ab1-a0c5-fe42dd62feaa--5846 block block-menu navigation block-system-menublock menu--corporate-information">
+                        
+    <h2 class="visually-hidden" id="block-sitecorporateinformation-menu">Site - Corporate Information</h2>
+    
+
+                              <ul data-block-uuid="f9b1dd6a-34bd-4ab1-a0c5-fe42dd62feaa" class="menu side-menu">
+                  <li class="side-menu__item">
+          <a href="/zh-hans/corporate-profile" data-drupal-link-system-path="node/5811">公司介绍</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="/zh-hans/corporate-governance/governance-overview" data-drupal-link-system-path="node/5836">公司治理</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="/zh-hans/corporate-governance/board-of-directors" data-drupal-link-system-path="node/5841">董事会成员</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="/zh-hans/corporate-governance/management" data-drupal-link-system-path="node/5846" class="is-active" aria-current="page">公司管理层</a>
+                  </li>
+          </ul>
+  
+
+
+    </nav>
+
+        </div>
+        </div>
+    </div>
+    
+
+
+</section>
+
+
+
+<section id="ndq-content">
+
+        <div class="row">                 
+
+            <div class="columns medium-12 large-12 ">
+
+
+                <div class="row">
+
+                    <div class="columns medium-12">
+
+                        <div class="ndq-releases">
+
+                              <div class="region region-content">
+    <div id="block-nir-pid3704-websitenoticeblock" class="block--website-notice-block block--website-notice-block--5846 block--content--website-notice-block block--content--website-notice-block--5846 block--db4d3b65-d0f1-48f1-9fe4-d52db8a3b20f block--db4d3b65-d0f1-48f1-9fe4-d52db8a3b20f--5846 block block-nir-website-notices block-website-notice-block">
+  
+    
+      
+  </div>
+<div data-drupal-messages-fallback class="hidden"></div>
+
+<div id="block-nir-pid3704-content" class="block--system-main-block block--system-main-block--5846 block--content--system-main-block block--content--system-main-block--5846 block--75b98726-e023-4793-a271-12ae7f88b03f block--75b98726-e023-4793-a271-12ae7f88b03f--5846 block block-system block-system-main-block">
+  
+    
+      <article class="node node--type-nir_landing_page node--view-mode-full clearfix">
+  <div>
+    
+<div class="panel-display boxton clearfix " >
+
+    <div class="row">
+      <div class="columns medium-12 radix-layouts-content panel-panel">
+        <div class="panel-panel-inner">
+          <div class="block-region-contentmain">
+<div class="block--management block--nir-people__widget block--nir-people__widget--5846 block--contentmain--nir-people__widget block--contentmain--nir-people__widget--5846 block--a39f70f3-615d-45ee-97d8-d71d23ab0904 block--a39f70f3-615d-45ee-97d8-d71d23ab0904--5846 block block-nir-person block-nir-people__widget">
+  
+    
+      <div class="nir-widget">
+    <div class="nir-widget--content">
+        <div class="nir-widget--list">
+              
+
+    <div class="whiteBox">
+
+    
+    
+            <div class="nir-widget--field nir-widget--person--name">
+            <a href="/zh-hans/management/lixiang" hreflang="zh-hans">李想</a>
+        </div>
+    
+            <div class="nir-widget--field nir-widget--person--title">
+            
+            <div class="field field--name-field-nir-person-title field--type-string field--label-hidden field__item">创始人、董事长、首席执行官</div>
+      
+        </div>
+    
+        <div class="readBio">
+        <div class="nir-widget--field nir-widget--person--bio-read-more">
+            <span class="bio-more">
+                <a href="/zh-hans/management/lixiang" hreflang="zh-hans">阅读简历</a>
+                <span class="ndqicon-arrow-right"></span>
+            </span>
+
+        </div>
+    </div>
+    
+    <div >
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+    </div>
+
+
+
+    <div class="whiteBox">
+
+    
+    
+            <div class="nir-widget--field nir-widget--person--name">
+            <a href="/zh-hans/management/madonghui" hreflang="zh-hans">马东辉</a>
+        </div>
+    
+            <div class="nir-widget--field nir-widget--person--title">
+            
+            <div class="field field--name-field-nir-person-title field--type-string field--label-hidden field__item">执行董事兼总裁</div>
+      
+        </div>
+    
+        <div class="readBio">
+        <div class="nir-widget--field nir-widget--person--bio-read-more">
+            <span class="bio-more">
+                <a href="/zh-hans/management/madonghui" hreflang="zh-hans">阅读简历</a>
+                <span class="ndqicon-arrow-right"></span>
+            </span>
+
+        </div>
+    </div>
+    
+    <div >
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+    </div>
+
+
+
+    <div class="whiteBox">
+
+    
+    
+            <div class="nir-widget--field nir-widget--person--name">
+            <a href="/zh-hans/management/litie" hreflang="zh-hans">李铁</a>
+        </div>
+    
+            <div class="nir-widget--field nir-widget--person--title">
+            
+            <div class="field field--name-field-nir-person-title field--type-string field--label-hidden field__item">执行董事兼首席财务官</div>
+      
+        </div>
+    
+        <div class="readBio">
+        <div class="nir-widget--field nir-widget--person--bio-read-more">
+            <span class="bio-more">
+                <a href="/zh-hans/management/litie" hreflang="zh-hans">阅读简历</a>
+                <span class="ndqicon-arrow-right"></span>
+            </span>
+
+        </div>
+    </div>
+    
+    <div >
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+    </div>
+
+
+
+    <div class="whiteBox">
+
+    
+    
+            <div class="nir-widget--field nir-widget--person--name">
+            <a href="/zh-hans/management/xieyan" hreflang="zh-hans">谢炎</a>
+        </div>
+    
+            <div class="nir-widget--field nir-widget--person--title">
+            
+            <div class="field field--name-field-nir-person-title field--type-string field--label-hidden field__item">首席技术官</div>
+      
+        </div>
+    
+        <div class="readBio">
+        <div class="nir-widget--field nir-widget--person--bio-read-more">
+            <span class="bio-more">
+                <a href="/zh-hans/management/xieyan" hreflang="zh-hans">阅读简历</a>
+                <span class="ndqicon-arrow-right"></span>
+            </span>
+
+        </div>
+    </div>
+    
+    <div >
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+    </div>
+
+
+          </div>
+    <div class="nir-widget--pager">
+      
+    </div>
+    <div class="nir-widget--total-results">
+      
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+
+</div><!-- /.boxton -->
+
+  </div>
+</article>
+
+  </div>
+
+  </div>
+
+
+                                
+
+                        </div>
+
+                    </div>
+                    
+                                       
+
+                </div>
+                
+            </div>
+            
+
+
+        </div>
+
+</section>
+
+
+
+<footer role="contentinfo">
+
+    <div class="row overlay-fade-in revealOnScroll-fadeInUp">
+
+        <div class="large-6 medium-12 columns " id="footer-copyright">
+
+            
+
+<nav role="navigation" aria-labelledby="block-sitefooternavcol1-menu" id="block-sitefooternavcol1" class="block--system-menu-blocksite---footer-nav---col-1 block--system-menu-blocksite---footer-nav---col-1--5816 block--footer-left--system-menu-block--site---footer-nav---col-1 block--footer-left--system-menu-block--site---footer-nav---col-1--5816 block--91db4605-4796-44fc-b289-f6c9062d37b0 block--91db4605-4796-44fc-b289-f6c9062d37b0--5816 block block-menu navigation block-system-menublock menu--site---footer-nav---col-1">
+                        
+    <h2 class="visually-hidden" id="block-sitefooternavcol1-menu">Site - Footer Nav - col 1</h2>
+    
+
+                              <ul data-block-uuid="91db4605-4796-44fc-b289-f6c9062d37b0" class="menu side-menu">
+                  <li class="side-menu__item">
+          <a href="https://www.lixiang.com/about.html">理想汽车</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="https://www.lixiang.com/employ.html?fromJob=1">加入我们</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="https://www.lixiang.com/news.html">媒体中心</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="https://www.lixiang.com/help.html">帮助中心</a>
+                  </li>
+          </ul>
+  
+
+
+    </nav>
+
+        </div>
+        <div class="large-6 medium-12 columns text-right" id="footer-copyright">
+            <span>© Li Auto Inc.  2026</span>  
+
+                    
+    
+                                            <a href="https://www.lixiang.com/agreement/privacy.html" target="" rel="">Privacy Policy</a>
+                  
+
+
+    
+        </div>
+    </div>
+</footer>
+
+
+
+
+  </div>
+
+    
+          <script type="text/javascript">var s_CCSWebHostingAccount = "trcgliauto";</script>
+        <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"zh-hans\/","currentPath":"node\/5846","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"zh-hans"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJyNketOwzAMhV-oapBA4nEsJ7G20MSubBe2t1-WIrEiECg_Yp98OvGFiwIy1quXZIEfsxmzRIKKG6fzxH-Cq0oeWESjQZQkbEfJRWpEHWJaKBcXhYzeT6xk4SscSENdyAcAsUpawvjVHBS98Kkbd58zqv8LNxjev7CNkEEpSWvEXS_Cj95b9dJ6xRiO6Xhd8bQ3eA9mfMMLYM6QKpoBVlK3H7g-Hyd2sCun3goz7ZNZS35-fXoJ8k6qJe8Ff1C04gQsfei07-CbNn_ek2Iul766q2xu4ZBN1udBLdxXcgPoK8oY","theme":"nir_pid3704","theme_token":null},"ajaxTrustedUrl":[],"nir_admin_use_chosen":true,"nir_admin_use_select2":false,"user":{"uid":0,"permissionsHash":"66bcc2aee2d4e1d7dfa4c4de3d3a207f55a01cafbb3d595c74befb7d81242895"}}</script>
+<script src="/sites/g/files/knoqqb90086/files/js/js_wgY8ZhWOwV730jfEWVdlkwSU7kjD0Z8BWsAXNmBqXYw.js?scope=footer&amp;delta=0&amp;language=zh-hans&amp;theme=nir_pid3704&amp;include=eJyFjtsOAjEIRH_IbE008XMILURRLBvKevl7166JlxfDAzPDyYQqDlhR7yGlpfrpBiTLDIpTLYdV_QuObtSxjI07EWaa0XtYTkwS5kAY82Tllt6yI-dJQ84zhunb9uuI-6X1KQY84g2QCIpia4DKHkvLKLTZrbfJLuwuxD28cm4SDNXmh3n5_ycbXvsBNxtsDg"></script>
+<script src="https://assets.adobedtm.com/898335afd880/c52ee8aa1e90/launch-5ef258dce664.min.js" crossorigin="anonymous" async integrity="sha384-9QSqHMB+yiy/V4i+d2Au+ydEWbBz4E9DqsE+oYKOnL+kj4XAZGYZxabd0P3OGHkf"></script>
+<script src="/sites/g/files/knoqqb90086/files/js/js_1uNpHCxpBhPRQ6k4zBT__RMWbVoEbWkSQ6VMteaRTm8.js?scope=footer&amp;delta=2&amp;language=zh-hans&amp;theme=nir_pid3704&amp;include=eJyFjtsOAjEIRH_IbE008XMILURRLBvKevl7166JlxfDAzPDyYQqDlhR7yGlpfrpBiTLDIpTLYdV_QuObtSxjI07EWaa0XtYTkwS5kAY82Tllt6yI-dJQ84zhunb9uuI-6X1KQY84g2QCIpia4DKHkvLKLTZrbfJLuwuxD28cm4SDNXmh3n5_ycbXvsBNxtsDg"></script>
+<script src="/core/assets/vendor/ckeditor5/ckeditor5-dll/ckeditor5-dll.js?v=44.0.0"></script>
+<script src="/sites/g/files/knoqqb90086/files/js/js_ZqkpHTPvJHvSdMJTUveFbJbawMO7sWDVbP_9E6yqeg0.js?scope=footer&amp;delta=4&amp;language=zh-hans&amp;theme=nir_pid3704&amp;include=eJyFjtsOAjEIRH_IbE008XMILURRLBvKevl7166JlxfDAzPDyYQqDlhR7yGlpfrpBiTLDIpTLYdV_QuObtSxjI07EWaa0XtYTkwS5kAY82Tllt6yI-dJQ84zhunb9uuI-6X1KQY84g2QCIpia4DKHkvLKLTZrbfJLuwuxD28cm4SDNXmh3n5_ycbXvsBNxtsDg"></script>
+<script src="/profiles/nasdaqir/modules/custom/nir_ckeditor_datatables/js/build/datatables.js?v=1.10.9"></script>
+<script src="/sites/g/files/knoqqb90086/files/js/js_jJPZOkqnxHK-q7fLEVF43Xd_k7PRRb7chpiTta5GGcE.js?scope=footer&amp;delta=6&amp;language=zh-hans&amp;theme=nir_pid3704&amp;include=eJyFjtsOAjEIRH_IbE008XMILURRLBvKevl7166JlxfDAzPDyYQqDlhR7yGlpfrpBiTLDIpTLYdV_QuObtSxjI07EWaa0XtYTkwS5kAY82Tllt6yI-dJQ84zhunb9uuI-6X1KQY84g2QCIpia4DKHkvLKLTZrbfJLuwuxD28cm4SDNXmh3n5_ycbXvsBNxtsDg"></script>
+<script src="//tools.euroland.com/tools/common/eurolandiframeautoheight/eurolandtoolsintegrationobject.js"></script>
+<script src="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/client/js/modernizr2.6.2.js?t9cnj5"></script>
+<script src="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/foundation/foundation.min.js?t9cnj5"></script>
+<script src="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/client/js/ndq-functions.js?t9cnj5"></script>
+<script src="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/client/js/waypoints.min.js?t9cnj5"></script>
+<script src="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/client/js/jquery.flexslider.js?t9cnj5"></script>
+<script src="/sites/g/files/knoqqb90086/themes/site/nir_pid3704/js/theme.js?v=10.4.9"></script>
+<script src="/sites/g/files/knoqqb90086/files/js/js_rmhVxB1yaiZaxzci7bA2-CcenUmge0l91JmvOF6trn0.js?scope=footer&amp;delta=14&amp;language=zh-hans&amp;theme=nir_pid3704&amp;include=eJyFjtsOAjEIRH_IbE008XMILURRLBvKevl7166JlxfDAzPDyYQqDlhR7yGlpfrpBiTLDIpTLYdV_QuObtSxjI07EWaa0XtYTkwS5kAY82Tllt6yI-dJQ84zhunb9uuI-6X1KQY84g2QCIpia4DKHkvLKLTZrbfJLuwuxD28cm4SDNXmh3n5_ycbXvsBNxtsDg"></script>
+
+    
+  </body>
+</html>

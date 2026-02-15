@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>关于伴勺科技 | PanShaker Services - The Art of Wok</title>
+    <style>
+        /* --- 新增部分开始：定义你的字体 --- */
+        @font-face {
+            font-family: 'MyBrandFont';
+            /* 给字体起个名字，随便叫啥 */
+            src: url('myfont.ttf') format('truetype');
+            /* 这里必须和你放入的文件名一模一样！ */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'LogoFont';
+            src: url('logo.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* --- 新增部分结束 --- */
+
+        /* 全局重置与基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'MyBrandFont', "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #0E427E;
+            background-color: #fff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        /* 按钮通用样式优化 */
+        button, .btn {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            user-select: none;
+        }
+
+        /* 性能优化 */
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* 平滑滚动禁用在某些老设备上 */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        /* 布局容器 */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        /* 宽容器 - 用于解决方案等需要更大空间的区域 */
+        .container-wide {
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 60px;
+        }
+
+        /* 导航栏 */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0E427E;
+        }
+
+        .logo span {
+            color: #62BA46;
+        }
+
+        /* 品牌绿 */
+        .nav-links a {
+            margin-left: 40px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .nav-links a:hover {
+            color: #62BA46;
+        }
+
+        /* Hero Banner */
+        .hero {
+            min-height: 100vh;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 120px 20px 80px;
+        }
+
+        .hero-bg-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            z-index: -1;
+        }
+
+        .hero-content h1 {
+            font-size: 72px;
+            font-weight: 200;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-content h1 strong {
+            font-weight: 700;
+            display: block;
+            margin-top: 10px;
+            font-size: 80px;
+            background: linear-gradient(135deg, #0E427E 0%, #62BA46 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content p {
+            font-size: 28px;
+            color: #666;
+            margin-bottom: 40px;
+            font-weight: 300;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-content .en-slogan {
+            font-size: 14px;
+            color: #999;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        /* 核心理念区 */
+        .philosophy {
+            text-align: center;
+            background: #fff;
+        }
+
+        .philosophy h2 {
+            font-size: 56px;
+            margin-bottom: 40px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #0E427E 0%, #62BA46 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .philosophy p {
+            font-size: 22px;
+            color: #666;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        .divider {
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(90deg, #0E427E 0%, #62BA46 100%);
+            margin: 50px auto;
+            border-radius: 3px;
+        }
+
+        /* 左右图文布局 */
+        .split-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin: 100px 0;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .split-section:nth-child(even) {
+            direction: rtl;
+        }
+
+        .split-section:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .split-text {
+            padding: 40px;
+        }
+
+        .split-img {
+            height: 600px;
+            background-color: #eee;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .split-img:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .split-text h3 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            font-weight: 600;
+            letter-spacing: -1px;
+        }
+
+        .split-text p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .split-text .tag {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #f0f0f0;
+            color: #666;
+            font-size: 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        /* 品牌展示区 */
+        .brands {
+            background: #fff;
+        }
+
+        .brand-card {
+            text-align: center;
+            padding: 80px 60px;
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.04);
+            margin-top: 40px;
+            transition: all 0.4s ease;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
+        }
+
+        .brand-logo {
+            font-size: 48px;
+            font-weight: 900;
+            color: #d32f2f;
+            margin-bottom: 15px;
+        }
+
+        .brand-slogan {
+            font-size: 22px;
+            color: #0E427E;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        /* ESG区域 */
+        .esg-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            text-align: center;
+        }
+
+        .esg-section h2 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            color: #0E427E;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        .esg-section p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+
+        /* Footer */
+        footer {
+            background: #f8f9fa;
+            padding: 80px 0 30px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h4 {
+            color: #0E427E;
+            margin-bottom: 24px;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 14px;
+            transition: transform 0.3s ease;
+        }
+
+        .footer-col ul li:hover {
+            transform: translateX(5px);
+        }
+
+        .footer-col ul li a {
+            color: #666;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: #62BA46;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 30px;
+            color: #999;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Touch optimization */
+        body {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+        }
+
+        /* Tablet & iPad (768px - 1024px) */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .hero-content h1 {
+                font-size: 60px;
+            }
+
+            .hero-content h1 strong {
+                font-size: 66px;
+            }
+
+            .split-section {
+                gap: 60px;
+            }
+
+            .split-text h3 {
+                font-size: 40px;
+            }
+        }
+
+        /* Mobile & iPhone (< 768px) */
+        @media (max-width: 768px) {
+            /* 导航优化 - iPhone & 微信浏览器 */
+            header {
+                height: auto;
+                padding: 12px 0;
+                background: rgba(255, 255, 255, 0.98);
+            }
+
+            .nav-inner {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px 16px;
+            }
+
+            .nav-links a {
+                margin: 0;
+                font-size: 13px;
+                padding: 6px 12px;
+                border-radius: 20px;
+                background: #f5f5f5;
+                transition: all 0.3s;
+            }
+
+            .nav-links a:active {
+                background: #e0e0e0;
+                transform: scale(0.95);
+            }
+
+            /* Hero 区域 - 针对iPhone优化 */
+            .hero {
+                min-height: 100vh;
+                padding: 140px 20px 60px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px !important;
+                line-height: 1.25;
+                margin-bottom: 20px;
+                letter-spacing: 0;
+            }
+
+            .hero-content h1 strong {
+                font-size: 42px !important;
+                margin-top: 8px;
+            }
+
+            .hero-content p {
+                font-size: 18px;
+                line-height: 1.6;
+                padding: 0 10px;
+                margin-bottom: 30px;
+            }
+
+            .hero-content .en-slogan {
+                display: none;
+            }
+
+            .hero-content a {
+                font-size: 15px !important;
+                padding: 14px 32px !important;
+            }
+
+            /* Section通用优化 */
+            .section {
+                padding: 60px 0;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .container-wide {
+                padding: 0 16px;
+            }
+
+            /* 核心理念区 */
+            .philosophy h2 {
+                font-size: 32px;
+                padding: 0 20px;
+            }
+
+            .philosophy p {
+                font-size: 17px;
+                padding: 0 20px;
+                line-height: 1.7;
+            }
+
+            /* 解决方案区域 - 单列布局 */
+            .split-section {
+                grid-template-columns: 1fr !important;
+                gap: 40px;
+                margin: 60px 0 !important;
+                direction: ltr !important;
+            }
+
+            .split-section:nth-child(even) {
+                direction: ltr !important;
+            }
+
+            .split-text {
+                padding: 0 10px;
+                text-align: center;
+            }
+
+            .split-text h3 {
+                font-size: 32px !important;
+                margin-bottom: 20px;
+            }
+
+            .split-text p {
+                font-size: 17px !important;
+                line-height: 1.7;
+            }
+
+            .split-img {
+                width: 100%;
+                height: 280px;
+                border-radius: 16px;
+            }
+
+            /* 品牌展示区 */
+            .brand-card {
+                padding: 40px 20px;
+                border-radius: 16px;
+            }
+
+            .brand-logo {
+                font-size: 28px;
+            }
+
+            .brand-slogan {
+                font-size: 18px;
+            }
+
+            /* ESG区域 */
+            .esg-section h2 {
+                font-size: 28px;
+                padding: 0 20px;
+            }
+
+            .esg-section p {
+                font-size: 16px;
+                padding: 0 20px;
+            }
+
+            /* Footer优化 */
+            footer {
+                padding: 60px 0 24px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+
+            .footer-col {
+                margin-bottom: 0;
+            }
+
+            .footer-col ul li:hover {
+                transform: none;
+            }
+
+            .copyright {
+                font-size: 12px;
+                padding-top: 24px;
+            }
+
+            /* 品牌大使卡片 */
+            .ambassador-card {
+                flex-direction: column !important;
+            }
+
+            .ambassador-img-container {
+                max-width: 100%;
+                aspect-ratio: 16/9;
+                border-radius: 12px;
+            }
+
+            .ambassador-text {
+                padding: 30px 20px !important;
+                text-align: center !important;
+            }
+
+            .ambassador-text p {
+                font-size: 15px !important;
+                line-height: 1.8;
+            }
+
+            .ambassador-desc {
+                display: block;
+                margin-top: 8px;
+            }
+
+            .mobile-hide-pipe {
+                display: none;
+            }
+        }
+
+        /* iPhone SE / Small phones (< 375px) */
+        @media (max-width: 374px) {
+            .hero-content h1 {
+                font-size: 32px !important;
+            }
+
+            .hero-content h1 strong {
+                font-size: 36px !important;
+            }
+
+            .split-text h3 {
+                font-size: 28px !important;
+            }
+
+            .philosophy h2 {
+                font-size: 28px;
+            }
+        }
+
+        /* iPhone 12/13/14 Pro Max & Large phones (> 414px) */
+        @media (min-width: 415px) and (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 40px !important;
+            }
+
+            .hero-content h1 strong {
+                font-size: 48px !important;
+            }
+
+            .split-text h3 {
+                font-size: 36px !important;
+            }
+
+            .split-img {
+                height: 320px;
+            }
+        }
+
+        /* 微信浏览器特殊优化 */
+        @media screen and (max-width: 768px) {
+            /* 防止微信浏览器缩放 */
+            body {
+                font-size: 16px;
+            }
+
+            /* 优化微信内嵌浏览器的点击体验 */
+            a, button {
+                -webkit-tap-highlight-color: rgba(98, 186, 70, 0.2);
+            }
+
+            /* 微信浏览器input优化 */
+            input, textarea {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-inner">
+            <div class="logo" onmouseenter="this.classList.add('hovered')"
+                onmouseleave="this.classList.remove('hovered')" onclick="this.classList.toggle('clicked')">
+                <div class="logo-en">
+                    <span
+                        style="font-family: 'LogoFont', sans-serif; color: #0E427E; letter-spacing: -1px;">PanShaker</span><span
+                        style="font-family: 'LogoFont', sans-serif; color: #62BA46; margin-left: 6px; letter-spacing: -1px;">Services</span>
+                </div>
+                <div class="logo-cn">
+                    <span
+                        style="font-family: 'LogoFont', sans-serif; color: #0E427E; letter-spacing: -1px;">伴勺</span><span
+                        style="font-family: 'LogoFont', sans-serif; color: #62BA46; margin-left: 6px; letter-spacing: -1px;">科技</span>
+                </div>
+            </div>
+
+            <style>
+                .logo {
+                    position: relative;
+                    height: 32px;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+
+                .logo-en,
+                .logo-cn {
+                    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .logo-cn {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translateY(100%);
+                    opacity: 0;
+                }
+
+                @media (min-width: 769px) {
+                    .logo.hovered .logo-en {
+                        transform: translateY(-100%);
+                        opacity: 0;
+                    }
+
+                    .logo.hovered .logo-cn {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+
+                /* Mobile Tap Support */
+                @media (max-width: 768px) {
+                    .logo.clicked .logo-en {
+                        transform: translateY(-100%);
+                        opacity: 0;
+                    }
+
+                    .logo.clicked .logo-cn {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+            </style>
+            <nav class="nav-links">
+                <a href="#">首页</a>
+                <a href="synapse_os.html">Synapse OS</a>
+                <a href="about.html">关于我们</a>
+                <a href="#">无声厨房</a>
+                <a href="#">联系我们</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="hero-section">
+        <div class="hero-bg-placeholder"></div>
+        <canvas id="hero-canvas"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;"></canvas>
+
+        <script>
+            // Premium Interactive Particles
+            (function () {
+                const canvas = document.getElementById('hero-canvas');
+                const ctx = canvas.getContext('2d');
+                let width, height;
+                let particles = [];
+
+                // Configuration
+                // Configuration
+                const isMobile = window.innerWidth < 768;
+                const particleCount = isMobile ? 20 : 100; // Increased desktop count
+                const connectionDistance = isMobile ? 100 : 150;
+                const mouseDistance = isMobile ? 0 : 250; // Disable interaction on mobile
+
+                let mouse = { x: null, y: null };
+
+                class Particle {
+                    constructor() {
+                        this.x = Math.random() * width;
+                        this.y = Math.random() * height;
+                        this.vx = (Math.random() - 0.5) * (isMobile ? 1.5 : 0.5); // Slightly faster on mobile to look active
+                        this.vy = (Math.random() - 0.5) * (isMobile ? 1.5 : 0.5);
+                        this.size = Math.random() * 2 + 1;
+                        this.color = Math.random() > 0.5 ? '14, 66, 126' : '98, 186, 70'; // Brand Blue or Green
+                        this.baseX = this.x;
+                        this.baseY = this.y;
+                        this.density = (Math.random() * 30) + 1;
+                    }
+
+                    update() {
+                        // Mouse interaction (Desktop only)
+                        if (!isMobile && mouse.x != null) {
+                            let dx = mouse.x - this.x;
+                            let dy = mouse.y - this.y;
+                            let distance = Math.sqrt(dx * dx + dy * dy);
+                            let forceDirectionX = dx / distance;
+                            let forceDirectionY = dy / distance;
+                            let maxDistance = mouseDistance;
+                            let force = (maxDistance - distance) / maxDistance;
+                            let directionX = forceDirectionX * force * this.density;
+                            let directionY = forceDirectionY * force * this.density;
+
+                            if (distance < mouseDistance) {
+                                this.x -= directionX;
+                                this.y -= directionY;
+                            } else {
+                                if (this.x !== this.baseX) {
+                                    let dx = this.x - this.baseX;
+                                    this.x -= dx / 10;
+                                }
+                                if (this.y !== this.baseY) {
+                                    let dy = this.y - this.baseY;
+                                    this.y -= dy / 10;
+                                }
+                            }
+                        }
+
+                        // Movement
+                        this.x += this.vx;
+                        this.y += this.vy;
+
+                        // Bounce off edges
+                        if (this.x < 0 || this.x > width) this.vx = -this.vx;
+                        if (this.y < 0 || this.y > height) this.vy = -this.vy;
+                    }
+
+                    draw() {
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                        ctx.fillStyle = `rgba(${this.color}, 0.6)`;
+                        ctx.fill();
+                    }
+                }
+
+                function init() {
+                    width = canvas.width = canvas.parentElement.offsetWidth;
+                    height = canvas.height = canvas.parentElement.offsetHeight;
+                    particles = [];
+                    for (let i = 0; i < particleCount; i++) {
+                        particles.push(new Particle());
+                    }
+                }
+
+                function connect() {
+                    for (let a = 0; a < particles.length; a++) {
+                        for (let b = a; b < particles.length; b++) {
+                            let distance = ((particles[a].x - particles[b].x) * (particles[a].x - particles[b].x)) +
+                                ((particles[a].y - particles[b].y) * (particles[a].y - particles[b].y));
+                            if (distance < (connectionDistance * connectionDistance)) {
+                                let opacityValue = 1 - (distance / 20000);
+                                ctx.strokeStyle = `rgba(180, 180, 180, ${opacityValue * 0.2})`; // Subtle gray connections
+                                ctx.lineWidth = 1;
+                                ctx.beginPath();
+                                ctx.moveTo(particles[a].x, particles[a].y);
+                                ctx.lineTo(particles[b].x, particles[b].y);
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                }
+
+                function animate() {
+                    requestAnimationFrame(animate);
+                    ctx.clearRect(0, 0, width, height);
+
+                    for (let i = 0; i < particles.length; i++) {
+                        particles[i].update();
+                        particles[i].draw();
+                    }
+                    connect();
+                }
+
+                // Event Listeners
+                window.addEventListener('resize', init);
+
+                const heroSection = document.getElementById('hero-section');
+                heroSection.addEventListener('mousemove', function (e) {
+                    const rect = canvas.getBoundingClientRect();
+                    mouse.x = e.clientX - rect.left;
+                    mouse.y = e.clientY - rect.top;
+                });
+
+                heroSection.addEventListener('mouseleave', function () {
+                    mouse.x = null;
+                    mouse.y = null;
+                });
+
+                init();
+                animate();
+            })();
+        </script>
+
+        <div class="hero-content" style="position: relative; z-index: 1; pointer-events: none;">
+            <h1>AI 赋能下低人工成本<br><strong>商业中餐解决方案</strong></h1>
+            <p style="max-width: 800px; margin: 30px auto 40px; opacity: 0.9;">融合硬件自动化与 AI 智能系统，重新定义餐饮行业效率</p>
+            <a href="#"
+                style="display:inline-block; padding: 16px 48px; background:#62BA46; color:#fff; border-radius:30px; font-size:17px; pointer-events: auto; font-weight: 500; box-shadow: 0 8px 24px rgba(98, 186, 70, 0.3); transition: all 0.4s;"
+                onmouseenter="this.style.background='#0E427E'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 32px rgba(14, 66, 126, 0.4)'"
+                onmouseleave="this.style.background='#62BA46'; this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(98, 186, 70, 0.3)'">
+                了解更多
+            </a>
+        </div>
+    </section>
+
+    <section class="section philosophy">
+        <div class="container">
+            <h2>不止于餐饮，更是硬科技</h2>
+            <div class="divider"></div>
+            <p>
+                我们将餐饮业不可控的人工烹饪环节，转换为 AI 时代高度可靠的工业自动化环节。<br>
+                在北美，书写中华美食的各种可能。
+            </p>
+        </div>
+    </section>
+
+    <section class="section" style="background: #fafafa;">
+        <div class="container-wide">
+            <div class="split-section">
+                <div class="split-text">
+                    <h3>竞品价格 1/2</h3>
+                    <p style="font-size: 22px; color: #333; font-weight: 500; line-height: 1.6;">&lt; 2周 低成本改装<br>实现无人化烹饪</p>
+                </div>
+                <!-- Hardware Image Area -->
+                <div class="split-img" style="background: transparent; padding: 0; overflow: hidden;">
+                    <div
+                        style="width: 100%; height: 100%; background: #f9f9f9; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 20px;">
+                        <img src="product.jpg" alt="Product" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="split-section">
+                <div class="split-text">
+                    <a href="synapse_os.html" style="display: inline-block; text-decoration: none;">
+                        <h3 style="cursor: pointer; transition: all 0.3s; display: inline-block;" 
+                            onmouseenter="this.style.color='#0E427E'; this.style.transform='translateX(10px)'"
+                            onmouseleave="this.style.color='inherit'; this.style.transform='translateX(0)'">
+                            Synapse OS
+                        </h3>
+                    </a>
+                    <p style="font-size: 22px; line-height: 1.7;">下一代餐饮操作系统<br>打造中餐出海标准化一条龙服务</p>
+                    <a href="synapse_os.html"
+                        style="display: inline-block; margin-top: 25px; padding: 12px 28px; background: #0E427E; color: #fff; border-radius: 25px; font-size: 15px; transition: all 0.3s; box-shadow: 0 4px 12px rgba(14, 66, 126, 0.2);"
+                        onmouseenter="this.style.background='#62BA46'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(98, 186, 70, 0.3)'"
+                        onmouseleave="this.style.background='#0E427E'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(14, 66, 126, 0.2)'">
+                        了解更多 →
+                    </a>
+                </div>
+                <!-- Make image clickable too -->
+                <a href="synapse_os.html" class="split-img"
+                    style="background: #eef2f5; display: flex; align-items: center; justify-content: center; flex-direction: column; overflow: hidden; border-radius: 20px; cursor: pointer; text-decoration: none;">
+                    <img src="restaurant.webp" alt="Restaurant Concept"
+                        style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);"
+                        onmouseenter="this.style.transform='scale(1.08)'"
+                        onmouseleave="this.style.transform='scale(1)'"
+                        loading="lazy">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section brands" style="padding-bottom: 80px; background: #fff;">
+        <div class="container">
+            <style>
+                .ambassador-card {
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    /* Vertical stack for minimalist view */
+                    align-items: center;
+                    background: #fff;
+                    color: #333;
+                }
+
+                .ambassador-img-container {
+                    width: 100%;
+                    max-width: 800px;
+                    height: auto;
+                    aspect-ratio: 16/9;
+                    position: relative;
+                    margin-bottom: 30px;
+                    border-radius: 12px;
+                    overflow: hidden;
+                }
+
+                .ambassador-text {
+                    text-align: center;
+                }
+            </style>
+
+            <div class="ambassador-card">
+                <div class="ambassador-img-container">
+                    <img src="gaoleilei.png" alt="Gao Leilei"
+                        style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+                </div>
+                <div class="ambassador-text">
+                    <p style="font-size: 16px; color: #333; font-weight: 500; letter-spacing: 1px;">
+                        高雷雷 <span class="mobile-hide-pipe" style="margin: 0 10px; color: #ccc;">|</span> 全球大使 <span
+                            class="mobile-hide-pipe" style="margin: 0 10px; color: #ccc;">|</span> <span
+                            class="ambassador-desc">前北京国安队队员，餐厅老板</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section esg-section">
+        <div class="container">
+            <h2>无声厨房计划</h2>
+            <p>赋能听障群体，创造包容性就业环境<br>用科技消除沟通障碍，让每个人都能发光发热</p>
+            <a href="#"
+                style="display:inline-block; padding: 12px 32px; color:#0E427E; border-radius:4px; font-size:16px; background: transparent; transition: all 0.3s; font-weight: 500; text-decoration: underline; text-underline-offset: 4px;"
+                onmouseenter="this.style.color='#62BA46'"
+                onmouseleave="this.style.color='#0E427E'">
+                了解更多
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>PanShaker Services</h4>
+                    <ul>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="careers.html">加入团队</a></li>
+                        <li><a href="investors.html">投资者关系</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>技术支持</h4>
+                    <ul>
+                        <li><a href="synapse_os.html">Synapse OS</a></li>
+                        <li><a href="#">硬件改造方案</a></li>
+                        <li><a href="#">售后服务</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>Email: contact@panshaker.com</li>
+                        <li>Location: San Diego, CA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <span style="font-family: sans-serif;">©</span>2026 PanShaker LLC. All Rights Reserved. <br>
+                聚焦北美市场的餐饮自动化基础设施服务商
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

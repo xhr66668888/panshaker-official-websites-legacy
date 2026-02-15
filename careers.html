@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>关于伴勺科技 | PanShaker Services - The Art of Wok</title>
+    <style>
+        /* --- 新增部分开始：定义你的字体 --- */
+        @font-face {
+            font-family: 'MyBrandFont';
+            /* 给字体起个名字，随便叫啥 */
+            src: url('myfont.ttf') format('truetype');
+            /* 这里必须和你放入的文件名一模一样！ */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'LogoFont';
+            src: url('logo.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* --- 新增部分结束 --- */
+
+        /* 全局重置与基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* 修改这里：把 MyBrandFont 放在第一个，作为首选字体 */
+            font-family: 'MyBrandFont', "PingFang SC", "Microsoft YaHei", sans-serif;
+            color: #0E427E;
+            background-color: #fff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* 布局容器 */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        /* 导航栏 */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0E427E;
+        }
+
+        .logo span {
+            color: #62BA46;
+        }
+
+        /* 品牌绿 */
+        .nav-links a {
+            margin-left: 40px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .nav-links a:hover {
+            color: #62BA46;
+        }
+
+        /* Hero Banner */
+        .hero {
+            height: 85vh;
+            background: #f5f5f5;
+            /* 这里建议换成一张高清的机械臂炒菜或干净厨房的背景图 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            z-index: -1;
+        }
+
+        .hero-content h1 {
+            font-size: 64px;
+            font-weight: 200;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .hero-content h1 strong {
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .hero-content .en-slogan {
+            font-size: 14px;
+            color: #999;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        /* 核心理念区 - 模仿魅族的大字排版 */
+        .philosophy {
+            text-align: center;
+            background: #fff;
+        }
+
+        .philosophy h2 {
+            font-size: 42px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .philosophy p {
+            font-size: 18px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .divider {
+            width: 60px;
+            height: 4px;
+            background: #62BA46;
+            margin: 40px auto;
+        }
+
+        /* 左右图文布局 */
+        .split-section {
+            display: flex;
+            align-items: center;
+            margin: 60px 0;
+        }
+
+        .split-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .split-text {
+            flex: 1;
+            padding: 0 60px;
+        }
+
+        .split-img {
+            flex: 1;
+            height: 500px;
+            background-color: #eee;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 20px;
+        }
+
+        .split-text h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .split-text p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .split-text .tag {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #f0f0f0;
+            color: #666;
+            font-size: 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        /* 品牌展示区 */
+        .brands {
+            background: #fafafa;
+        }
+
+        .brand-card {
+            text-align: center;
+            padding: 60px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            margin-top: 40px;
+        }
+
+        .brand-logo {
+            font-size: 40px;
+            font-weight: 900;
+            color: #d32f2f;
+            /* 小龙虾红 */
+            margin-bottom: 10px;
+        }
+
+        .brand-slogan {
+            font-size: 20px;
+            color: #0E427E;
+            font-style: italic;
+        }
+
+        /* 团队与ESG */
+        .esg-section {
+            background: #111;
+            color: #fff;
+            text-align: center;
+        }
+
+        .esg-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .esg-section p {
+            color: #888;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .esg-icon {
+            font-size: 60px;
+            margin-bottom: 30px;
+            color: #62BA46;
+        }
+
+        /* 底部 */
+        footer {
+            background: #fff;
+            padding: 60px 0 20px;
+            border-top: 1px solid #eee;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #0E427E;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+
+            /* 导航调整 */
+            header {
+                height: auto;
+                padding: 15px 0;
+            }
+
+            .nav-inner {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                margin: 5px 12px;
+                font-size: 14px;
+                margin-left: 0;
+            }
+
+            /* Hero 区域调整 */
+            .hero {
+                height: auto;
+                padding: 180px 0 80px;
+                /* Increased top padding to prevent header overlap */
+            }
+
+            /* 增加顶部padding避开header */
+            .hero-content h1 {
+                font-size: 32px;
+                line-height: 1.3;
+            }
+
+            .hero-content p {
+                font-size: 18px;
+                line-height: 1.5;
+                padding: 0 20px;
+            }
+
+            .hero-content .en-slogan {
+                font-size: 12px;
+                display: none;
+            }
+
+            /* 移动端隐藏英文长标语或缩小 */
+
+            /* 通用 Section 调整 */
+            .section {
+                padding: 60px 0;
+            }
+
+            /* 核心理念区 */
+            .philosophy h2 {
+                font-size: 28px;
+            }
+
+            .philosophy p {
+                font-size: 16px;
+                padding: 0 15px;
+            }
+
+            /* 图文混排调整 */
+            .split-section {
+                flex-direction: column !important;
+                margin: 40px 0;
+            }
+
+            .split-text {
+                padding: 0 0 40px 0;
+                text-align: center;
+            }
+
+            .split-text h3 {
+                font-size: 24px;
+            }
+
+            .split-img {
+                width: 100%;
+                height: 250px;
+            }
+
+            /* 图片高度减小 */
+
+            /* 品牌展示区 */
+            .brand-card {
+                padding: 40px 20px;
+            }
+
+            .brand-logo {
+                font-size: 32px;
+            }
+
+            /* ESG */
+            .esg-section h2 {
+                font-size: 28px;
+            }
+
+            /* Footer */
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-col {
+                margin-bottom: 30px;
+            }
+
+            /* Brand Ambassador Mobile */
+            .ambassador-card {
+                flex-direction: column !important;
+            }
+
+            .ambassador-text {
+                padding: 40px 20px !important;
+                text-align: center !important;
+            }
+
+            .ambassador-text h3 {
+                font-size: 32px !important;
+            }
+
+            .ambassador-img-container {
+                min-height: 400px !important;
+            }
+
+            /* Force image to cover */
+            .ambassador-img-container img {
+                position: relative !important;
+                height: 100% !important;
+            }
+
+            /* Mobile breaks for Ambassador Title */
+            .ambassador-desc {
+                display: block;
+                margin-top: 5px;
+            }
+
+            .mobile-hide-pipe {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-inner">
+            <div class="logo" onmouseenter="this.classList.add('hovered')"
+                onmouseleave="this.classList.remove('hovered')" onclick="this.classList.toggle('clicked')">
+                <div class="logo-en">
+                    <span
+                        style="font-family: 'LogoFont', sans-serif; color: #0E427E; letter-spacing: -1px;">PanShaker</span><span
+                        style="font-family: 'LogoFont', sans-serif; color: #62BA46; margin-left: 6px; letter-spacing: -1px;">Services</span>
+                </div>
+                <div class="logo-cn">
+                    <span
+                        style="font-family: 'LogoFont', sans-serif; color: #0E427E; letter-spacing: -1px;">伴勺</span><span
+                        style="font-family: 'LogoFont', sans-serif; color: #62BA46; margin-left: 6px; letter-spacing: -1px;">科技</span>
+                </div>
+            </div>
+
+            <style>
+                .logo {
+                    position: relative;
+                    height: 32px;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+
+                .logo-en,
+                .logo-cn {
+                    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .logo-cn {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translateY(100%);
+                    opacity: 0;
+                }
+
+                @media (min-width: 769px) {
+                    .logo.hovered .logo-en {
+                        transform: translateY(-100%);
+                        opacity: 0;
+                    }
+
+                    .logo.hovered .logo-cn {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+
+                /* Mobile Tap Support */
+                @media (max-width: 768px) {
+                    .logo.clicked .logo-en {
+                        transform: translateY(-100%);
+                        opacity: 0;
+                    }
+
+                    .logo.clicked .logo-cn {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+            </style>
+            <nav class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="#">无声厨房</a>
+                <a href="#">联系我们</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top: 150px; background: #fafafa;">
+        <div class="container">
+            <h1 style="text-align: center; font-size: 48px; font-weight: 300; margin-bottom: 60px; color: #0E427E;">Join
+                Our Team</h1>
+
+            <div class="job-card"
+                style="background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); max-width: 900px; margin: 0 auto;">
+                <div class="job-header"
+                    style="margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
+                    <h2 style="font-size: 32px; color: #0E427E; margin-bottom: 10px;">Lead Field Service Technician</h2>
+                    <p style="font-size: 18px; color: #666; display: flex; flex-wrap: wrap; gap: 20px;">
+                        <span><strong style="color:#333;">Location:</strong> Seattle, WA</span>
+                        <span><strong style="color:#333;">Salary:</strong> $79,000 - $98,800 a year</span>
+                        <span><strong style="color:#333;">Type:</strong> Full-time</span>
+                    </p>
+                </div>
+
+                <div class="job-description" style="margin-bottom: 40px;">
+                    <h3 style="font-size: 20px; color: #333; margin-bottom: 15px;">Role Overview</h3>
+                    <p style="color: #666; margin-bottom: 20px; font-size: 16px;">
+                        PanShaker Services is seeking a dedicated Lead Field Service Technician to ensure the
+                        reliability of our automated culinary systems. You will be responsible for the installation,
+                        maintenance, and repair of our cutting-edge robotic wok hardware at client sites.
+                        <strong>Valid work authorization in the US is required.</strong>
+                    </p>
+
+                    <h3 style="font-size: 20px; color: #333; margin-bottom: 15px;">Key Responsibilities</h3>
+                    <ul style="list-style: disc; margin-left: 20px; color: #666; margin-bottom: 20px; font-size: 16px;">
+                        <li>Perform on-site installation, commissioning, and maintenance of PanShaker automated cooking
+                            units.</li>
+                        <li>Diagnose technical issues and perform repairs to minimize downtime.</li>
+                        <li>Provide training and technical support to kitchen staff.</li>
+                        <li>Maintain detailed service logs and report on hardware performance.</li>
+                    </ul>
+                </div>
+
+                <div class="job-benefits" style="margin-bottom: 40px;">
+                    <h3 style="font-size: 20px; color: #333; margin-bottom: 15px;">Benefits</h3>
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
+                        <span class="benefit-tag">Tuition reimbursement</span>
+                        <span class="benefit-tag">Parental leave</span>
+                        <span class="benefit-tag">Health insurance</span>
+                        <span class="benefit-tag">401(k) matching</span>
+                        <span class="benefit-tag">Paid time off</span>
+                        <span class="benefit-tag">Vision insurance</span>
+                        <span class="benefit-tag">Health savings account</span>
+                        <span class="benefit-tag">Dental insurance</span>
+                        <span class="benefit-tag">Flexible spending account</span>
+                        <span class="benefit-tag">Life insurance</span>
+                        <span class="benefit-tag">Employee assistance program</span>
+                        <span class="benefit-tag">Disability insurance</span>
+                        <span class="benefit-tag">Paid holidays</span>
+                    </div>
+                    <style>
+                        .benefit-tag {
+                            background: #f0f7ff;
+                            color: #0E427E;
+                            padding: 8px 12px;
+                            border-radius: 6px;
+                            font-size: 14px;
+                            text-align: center;
+                        }
+                    </style>
+                </div>
+
+                <div style="text-align: center;">
+                    <a href="mailto:contact@panshaker.com?subject=Application for Lead Field Service Technician - [Your Name]"
+                        style="display: inline-block; padding: 15px 40px; background: #62BA46; color: #fff; font-size: 18px; border-radius: 30px; font-weight: bold; transition: background 0.3s;">
+                        Apply Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>PanShaker Services</h4>
+                    <ul>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="careers.html">加入团队</a></li>
+                        <li><a href="investors.html">投资者关系</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>技术支持</h4>
+                    <ul>
+                        <li><a href="#">Synapse OS</a></li>
+                        <li><a href="#">硬件改造方案</a></li>
+                        <li><a href="#">售后服务</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>Email: contact@panshaker.com</li>
+                        <li>Location: San Diego, CA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <span style="font-family: sans-serif;">©</span>2026 PanShaker LLC. All Rights Reserved. <br>
+                聚焦北美市场的餐饮自动化基础设施服务商
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <title>投资者关系 | 伴勺科技</title>
+    <!-- Same styles -->
+    <style>
+        @font-face {
+            font-family: 'LogoFont';
+            src: url('logo.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'MyFont';
+            src: url('myfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "MyFont", "PingFang SC", "Microsoft YaHei", sans-serif;
+            color: #333;
+            background-color: #fcfcfc;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Logo */
+        .logo {
+            position: relative;
+            height: 32px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .logo-en,
+        .logo-cn {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-cn {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        @media (min-width: 769px) {
+            .logo.hovered .logo-en {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            .logo.hovered .logo-cn {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logo.clicked .logo-en {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            .logo.clicked .logo-cn {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .nav-links a {
+            margin-left: 40px;
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #62BA46;
+        }
+
+        /* Egg Content */
+        .egg-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding-top: 80px;
+            /* Header space */
+            text-align: center;
+        }
+
+        .egg-image-placeholder {
+            width: 800px;
+            max-width: 90%;
+            height: 450px;
+            background: #eee;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #999;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .egg-image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* or cover depending on the image */
+        }
+
+        .egg-text {
+            font-size: 24px;
+            color: #0E427E;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .egg-subtext {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-inner">
+            <div class="logo" onmouseenter="this.classList.add('hovered')"
+                onmouseleave="this.classList.remove('hovered')" onclick="this.classList.toggle('clicked')">
+                <div class="logo-en">
+                    <span
+                        style="font-family: 'LogoFont', sans-serif; color: #0E427E; letter-spacing: -1px;">PanShaker</span><span
+                        style="font-family: 'LogoFont', sans-serif; color: #62BA46; margin-left: 6px; letter-spacing: -1px;">Services</span>
+                </div>
+                <div class="logo-cn">
+                    <span
+                        style="font-family: 'LogoFont', sans-serif; color: #0E427E; letter-spacing: -1px;">伴勺</span><span
+                        style="font-family: 'LogoFont', sans-serif; color: #62BA46; margin-left: 6px; letter-spacing: -1px;">科技</span>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="about.html">关于我们</a>
+                <a href="#">无声厨房</a>
+                <a href="#">联系我们</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="egg-container">
+        <!-- Placeholder: To be replaced by nasdaq_celebration.png when available -->
+        <div class="egg-image-placeholder" id="image-container">
+            <img src="relations.jpg" alt="Investor Relations">
+        </div>
+
+        <div class="egg-text">我们还在努力，感谢您的支持。</div>
+        <div class="egg-subtext">祝您生活幸福，万事如意。</div>
+    </div>
+
+
+
+    <audio id="bgm" loop>
+        <source src="mymusic.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var audio = document.getElementById("bgm");
+            audio.volume = 0.5;
+
+            var playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                    // Autoplay started
+                }).catch(error => {
+                    // Autoplay prevented, wait for interaction
+                    document.body.addEventListener('click', function () {
+                        audio.play();
+                    }, { once: true });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
