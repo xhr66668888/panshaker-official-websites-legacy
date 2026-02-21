@@ -6,105 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Panshaker Services</title>
     <link rel="icon" type="image/png" href="assets/images/logo-transparent.png">
+    <link rel="stylesheet" href="assets/styles/shared.css">
     <style>
-        /* --- 新增部分开始：定义你的字体 --- */
-        @font-face {
-            font-family: 'MyBrandFont';
-            /* 给字体起个名字，随便叫啥 */
-            src: url('assets/fonts/myfont.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'LogoFont';
-            src: url('assets/fonts/logo.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        /* 全局重置与基础样式 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            /* 修改这里：把 MyBrandFont 放在第一个，作为首选字体 */
-            font-family: 'MyBrandFont', "PingFang SC", "Microsoft YaHei", sans-serif;
             color: #0E427E;
             background-color: #fff;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: color 0.3s;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        /* 布局容器 */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
         }
 
         .section {
             padding: 100px 0;
-        }
-
-        /* 导航栏 */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
-        }
-
-        .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 100%;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #0E427E;
-        }
-
-        .logo span {
-            color: #62BA46;
-        }
-
-        /* 品牌绿 */
-        .nav-links a {
-            margin-left: 40px;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .nav-links a:hover {
-            color: #62BA46;
         }
 
         /* Hero Banner */
@@ -483,117 +393,68 @@
                         style="font-family: 'LogoFont', sans-serif; color: #62BA46; margin-left: 6px; letter-spacing: -1px;">科技</span>
                 </div>
             </div>
-
-            <style>
-                .logo {
-                    position: relative;
-                    height: 32px;
-                    overflow: hidden;
-                    cursor: pointer;
-                }
-
-                .logo-en,
-                .logo-cn {
-                    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
-                    display: flex;
-                    align-items: center;
-                }
-
-                .logo-cn {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    transform: translateY(100%);
-                    opacity: 0;
-                }
-
-                @media (min-width: 769px) {
-                    .logo.hovered .logo-en {
-                        transform: translateY(-100%);
-                        opacity: 0;
-                    }
-
-                    .logo.hovered .logo-cn {
-                        transform: translateY(0);
-                        opacity: 1;
-                    }
-                }
-
-                /* Mobile Tap Support */
-                @media (max-width: 768px) {
-                    .logo.clicked .logo-en {
-                        transform: translateY(-100%);
-                        opacity: 0;
-                    }
-
-                    .logo.clicked .logo-cn {
-                        transform: translateY(0);
-                        opacity: 1;
-                    }
-                }
-            </style>
             <nav class="nav-links">
-                <a href="index.html">首页</a>
-                <a href="about.html">关于我们</a>
-                <a href="#">无声厨房</a>
-                <a href="#">联系我们</a>
+                <a href="index.html" data-i18n="nav.home">首页</a>
+                <a href="about.html" data-i18n="nav.about">关于我们</a>
+                <a href="#" data-i18n="nav.silent_kitchen">无声厨房</a>
+                <a href="#" data-i18n="nav.contact">联系我们</a>
             </nav>
         </div>
     </header>
 
     <section class="section" style="padding-top: 150px; background: #fafafa;">
         <div class="container">
-            <h1 style="text-align: center; font-size: 48px; font-weight: 300; margin-bottom: 60px; color: #0E427E;">Join
+            <h1 data-i18n="careers.heading" style="text-align: center; font-size: 48px; font-weight: 300; margin-bottom: 60px; color: #0E427E;">Join
                 Our Team</h1>
 
             <div class="job-card"
                 style="background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); max-width: 900px; margin: 0 auto;">
                 <div class="job-header"
                     style="margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px;">
-                    <h2 style="font-size: 32px; color: #0E427E; margin-bottom: 10px;">Lead Field Service Technician</h2>
+                    <h2 data-i18n="careers.role.title" style="font-size: 32px; color: #0E427E; margin-bottom: 10px;">Lead Field Service Technician</h2>
                     <p style="font-size: 18px; color: #666; display: flex; flex-wrap: wrap; gap: 20px;">
-                        <span><strong style="color:#333;">Location:</strong> Seattle, WA</span>
-                        <span><strong style="color:#333;">Salary:</strong> $79,000 - $98,800 a year</span>
-                        <span><strong style="color:#333;">Type:</strong> Full-time</span>
+                        <span data-i18n="careers.role.location"><strong style="color:#333;">Location:</strong> Seattle, WA</span>
+                        <span data-i18n="careers.role.salary"><strong style="color:#333;">Salary:</strong> $79,000 - $98,800 a year</span>
+                        <span data-i18n="careers.role.type"><strong style="color:#333;">Type:</strong> Full-time</span>
                     </p>
                 </div>
 
                 <div class="job-description" style="margin-bottom: 40px;">
-                    <h3 style="font-size: 20px; color: #333; margin-bottom: 15px;">Role Overview</h3>
-                    <p style="color: #666; margin-bottom: 20px; font-size: 16px;">
+                    <h3 data-i18n="careers.role.overview_title" style="font-size: 20px; color: #333; margin-bottom: 15px;">Role Overview</h3>
+                    <p data-i18n="careers.role.overview_desc" style="color: #666; margin-bottom: 20px; font-size: 16px;">
                         Panshaker Services is seeking a dedicated Lead Field Service Technician to ensure the
                         reliability of our automated culinary systems. You will be responsible for the installation,
                         maintenance, and repair of our cutting-edge robotic wok hardware at client sites.
                         <strong>Valid work authorization in the US is required.</strong>
                     </p>
 
-                    <h3 style="font-size: 20px; color: #333; margin-bottom: 15px;">Key Responsibilities</h3>
+                    <h3 data-i18n="careers.role.resp_title" style="font-size: 20px; color: #333; margin-bottom: 15px;">Key Responsibilities</h3>
                     <ul style="list-style: disc; margin-left: 20px; color: #666; margin-bottom: 20px; font-size: 16px;">
-                        <li>Perform on-site installation, commissioning, and maintenance of Panshaker automated cooking
+                        <li data-i18n="careers.role.resp_1">Perform on-site installation, commissioning, and maintenance of Panshaker automated cooking
                             units.</li>
-                        <li>Diagnose technical issues and perform repairs to minimize downtime.</li>
-                        <li>Provide training and technical support to kitchen staff.</li>
-                        <li>Maintain detailed service logs and report on hardware performance.</li>
+                        <li data-i18n="careers.role.resp_2">Diagnose technical issues and perform repairs to minimize downtime.</li>
+                        <li data-i18n="careers.role.resp_3">Provide training and technical support to kitchen staff.</li>
+                        <li data-i18n="careers.role.resp_4">Maintain detailed service logs and report on hardware performance.</li>
                     </ul>
                 </div>
 
                 <div class="job-benefits" style="margin-bottom: 40px;">
-                    <h3 style="font-size: 20px; color: #333; margin-bottom: 15px;">Benefits</h3>
+                    <h3 data-i18n="careers.benefits_title" style="font-size: 20px; color: #333; margin-bottom: 15px;">Benefits</h3>
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
-                        <span class="benefit-tag">Tuition reimbursement</span>
-                        <span class="benefit-tag">Parental leave</span>
-                        <span class="benefit-tag">Health insurance</span>
-                        <span class="benefit-tag">401(k) matching</span>
-                        <span class="benefit-tag">Paid time off</span>
-                        <span class="benefit-tag">Vision insurance</span>
-                        <span class="benefit-tag">Health savings account</span>
-                        <span class="benefit-tag">Dental insurance</span>
-                        <span class="benefit-tag">Flexible spending account</span>
-                        <span class="benefit-tag">Life insurance</span>
-                        <span class="benefit-tag">Employee assistance program</span>
-                        <span class="benefit-tag">Disability insurance</span>
-                        <span class="benefit-tag">Paid holidays</span>
+                        <span class="benefit-tag" data-i18n="careers.benefit_1">Tuition reimbursement</span>
+                        <span class="benefit-tag" data-i18n="careers.benefit_2">Parental leave</span>
+                        <span class="benefit-tag" data-i18n="careers.benefit_3">Health insurance</span>
+                        <span class="benefit-tag" data-i18n="careers.benefit_4">401(k) matching</span>
+                        <span class="benefit-tag" data-i18n="careers.benefit_5">Paid time off</span>
+                        <span class="benefit-tag" data-i18n="careers.benefit_6">Vision insurance</span>
+                        <span class="benefit-tag" data-i18n="careers.benefit_7">Health savings account</span>
+                        <span class="benefit-tag" data-i18n="careers.benefit_8">Dental insurance</span>
+                        <span class="benefit-tag" data-i18n="careers.benefit_9">Flexible spending account</span>
+                        <span class="benefit-tag" data-i18n="careers.benefit_10">Life insurance</span>
+                        <span class="benefit-tag" data-i18n="careers.benefit_11">Employee assistance program</span>
+                        <span class="benefit-tag" data-i18n="careers.benefit_12">Disability insurance</span>
+                        <span class="benefit-tag" data-i18n="careers.benefit_13">Paid holidays</span>
                     </div>
                     <style>
                         .benefit-tag {
@@ -609,6 +470,7 @@
 
                 <div style="text-align: center;">
                     <a href="mailto:contact@panshaker.com?subject=Application for Lead Field Service Technician - [Your Name]"
+                        data-i18n="careers.apply_cta"
                         style="display: inline-block; padding: 15px 40px; background: #62BA46; color: #fff; font-size: 18px; border-radius: 30px; font-weight: bold; transition: background 0.3s;">
                         Apply Now
                     </a>
@@ -621,32 +483,32 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h4>Panshaker Services</h4>
+                    <h4 data-i18n="footer.company_title">Panshaker Services</h4>
                     <ul>
-                        <li><a href="about.html">关于我们</a></li>
-                        <li><a href="careers.html">加入团队</a></li>
-                        <li><a href="investors.html">投资者关系</a></li>
+                        <li><a href="about.html" data-i18n="footer.about">关于我们</a></li>
+                        <li><a href="careers.html" data-i18n="footer.careers">加入团队</a></li>
+                        <li><a href="investors.html" data-i18n="footer.investors">投资者关系</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>技术支持</h4>
+                    <h4 data-i18n="footer.tech">技术支持</h4>
                     <ul>
-                        <li><a href="#">Synapse OS</a></li>
-                        <li><a href="#">硬件改造方案</a></li>
-                        <li><a href="#">售后服务</a></li>
+                        <li><a href="#" data-i18n="footer.synapse">Synapse OS</a></li>
+                        <li><a href="#" data-i18n="footer.hardware">硬件改造方案</a></li>
+                        <li><a href="#" data-i18n="footer.support">售后服务</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>联系方式</h4>
+                    <h4 data-i18n="footer.contact_title">联系方式</h4>
                     <ul>
-                        <li>Email: contact@panshaker.com</li>
-                        <li>Location: San Diego, CA</li>
+                        <li data-i18n="footer.email">Email: contact@panshaker.com</li>
+                        <li data-i18n="footer.location">Location: San Diego, CA</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <span style="font-family: sans-serif;">©</span>2026 Panshaker LLC. All Rights Reserved. <br>
-                聚焦北美市场的餐饮自动化基础设施服务商
+                <span style="font-family: sans-serif;">©</span><span data-i18n="footer.copyright">2026 Panshaker Inc. All Rights Reserved.</span> <br>
+                <span data-i18n="footer.tagline">聚焦北美市场的餐饮自动化基础设施服务商</span>
             </div>
         </div>
     </footer>

@@ -7,6 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <title>unknown | 管理团队 | Panshaker Services</title>
     <link rel="icon" type="image/png" href="assets/images/logo-transparent.png">
+    <link rel="stylesheet" href="assets/styles/shared.css">
     <!-- Same styles as others -->
     <style>
         /* --- 字体定义 --- */
@@ -251,25 +252,25 @@
                 </div>
             </div>
             <nav class="nav-links">
-                <a href="index.html">首页</a>
-                <a href="about.html">关于我们</a>
-                <a href="#">无声厨房</a>
-                <a href="#">联系我们</a>
+                <a href="index.html" data-i18n="nav.home">首页</a>
+                <a href="about.html" data-i18n="nav.about">关于我们</a>
+                <a href="#" data-i18n="nav.silent_kitchen">无声厨房</a>
+                <a href="#" data-i18n="nav.contact">联系我们</a>
             </nav>
         </div>
     </header>
 
     <div class="container profile-container">
 
-        <a href="about.html" class="back-link"><span>←</span> 返回管理团队</a>
+        <a href="about.html" class="back-link" data-i18n="profile.back_link"><span>←</span> 返回管理团队</a>
 
         <div class="profile-header">
-            <h1>unknown</h1>
-            <div class="profile-title">CTO</div>
+            <h1 data-i18n="profile.unknown.name">unknown</h1>
+            <div class="profile-title" data-i18n="profile.unknown.role">CTO</div>
         </div>
 
         <div class="profile-content">
-            <p>unknown，美国宾夕法尼亚大学计算机系博士，天津大学计算机系学士学位。</p>
+            <p data-i18n="profile.unknown.p1">unknown，美国宾夕法尼亚大学计算机系博士，天津大学计算机系学士学位。</p>
         </div>
     </div>
 
@@ -277,32 +278,32 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h4>Panshaker Services</h4>
+                    <h4 data-i18n="footer.company_title">Panshaker Services</h4>
                     <ul>
-                        <li><a href="about.html">关于我们</a></li>
-                        <li><a href="careers.html">加入团队</a></li>
-                        <li><a href="investors.html">投资者关系</a></li>
+                        <li><a href="about.html" data-i18n="footer.about">关于我们</a></li>
+                        <li><a href="careers.html" data-i18n="footer.careers">加入团队</a></li>
+                        <li><a href="investors.html" data-i18n="footer.investors">投资者关系</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>技术支持</h4>
+                    <h4 data-i18n="footer.tech">技术支持</h4>
                     <ul>
-                        <li><a href="#">Synapse OS</a></li>
-                        <li><a href="#">硬件改造方案</a></li>
-                        <li><a href="#">售后服务</a></li>
+                        <li><a href="#" data-i18n="footer.synapse">Synapse OS</a></li>
+                        <li><a href="#" data-i18n="footer.hardware">硬件改造方案</a></li>
+                        <li><a href="#" data-i18n="footer.support">售后服务</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>联系方式</h4>
+                    <h4 data-i18n="footer.contact_title">联系方式</h4>
                     <ul>
-                        <li>Email: contact@panshaker.com</li>
-                        <li>Location: San Diego, CA</li>
+                        <li data-i18n="footer.email">Email: contact@panshaker.com</li>
+                        <li data-i18n="footer.location">Location: San Diego, CA</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <span style="font-family: sans-serif;">©</span>2026 Panshaker LLC. All Rights Reserved. <br>
-                聚焦北美市场的餐饮自动化基础设施服务商
+                <span style="font-family: sans-serif;">©</span><span data-i18n="footer.copyright">2026 Panshaker Inc. All Rights Reserved.</span> <br>
+                <span data-i18n="footer.tagline">聚焦北美市场的餐饮自动化基础设施服务商</span>
             </div>
         </div>
     </footer>

@@ -7,86 +7,12 @@
     <meta name="format-detection" content="telephone=no">
     <title>Panshaker Services</title>
     <link rel="icon" type="image/png" href="assets/images/logo-transparent.png">
+    <link rel="stylesheet" href="assets/styles/shared.css">
     <style>
-        /* --- 新增部分开始：定义你的字体 --- */
-        @font-face {
-            font-family: 'MyBrandFont';
-            /* 给字体起个名字，随便叫啥 */
-            src: url('assets/fonts/myfont.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'LogoFont';
-            src: url('assets/fonts/logo.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        /* 全局重置与基础样式 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'MyBrandFont', "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
-            color: #0E427E;
-            background-color: #fff;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s ease;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-            height: auto;
-        }
-
-        /* 按钮通用样式优化 */
-        button, .btn {
-            cursor: pointer;
-            border: none;
-            outline: none;
-            user-select: none;
-        }
-
-        /* 性能优化 */
-        * {
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        /* 平滑滚动禁用在某些老设备上 */
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-        }
-
         /* 布局容器 */
         .container {
-            width: 100%;
             max-width: 1400px;
-            margin: 0 auto;
             padding: 0 40px;
-        }
-
-        .section {
-            padding: 120px 0;
         }
 
         /* 宽容器 - 用于解决方案等需要更大空间的区域 */
@@ -95,47 +21,6 @@
             max-width: 1600px;
             margin: 0 auto;
             padding: 0 60px;
-        }
-
-        /* 导航栏 */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
-        }
-
-        .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 100%;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #0E427E;
-        }
-
-        .logo span {
-            color: #62BA46;
-        }
-
-        /* 品牌绿 */
-        .nav-links a {
-            margin-left: 40px;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .nav-links a:hover {
-            color: #62BA46;
         }
 
         /* Hero Banner */
@@ -721,61 +606,12 @@
                         style="font-family: 'LogoFont', sans-serif; color: #62BA46; margin-left: 6px; letter-spacing: -1px;">科技</span>
                 </div>
             </div>
-
-            <style>
-                .logo {
-                    position: relative;
-                    height: 32px;
-                    overflow: hidden;
-                    cursor: pointer;
-                }
-
-                .logo-en,
-                .logo-cn {
-                    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
-                    display: flex;
-                    align-items: center;
-                }
-
-                .logo-cn {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    transform: translateY(100%);
-                    opacity: 0;
-                }
-
-                @media (min-width: 769px) {
-                    .logo.hovered .logo-en {
-                        transform: translateY(-100%);
-                        opacity: 0;
-                    }
-
-                    .logo.hovered .logo-cn {
-                        transform: translateY(0);
-                        opacity: 1;
-                    }
-                }
-
-                /* Mobile Tap Support */
-                @media (max-width: 768px) {
-                    .logo.clicked .logo-en {
-                        transform: translateY(-100%);
-                        opacity: 0;
-                    }
-
-                    .logo.clicked .logo-cn {
-                        transform: translateY(0);
-                        opacity: 1;
-                    }
-                }
-            </style>
             <nav class="nav-links">
-                <a href="#">首页</a>
-                <a href="synapse_os.html">Synapse OS</a>
-                <a href="about.html">关于我们</a>
-                <a href="#">无声厨房</a>
-                <a href="#">联系我们</a>
+                <a href="#" data-i18n="nav.home">首页</a>
+                <a href="synapse_os.html" data-i18n="nav.synapse">Synapse OS</a>
+                <a href="about.html" data-i18n="nav.about">关于我们</a>
+                <a href="#" data-i18n="nav.silent_kitchen">无声厨房</a>
+                <a href="#" data-i18n="nav.contact">联系我们</a>
             </nav>
         </div>
     </header>
@@ -919,9 +755,10 @@
         </script>
 
         <div class="hero-content" style="position: relative; z-index: 1; pointer-events: none;">
-            <h1>AI 赋能下低人工成本<br><strong>商业中餐解决方案</strong></h1>
-            <p style="max-width: 800px; margin: 30px auto 40px; opacity: 0.9;">融合硬件自动化与 AI 智能系统，重新定义餐饮行业效率</p>
+            <h1 data-i18n-html="home.hero.title">AI 赋能下低人工成本<br><strong>商业中餐解决方案</strong></h1>
+            <p data-i18n="home.hero.subtitle" style="max-width: 800px; margin: 30px auto 40px; opacity: 0.9;">融合硬件自动化与 AI 智能系统，重新定义餐饮行业效率</p>
             <a href="#"
+                data-i18n="home.hero.cta"
                 style="display:inline-block; padding: 16px 48px; background:#62BA46; color:#fff; border-radius:30px; font-size:17px; pointer-events: auto; font-weight: 500; box-shadow: 0 8px 24px rgba(98, 186, 70, 0.3); transition: all 0.4s;"
                 onmouseenter="this.style.background='#0E427E'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 32px rgba(14, 66, 126, 0.4)'"
                 onmouseleave="this.style.background='#62BA46'; this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(98, 186, 70, 0.3)'">
@@ -932,9 +769,9 @@
 
     <section class="section philosophy">
         <div class="container">
-            <h2>不止于餐饮，更是硬科技</h2>
+            <h2 data-i18n="home.philosophy.title">不止于餐饮，更是硬科技</h2>
             <div class="divider"></div>
-            <p>
+            <p data-i18n-html="home.philosophy.desc">
                 我们将餐饮业不可控的人工烹饪环节，转换为 AI 时代高度可靠的工业自动化环节。<br>
                 在北美，书写中华美食的各种可能。
             </p>
@@ -945,8 +782,8 @@
         <div class="container-wide">
             <div class="split-section">
                 <div class="split-text">
-                    <h3>竞品价格 1/2</h3>
-                    <p style="font-size: 22px; color: #333; font-weight: 500; line-height: 1.6;">&lt; 2周 低成本改装<br>实现无人化烹饪</p>
+                    <h3 data-i18n="home.solution.price_title">竞品价格 1/2</h3>
+                    <p data-i18n-html="home.solution.price_desc" style="font-size: 22px; color: #333; font-weight: 500; line-height: 1.6;">&lt; 2周 低成本改装<br>实现无人化烹饪</p>
                 </div>
                 <!-- Hardware Image Area -->
                 <div class="split-img" style="background: transparent; padding: 0; overflow: hidden;">
@@ -961,13 +798,15 @@
                 <div class="split-text">
                     <a href="synapse_os.html" style="display: inline-block; text-decoration: none;">
                         <h3 style="cursor: pointer; transition: all 0.3s; display: inline-block;" 
+                            data-i18n="home.solution.synapse_title"
                             onmouseenter="this.style.color='#0E427E'; this.style.transform='translateX(10px)'"
                             onmouseleave="this.style.color='inherit'; this.style.transform='translateX(0)'">
                             Synapse OS
                         </h3>
                     </a>
-                    <p style="font-size: 22px; line-height: 1.7;">下一代餐饮操作系统<br>打造中餐出海标准化一条龙服务</p>
+                    <p data-i18n-html="home.solution.synapse_desc" style="font-size: 22px; line-height: 1.7;">下一代餐饮操作系统<br>打造中餐出海标准化一条龙服务</p>
                     <a href="synapse_os.html"
+                        data-i18n="home.solution.learn_more"
                         style="display: inline-block; margin-top: 25px; padding: 12px 28px; background: #0E427E; color: #fff; border-radius: 25px; font-size: 15px; transition: all 0.3s; box-shadow: 0 4px 12px rgba(14, 66, 126, 0.2);"
                         onmouseenter="this.style.background='#62BA46'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(98, 186, 70, 0.3)'"
                         onmouseleave="this.style.background='#0E427E'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(14, 66, 126, 0.2)'">
@@ -977,7 +816,7 @@
                 <!-- Make image clickable too -->
                 <a href="synapse_os.html" class="split-img"
                     style="background: #eef2f5; display: flex; align-items: center; justify-content: center; flex-direction: column; overflow: hidden; border-radius: 20px; cursor: pointer; text-decoration: none;">
-                    <img src="assets/images/restaurant.webp" alt="Restaurant Concept"
+                    <img src="assets/screenshots/synapse-dashboard.png" alt="Synapse OS Dashboard"
                         style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);"
                         onmouseenter="this.style.transform='scale(1.08)'"
                         onmouseleave="this.style.transform='scale(1)'"
@@ -1022,7 +861,7 @@
                         style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
                 </div>
                 <div class="ambassador-text">
-                    <p style="font-size: 16px; color: #333; font-weight: 500; letter-spacing: 1px;">
+                    <p data-i18n-html="home.ambassador.line" style="font-size: 16px; color: #333; font-weight: 500; letter-spacing: 1px;">
                         高雷雷 <span class="mobile-hide-pipe" style="margin: 0 10px; color: #ccc;">|</span> 全球大使 <span
                             class="mobile-hide-pipe" style="margin: 0 10px; color: #ccc;">|</span> <span
                             class="ambassador-desc">前北京国安队队员，餐厅老板</span>
@@ -1034,9 +873,10 @@
 
     <section class="section esg-section">
         <div class="container">
-            <h2>无声厨房计划</h2>
-            <p>赋能听障群体，创造包容性就业环境<br>用科技消除沟通障碍，让每个人都能发光发热</p>
+            <h2 data-i18n="home.esg.title">无声厨房计划</h2>
+            <p data-i18n-html="home.esg.desc">赋能听障群体，创造包容性就业环境<br>用科技消除沟通障碍，让每个人都能发光发热</p>
             <a href="#"
+                data-i18n="home.esg.cta"
                 style="display:inline-block; padding: 12px 32px; color:#0E427E; border-radius:4px; font-size:16px; background: transparent; transition: all 0.3s; font-weight: 500; text-decoration: underline; text-underline-offset: 4px;"
                 onmouseenter="this.style.color='#62BA46'"
                 onmouseleave="this.style.color='#0E427E'">
@@ -1049,32 +889,32 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h4>Panshaker Services</h4>
+                    <h4 data-i18n="footer.company_title">Panshaker Services</h4>
                     <ul>
-                        <li><a href="about.html">关于我们</a></li>
-                        <li><a href="careers.html">加入团队</a></li>
-                        <li><a href="investors.html">投资者关系</a></li>
+                        <li><a href="about.html" data-i18n="footer.about">关于我们</a></li>
+                        <li><a href="careers.html" data-i18n="footer.careers">加入团队</a></li>
+                        <li><a href="investors.html" data-i18n="footer.investors">投资者关系</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>技术支持</h4>
+                    <h4 data-i18n="footer.tech">技术支持</h4>
                     <ul>
-                        <li><a href="synapse_os.html">Synapse OS</a></li>
-                        <li><a href="#">硬件改造方案</a></li>
-                        <li><a href="#">售后服务</a></li>
+                        <li><a href="synapse_os.html" data-i18n="footer.synapse">Synapse OS</a></li>
+                        <li><a href="#" data-i18n="footer.hardware">硬件改造方案</a></li>
+                        <li><a href="#" data-i18n="footer.support">售后服务</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>联系方式</h4>
+                    <h4 data-i18n="footer.contact_title">联系方式</h4>
                     <ul>
-                        <li>Email: contact@panshaker.com</li>
-                        <li>Location: San Diego, CA</li>
+                        <li data-i18n="footer.email">Email: contact@panshaker.com</li>
+                        <li data-i18n="footer.location">Location: San Diego, CA</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <span style="font-family: sans-serif;">©</span>2026 Panshaker LLC. All Rights Reserved. <br>
-                聚焦北美市场的餐饮自动化基础设施服务商
+                <span style="font-family: sans-serif;">©</span><span data-i18n="footer.copyright">2026 Panshaker Inc. All Rights Reserved.</span> <br>
+                <span data-i18n="footer.tagline">聚焦北美市场的餐饮自动化基础设施服务商</span>
             </div>
         </div>
     </footer>

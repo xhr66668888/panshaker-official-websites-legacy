@@ -7,156 +7,18 @@
     <meta name="format-detection" content="telephone=no">
     <title>Panshaker Services</title>
     <link rel="icon" type="image/png" href="assets/images/logo-transparent.png">
+    <link rel="stylesheet" href="assets/styles/shared.css">
     <style>
-        /* --- 字体定义 --- */
-        @font-face {
-            font-family: 'LogoFont';
-            src: url('assets/fonts/logo.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'MyBrandFont';
-            src: url('assets/fonts/myfont.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        /* 全局样式 - 保持与其他页面一致 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        /* 全局样式 - 补充页面自定义 */
         body {
-            font-family: 'MyBrandFont', "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
             color: #333;
             background-color: #fff;
             line-height: 1.8;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-tap-highlight-color: transparent;
             overflow-x: hidden;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-        }
-
-        /* 布局容器 */
         .container {
-            width: 100%;
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section {
-            padding: 80px 0;
-        }
-
-        /* 导航栏 */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
-        }
-
-        .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 100%;
-        }
-
-        /* Logo 样式 & 动画 */
-        .logo {
-            position: relative;
-            height: 32px;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .logo-en,
-        .logo-cn {
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo-cn {
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform: translateY(100%);
-            opacity: 0;
-        }
-
-        @media (min-width: 769px) {
-            .logo.hovered .logo-en {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-
-            .logo.hovered .logo-cn {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* Mobile Tap Support */
-        @media (max-width: 768px) {
-            .logo.clicked .logo-en {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-
-            .logo.clicked .logo-cn {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .nav-links a {
-            margin-left: 40px;
-            font-size: 14px;
-            color: #666;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #62BA46;
         }
 
         /* Banner */
@@ -450,32 +312,32 @@
                 </div>
             </div>
             <nav class="nav-links">
-                <a href="index.html">首页</a>
-                <a href="about.html" class="active">关于我们</a>
-                <a href="#">无声厨房</a>
-                <a href="#">联系我们</a>
+                <a href="index.html" data-i18n="nav.home">首页</a>
+                <a href="about.html" class="active" data-i18n="nav.about">关于我们</a>
+                <a href="#" data-i18n="nav.silent_kitchen">无声厨房</a>
+                <a href="#" data-i18n="nav.contact">联系我们</a>
             </nav>
         </div>
     </header>
 
     <div class="page-banner">
         <div class="container">
-            <h1>公司信息</h1>
-            <p>Innovation Meets Automation</p>
+            <h1 data-i18n="about.banner.title">公司信息</h1>
+            <p data-i18n="about.banner.subtitle">Innovation Meets Automation</p>
         </div>
     </div>
 
     <section class="section content-section">
         <div class="container">
-            <h2 class="section-title">公司介绍</h2>
+            <h2 class="section-title" data-i18n="about.intro.title">公司介绍</h2>
             <div class="text-block">
-                <p>伴勺科技（Panshaker Services）是北美餐饮自动化领域的创新领跑者。我们的使命是「让地道的东方味道跨越国界，让每一座城市都能便捷地享受美食」。通过深度集成工业级自动化硬件与自主研发的
+                <p data-i18n="about.intro.p1">伴勺科技（Panshaker Services）是北美餐饮自动化领域的创新领跑者。我们的使命是「让地道的东方味道跨越国界，让每一座城市都能便捷地享受美食」。通过深度集成工业级自动化硬件与自主研发的
                     IoT 云端系统，我们为北美餐饮业提供了极简、低成本且美味的自动化商业解决方案。</p>
-                <p>我们是成功将“无人化烹饪”在北美中餐赛道落地的先驱。我们看到了北美市场传统餐饮中的痛点，将不可控的烹饪环节转化为标准化的流程，彻底解决了行业长期以来“高人工、低效率、品质不稳定，商业复杂”的痛点。
+                <p data-i18n="about.intro.p2">我们是成功将“无人化烹饪”在北美中餐赛道落地的先驱。我们看到了北美市场传统餐饮中的痛点，将不可控的烹饪环节转化为标准化的流程，彻底解决了行业长期以来“高人工、低效率、品质不稳定，商业复杂”的痛点。
                 </p>
-                <p>我们不仅自主经营品牌，更通过创新的“店中店”合作模式与机器订阅体系，为现有餐厅提供技术赋能。我们的核心竞争力源于自主研发炒菜机器人、人工智能视觉监控技术以及 Synapse OS
+                <p data-i18n="about.intro.p3">我们不仅自主经营品牌，更通过创新的“店中店”合作模式与机器订阅体系，为现有餐厅提供技术赋能。我们的核心竞争力源于自主研发炒菜机器人、人工智能视觉监控技术以及 Synapse OS
                     自动化餐厅管理系统，是替代预制菜的最优解决方案。</p>
-                <p>未来，伴勺科技将持续深耕餐饮自动化浪潮，致力于将产品线从自动化炒菜机器人扩展至全品类中餐标准化基础设施，降低餐饮行业创业的门槛。我们坚持运用前沿科技连接物理世界与数字世界，为全球餐饮从业者创造价值，为每一位食客带来更有温度和实惠的美食体验。
+                <p data-i18n="about.intro.p4">未来，伴勺科技将持续深耕餐饮自动化浪潮，致力于将产品线从自动化炒菜机器人扩展至全品类中餐标准化基础设施，降低餐饮行业创业的门槛。我们坚持运用前沿科技连接物理世界与数字世界，为全球餐饮从业者创造价值，为每一位食客带来更有温度和实惠的美食体验。
                 </p>
             </div>
         </div>
@@ -484,14 +346,14 @@
     <section class="section"
         style="background: url('assets/images/managementteam.jpg') no-repeat center center; background-size: cover; padding-top: 60px;">
         <div class="container">
-            <h2 class="section-title" style="color: #fff; border-color: #fff;">管理团队</h2>
+            <h2 class="section-title" style="color: #fff; border-color: #fff;" data-i18n="about.team.title">管理团队</h2>
             <div class="team-grid">
 
                 <!-- 创始人 -->
                 <div class="team-card">
-                    <span class="team-name">徐浩然</span>
-                    <div class="team-title">创始人</div>
-                    <a href="profile_xu.html" class="view-profile-btn">阅读简历 <span style="margin-left:5px;">→</span></a>
+                    <span class="team-name" data-i18n="about.team.xu.name">徐浩然</span>
+                    <div class="team-title" data-i18n="about.team.xu.role">创始人</div>
+                    <a href="profile_xu.html" class="view-profile-btn" data-i18n="about.team.view_profile">阅读简历 <span style="margin-left:5px;">→</span></a>
                 </div>
 
                 <!-- 联合创始人 - 暂时屏蔽，保留代码，需要时取消注释即可上线 -->
@@ -521,32 +383,32 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h4>Panshaker Services</h4>
+                    <h4 data-i18n="footer.company_title">Panshaker Services</h4>
                     <ul>
-                        <li><a href="about.html">关于我们</a></li>
-                        <li><a href="careers.html">加入团队</a></li>
-                        <li><a href="investors.html">投资者关系</a></li>
+                        <li><a href="about.html" data-i18n="footer.about">关于我们</a></li>
+                        <li><a href="careers.html" data-i18n="footer.careers">加入团队</a></li>
+                        <li><a href="investors.html" data-i18n="footer.investors">投资者关系</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>技术支持</h4>
+                    <h4 data-i18n="footer.tech">技术支持</h4>
                     <ul>
-                        <li><a href="#">Synapse OS</a></li>
-                        <li><a href="#">硬件改造方案</a></li>
-                        <li><a href="#">售后服务</a></li>
+                        <li><a href="#" data-i18n="footer.synapse">Synapse OS</a></li>
+                        <li><a href="#" data-i18n="footer.hardware">硬件改造方案</a></li>
+                        <li><a href="#" data-i18n="footer.support">售后服务</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>联系方式</h4>
+                    <h4 data-i18n="footer.contact_title">联系方式</h4>
                     <ul>
-                        <li>Email: contact@panshaker.com</li>
-                        <li>Location: San Diego, CA</li>
+                        <li data-i18n="footer.email">Email: contact@panshaker.com</li>
+                        <li data-i18n="footer.location">Location: San Diego, CA</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <span style="font-family: sans-serif;">©</span>2026 Panshaker LLC. All Rights Reserved. <br>
-                聚焦北美市场的餐饮自动化基础设施服务商
+                <span style="font-family: sans-serif;">©</span><span data-i18n="footer.copyright">2026 Panshaker Inc. All Rights Reserved.</span> <br>
+                <span data-i18n="footer.tagline">聚焦北美市场的餐饮自动化基础设施服务商</span>
             </div>
         </div>
     </footer>

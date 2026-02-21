@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
     <title>Panshaker Services</title>
     <link rel="icon" type="image/png" href="assets/images/logo-transparent.png">
+    <link rel="stylesheet" href="assets/styles/shared.css">
     <!-- Same styles -->
     <style>
         @font-face {
@@ -196,10 +197,10 @@
                 </div>
             </div>
             <nav class="nav-links">
-                <a href="index.html">首页</a>
-                <a href="about.html">关于我们</a>
-                <a href="#">无声厨房</a>
-                <a href="#">联系我们</a>
+                <a href="index.html" data-i18n="nav.home">首页</a>
+                <a href="about.html" data-i18n="nav.about">关于我们</a>
+                <a href="#" data-i18n="nav.silent_kitchen">无声厨房</a>
+                <a href="#" data-i18n="nav.contact">联系我们</a>
             </nav>
         </div>
     </header>
@@ -210,9 +211,45 @@
             <img src="assets/images/relations.jpg" alt="Investor Relations">
         </div>
 
-        <div class="egg-text">我们还在努力，感谢您的支持。</div>
-        <div class="egg-subtext">祝您生活幸福，万事如意。</div>
+        <div class="egg-text" data-i18n="investors.loading">我们还在努力，感谢您的支持。</div>
+        <div class="egg-subtext" data-i18n="investors.subtitle">祝您生活幸福，万事如意。</div>
     </div>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4 data-i18n="footer.company_title">Panshaker Services</h4>
+                    <ul>
+                        <li><a href="about.html" data-i18n="footer.about">关于我们</a></li>
+                        <li><a href="careers.html" data-i18n="footer.careers">加入团队</a></li>
+                        <li><a href="investors.html" data-i18n="footer.investors">投资者关系</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.tech">技术支持</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer.synapse">Synapse OS</a></li>
+                        <li><a href="#" data-i18n="footer.hardware">硬件改造方案</a></li>
+                        <li><a href="#" data-i18n="footer.support">售后服务</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.contact_title">联系方式</h4>
+                    <ul>
+                        <li data-i18n="footer.email">Email: contact@panshaker.com</li>
+                        <li data-i18n="footer.location">Location: San Diego, CA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <span style="font-family: sans-serif;">©</span><span data-i18n="footer.copyright">2026 Panshaker Inc. All Rights Reserved.</span> <br>
+                <span data-i18n="footer.tagline">聚焦北美市场的餐饮自动化基础设施服务商</span>
+            </div>
+        </div>
+    </footer>
 
 
 

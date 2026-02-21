@@ -27,7 +27,7 @@
 |------|---------|------------|
 | 英文品牌名 | **Panshaker Services** | PanShaker Services, Pan Shaker |
 | 中文品牌名 | 伴勺科技 | 半勺科技 |
-| 法律主体 | Panshaker LLC | PanShaker LLC |
+| 法律主体 | Panshaker Inc | Panshaker LLC, PanShaker LLC |
 | Tab标题(所有页面) | **Panshaker Services** | 伴勺科技, The Art of Wok |
 
 ### 1.2 品牌色彩
@@ -284,7 +284,7 @@ src: url('assets/fonts/logo.otf') format('opentype');
 {
   "nav.home": "首页",
   "hero.headline": "AI 赋能下低人工成本",
-  "footer.copyright": "©2026 Panshaker LLC. All Rights Reserved."
+    "footer.copyright": "©2026 Panshaker Inc. All Rights Reserved."
 }
 ```
 
@@ -484,11 +484,11 @@ input, textarea { font-size: 16px; }
 
 ### 10.2 待办事项
 
-- 首页Synapse OS旁边图片载入错误
-- [ ] 提供 `logo-transparent.png` 文件作为 Favicon
-- [ ] 将截图文件名从中文改为英文（避免 URL 编码问题）
-- [ ] 为 i18n 系统的 HTML 元素添加 `data-i18n` 属性以完成完整翻译覆盖
-- [ ] 考虑将内联 CSS 提取为共享 CSS 文件（减少页面间重复）
+- [x] 首页 Synapse OS 图片加载错误修复（统一改用英文文件名）
+- [x] 提供 `logo-transparent.png` 文件作为 Favicon
+- [x] 将截图文件名从中文改为英文（避免 URL 编码问题）
+- [x] 为 i18n 系统的 HTML 元素添加 `data-i18n` 属性以完成完整翻译覆盖（首页/关于/招聘/投资者/个人页）
+- [x] 提取共享 CSS（`assets/styles/shared.css`）并在各页面复用
 - [ ] 添加 OpenGraph / Twitter Card meta 标签
 - [ ] 添加 Google Analytics 或 百度统计
 - [ ] 配置 HTTPS 和 CDN
@@ -498,6 +498,7 @@ input, textarea { font-size: 16px; }
 | 日期 | 版本 | 变更 |
 |------|------|------|
 | 2026-02-20 | 1.0.0 | 初始规范建立。清理项目结构，移除渐变设计，统一品牌名为 Panshaker，隐藏部分团队成员，新增 i18n 和设备检测模块，建立设计与技术规范文档 |
+| 2026-03-XX | 1.0.1 | 统一品牌主体为 Panshaker Inc，修复 Synapse OS 图片与截图文件名，新增透明底 Favicon，抽取共享样式，补齐多语言翻译与页面 data-i18n 覆盖，完善招聘与团队页面文案 |
 
 ---
 
