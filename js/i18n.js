@@ -206,13 +206,13 @@
         // Check if already exists
         if (document.getElementById('ps-lang-switcher')) return;
 
-        // Find the header nav area to insert into
-        var navInner = document.querySelector('.nav-inner');
-        if (!navInner) return; // fallback: no header found
+        // Inject into .nav-links so the header stays a clean 2-child flex layout
+        var navLinks = document.querySelector('.nav-links');
+        if (!navLinks) return; // fallback: no header found
 
         var container = document.createElement('div');
         container.id = 'ps-lang-switcher';
-        container.style.cssText = 'position:relative;margin-left:32px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;';
+        container.style.cssText = 'position:relative;margin-left:16px;display:inline-flex;align-items:center;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;';
 
         // Toggle button — shows current language as text
         var btn = document.createElement('button');
@@ -277,7 +277,7 @@
 
         container.appendChild(btn);
         container.appendChild(dropdown);
-        navInner.appendChild(container);
+        navLinks.appendChild(container);
     }
 
     function updateSwitcherUI() {
