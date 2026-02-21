@@ -484,6 +484,7 @@ input, textarea { font-size: 16px; }
 
 ### 10.2 待办事项
 
+- 首页Synapse OS旁边图片载入错误
 - [ ] 提供 `logo-transparent.png` 文件作为 Favicon
 - [ ] 将截图文件名从中文改为英文（避免 URL 编码问题）
 - [ ] 为 i18n 系统的 HTML 元素添加 `data-i18n` 属性以完成完整翻译覆盖
