@@ -4,26 +4,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>关于伴勺科技 | PanShaker Services - The Art of Wok</title>
+    <title>Panshaker Services</title>
+    <link rel="icon" type="image/png" href="assets/images/logo-transparent.png">
     <style>
         /* --- 新增部分开始：定义你的字体 --- */
         @font-face {
             font-family: 'MyBrandFont';
             /* 给字体起个名字，随便叫啥 */
-            src: url('myfont.ttf') format('truetype');
-            /* 这里必须和你放入的文件名一模一样！ */
+            src: url('assets/fonts/myfont.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
 
         @font-face {
             font-family: 'LogoFont';
-            src: url('logo.otf') format('opentype');
+            src: url('assets/fonts/logo.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
         }
-
-        /* --- 新增部分结束 --- */
 
         /* 全局重置与基础样式 */
         * {
@@ -128,7 +126,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            background: #f0f4f8;
             z-index: -1;
         }
 
@@ -476,7 +474,7 @@
                 onmouseleave="this.classList.remove('hovered')" onclick="this.classList.toggle('clicked')">
                 <div class="logo-en">
                     <span
-                        style="font-family: 'LogoFont', sans-serif; color: #0E427E; letter-spacing: -1px;">PanShaker</span><span
+                        style="font-family: 'LogoFont', sans-serif; color: #0E427E; letter-spacing: -1px;">Panshaker</span><span
                         style="font-family: 'LogoFont', sans-serif; color: #62BA46; margin-left: 6px; letter-spacing: -1px;">Services</span>
                 </div>
                 <div class="logo-cn">
@@ -563,7 +561,7 @@
                 <div class="job-description" style="margin-bottom: 40px;">
                     <h3 style="font-size: 20px; color: #333; margin-bottom: 15px;">Role Overview</h3>
                     <p style="color: #666; margin-bottom: 20px; font-size: 16px;">
-                        PanShaker Services is seeking a dedicated Lead Field Service Technician to ensure the
+                        Panshaker Services is seeking a dedicated Lead Field Service Technician to ensure the
                         reliability of our automated culinary systems. You will be responsible for the installation,
                         maintenance, and repair of our cutting-edge robotic wok hardware at client sites.
                         <strong>Valid work authorization in the US is required.</strong>
@@ -571,7 +569,7 @@
 
                     <h3 style="font-size: 20px; color: #333; margin-bottom: 15px;">Key Responsibilities</h3>
                     <ul style="list-style: disc; margin-left: 20px; color: #666; margin-bottom: 20px; font-size: 16px;">
-                        <li>Perform on-site installation, commissioning, and maintenance of PanShaker automated cooking
+                        <li>Perform on-site installation, commissioning, and maintenance of Panshaker automated cooking
                             units.</li>
                         <li>Diagnose technical issues and perform repairs to minimize downtime.</li>
                         <li>Provide training and technical support to kitchen staff.</li>
@@ -623,7 +621,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h4>PanShaker Services</h4>
+                    <h4>Panshaker Services</h4>
                     <ul>
                         <li><a href="about.html">关于我们</a></li>
                         <li><a href="careers.html">加入团队</a></li>
@@ -647,12 +645,14 @@
                 </div>
             </div>
             <div class="copyright">
-                <span style="font-family: sans-serif;">©</span>2026 PanShaker LLC. All Rights Reserved. <br>
+                <span style="font-family: sans-serif;">©</span>2026 Panshaker LLC. All Rights Reserved. <br>
                 聚焦北美市场的餐饮自动化基础设施服务商
             </div>
         </div>
     </footer>
 
+    <script src="js/device.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 
 </html>

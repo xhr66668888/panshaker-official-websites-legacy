@@ -1,0 +1,57 @@
+{
+  "nav.home": "ホーム",
+  "nav.about": "会社概要",
+  "nav.silent_kitchen": "サイレントキッチン",
+  "nav.contact": "お問い合わせ",
+  "nav.synapse": "Synapse OS",
+  "nav.careers": "採用情報",
+  "nav.investors": "投資家情報",
+
+  "hero.headline": "AI搭載の低人件費",
+  "hero.headline_strong": "商業中華料理ソリューション",
+  "hero.subtitle": "ハードウェアオートメーションとAIインテリジェントシステムの融合で外食産業の効率を再定義",
+  "hero.cta": "詳しく見る",
+
+  "philosophy.title": "食を超えて、ハードテックへ",
+  "philosophy.desc": "外食産業のコントロール不能な手動調理プロセスを、AI時代に適した高信頼の産業オートメーションプロセスに変換します。<br>北米で中華料理の新たな可能性を創造します。",
+
+  "solution.price_title": "競合の半額",
+  "solution.price_desc": "2週間以内の低コスト改装で<br>無人調理を実現",
+  "solution.synapse_title": "Synapse OS",
+  "solution.synapse_desc": "次世代レストラン運営システム<br>中華料理の海外展開をワンストップで標準化",
+  "solution.learn_more": "詳しく見る →",
+
+  "ambassador.name": "高雷雷",
+  "ambassador.title": "グローバルアンバサダー",
+  "ambassador.desc": "元北京国安FCメンバー、レストランオーナー",
+
+  "esg.title": "サイレントキッチンプログラム",
+  "esg.desc": "聴覚障害者コミュニティのエンパワーメント、包括的な雇用環境の創出<br>テクノロジーでコミュニケーションの壁を取り除き、誰もが輝ける社会へ",
+  "esg.cta": "詳しく見る",
+
+  "footer.company": "Panshaker Services",
+  "footer.about": "会社概要",
+  "footer.careers": "採用情報",
+  "footer.investors": "投資家情報",
+  "footer.tech": "技術サポート",
+  "footer.synapse": "Synapse OS",
+  "footer.hardware": "ハードウェアソリューション",
+  "footer.support": "アフターサービス",
+  "footer.contact": "お問い合わせ",
+  "footer.copyright": "©2026 Panshaker LLC. All Rights Reserved.",
+  "footer.tagline": "北米市場向け外食オートメーションインフラプロバイダー",
+
+  "about.banner_title": "企業情報",
+  "about.banner_subtitle": "Innovation for the Art of Wok",
+  "about.section_intro": "会社紹介",
+  "about.section_team": "経営チーム",
+
+  "team.xu_name": "シュー・ハオラン",
+  "team.xu_title": "創設者",
+  "team.view_profile": "プロフィール",
+
+  "careers.title": "チームに参加",
+
+  "investors.loading": "まだ頑張っています。ご支援に感謝しています。",
+  "investors.subtitle": "幸福と万事のご成功をお祈りいたします。"
+}

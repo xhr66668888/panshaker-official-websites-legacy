@@ -1,0 +1,57 @@
+{
+  "nav.home": "홈",
+  "nav.about": "회사 소개",
+  "nav.silent_kitchen": "사일런트 키친",
+  "nav.contact": "문의하기",
+  "nav.synapse": "Synapse OS",
+  "nav.careers": "채용",
+  "nav.investors": "투자자 관계",
+
+  "hero.headline": "AI 기반 저인건비",
+  "hero.headline_strong": "상업용 중식 솔루션",
+  "hero.subtitle": "하드웨어 자동화와 AI 지능형 시스템을 통합하여 외식 산업의 효율성을 재정의",
+  "hero.cta": "자세히 보기",
+
+  "philosophy.title": "음식을 넘어, 하드 테크",
+  "philosophy.desc": "외식 산업의 통제 불가능한 수동 조리 과정을 AI 시대에 맞는 고신뢰 산업 자동화 프로세스로 전환합니다.<br>북미에서 중화 요리의 새로운 가능성을 만듭니다.",
+
+  "solution.price_title": "경쟁사 가격의 1/2",
+  "solution.price_desc": "2주 이내 저비용 개조<br>무인 조리 실현",
+  "solution.synapse_title": "Synapse OS",
+  "solution.synapse_desc": "차세대 레스토랑 운영 시스템<br>중식 해외 진출을 위한 원스톱 표준화 솔루션",
+  "solution.learn_more": "자세히 보기 →",
+
+  "ambassador.name": "가오레이레이",
+  "ambassador.title": "글로벌 대사",
+  "ambassador.desc": "전 베이징 궈안 FC 선수, 레스토랑 사장",
+
+  "esg.title": "사일런트 키친 프로그램",
+  "esg.desc": "청각 장애인 커뮤니티 역량 강화, 포용적 고용 환경 구축<br>기술로 소통 장벽을 없애고, 모두가 빛나게",
+  "esg.cta": "자세히 보기",
+
+  "footer.company": "Panshaker Services",
+  "footer.about": "회사 소개",
+  "footer.careers": "채용",
+  "footer.investors": "투자자 관계",
+  "footer.tech": "기술 지원",
+  "footer.synapse": "Synapse OS",
+  "footer.hardware": "하드웨어 솔루션",
+  "footer.support": "사후 서비스",
+  "footer.contact": "연락처",
+  "footer.copyright": "©2026 Panshaker LLC. All Rights Reserved.",
+  "footer.tagline": "북미 시장을 위한 외식 자동화 인프라 제공업체",
+
+  "about.banner_title": "회사 정보",
+  "about.banner_subtitle": "Innovation for the Art of Wok",
+  "about.section_intro": "회사 소개",
+  "about.section_team": "경영진",
+
+  "team.xu_name": "쉬하오란",
+  "team.xu_title": "창립자",
+  "team.view_profile": "프로필 보기",
+
+  "careers.title": "우리 팀에 합류하세요",
+
+  "investors.loading": "아직 열심히 노력 중입니다. 응원해 주셔서 감사합니다.",
+  "investors.subtitle": "행복한 생활과 만사형통을 기원합니다."
+}

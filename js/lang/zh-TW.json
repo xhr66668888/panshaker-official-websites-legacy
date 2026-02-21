@@ -1,0 +1,57 @@
+{
+  "nav.home": "首頁",
+  "nav.about": "關於我們",
+  "nav.silent_kitchen": "無聲廚房",
+  "nav.contact": "聯繫我們",
+  "nav.synapse": "Synapse OS",
+  "nav.careers": "加入團隊",
+  "nav.investors": "投資者關係",
+
+  "hero.headline": "AI 賦能下低人工成本",
+  "hero.headline_strong": "商業中餐解決方案",
+  "hero.subtitle": "融合硬體自動化與 AI 智慧系統，重新定義餐飲行業效率",
+  "hero.cta": "了解更多",
+
+  "philosophy.title": "不止於餐飲，更是硬科技",
+  "philosophy.desc": "我們將餐飲業不可控的人工烹飪環節，轉換為 AI 時代高度可靠的工業自動化環節。<br>在北美，書寫中華美食的各種可能。",
+
+  "solution.price_title": "競品價格 1/2",
+  "solution.price_desc": "< 2週 低成本改裝<br>實現無人化烹飪",
+  "solution.synapse_title": "Synapse OS",
+  "solution.synapse_desc": "下一代餐飲操作系統<br>打造中餐出海標準化一條龍服務",
+  "solution.learn_more": "了解更多 →",
+
+  "ambassador.name": "高雷雷",
+  "ambassador.title": "全球大使",
+  "ambassador.desc": "前北京國安隊隊員，餐廳老闆",
+
+  "esg.title": "無聲廚房計劃",
+  "esg.desc": "賦能聽障群體，創造包容性就業環境<br>用科技消除溝通障礙，讓每個人都能發光發熱",
+  "esg.cta": "了解更多",
+
+  "footer.company": "Panshaker Services",
+  "footer.about": "關於我們",
+  "footer.careers": "加入團隊",
+  "footer.investors": "投資者關係",
+  "footer.tech": "技術支援",
+  "footer.synapse": "Synapse OS",
+  "footer.hardware": "硬體改造方案",
+  "footer.support": "售後服務",
+  "footer.contact": "聯繫方式",
+  "footer.copyright": "©2026 Panshaker LLC. All Rights Reserved.",
+  "footer.tagline": "聚焦北美市場的餐飲自動化基礎設施服務商",
+
+  "about.banner_title": "公司資訊",
+  "about.banner_subtitle": "Innovation for the Art of Wok",
+  "about.section_intro": "公司介紹",
+  "about.section_team": "管理團隊",
+
+  "team.xu_name": "徐浩然",
+  "team.xu_title": "創始人",
+  "team.view_profile": "閱讀簡歷",
+
+  "careers.title": "加入我們",
+
+  "investors.loading": "我們還在努力，感謝您的支持。",
+  "investors.subtitle": "祝您生活幸福，萬事如意。"
+}

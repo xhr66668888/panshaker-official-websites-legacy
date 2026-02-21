@@ -5,26 +5,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
     <meta name="format-detection" content="telephone=no">
-    <title>关于伴勺科技 | PanShaker Services - The Art of Wok</title>
+    <title>Panshaker Services</title>
+    <link rel="icon" type="image/png" href="assets/images/logo-transparent.png">
     <style>
         /* --- 新增部分开始：定义你的字体 --- */
         @font-face {
             font-family: 'MyBrandFont';
             /* 给字体起个名字，随便叫啥 */
-            src: url('myfont.ttf') format('truetype');
-            /* 这里必须和你放入的文件名一模一样！ */
+            src: url('assets/fonts/myfont.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
 
         @font-face {
             font-family: 'LogoFont';
-            src: url('logo.otf') format('opentype');
+            src: url('assets/fonts/logo.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
         }
-
-        /* --- 新增部分结束 --- */
 
         /* 全局重置与基础样式 */
         * {
@@ -159,7 +157,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            background: #f0f4f8;
             z-index: -1;
         }
 
@@ -179,10 +177,7 @@
             display: block;
             margin-top: 10px;
             font-size: 80px;
-            background: linear-gradient(135deg, #0E427E 0%, #62BA46 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #0E427E;
         }
 
         .hero-content p {
@@ -214,10 +209,7 @@
             margin-bottom: 40px;
             font-weight: 600;
             letter-spacing: -1px;
-            background: linear-gradient(135deg, #0E427E 0%, #62BA46 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #0E427E;
         }
 
         .philosophy p {
@@ -232,7 +224,7 @@
         .divider {
             width: 80px;
             height: 5px;
-            background: linear-gradient(90deg, #0E427E 0%, #62BA46 100%);
+            background: #62BA46;
             margin: 50px auto;
             border-radius: 3px;
         }
@@ -339,7 +331,7 @@
 
         /* ESG区域 */
         .esg-section {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: #f5f7fa;
             color: #333;
             text-align: center;
         }
@@ -720,7 +712,7 @@
                 onmouseleave="this.classList.remove('hovered')" onclick="this.classList.toggle('clicked')">
                 <div class="logo-en">
                     <span
-                        style="font-family: 'LogoFont', sans-serif; color: #0E427E; letter-spacing: -1px;">PanShaker</span><span
+                        style="font-family: 'LogoFont', sans-serif; color: #0E427E; letter-spacing: -1px;">Panshaker</span><span
                         style="font-family: 'LogoFont', sans-serif; color: #62BA46; margin-left: 6px; letter-spacing: -1px;">Services</span>
                 </div>
                 <div class="logo-cn">
@@ -960,7 +952,7 @@
                 <div class="split-img" style="background: transparent; padding: 0; overflow: hidden;">
                     <div
                         style="width: 100%; height: 100%; background: #f9f9f9; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 20px;">
-                        <img src="product.jpg" alt="Product" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                        <img src="assets/images/product.jpg" alt="Product" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -985,7 +977,7 @@
                 <!-- Make image clickable too -->
                 <a href="synapse_os.html" class="split-img"
                     style="background: #eef2f5; display: flex; align-items: center; justify-content: center; flex-direction: column; overflow: hidden; border-radius: 20px; cursor: pointer; text-decoration: none;">
-                    <img src="restaurant.webp" alt="Restaurant Concept"
+                    <img src="assets/images/restaurant.webp" alt="Restaurant Concept"
                         style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);"
                         onmouseenter="this.style.transform='scale(1.08)'"
                         onmouseleave="this.style.transform='scale(1)'"
@@ -1026,7 +1018,7 @@
 
             <div class="ambassador-card">
                 <div class="ambassador-img-container">
-                    <img src="gaoleilei.png" alt="Gao Leilei"
+                    <img src="assets/images/gaoleilei.png" alt="Gao Leilei"
                         style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
                 </div>
                 <div class="ambassador-text">
@@ -1057,7 +1049,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h4>PanShaker Services</h4>
+                    <h4>Panshaker Services</h4>
                     <ul>
                         <li><a href="about.html">关于我们</a></li>
                         <li><a href="careers.html">加入团队</a></li>
@@ -1081,12 +1073,14 @@
                 </div>
             </div>
             <div class="copyright">
-                <span style="font-family: sans-serif;">©</span>2026 PanShaker LLC. All Rights Reserved. <br>
+                <span style="font-family: sans-serif;">©</span>2026 Panshaker LLC. All Rights Reserved. <br>
                 聚焦北美市场的餐饮自动化基础设施服务商
             </div>
         </div>
     </footer>
 
+    <script src="js/device.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 
 </html>

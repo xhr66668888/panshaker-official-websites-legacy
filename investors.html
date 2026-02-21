@@ -4,19 +4,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
-    <title>投资者关系 | 伴勺科技</title>
+    <title>Panshaker Services</title>
+    <link rel="icon" type="image/png" href="assets/images/logo-transparent.png">
     <!-- Same styles -->
     <style>
         @font-face {
             font-family: 'LogoFont';
-            src: url('logo.otf') format('opentype');
+            src: url('assets/fonts/logo.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
         }
 
         @font-face {
             font-family: 'MyFont';
-            src: url('myfont.ttf') format('truetype');
+            src: url('assets/fonts/myfont.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
@@ -185,7 +186,7 @@
                 onmouseleave="this.classList.remove('hovered')" onclick="this.classList.toggle('clicked')">
                 <div class="logo-en">
                     <span
-                        style="font-family: 'LogoFont', sans-serif; color: #0E427E; letter-spacing: -1px;">PanShaker</span><span
+                        style="font-family: 'LogoFont', sans-serif; color: #0E427E; letter-spacing: -1px;">Panshaker</span><span
                         style="font-family: 'LogoFont', sans-serif; color: #62BA46; margin-left: 6px; letter-spacing: -1px;">Services</span>
                 </div>
                 <div class="logo-cn">
@@ -206,7 +207,7 @@
     <div class="egg-container">
         <!-- Placeholder: To be replaced by nasdaq_celebration.png when available -->
         <div class="egg-image-placeholder" id="image-container">
-            <img src="relations.jpg" alt="Investor Relations">
+            <img src="assets/images/relations.jpg" alt="Investor Relations">
         </div>
 
         <div class="egg-text">我们还在努力，感谢您的支持。</div>
@@ -216,7 +217,7 @@
 
 
     <audio id="bgm" loop>
-        <source src="mymusic.mp3" type="audio/mpeg">
+        <source src="assets/media/mymusic.mp3" type="audio/mpeg">
     </audio>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -237,6 +238,8 @@
             }
         });
     </script>
+    <script src="js/device.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 
 </html>

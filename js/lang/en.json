@@ -1,0 +1,57 @@
+{
+  "nav.home": "Home",
+  "nav.about": "About Us",
+  "nav.silent_kitchen": "Silent Kitchen",
+  "nav.contact": "Contact",
+  "nav.synapse": "Synapse OS",
+  "nav.careers": "Careers",
+  "nav.investors": "Investor Relations",
+
+  "hero.headline": "AI-Powered Low-Labor-Cost",
+  "hero.headline_strong": "Commercial Chinese Cuisine Solutions",
+  "hero.subtitle": "Integrating hardware automation with AI intelligent systems to redefine restaurant efficiency",
+  "hero.cta": "Learn More",
+
+  "philosophy.title": "Beyond Food — It's Hard Tech",
+  "philosophy.desc": "We transform the uncontrollable manual cooking process into a highly reliable industrial automation process for the AI era.<br>Writing new possibilities for Chinese cuisine in North America.",
+
+  "solution.price_title": "Half the Price of Competitors",
+  "solution.price_desc": "< 2 weeks low-cost retrofit<br>enabling unmanned cooking",
+  "solution.synapse_title": "Synapse OS",
+  "solution.synapse_desc": "Next-gen restaurant operating system<br>One-stop standardized solution for Chinese cuisine overseas",
+  "solution.learn_more": "Learn More →",
+
+  "ambassador.name": "Gao Leilei",
+  "ambassador.title": "Global Ambassador",
+  "ambassador.desc": "Former Beijing Guoan FC player, restaurant owner",
+
+  "esg.title": "Silent Kitchen Initiative",
+  "esg.desc": "Empowering the hearing-impaired community, creating inclusive employment<br>Using technology to break communication barriers, let everyone shine",
+  "esg.cta": "Learn More",
+
+  "footer.company": "Panshaker Services",
+  "footer.about": "About Us",
+  "footer.careers": "Careers",
+  "footer.investors": "Investor Relations",
+  "footer.tech": "Technical Support",
+  "footer.synapse": "Synapse OS",
+  "footer.hardware": "Hardware Solutions",
+  "footer.support": "After-Sales Service",
+  "footer.contact": "Contact",
+  "footer.copyright": "©2026 Panshaker LLC. All Rights Reserved.",
+  "footer.tagline": "Restaurant Automation Infrastructure Provider for the North American Market",
+
+  "about.banner_title": "Company Information",
+  "about.banner_subtitle": "Innovation for the Art of Wok",
+  "about.section_intro": "About Panshaker",
+  "about.section_team": "Leadership",
+
+  "team.xu_name": "Haoran Xu",
+  "team.xu_title": "Founder",
+  "team.view_profile": "View Profile",
+
+  "careers.title": "Join Our Team",
+
+  "investors.loading": "We're still working hard. Thank you for your support.",
+  "investors.subtitle": "Wishing you happiness and all the best."
+}

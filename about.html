@@ -5,19 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
     <meta name="format-detection" content="telephone=no">
-    <title>关于我们 | 伴勺科技</title>
+    <title>Panshaker Services</title>
+    <link rel="icon" type="image/png" href="assets/images/logo-transparent.png">
     <style>
         /* --- 字体定义 --- */
         @font-face {
             font-family: 'LogoFont';
-            src: url('logo.otf') format('opentype');
+            src: url('assets/fonts/logo.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
         }
 
         @font-face {
             font-family: 'MyBrandFont';
-            src: url('myfont.ttf') format('truetype');
+            src: url('assets/fonts/myfont.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
@@ -163,7 +164,7 @@
             padding-top: 200px;
             padding-bottom: 100px;
             /* background: #f8f8f8; replaced by image */
-            background: url('09-JackRacino.jpeg') no-repeat center center;
+            background: url('assets/images/09-JackRacino.jpeg') no-repeat center center;
             background-size: cover;
             text-align: center;
             position: relative;
@@ -439,7 +440,7 @@
                 onmouseleave="this.classList.remove('hovered')" onclick="this.classList.toggle('clicked')">
                 <div class="logo-en">
                     <span
-                        style="font-family: 'LogoFont', sans-serif; color: #0E427E; letter-spacing: -1px;">PanShaker</span><span
+                        style="font-family: 'LogoFont', sans-serif; color: #0E427E; letter-spacing: -1px;">Panshaker</span><span
                         style="font-family: 'LogoFont', sans-serif; color: #62BA46; margin-left: 6px; letter-spacing: -1px;">Services</span>
                 </div>
                 <div class="logo-cn">
@@ -460,7 +461,7 @@
     <div class="page-banner">
         <div class="container">
             <h1>公司信息</h1>
-            <p>Innovation for the Art of Wok</p>
+            <p>Innovation Meets Automation</p>
         </div>
     </div>
 
@@ -468,7 +469,7 @@
         <div class="container">
             <h2 class="section-title">公司介绍</h2>
             <div class="text-block">
-                <p>伴勺科技（PanShaker Services）是北美餐饮自动化领域的创新领跑者。我们的使命是「让地道的东方味道跨越国界，让每一座城市都能便捷地享受美食」。通过深度集成工业级自动化硬件与自主研发的
+                <p>伴勺科技（Panshaker Services）是北美餐饮自动化领域的创新领跑者。我们的使命是「让地道的东方味道跨越国界，让每一座城市都能便捷地享受美食」。通过深度集成工业级自动化硬件与自主研发的
                     IoT 云端系统，我们为北美餐饮业提供了极简、低成本且美味的自动化商业解决方案。</p>
                 <p>我们是成功将“无人化烹饪”在北美中餐赛道落地的先驱。我们看到了北美市场传统餐饮中的痛点，将不可控的烹饪环节转化为标准化的流程，彻底解决了行业长期以来“高人工、低效率、品质不稳定，商业复杂”的痛点。
                 </p>
@@ -481,7 +482,7 @@
     </section>
 
     <section class="section"
-        style="background: url('managementteam.jpg') no-repeat center center; background-size: cover; padding-top: 60px;">
+        style="background: url('assets/images/managementteam.jpg') no-repeat center center; background-size: cover; padding-top: 60px;">
         <div class="container">
             <h2 class="section-title" style="color: #fff; border-color: #fff;">管理团队</h2>
             <div class="team-grid">
@@ -493,20 +494,24 @@
                     <a href="profile_xu.html" class="view-profile-btn">阅读简历 <span style="margin-left:5px;">→</span></a>
                 </div>
 
-                <!-- 联合创始人 -->
+                <!-- 联合创始人 - 暂时屏蔽，保留代码，需要时取消注释即可上线 -->
+                <!--
                 <div class="team-card">
                     <span class="team-name">孙启圣</span>
                     <div class="team-title">联合创始人</div>
                     <a href="profile_sun.html" class="view-profile-btn">阅读简历 <span style="margin-left:5px;">→</span></a>
                 </div>
+                -->
 
-                <!-- CTO -->
+                <!-- CTO - 暂时屏蔽，保留代码，需要时取消注释即可上线 -->
+                <!--
                 <div class="team-card">
                     <span class="team-name">unknown</span>
                     <div class="team-title">CTO</div>
                     <a href="profile_unknown.html" class="view-profile-btn">阅读简历 <span
                             style="margin-left:5px;">→</span></a>
                 </div>
+                -->
 
             </div>
         </div>
@@ -516,7 +521,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h4>PanShaker Services</h4>
+                    <h4>Panshaker Services</h4>
                     <ul>
                         <li><a href="about.html">关于我们</a></li>
                         <li><a href="careers.html">加入团队</a></li>
@@ -540,12 +545,14 @@
                 </div>
             </div>
             <div class="copyright">
-                <span style="font-family: sans-serif;">©</span>2026 PanShaker LLC. All Rights Reserved. <br>
+                <span style="font-family: sans-serif;">©</span>2026 Panshaker LLC. All Rights Reserved. <br>
                 聚焦北美市场的餐饮自动化基础设施服务商
             </div>
         </div>
     </footer>
 
+    <script src="js/device.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 
 </html>
