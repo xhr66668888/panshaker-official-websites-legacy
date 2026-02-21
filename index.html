@@ -47,12 +47,12 @@
         }
 
         .hero-content h1 {
-            font-size: 72px;
+            font-size: clamp(42px, 6vw, 64px);
             font-weight: 200;
-            margin-bottom: 30px;
-            letter-spacing: 1px;
-            line-height: 1.2;
-            max-width: 1000px;
+            margin-bottom: 26px;
+            letter-spacing: 0.5px;
+            line-height: 1.15;
+            max-width: 960px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -60,17 +60,17 @@
         .hero-content h1 strong {
             font-weight: 700;
             display: block;
-            margin-top: 10px;
-            font-size: 80px;
+            margin-top: 8px;
+            font-size: clamp(50px, 7vw, 74px);
             color: #0E427E;
         }
 
         .hero-content p {
-            font-size: 28px;
+            font-size: clamp(18px, 3vw, 24px);
             color: #666;
-            margin-bottom: 40px;
+            margin-bottom: 36px;
             font-weight: 300;
-            max-width: 900px;
+            max-width: 820px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -816,7 +816,7 @@
                 <!-- Make image clickable too -->
                 <a href="synapse_os.html" class="split-img"
                     style="background: #eef2f5; display: flex; align-items: center; justify-content: center; flex-direction: column; overflow: hidden; border-radius: 20px; cursor: pointer; text-decoration: none;">
-                    <img src="assets/screenshots/synapse-dashboard.png" alt="Synapse OS Dashboard"
+                    <img src="assets/images/restaurant.webp" alt="Synapse OS Dashboard"
                         style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);"
                         onmouseenter="this.style.transform='scale(1.08)'"
                         onmouseleave="this.style.transform='scale(1)'"
