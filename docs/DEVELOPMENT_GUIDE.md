@@ -91,6 +91,9 @@ font-family: 'MyBrandFont', "PingFang SC", "Microsoft YaHei", -apple-system, Bli
 
 ### 1.6 Slogan 规范
 
+- ✅ 品牌中文 Slogan：烟火无界，至味如初。
+- ✅ 品牌英文 Slogan：Timeless Flavor, Everywhere.
+
 ⚠️ 以下 Slogan 已弃用，不得在任何页面出现：
 - "The Art of Wok"
 - "Amazing Wok"
