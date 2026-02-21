@@ -193,32 +193,52 @@
      * Language Switcher UI
      * ============================ */
 
+    // Short labels for the header button (compact display)
+    var LANG_SHORT = {
+        'zh-CN': '中文',
+        'en': 'EN',
+        'zh-TW': '繁體',
+        'ko': '한국',
+        'ja': '日本'
+    };
+
     function createSwitcherUI() {
         // Check if already exists
         if (document.getElementById('ps-lang-switcher')) return;
 
+        // Find the header nav area to insert into
+        var navInner = document.querySelector('.nav-inner');
+        if (!navInner) return; // fallback: no header found
+
         var container = document.createElement('div');
         container.id = 'ps-lang-switcher';
-        container.style.cssText = 'position:fixed;bottom:20px;right:20px;z-index:9999;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;';
+        container.style.cssText = 'position:relative;margin-left:32px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;';
 
-        // Toggle button
+        // Toggle button — shows current language as text
         var btn = document.createElement('button');
         btn.id = 'ps-lang-btn';
-        btn.style.cssText = 'width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid #e0e0e0;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,0.1);transition:all 0.3s;font-size:16px;color:#0E427E;';
-        btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>';
+        btn.style.cssText = 'background:none;border:1px solid #e0e0e0;border-radius:6px;cursor:pointer;display:flex;align-items:center;gap:6px;padding:6px 14px;font-size:13px;color:#666;font-weight:500;transition:all 0.3s;white-space:nowrap;';
+        btn.innerHTML = '<span id="ps-lang-label">' + (LANG_SHORT[currentLang] || currentLang) + '</span>'
+            + '<svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 3 3-3"/></svg>';
         btn.setAttribute('aria-label', 'Switch Language');
+        btn.addEventListener('mouseenter', function () { btn.style.borderColor = '#62BA46'; btn.style.color = '#62BA46'; });
+        btn.addEventListener('mouseleave', function () {
+            var dd = document.getElementById('ps-lang-dropdown');
+            if (dd && dd.style.display === 'block') return;
+            btn.style.borderColor = '#e0e0e0'; btn.style.color = '#666';
+        });
 
-        // Dropdown
+        // Dropdown — opens downward from header
         var dropdown = document.createElement('div');
         dropdown.id = 'ps-lang-dropdown';
-        dropdown.style.cssText = 'position:absolute;bottom:52px;right:0;background:#fff;border:1px solid #e0e0e0;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.12);overflow:hidden;display:none;min-width:160px;';
+        dropdown.style.cssText = 'position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid #e0e0e0;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.1);overflow:hidden;display:none;min-width:150px;z-index:9999;';
 
         for (var i = 0; i < SUPPORTED_LANGS.length; i++) {
             var lang = SUPPORTED_LANGS[i];
             var item = document.createElement('a');
             item.href = '#';
             item.setAttribute('data-lang', lang);
-            item.style.cssText = 'display:block;padding:12px 20px;font-size:14px;color:#333;text-decoration:none;transition:background 0.2s;border-bottom:1px solid #f0f0f0;';
+            item.style.cssText = 'display:block;padding:10px 18px;font-size:13px;color:#333;text-decoration:none;transition:background 0.2s;border-bottom:1px solid #f5f5f5;';
             item.textContent = LANG_LABELS[lang];
             if (lang === currentLang) {
                 item.style.color = '#62BA46';
@@ -229,9 +249,10 @@
                     e.preventDefault();
                     PanI18n.switchLang(l);
                     dropdown.style.display = 'none';
+                    btn.style.borderColor = '#e0e0e0'; btn.style.color = '#666';
                 });
             })(lang);
-            item.addEventListener('mouseenter', function () { this.style.background = '#f8f8f8'; });
+            item.addEventListener('mouseenter', function () { this.style.background = '#fafafa'; });
             item.addEventListener('mouseleave', function () { this.style.background = '#fff'; });
             dropdown.appendChild(item);
         }
@@ -243,19 +264,29 @@
 
         btn.addEventListener('click', function (e) {
             e.stopPropagation();
-            dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+            var isOpen = dropdown.style.display === 'block';
+            dropdown.style.display = isOpen ? 'none' : 'block';
+            if (isOpen) { btn.style.borderColor = '#e0e0e0'; btn.style.color = '#666'; }
+            else { btn.style.borderColor = '#62BA46'; btn.style.color = '#62BA46'; }
         });
 
         document.addEventListener('click', function () {
             dropdown.style.display = 'none';
+            btn.style.borderColor = '#e0e0e0'; btn.style.color = '#666';
         });
 
-        container.appendChild(dropdown);
         container.appendChild(btn);
-        document.body.appendChild(container);
+        container.appendChild(dropdown);
+        navInner.appendChild(container);
     }
 
     function updateSwitcherUI() {
+        // Update button label
+        var label = document.getElementById('ps-lang-label');
+        if (label) {
+            label.textContent = LANG_SHORT[currentLang] || currentLang;
+        }
+        // Update dropdown highlights
         var dropdown = document.getElementById('ps-lang-dropdown');
         if (!dropdown) return;
         var items = dropdown.querySelectorAll('a[data-lang]');
