@@ -816,11 +816,14 @@
                 <!-- Make image clickable too -->
                 <a href="synapse_os.html" class="split-img"
                     style="background: #eef2f5; display: flex; align-items: center; justify-content: center; flex-direction: column; overflow: hidden; border-radius: 20px; cursor: pointer; text-decoration: none;">
-                    <img src="assets/images/restaurant.webp" alt="Synapse OS Dashboard"
-                        style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);"
-                        onmouseenter="this.style.transform='scale(1.08)'"
-                        onmouseleave="this.style.transform='scale(1)'"
-                        loading="lazy">
+                    <picture style="width: 100%; height: 100%; display: block;">
+                        <source srcset="assets/images/restaurant.webp" type="image/webp">
+                        <img src="assets/screenshots/synapse-dashboard.png" alt="Synapse OS Dashboard"
+                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);"
+                            onmouseenter="this.style.transform='scale(1.08)'"
+                            onmouseleave="this.style.transform='scale(1)'"
+                            loading="lazy">
+                    </picture>
                 </a>
             </div>
         </div>
