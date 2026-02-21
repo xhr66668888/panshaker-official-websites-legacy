@@ -50,9 +50,7 @@
 
         .page-banner h1 {
             font-family: 'MyBrandFont', sans-serif;
-            /* Custom Font */
-            font-size: 56px;
-            /* Slightly larger for banner impact */
+            font-size: 44px;
             font-weight: normal;
             color: #fff;
             /* White Text */
@@ -78,7 +76,7 @@
         }
 
         .section-title {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 600;
             color: #111;
             margin-bottom: 40px;
@@ -179,6 +177,7 @@
 
         /* Mobile & iPhone Optimization (< 768px) */
         @media (max-width: 768px) {
+
             /* 导航优化 */
             header {
                 height: auto;
@@ -242,9 +241,8 @@
                 padding: 60px 0;
             }
 
-            /* 内容区域优化 */
             .section-title {
-                font-size: 28px !important;
+                font-size: 24px !important;
                 margin-bottom: 24px;
             }
 
@@ -280,7 +278,7 @@
         /* Large phones (415px - 768px) */
         @media (min-width: 415px) and (max-width: 768px) {
             .page-banner h1 {
-                font-size: 40px !important;
+                font-size: 36px !important;
             }
         }
 
@@ -290,7 +288,8 @@
                 font-size: 16px;
             }
 
-            a, button {
+            a,
+            button {
                 -webkit-tap-highlight-color: rgba(98, 186, 70, 0.2);
             }
         }
@@ -334,13 +333,17 @@
         <div class="container">
             <h2 class="section-title" data-i18n="about.intro.title">公司介绍</h2>
             <div class="text-block">
-                <p data-i18n="about.intro.p1">伴勺科技（Panshaker Services）是北美餐饮自动化领域的创新领跑者。我们的使命是「让地道的东方味道跨越国界，让每一座城市都能便捷地享受美食」。通过深度集成工业级自动化硬件与自主研发的
+                <p data-i18n="about.intro.p1">伴勺科技（Panshaker
+                    Services）是北美餐饮自动化领域的创新领跑者。我们的使命是「让地道的东方味道跨越国界，让每一座城市都能便捷地享受美食」。通过深度集成工业级自动化硬件与自主研发的
                     IoT 云端系统，我们为北美餐饮业提供了极简、低成本且美味的自动化商业解决方案。</p>
-                <p data-i18n="about.intro.p2">我们是成功将“无人化烹饪”在北美中餐赛道落地的先驱。我们看到了北美市场传统餐饮中的痛点，将不可控的烹饪环节转化为标准化的流程，彻底解决了行业长期以来“高人工、低效率、品质不稳定，商业复杂”的痛点。
+                <p data-i18n="about.intro.p2">
+                    我们是成功将“无人化烹饪”在北美中餐赛道落地的先驱。我们看到了北美市场传统餐饮中的痛点，将不可控的烹饪环节转化为标准化的流程，彻底解决了行业长期以来“高人工、低效率、品质不稳定，商业复杂”的痛点。
                 </p>
-                <p data-i18n="about.intro.p3">我们不仅自主经营品牌，更通过创新的“店中店”合作模式与机器订阅体系，为现有餐厅提供技术赋能。我们的核心竞争力源于自主研发炒菜机器人、人工智能视觉监控技术以及 Synapse OS
+                <p data-i18n="about.intro.p3">
+                    我们不仅自主经营品牌，更通过创新的“店中店”合作模式与机器订阅体系，为现有餐厅提供技术赋能。我们的核心竞争力源于自主研发炒菜机器人、人工智能视觉监控技术以及 Synapse OS
                     自动化餐厅管理系统，是替代预制菜的最优解决方案。</p>
-                <p data-i18n="about.intro.p4">未来，伴勺科技将持续深耕餐饮自动化浪潮，致力于将产品线从自动化炒菜机器人扩展至全品类中餐标准化基础设施，降低餐饮行业创业的门槛。我们坚持运用前沿科技连接物理世界与数字世界，为全球餐饮从业者创造价值，为每一位食客带来更有温度和实惠的美食体验。
+                <p data-i18n="about.intro.p4">
+                    未来，伴勺科技将持续深耕餐饮自动化浪潮，致力于将产品线从自动化炒菜机器人扩展至全品类中餐标准化基础设施，降低餐饮行业创业的门槛。我们坚持运用前沿科技连接物理世界与数字世界，为全球餐饮从业者创造价值，为每一位食客带来更有温度和实惠的美食体验。
                 </p>
             </div>
         </div>
@@ -356,7 +359,8 @@
                 <div class="team-card">
                     <span class="team-name" data-i18n="about.team.xu.name">徐浩然</span>
                     <div class="team-title" data-i18n="about.team.xu.role">创始人</div>
-                    <a href="profile_xu.html" class="view-profile-btn" data-i18n="about.team.view_profile">阅读简历 <span style="margin-left:5px;">→</span></a>
+                    <a href="profile_xu.html" class="view-profile-btn" data-i18n="about.team.view_profile">阅读简历 <span
+                            style="margin-left:5px;">→</span></a>
                 </div>
 
                 <!-- 联合创始人 - 暂时屏蔽，保留代码，需要时取消注释即可上线 -->
@@ -410,7 +414,8 @@
                 </div>
             </div>
             <div class="copyright">
-                <span style="font-family: sans-serif;">©</span><span data-i18n="footer.copyright">2026 Panshaker Inc. All Rights Reserved.</span> <br>
+                <span style="font-family: sans-serif;">©</span><span data-i18n="footer.copyright">2026 Panshaker Inc.
+                    All Rights Reserved.</span> <br>
                 <span data-i18n="footer.tagline">聚焦北美市场的餐饮自动化基础设施服务商</span>
             </div>
         </div>

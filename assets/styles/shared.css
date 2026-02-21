@@ -12,6 +12,56 @@
     font-style: normal;
 }
 
+/* SF Pro Display */
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SF-Pro-Display-Regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SF-Pro-Display-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SF-Pro-Display-Semibold.otf') format('opentype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SF-Pro-Display-Bold.otf') format('opentype');
+    font-weight: 700;
+}
+
+/* SF Pro Text */
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url('../fonts/SF-Pro-Text-Regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url('../fonts/SF-Pro-Text-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url('../fonts/SF-Pro-Text-Semibold.otf') format('opentype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url('../fonts/SF-Pro-Text-Bold.otf') format('opentype');
+    font-weight: 700;
+}
+
 :root {
     --brand-blue: #0E427E;
     --brand-green: #62BA46;
@@ -32,10 +82,28 @@ body {
     color: var(--brand-blue);
     background-color: #fff;
     line-height: 1.6;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
     overflow-x: hidden;
+}
+
+/* Language Specific Typography */
+html[lang="en"] body,
+html[lang="ko"] body,
+html[lang="ja"] body {
+    font-family: 'SF Pro Text', 'SF Pro Display', sans-serif;
+}
+
+html[lang="ko"] body,
+html[lang="ja"] body {
+    word-break: keep-all;
+}
+
+html[lang="zh-CN"] body,
+html[lang="zh-TW"] body {
+    font-family: 'MyBrandFont', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 a {
