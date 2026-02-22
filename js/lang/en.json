@@ -60,8 +60,7 @@
   "home.esg.desc": "Empowering the hearing-impaired community, creating inclusive employment<br>Using technology to break communication barriers, let everyone shine",
   "home.esg.cta": "Learn More",
 
-  "about.banner.title": "Company Information",
-  "about.banner.subtitle": "Innovation Meets Automation",
+  "about.banner.title": "Information",
   "about.intro.title": "About Panshaker",
   "about.intro.p1": "Panshaker Services is a leader in North American restaurant automation. Our mission is to bring authentic Eastern flavors across borders so every city can enjoy great food. By integrating industrial-grade automation hardware with our own AI, we deliver reliable, efficient kitchens.",
   "about.intro.p2": "We pioneered unmanned cooking for Chinese cuisine in North America, turning uncontrollable cooking steps into standardized processes to solve high labor costs, low efficiency, inconsistent quality, and operational complexity.",
@@ -84,8 +83,8 @@
   "profile.unknown.role": "CTO",
   "profile.unknown.p1": "unknown holds a Ph.D. in Computer Science from the University of Pennsylvania and a B.S. in Computer Science from Tianjin University.",
 
-  "careers.title": "Join Our Team",
-  "careers.heading": "Join Our Team",
+  "careers.title": "Careers",
+  "careers.heading": "Careers",
   "careers.role.title": "Lead Field Service Technician",
   "careers.role.location": "Location: Seattle, WA",
   "careers.role.salary": "Salary: $79,000 - $98,800 a year",

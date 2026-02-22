@@ -83,15 +83,38 @@ body {
 }
 
 /* Language Specific Typography */
-html[lang="ko"] body,
-html[lang="ja"] body {
+html[lang="ko"] body {
     word-break: keep-all;
+}
+
+/* Japanese: allow natural line breaks between characters and scale down slightly */
+html[lang="ja"] body {
+    word-break: normal;
+    overflow-wrap: break-word;
+    font-size: 15px;
+}
+
+html[lang="ja"] .nav-links a {
+    font-size: 12px;
+    letter-spacing: -0.5px;
+}
+
+html[lang="ja"] h1,
+html[lang="ja"] h2,
+html[lang="ja"] h3 {
+    overflow-wrap: break-word;
+    word-break: normal;
 }
 
 a {
     text-decoration: none;
     color: inherit;
     transition: color 0.3s ease;
+}
+
+/* Force all form and interactive elements to inherit brand font */
+input, textarea, select, button, table, th, td, code, pre, kbd, samp {
+    font-family: inherit;
 }
 
 ul {
