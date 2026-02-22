@@ -156,6 +156,22 @@
             color: var(--brand-blue);
         }
 
+        #ps-lang-dropdown a {
+            display: block !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            text-align: left !important;
+            padding: 10px 14px !important;
+            margin: 0 !important;
+            border-radius: 0 !important;
+            background: transparent !important;
+            transform: none !important;
+        }
+
+        #ps-lang-dropdown a:last-child {
+            border-bottom: none !important;
+        }
+
         /* Hide hamburger on desktop */
         .nav-toggle {
             display: none;
@@ -1270,12 +1286,12 @@
                     style="font-family:'LogoFont'; color:var(--brand-green); margin-left: 6px; letter-spacing: -1px;">Services</span>
             </div>
             <nav class="nav-links">
-                <a href="#products">产品</a>
-                <a href="#features">功能特性</a>
-                <a href="#stories">客户案例</a>
-                <a href="index.html">了解Panshaker</a>
-                <a href="about.html">关于我们</a>
-                <a href="#demo">预约演示</a>
+                <a href="#products" data-i18n="synapse.nav.products">产品</a>
+                <a href="#features" data-i18n="synapse.nav.features">功能特性</a>
+                <a href="#stories" data-i18n="synapse.nav.stories">客户案例</a>
+                <a href="index.html" data-i18n="synapse.nav.learn">了解Panshaker</a>
+                <a href="about.html" data-i18n="synapse.nav.about">关于我们</a>
+                <a href="#demo" data-i18n="synapse.nav.demo">预约演示</a>
             </nav>
         </div>
     </header>
@@ -1285,11 +1301,11 @@
         <div class="hero-content-wrapper" style="max-width: 980px; margin: 0 auto;">
             <img src="assets/images/synapseoslogo.png" alt="Synapse OS Logo" class="hero-logo-img"
                 style="width: 400px !important; margin-bottom: 50px !important;">
-            <h1 style="font-size: 64px; font-weight: 600; margin: 30px 0 30px 0; line-height: 1.1;">
+            <h1 data-i18n="synapse.hero.title" style="font-size: 64px; font-weight: 600; margin: 30px 0 30px 0; line-height: 1.1;">
                 为智能餐饮而生
             </h1>
             <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 30px;">
-                <p style="font-size: 18px; font-weight: 400; color: #a1a1a6; margin: 0;">专为</p>
+                <p data-i18n="synapse.hero.for" style="font-size: 18px; font-weight: 400; color: #a1a1a6; margin: 0;">专为</p>
                 <div style="display: inline-flex; align-items: baseline;">
                     <span
                         style="font-family: 'LogoFont', sans-serif; color: rgba(14, 66, 126, 0.9); letter-spacing: -1px; font-size: 20px; filter: brightness(0) invert(1);">Panshaker</span>
@@ -1298,17 +1314,19 @@
                     <sup
                         style="font-size: 10px; margin-left: 2px; font-family: sans-serif; color: #a1a1a6; font-weight: 400;">™</sup>
                 </div>
-                <p style="font-size: 18px; font-weight: 400; color: #a1a1a6; margin: 0;">打造</p>
+                <p data-i18n="synapse.hero.build" style="font-size: 18px; font-weight: 400; color: #a1a1a6; margin: 0;">打造</p>
             </div>
-            <p class="typography-subhead">
+            <p class="typography-subhead" data-i18n-html="synapse.hero.subtitle">
                 连接前台与后厨的AI神经中枢。从全渠道点单到智能炒菜机器人出餐，<br>
                 简化运营、加速服务、释放潜力。
             </p>
             <div style="margin-top: 40px; display: flex; gap: 40px; justify-content: center;">
                 <a href="#demo"
+                    data-i18n="synapse.hero.cta_demo"
                     style="font-size: 18px; color: #fff; text-decoration: none; font-weight: 500; transition: opacity 0.3s;"
                     onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">预约演示</a>
                 <a href="index.html"
+                    data-i18n="synapse.hero.cta_learn"
                     style="font-size: 18px; color: #fff; text-decoration: none; font-weight: 500; transition: opacity 0.3s;"
                     onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">了解Panshaker</a>
             </div>
@@ -1321,26 +1339,27 @@
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
                 <!-- Left Content -->
                 <div style="text-align: left; color: var(--bg-light);">
-                    <div
+                    <div data-i18n="synapse.ai.badge"
                         style="display: inline-block; padding: 8px 20px; background: rgba(14, 66, 126, 0.3); border-radius: 20px; font-size: 14px; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.9);">
                         AI驱动的智能助手
                     </div>
                     <h2 class="section-headline" style="color: var(--bg-light); margin-bottom: 24px; text-align: left;">
                         autoGLM
                     </h2>
-                    <h3 style="font-size: 28px; font-weight: 400; margin-bottom: 30px; color: rgba(255,255,255,0.85);">
+                    <h3 data-i18n="synapse.ai.subtitle" style="font-size: 28px; font-weight: 400; margin-bottom: 30px; color: rgba(255,255,255,0.85);">
                         餐厅运营 无需动手
                     </h3>
-                    <p style="font-size: 20px; line-height: 1.6; margin-bottom: 16px; color: rgba(255,255,255,0.9);">
+                    <p data-i18n-html="synapse.ai.desc1" style="font-size: 20px; line-height: 1.6; margin-bottom: 16px; color: rgba(255,255,255,0.9);">
                         同根同源技术<br>
                         接入<strong>智谱GLM-4</strong>、<strong>豆包</strong>、<strong>阿里通义千问</strong>等主流大模型
                     </p>
-                    <p class="typography-subhead"
+                    <p class="typography-subhead" data-i18n="synapse.ai.desc2"
                         style="margin-bottom: 50px; color: rgba(255,255,255,0.75); text-align: left;">
                         多Agent协作架构，语音识别秒懂需求，自动分解任务、智能推荐决策、口味数字孪生，让AI成为你的超级餐厅管家
                     </p>
 
                     <a href="#"
+                        data-i18n="synapse.ai.more"
                         style="color: var(--bg-light); font-size: 18px; text-decoration: none; font-weight: 500; transition: opacity 0.3s;"
                         onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
                         了解更多 →
@@ -1360,9 +1379,9 @@
                                 AI
                             </div>
                             <div>
-                                <div style="font-size: 16px; font-weight: 600; color: var(--text-main);">autoGLM 助手
+                                <div data-i18n="synapse.ai.chat.title" style="font-size: 16px; font-weight: 600; color: var(--text-main);">autoGLM 助手
                                 </div>
-                                <div style="font-size: 12px; color: var(--text-gray);">在线</div>
+                                <div data-i18n="synapse.ai.chat.online" style="font-size: 12px; color: var(--text-gray);">在线</div>
                             </div>
                         </div>
 
@@ -1370,7 +1389,7 @@
                         <div style="display: flex; flex-direction: column; gap: 16px;">
                             <!-- User Message -->
                             <div style="display: flex; justify-content: flex-end;">
-                                <div
+                                <div data-i18n="synapse.ai.chat.user"
                                     style="background: var(--brand-blue); color: var(--bg-light); padding: 12px 18px; border-radius: 18px 18px 4px 18px; max-width: 70%; font-size: 14px; line-height: 1.5;">
                                     帮我安排明天的排班
                                 </div>
@@ -1380,9 +1399,9 @@
                             <div style="display: flex; justify-content: flex-start;">
                                 <div
                                     style="background: var(--bg-light); border: 1px solid rgba(0,0,0,0.08); color: var(--text-main); padding: 14px 18px; border-radius: 18px 18px 18px 4px; max-width: 75%; font-size: 14px; line-height: 1.6;">
-                                    <div style="margin-bottom: 8px; font-weight: 600;">已为您分析明天客流预测</div>
-                                    <div style="margin-bottom: 8px; color: var(--text-gray);">建议配置：</div>
-                                    <div style="font-size: 13px; color: var(--text-gray);">• 前台 3人（午高峰+2）<br>• 后厨
+                                    <div data-i18n="synapse.ai.chat.ai_title" style="margin-bottom: 8px; font-weight: 600;">已为您分析明天客流预测</div>
+                                    <div data-i18n="synapse.ai.chat.ai_hint" style="margin-bottom: 8px; color: var(--text-gray);">建议配置：</div>
+                                    <div data-i18n-html="synapse.ai.chat.ai_list" style="font-size: 13px; color: var(--text-gray);">• 前台 3人（午高峰+2）<br>• 后厨
                                         4人<br>• 预计节省人力成本 18%</div>
                                 </div>
                             </div>
@@ -1461,11 +1480,12 @@
     <!-- Value Proposition Section -->
     <section style="padding: 100px 20px; background: #fff; text-align: center;">
         <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 class="section-headline" style="color: #1d1d1f;">更智能的运营。更少的成本。更多的收益。</h2>
-            <p class="section-subhead" style="color: #86868b; margin-bottom: 60px;">
+            <h2 class="section-headline" data-i18n="synapse.value.title" style="color: #1d1d1f;">更智能的运营。更少的成本。更多的收益。</h2>
+            <p class="section-subhead" data-i18n="synapse.value.desc" style="color: #86868b; margin-bottom: 60px;">
                 探索为现代餐饮企业打造的强大工具，在不牺牲质量的前提下降低成本
             </p>
             <a href="#demo"
+                data-i18n="synapse.value.cta"
                 style="color: var(--brand-blue); font-size: 18px; text-decoration: none; font-weight: 500;">预约演示 →</a>
         </div>
     </section>
@@ -1473,62 +1493,62 @@
     <!-- Products Section - Interactive Switch Card -->
     <section id="products" style="padding: 100px 20px; background: #F5F5F7;">
         <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 class="section-headline" style="color: #1d1d1f; margin-bottom: 80px;">匹配您业务的智能技术</h2>
+            <h2 class="section-headline" data-i18n="synapse.products.title" style="color: #1d1d1f; margin-bottom: 80px;">匹配您业务的智能技术</h2>
 
             <!-- Switch Card System -->
             <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center;">
                 <!-- Left Side - Menu Items -->
                 <div class="switch-card-left">
                     <div class="switch-card-item" data-target="0">
-                        <div class="switch-card-item-title">快餐服务</div>
+                        <div class="switch-card-item-title" data-i18n="synapse.products.item1.title">快餐服务</div>
                         <div class="switch-card-item-content">
-                            <p style="color: #666; margin-bottom: 15px;">自助点餐机 + KDS厨显系统</p>
-                            <a href="#" style="color: var(--brand-blue); font-size: 14px; text-decoration: none;">了解更多
+                            <p style="color: #666; margin-bottom: 15px;" data-i18n="synapse.products.item1.desc">自助点餐机 + KDS厨显系统</p>
+                            <a href="#" data-i18n="synapse.common.more" style="color: var(--brand-blue); font-size: 14px; text-decoration: none;">了解更多
                                 →</a>
                         </div>
                     </div>
 
                     <div class="switch-card-item" data-target="1">
-                        <div class="switch-card-item-title">正餐服务</div>
+                        <div class="switch-card-item-title" data-i18n="synapse.products.item2.title">正餐服务</div>
                         <div class="switch-card-item-content">
-                            <p style="color: #666; margin-bottom: 15px;">完整POS系统 + 桌台管理</p>
-                            <a href="#" style="color: var(--brand-blue); font-size: 14px; text-decoration: none;">了解更多
+                            <p style="color: #666; margin-bottom: 15px;" data-i18n="synapse.products.item2.desc">完整POS系统 + 桌台管理</p>
+                            <a href="#" data-i18n="synapse.common.more" style="color: var(--brand-blue); font-size: 14px; text-decoration: none;">了解更多
                                 →</a>
                         </div>
                     </div>
 
                     <div class="switch-card-item" data-target="2">
-                        <div class="switch-card-item-title">茶饮甜品店</div>
+                        <div class="switch-card-item-title" data-i18n="synapse.products.item3.title">茶饮甜品店</div>
                         <div class="switch-card-item-content">
-                            <p style="color: #666; margin-bottom: 15px;">快速点单 + 取餐屏幕</p>
-                            <a href="#" style="color: var(--brand-blue); font-size: 14px; text-decoration: none;">了解更多
+                            <p style="color: #666; margin-bottom: 15px;" data-i18n="synapse.products.item3.desc">快速点单 + 取餐屏幕</p>
+                            <a href="#" data-i18n="synapse.common.more" style="color: var(--brand-blue); font-size: 14px; text-decoration: none;">了解更多
                                 →</a>
                         </div>
                     </div>
 
                     <div class="switch-card-item" data-target="3">
-                        <div class="switch-card-item-title">智能炒菜餐厅</div>
+                        <div class="switch-card-item-title" data-i18n="synapse.products.item4.title">智能炒菜餐厅</div>
                         <div class="switch-card-item-content">
-                            <p style="color: #666; margin-bottom: 15px;">Panshaker机器人精准控制</p>
-                            <a href="#" style="color: var(--brand-green); font-size: 14px; text-decoration: none;">了解更多
+                            <p style="color: #666; margin-bottom: 15px;" data-i18n="synapse.products.item4.desc">Panshaker机器人精准控制</p>
+                            <a href="#" data-i18n="synapse.common.more" style="color: var(--brand-green); font-size: 14px; text-decoration: none;">了解更多
                                 →</a>
                         </div>
                     </div>
 
                     <div class="switch-card-item" data-target="4">
-                        <div class="switch-card-item-title">火锅自助餐</div>
+                        <div class="switch-card-item-title" data-i18n="synapse.products.item5.title">火锅自助餐</div>
                         <div class="switch-card-item-content">
-                            <p style="color: #666; margin-bottom: 15px;">平板点餐 + 智能计费</p>
-                            <a href="#" style="color: var(--brand-blue); font-size: 14px; text-decoration: none;">了解更多
+                            <p style="color: #666; margin-bottom: 15px;" data-i18n="synapse.products.item5.desc">平板点餐 + 智能计费</p>
+                            <a href="#" data-i18n="synapse.common.more" style="color: var(--brand-blue); font-size: 14px; text-decoration: none;">了解更多
                                 →</a>
                         </div>
                     </div>
 
                     <div class="switch-card-item" data-target="5">
-                        <div class="switch-card-item-title">连锁餐饮</div>
+                        <div class="switch-card-item-title" data-i18n="synapse.products.item6.title">连锁餐饮</div>
                         <div class="switch-card-item-content">
-                            <p style="color: #666; margin-bottom: 15px;">多店管理 + 数据汇总</p>
-                            <a href="#" style="color: var(--brand-blue); font-size: 14px; text-decoration: none;">了解更多
+                            <p style="color: #666; margin-bottom: 15px;" data-i18n="synapse.products.item6.desc">多店管理 + 数据汇总</p>
+                            <a href="#" data-i18n="synapse.common.more" style="color: var(--brand-blue); font-size: 14px; text-decoration: none;">了解更多
                                 →</a>
                         </div>
                     </div>
@@ -1563,7 +1583,7 @@
     <!-- Product Tiers Section -->
     <section style="padding: 100px 20px; background: #fff;">
         <div class="matrix-section">
-            <h2 class="section-headline" style="text-align: center; margin-bottom: 80px;">选择适合您的版本</h2>
+            <h2 class="section-headline" data-i18n="synapse.tiers.title" style="text-align: center; margin-bottom: 80px;">选择适合您的版本</h2>
 
             <!-- Tier 1: Gold (Full Width) -->
             <article class="tier-card tier-gold">
@@ -1571,12 +1591,12 @@
                     <span class="tagline">The Brain</span>
                     <h2>Synapse OS Gold<sup style="font-size: 0.5em; margin-left: 2px; font-family: sans-serif;">™</sup>
                     </h2>
-                    <p>极致个性化的 C2M 引擎 - 口味数字孪生系统</p>
+                    <p data-i18n="synapse.tier.gold.desc">极致个性化的 C2M 引擎 - 口味数字孪生系统</p>
                     <div class="demo-link">
                         <a href="#demo"
                             style="color: var(--gold); text-decoration: underline; text-underline-offset: 4px; transition: color 0.3s;"
                             onmouseenter="this.style.color='#333'"
-                            onmouseleave="this.style.color='var(--gold)'">预约演示</a>
+                            onmouseleave="this.style.color='var(--gold)'" data-i18n="synapse.nav.demo">预约演示</a>
                     </div>
                 </div>
             </article>
@@ -1586,12 +1606,12 @@
                 <div style="max-width: 700px;">
                     <span class="tier-tagline">The Hand</span>
                     <h2>Synapse OS<sup style="font-size: 0.5em; margin-left: 2px; font-family: sans-serif;">™</sup></h2>
-                    <p>自动化餐厅的标准配置。机器人中控直接下发 G-Code 指令，精准控制油温与翻炒。</p>
+                    <p data-i18n="synapse.tier.standard.desc">自动化餐厅的标准配置。机器人中控直接下发 G-Code 指令，精准控制油温与翻炒。</p>
                     <div class="demo-link">
                         <a href="#demo"
                             style="color: var(--brand-blue); text-decoration: underline; text-underline-offset: 4px; transition: color 0.3s;"
                             onmouseenter="this.style.color='#333'"
-                            onmouseleave="this.style.color='var(--brand-blue)'">预约演示</a>
+                            onmouseleave="this.style.color='var(--brand-blue)'" data-i18n="synapse.nav.demo">预约演示</a>
                     </div>
                 </div>
             </article>
@@ -1602,11 +1622,11 @@
                 <article class="tier-card tier-lite">
                     <span class="typography-label" style="color: #999;">The Eye</span>
                     <h3 style="font-size: 40px; margin-bottom: 16px; font-weight: normal;">Synapse OS Lite</h3>
-                    <p style="color: #666; font-size: 16px; margin-bottom: 20px;">视觉库存监控与智能熔断系统</p>
+                    <p style="color: #666; font-size: 16px; margin-bottom: 20px;" data-i18n="synapse.tier.lite.desc">视觉库存监控与智能熔断系统</p>
                     <div class="demo-link">
                         <a href="#"
                             style="color: #1d1d1f; text-decoration: underline; text-underline-offset: 4px; transition: color 0.3s;"
-                            onmouseenter="this.style.color='#666'" onmouseleave="this.style.color='#1d1d1f'">免费试用</a>
+                            onmouseenter="this.style.color='#666'" onmouseleave="this.style.color='#1d1d1f'" data-i18n="synapse.tier.lite.cta">免费试用</a>
                     </div>
                 </article>
 
@@ -1614,12 +1634,12 @@
                 <article class="tier-card tier-care">
                     <span class="typography-label" style="color: #999;">The Shield</span>
                     <h3 style="font-size: 40px; margin-bottom: 16px; font-weight: normal;">Care</h3>
-                    <p style="color: #666; font-size: 16px; margin-bottom: 20px;">赋能听障群体的无声交互系统</p>
+                    <p style="color: #666; font-size: 16px; margin-bottom: 20px;" data-i18n="synapse.tier.care.desc">赋能听障群体的无声交互系统</p>
                     <div class="demo-link">
                         <a href="#"
                             style="color: var(--brand-green); text-decoration: underline; text-underline-offset: 4px; transition: color 0.3s;"
                             onmouseenter="this.style.color='#333'"
-                            onmouseleave="this.style.color='var(--brand-green)'">了解更多</a>
+                            onmouseleave="this.style.color='var(--brand-green)'" data-i18n="synapse.common.more_plain">了解更多</a>
                     </div>
                 </article>
             </div>
@@ -1629,11 +1649,11 @@
     <!-- Customer Stories Section -->
     <section id="stories" style="padding: 100px 20px; background: #F5F5F7;">
         <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-            <h2 class="section-headline" style="color: #1d1d1f; margin-bottom: 30px;">真实案例。真实成果。</h2>
-            <p class="section-subhead" style="color: #86868b; margin-bottom: 40px;">
+            <h2 class="section-headline" data-i18n="synapse.stories.title" style="color: #1d1d1f; margin-bottom: 30px;">真实案例。真实成果。</h2>
+            <p class="section-subhead" data-i18n="synapse.stories.desc" style="color: #86868b; margin-bottom: 40px;">
                 看看餐饮企业如何通过Synapse OS提升效率和收益
             </p>
-            <a href="#" style="color: var(--brand-blue); font-size: 18px; text-decoration: none; font-weight: 500;">了解更多
+            <a href="#" data-i18n="synapse.common.more" style="color: var(--brand-blue); font-size: 18px; text-decoration: none; font-weight: 500;">了解更多
                 →</a>
         </div>
     </section>
@@ -1641,11 +1661,11 @@
     <!-- Hardware Features Section -->
     <section id="features" style="padding: 100px 20px; background: #fff;">
         <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-            <h2 class="section-headline" style="color: #1d1d1f; margin-bottom: 30px;">适配您业务的智能硬件</h2>
-            <p class="section-subhead" style="color: #86868b; margin-bottom: 40px;">
+            <h2 class="section-headline" data-i18n="synapse.features.title" style="color: #1d1d1f; margin-bottom: 30px;">适配您业务的智能硬件</h2>
+            <p class="section-subhead" data-i18n="synapse.features.desc" style="color: #86868b; margin-bottom: 40px;">
                 从POS系统到Panshaker机器人，全方位智能化解决方案
             </p>
-            <a href="#" style="color: var(--brand-blue); font-size: 18px; text-decoration: none; font-weight: 500;">了解更多
+            <a href="#" data-i18n="synapse.common.more" style="color: var(--brand-blue); font-size: 18px; text-decoration: none; font-weight: 500;">了解更多
                 →</a>
         </div>
     </section>
@@ -1653,8 +1673,8 @@
     <!-- Product Screenshots Section -->
     <section class="screenshots-section">
         <div class="screenshots-container">
-            <h2 class="section-headline">体验 Synapse OS 的强大功能</h2>
-            <p class="section-subhead">全方位的餐饮智能管理，从订单到出餐，一切尽在掌控</p>
+            <h2 class="section-headline" data-i18n="synapse.screens.title">体验 Synapse OS 的强大功能</h2>
+            <p class="section-subhead" data-i18n="synapse.screens.desc">全方位的餐饮智能管理，从订单到出餐，一切尽在掌控</p>
 
             <!-- Screenshot 1: AI Assistant -->
             <div class="screenshot-item fade-in-scroll">
@@ -1715,11 +1735,11 @@
 
     <!-- Comparison Table -->
     <section class="compare-section">
-        <h2 class="compare-headline">Which OS is right for you?</h2>
+        <h2 class="compare-headline" data-i18n="synapse.compare.title">Which OS is right for you?</h2>
         <table class="compare-table">
             <thead>
                 <tr>
-                    <th>功能</th>
+                    <th data-i18n="synapse.compare.feature">功能</th>
                     <th>
                         <span style="display:block; font-size:24px; color:#1d1d1f; margin-bottom:5px;">Lite</span>
                         <span style="font-weight:400; color:#86868b; font-size:14px;">The Eye</span>
@@ -1740,42 +1760,42 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>核心硬件</td>
-                    <td>摄像头 + 盒子</td>
-                    <td>摄像头 + 机器人</td>
-                    <td>摄像头 + 机器人</td>
-                    <td>适配任意版本</td>
+                    <td data-i18n="synapse.compare.row1.k">核心硬件</td>
+                    <td data-i18n="synapse.compare.row1.lite">摄像头 + 盒子</td>
+                    <td data-i18n="synapse.compare.row1.std">摄像头 + 机器人</td>
+                    <td data-i18n="synapse.compare.row1.gold">摄像头 + 机器人</td>
+                    <td data-i18n="synapse.compare.row1.care">适配任意版本</td>
                 </tr>
                 <tr>
-                    <td>视觉库存监控</td>
-                    <td style="color:#86868b;">●</td>
-                    <td style="color:#86868b;">●</td>
-                    <td style="color:#86868b;">●</td>
-                    <td style="color:#86868b;">●</td>
-                </tr>
-                <tr>
-                    <td>外卖自动熔断</td>
+                    <td data-i18n="synapse.compare.row2.k">视觉库存监控</td>
                     <td style="color:#86868b;">●</td>
                     <td style="color:#86868b;">●</td>
                     <td style="color:#86868b;">●</td>
                     <td style="color:#86868b;">●</td>
                 </tr>
                 <tr>
-                    <td>机器人自动烹饪</td>
+                    <td data-i18n="synapse.compare.row3.k">外卖自动熔断</td>
+                    <td style="color:#86868b;">●</td>
+                    <td style="color:#86868b;">●</td>
+                    <td style="color:#86868b;">●</td>
+                    <td style="color:#86868b;">●</td>
+                </tr>
+                <tr>
+                    <td data-i18n="synapse.compare.row4.k">机器人自动烹饪</td>
                     <td style="font-size: 20px; color:#ccc;">○</td>
-                    <td>(标准 SOP)</td>
-                    <td>(动态调整)</td>
-                    <td>适配</td>
+                    <td data-i18n="synapse.compare.row4.std">(标准 SOP)</td>
+                    <td data-i18n="synapse.compare.row4.gold">(动态调整)</td>
+                    <td data-i18n="synapse.compare.row4.care">适配</td>
                 </tr>
                 <tr>
-                    <td>口味个性化 (C2M)</td>
+                    <td data-i18n="synapse.compare.row5.k">口味个性化 (C2M)</td>
                     <td style="font-size: 20px; color:#ccc;">○</td>
                     <td style="font-size: 20px; color:#ccc;">○</td>
                     <td style="color:#86868b;">●</td>
                     <td style="font-size: 20px; color:#ccc;">○</td>
                 </tr>
                 <tr>
-                    <td>无障碍震动交互</td>
+                    <td data-i18n="synapse.compare.row6.k">无障碍震动交互</td>
                     <td style="font-size: 20px; color:#ccc;">○</td>
                     <td style="font-size: 20px; color:#ccc;">○</td>
                     <td style="font-size: 20px; color:#ccc;">○</td>
@@ -1788,13 +1808,13 @@
     <!-- Video Demo Section -->
     <section class="video-section">
         <div class="video-container">
-            <h2 class="section-headline">看看 Synapse OS 的实际运作</h2>
-            <p class="section-subhead">完整演示从点单到出餐的全流程</p>
+            <h2 class="section-headline" data-i18n="synapse.video.title">看看 Synapse OS 的实际运作</h2>
+            <p class="section-subhead" data-i18n="synapse.video.desc">完整演示从点单到出餐的全流程</p>
             <div class="video-wrapper">
                 <video controls preload="metadata" poster="assets/screenshots/synapse-dashboard.png" playsinline
                     controlslist="nodownload">
                     <source src="assets/screenshots/synapse-demo.mp4" type="video/mp4">
-                    您的浏览器不支持 HTML5 视频播放。请升级您的浏览器。
+                    <span data-i18n="synapse.video.fallback">您的浏览器不支持 HTML5 视频播放。请升级您的浏览器。</span>
                 </video>
             </div>
         </div>
@@ -1803,15 +1823,16 @@
     <!-- CTA Section -->
     <section id="demo" style="padding: 100px 20px; background: var(--brand-blue); color: #fff; text-align: center;">
         <div style="max-width: 800px; margin: 0 auto;">
-            <h2 style="font-size: 48px; font-weight: 600; margin-bottom: 20px; line-height: 1.2;">
+            <h2 data-i18n-html="synapse.cta.title" style="font-size: 48px; font-weight: 600; margin-bottom: 20px; line-height: 1.2;">
                 为雄心勃勃的餐饮企业<br>打造智能系统
             </h2>
-            <p style="font-size: 20px; margin-bottom: 40px; color: rgba(255,255,255,0.9);">
+            <p data-i18n="synapse.cta.desc" style="font-size: 20px; margin-bottom: 40px; color: rgba(255,255,255,0.9);">
                 快速演示 — 我们将为您详细介绍如何为您的业务量身定制
             </p>
             <a href="about.html" class="btn"
+                data-i18n="synapse.cta.button"
                 style="background: #fff; color: var(--brand-blue); font-size: 17px; padding: 14px 32px; display: inline-block;">联系我们</a>
-            <p style="font-size: 14px; margin-top: 20px; color: rgba(255,255,255,0.7);">
+            <p data-i18n="synapse.cta.tip" style="font-size: 14px; margin-top: 20px; color: rgba(255,255,255,0.7);">
                 温馨提示：我们只专注服务北美地区的餐饮企业
             </p>
         </div>
@@ -1820,9 +1841,9 @@
     <!-- Powered By Section -->
     <section style="padding: 80px 20px; background: #fff; text-align: center;">
         <div style="max-width: 1200px; margin: 0 auto;">
-            <h3 style="font-size: 28px; margin-bottom: 30px; color: #1d1d1f; font-weight: 600;">助力全球顶尖餐饮企业</h3>
+            <h3 data-i18n="synapse.partners.title" style="font-size: 28px; margin-bottom: 30px; color: #1d1d1f; font-weight: 600;">助力全球顶尖餐饮企业</h3>
             <a href="#"
-                style="color: var(--brand-blue); font-size: 18px; text-decoration: none; font-weight: 500;">了解我们的伙伴
+                data-i18n="synapse.partners.link" style="color: var(--brand-blue); font-size: 18px; text-decoration: none; font-weight: 500;">了解我们的伙伴
                 →</a>
         </div>
     </section>
@@ -1834,45 +1855,45 @@
                 style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 60px;">
                 <!-- Column 1 -->
                 <div>
-                    <h4 style="font-size: 14px; font-weight: 600; color: #1d1d1f; margin-bottom: 20px;">产品</h4>
+                    <h4 data-i18n="synapse.footer.col1.title" style="font-size: 14px; font-weight: 600; color: #1d1d1f; margin-bottom: 20px;">产品</h4>
                     <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <a href="#" style="font-size: 12px; color: #86868b;">POS系统</a>
-                        <a href="#" style="font-size: 12px; color: #86868b;">自助点餐机</a>
-                        <a href="#" style="font-size: 12px; color: #86868b;">在线订餐</a>
-                        <a href="#" style="font-size: 12px; color: #86868b;">Panshaker机器人</a>
-                        <a href="#" style="font-size: 12px; color: #86868b;">会员忠诚度</a>
+                        <a href="#" data-i18n="synapse.footer.col1.item1" style="font-size: 12px; color: #86868b;">POS系统</a>
+                        <a href="#" data-i18n="synapse.footer.col1.item2" style="font-size: 12px; color: #86868b;">自助点餐机</a>
+                        <a href="#" data-i18n="synapse.footer.col1.item3" style="font-size: 12px; color: #86868b;">在线订餐</a>
+                        <a href="#" data-i18n="synapse.footer.col1.item4" style="font-size: 12px; color: #86868b;">Panshaker机器人</a>
+                        <a href="#" data-i18n="synapse.footer.col1.item5" style="font-size: 12px; color: #86868b;">会员忠诚度</a>
                     </div>
                 </div>
 
                 <!-- Column 2 -->
                 <div>
-                    <h4 style="font-size: 14px; font-weight: 600; color: #1d1d1f; margin-bottom: 20px;">餐饮类型</h4>
+                    <h4 data-i18n="synapse.footer.col2.title" style="font-size: 14px; font-weight: 600; color: #1d1d1f; margin-bottom: 20px;">餐饮类型</h4>
                     <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <a href="#" style="font-size: 12px; color: #86868b;">正餐服务</a>
-                        <a href="#" style="font-size: 12px; color: #86868b;">快餐服务</a>
-                        <a href="#" style="font-size: 12px; color: #86868b;">茶饮甜品</a>
-                        <a href="#" style="font-size: 12px; color: #86868b;">智能机器人餐厅</a>
+                        <a href="#" data-i18n="synapse.footer.col2.item1" style="font-size: 12px; color: #86868b;">正餐服务</a>
+                        <a href="#" data-i18n="synapse.footer.col2.item2" style="font-size: 12px; color: #86868b;">快餐服务</a>
+                        <a href="#" data-i18n="synapse.footer.col2.item3" style="font-size: 12px; color: #86868b;">茶饮甜品</a>
+                        <a href="#" data-i18n="synapse.footer.col2.item4" style="font-size: 12px; color: #86868b;">智能机器人餐厅</a>
                     </div>
                 </div>
 
                 <!-- Column 3 -->
                 <div>
-                    <h4 style="font-size: 14px; font-weight: 600; color: #1d1d1f; margin-bottom: 20px;">关于Synapse OS
+                    <h4 data-i18n="synapse.footer.col3.title" style="font-size: 14px; font-weight: 600; color: #1d1d1f; margin-bottom: 20px;">关于Synapse OS
                     </h4>
                     <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <a href="about.html" style="font-size: 12px; color: #86868b;">关于我们</a>
-                        <a href="index.html" style="font-size: 12px; color: #86868b;">了解Panshaker</a>
-                        <a href="#demo" style="font-size: 12px; color: #86868b;">预约演示</a>
+                        <a href="about.html" data-i18n="synapse.footer.col3.item1" style="font-size: 12px; color: #86868b;">关于我们</a>
+                        <a href="index.html" data-i18n="synapse.footer.col3.item2" style="font-size: 12px; color: #86868b;">了解Panshaker</a>
+                        <a href="#demo" data-i18n="synapse.footer.col3.item3" style="font-size: 12px; color: #86868b;">预约演示</a>
                     </div>
                 </div>
 
                 <!-- Column 4 -->
                 <div>
-                    <h4 style="font-size: 14px; font-weight: 600; color: #1d1d1f; margin-bottom: 20px;">资源</h4>
+                    <h4 data-i18n="synapse.footer.col4.title" style="font-size: 14px; font-weight: 600; color: #1d1d1f; margin-bottom: 20px;">资源</h4>
                     <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <a href="#" style="font-size: 12px; color: #86868b;">博客</a>
-                        <a href="#" style="font-size: 12px; color: #86868b;">隐私政策</a>
-                        <a href="#" style="font-size: 12px; color: #86868b;">服务条款</a>
+                        <a href="#" data-i18n="synapse.footer.col4.item1" style="font-size: 12px; color: #86868b;">博客</a>
+                        <a href="#" data-i18n="synapse.footer.col4.item2" style="font-size: 12px; color: #86868b;">隐私政策</a>
+                        <a href="#" data-i18n="synapse.footer.col4.item3" style="font-size: 12px; color: #86868b;">服务条款</a>
                     </div>
                 </div>
             </div>
@@ -1880,10 +1901,10 @@
             <!-- Copyright -->
             <div style="border-top: 1px solid #d2d2d7; padding-top: 20px; text-align: center;">
                 <p style="font-size: 12px; color: #86868b;">
-                    <span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; vertical-align: baseline;">©</span> 2026 Synapse OS. All rights reserved.
+                    <span style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; vertical-align: baseline;">©</span> <span data-i18n="synapse.footer.copyright">2026 Synapse OS. All rights reserved.</span>
                 </p>
                 <p style="font-size: 12px; color: #86868b; margin-top: 10px;">
-                    Designed for <a href="index.html" style="color: var(--brand-blue);">Panshaker Services</a>
+                    <span data-i18n="synapse.footer.designed">Designed for</span> <a href="index.html" style="color: var(--brand-blue);" data-i18n="synapse.footer.brand">Panshaker Services</a>
                 </p>
             </div>
         </div>

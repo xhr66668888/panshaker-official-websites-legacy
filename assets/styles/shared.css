@@ -197,6 +197,22 @@ header {
     color: var(--brand-green);
 }
 
+#ps-lang-dropdown a {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+    padding: 10px 14px !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    transform: none !important;
+}
+
+#ps-lang-dropdown a:last-child {
+    border-bottom: none !important;
+}
+
 /* Hide hamburger on desktop */
 .nav-toggle {
     display: none;
