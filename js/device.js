@@ -205,11 +205,82 @@
     // Export
     global.PanDevice = PanDevice;
 
+    /* ============================
+     * Mobile Navigation (Hamburger)
+     * Injects toggle button & manages open/close state
+     * ============================ */
+
+    function initMobileNav() {
+        if (window.innerWidth > 768) return;
+
+        var header = document.querySelector('header');
+        var navInner = document.querySelector('.nav-inner');
+        if (!header || !navInner) return;
+        if (navInner.querySelector('.nav-toggle')) return; // already injected
+
+        // Create hamburger button
+        var btn = document.createElement('button');
+        btn.className = 'nav-toggle';
+        btn.setAttribute('aria-label', 'Menu');
+        btn.innerHTML = '<span></span>';
+        navInner.appendChild(btn);
+
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            header.classList.toggle('nav-open');
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = header.classList.contains('nav-open') ? 'hidden' : '';
+        });
+
+        // Close menu when a nav link is clicked
+        var links = navInner.querySelectorAll('.nav-links a');
+        for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener('click', function () {
+                header.classList.remove('nav-open');
+                document.body.style.overflow = '';
+            });
+        }
+
+        // Close menu on backdrop click
+        document.addEventListener('click', function (e) {
+            if (header.classList.contains('nav-open') && !navInner.contains(e.target)) {
+                header.classList.remove('nav-open');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+    // Handle resize — show/hide hamburger dynamically
+    function handleNavResize() {
+        var header = document.querySelector('header');
+        if (!header) return;
+
+        if (window.innerWidth > 768) {
+            header.classList.remove('nav-open');
+            document.body.style.overflow = '';
+            var toggle = header.querySelector('.nav-toggle');
+            if (toggle) toggle.style.display = 'none';
+        } else {
+            var toggle2 = header.querySelector('.nav-toggle');
+            if (toggle2) {
+                toggle2.style.display = '';
+            } else {
+                initMobileNav();
+            }
+        }
+    }
+
     // Apply classes on DOM ready
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', applyClasses);
+        document.addEventListener('DOMContentLoaded', function () {
+            applyClasses();
+            initMobileNav();
+            window.addEventListener('resize', handleNavResize);
+        });
     } else {
         applyClasses();
+        initMobileNav();
+        window.addEventListener('resize', handleNavResize);
     }
 
 })(window);

@@ -212,7 +212,7 @@
 
         var container = document.createElement('div');
         container.id = 'ps-lang-switcher';
-        container.style.cssText = 'position:relative;margin-left:16px;display:inline-flex;align-items:center;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;';
+        container.style.cssText = 'position:relative;margin-left:16px;display:inline-flex;align-items:center;font-family:"Smartisan Compact",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;';
 
         // Toggle button — shows current language as text
         var btn = document.createElement('button');
