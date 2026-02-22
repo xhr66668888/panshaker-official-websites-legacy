@@ -217,7 +217,7 @@
         // Toggle button — shows current language as text
         var btn = document.createElement('button');
         btn.id = 'ps-lang-btn';
-        btn.style.cssText = 'background:none;border:1px solid #e0e0e0;border-radius:6px;cursor:pointer;display:flex;align-items:center;gap:6px;padding:6px 14px;font-size:13px;color:#666;font-weight:500;transition:all 0.3s;white-space:nowrap;';
+        btn.style.cssText = 'background:none;border:1px solid #e0e0e0;border-radius:6px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;padding:6px 10px;font-size:13px;color:#666;font-weight:500;transition:all 0.3s;white-space:nowrap;line-height:1;';
         btn.innerHTML = '<span id="ps-lang-label">' + (LANG_SHORT[currentLang] || currentLang) + '</span>'
             + '<svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 3 3-3"/></svg>';
         btn.setAttribute('aria-label', 'Switch Language');
