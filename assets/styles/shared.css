@@ -99,6 +99,14 @@ html[lang="ja"] .nav-links a {
     letter-spacing: -0.5px;
 }
 
+/* On mobile, restore normal nav link size for Japanese */
+@media (max-width: 768px) {
+    html[lang="ja"] .nav-links a {
+        font-size: 17px;
+        letter-spacing: normal;
+    }
+}
+
 html[lang="ja"] h1,
 html[lang="ja"] h2,
 html[lang="ja"] h3 {
