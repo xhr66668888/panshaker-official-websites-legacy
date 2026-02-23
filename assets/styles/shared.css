@@ -355,7 +355,15 @@ footer {
         top: 56px;
         left: 0;
         right: 0;
-        bottom: 0;
+        /*
+         * Height strategy (progressive enhancement):
+         * 1) 100vh fallback — works everywhere but may be too tall in browsers with toolbars
+         * 2) 100dvh — dynamic viewport height, adjusts for browser chrome
+         * 3) JS override via --nav-vh custom property — ultimate fallback for WeChat etc.
+         */
+        height: calc(100vh - 56px);
+        height: calc(100dvh - 56px);
+        height: calc(var(--nav-vh, 100vh) - 56px);
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
@@ -363,11 +371,23 @@ footer {
         align-items: stretch;
         justify-content: flex-start;
         padding: 24px 24px 40px;
+        /* Safe area for notched devices; fallback 0px for browsers without env() */
+        padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
         gap: 0;
         display: none;
         overflow-y: auto;
+        overflow-x: hidden;
+        overscroll-behavior: contain;
         -webkit-overflow-scrolling: touch;
         z-index: 1001;
+    }
+
+    /*
+     * WeChat Android: backdrop-filter often unsupported — use solid bg fallback.
+     * .device-wechat is added by device.js when running inside WeChat.
+     */
+    .device-wechat .nav-links {
+        background: #fff;
     }
 
     header.nav-open .nav-links {
@@ -384,6 +404,8 @@ footer {
         border-radius: 0;
         background: none;
         transition: color 0.3s;
+        /* Prevent items from shrinking when panel is tight */
+        flex-shrink: 0;
     }
 
     .nav-links a:last-of-type {
@@ -402,6 +424,13 @@ footer {
         margin-top: 16px;
         padding-top: 16px;
         border-top: 1px solid rgba(0, 0, 0, 0.06);
+        flex-shrink: 0;
+    }
+
+    /* On mobile, open language dropdown upward to avoid bottom clipping */
+    #ps-lang-dropdown {
+        top: auto !important;
+        bottom: calc(100% + 8px) !important;
     }
 
     .container {

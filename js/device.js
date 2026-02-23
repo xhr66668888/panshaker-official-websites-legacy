@@ -210,6 +210,24 @@
      * Injects toggle button & manages open/close state
      * ============================ */
 
+    /**
+     * Set --nav-vh CSS custom property to the real visual viewport height.
+     * This is the ultimate fallback for browsers where 100vh / 100dvh
+     * includes browser chrome (WeChat Android, older WebViews, etc.).
+     */
+    function setNavVH() {
+        var vh = window.innerHeight;
+        document.documentElement.style.setProperty('--nav-vh', vh + 'px');
+    }
+
+    // Touch-move blocker for scroll-lock (reusable reference so we can remove it)
+    var touchMoveBlocker = function (e) {
+        // Allow scrolling inside .nav-links itself
+        var navLinks = document.querySelector('.nav-links');
+        if (navLinks && navLinks.contains(e.target)) return;
+        e.preventDefault();
+    };
+
     function initMobileNav() {
         if (window.innerWidth > 768) return;
 
@@ -217,6 +235,9 @@
         var navInner = document.querySelector('.nav-inner');
         if (!header || !navInner) return;
         if (navInner.querySelector('.nav-toggle')) return; // already injected
+
+        // Set initial --nav-vh
+        setNavVH();
 
         // Create hamburger button
         var btn = document.createElement('button');
@@ -227,25 +248,48 @@
 
         btn.addEventListener('click', function (e) {
             e.stopPropagation();
-            header.classList.toggle('nav-open');
-            // Prevent body scroll when menu is open
-            document.body.style.overflow = header.classList.contains('nav-open') ? 'hidden' : '';
+            var isOpen = header.classList.contains('nav-open');
+            if (!isOpen) {
+                // Recalculate real viewport height right before opening
+                setNavVH();
+                // Opening: save scroll position, then lock body
+                var scrollPos = window.scrollY || window.pageYOffset || 0;
+                header.classList.add('nav-open');
+                document.body.style.overflow = 'hidden';
+                document.body.style.position = 'fixed';
+                document.body.style.width = '100%';
+                document.body.style.top = '-' + scrollPos + 'px';
+                // WeChat & Android: also block touchmove on body to fully prevent scroll-through
+                document.addEventListener('touchmove', touchMoveBlocker, { passive: false });
+            } else {
+                // Closing: restore scroll position
+                closeNav();
+            }
         });
+
+        function closeNav() {
+            var scrollY = Math.abs(parseInt(document.body.style.top || '0', 10));
+            header.classList.remove('nav-open');
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
+            document.body.style.top = '';
+            window.scrollTo(0, scrollY);
+            document.removeEventListener('touchmove', touchMoveBlocker);
+        }
 
         // Close menu when a nav link is clicked
         var links = navInner.querySelectorAll('.nav-links a');
         for (var i = 0; i < links.length; i++) {
             links[i].addEventListener('click', function () {
-                header.classList.remove('nav-open');
-                document.body.style.overflow = '';
+                closeNav();
             });
         }
 
         // Close menu on backdrop click
         document.addEventListener('click', function (e) {
             if (header.classList.contains('nav-open') && !navInner.contains(e.target)) {
-                header.classList.remove('nav-open');
-                document.body.style.overflow = '';
+                closeNav();
             }
         });
     }
@@ -255,9 +299,18 @@
         var header = document.querySelector('header');
         if (!header) return;
 
+        // Always update --nav-vh on resize / orientation change
+        setNavVH();
+
         if (window.innerWidth > 768) {
+            var scrollY = Math.abs(parseInt(document.body.style.top || '0', 10));
             header.classList.remove('nav-open');
             document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
+            document.body.style.top = '';
+            if (scrollY) window.scrollTo(0, scrollY);
+            document.removeEventListener('touchmove', touchMoveBlocker);
             var toggle = header.querySelector('.nav-toggle');
             if (toggle) toggle.style.display = 'none';
         } else {
@@ -274,11 +327,13 @@
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function () {
             applyClasses();
+            setNavVH();
             initMobileNav();
             window.addEventListener('resize', handleNavResize);
         });
     } else {
         applyClasses();
+        setNavVH();
         initMobileNav();
         window.addEventListener('resize', handleNavResize);
     }
