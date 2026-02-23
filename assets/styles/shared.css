@@ -94,15 +94,22 @@ html[lang="ja"] body {
     font-size: 15px;
 }
 
+/*
+ * Japanese nav: characters are wider than Latin, so reduce spacing
+ * instead of drastically shrinking font-size.
+ * Desktop: 13px + tighter margins  (other langs: 14px + 40px margin)
+ * Mobile:  17px normal             (same as other langs)
+ */
 html[lang="ja"] .nav-links a {
-    font-size: 12px;
-    letter-spacing: -0.5px;
+    font-size: 13px;
+    margin-left: 24px;
+    letter-spacing: -0.3px;
 }
 
-/* On mobile, restore normal nav link size for Japanese */
 @media (max-width: 768px) {
     html[lang="ja"] .nav-links a {
         font-size: 17px;
+        margin-left: 0;
         letter-spacing: normal;
     }
 }
