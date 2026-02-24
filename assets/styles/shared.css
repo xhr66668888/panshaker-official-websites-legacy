@@ -47,14 +47,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'LogoFont';
-    src: url('../fonts/logo.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 :root {
     --brand-blue: #0E427E;
     --brand-green: #62BA46;
@@ -173,48 +165,22 @@ header {
 }
 
 .logo {
-    position: relative;
-    height: 32px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.logo-en,
-.logo-cn {
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
     display: flex;
     align-items: center;
+    height: 32px;
+    flex-shrink: 0;
+    text-decoration: none;
 }
 
-.logo-cn {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(100%);
-    opacity: 0;
+.logo-img {
+    height: 16px;
+    width: auto;
+    display: block;
 }
 
 @media (min-width: 769px) {
-    .logo.hovered .logo-en {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    .logo.hovered .logo-cn {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@media (max-width: 768px) {
-    .logo.clicked .logo-en {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    .logo.clicked .logo-cn {
-        transform: translateY(0);
-        opacity: 1;
+    .logo-img {
+        height: 18px;
     }
 }
 
