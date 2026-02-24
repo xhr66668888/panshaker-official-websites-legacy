@@ -4,70 +4,43 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
-    <title>Investor Relations | Panshaker Services</title>
+    <meta name="format-detection" content="telephone=no">
+    <title>X7-AI Robot | Panshaker Services</title>
     <meta name="description"
-        content="Panshaker Services investor relations — stay updated on our journey to revolutionize North American food automation.">
+        content="Explore the X7-AI Robot by Panshaker Services — intelligent cooking automation powered by AI.">
     <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="assets/images/favicon-16x16.png" sizes="16x16">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="stylesheet" href="assets/styles/shared.css?v=3">
-    <!-- Same styles -->
     <style>
-        /* Page-specific styles only — base/fonts from shared.css */
         body {
             color: #333;
-            background-color: #fcfcfc;
-            line-height: 1.8;
+            background-color: #fff;
+            margin: 0;
+            overflow-x: hidden;
         }
 
-        /* Egg Content */
-        .egg-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+        .iframe-wrapper {
             padding-top: 80px;
-            /* Header space */
-            text-align: center;
-        }
-
-        .egg-image-placeholder {
-            width: 800px;
-            max-width: 90%;
-            height: 450px;
-            background: #eee;
-            border-radius: 20px;
-            margin-bottom: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: #999;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .egg-image-placeholder img {
             width: 100%;
-            height: 100%;
-            object-fit: contain;
-            /* or cover depending on the image */
         }
 
-        .egg-text {
-            font-size: 24px;
-            color: #0E427E;
-            margin-bottom: 10px;
-            font-weight: 300;
+        .iframe-wrapper iframe {
+            display: block;
+            width: 100%;
+            min-height: calc(100vh - 80px);
+            border: none;
         }
 
-        .egg-subtext {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 50px;
+        @media (max-width: 768px) {
+            .iframe-wrapper {
+                padding-top: 56px;
+            }
+
+            .iframe-wrapper iframe {
+                min-height: calc(100vh - 56px);
+            }
         }
     </style>
 </head>
@@ -87,7 +60,7 @@
             </a>
             <nav class="nav-links">
                 <a href="index.html" data-i18n="nav.home">首页</a>
-                <a href="x7_ai.html" data-i18n="nav.x7_ai">X7-AI机器人</a>
+                <a href="x7_ai.html" class="active" data-i18n="nav.x7_ai">X7-AI机器人</a>
                 <a href="synapse_os.html" data-i18n="nav.synapse">Synapse OS</a>
                 <a href="about.html" data-i18n="nav.about">关于我们</a>
                 <a href="#" data-i18n="nav.contact">联系我们</a>
@@ -95,17 +68,14 @@
         </div>
     </header>
 
-    <div class="egg-container">
-        <!-- Placeholder: To be replaced by nasdaq_celebration.png when available -->
-        <div class="egg-image-placeholder" id="image-container">
-            <img src="assets/images/relations.jpg" alt="Investor Relations">
-        </div>
-
-        <div class="egg-text" data-i18n="investors.loading">我们还在努力，感谢您的支持。</div>
-        <div class="egg-subtext" data-i18n="investors.subtitle">祝您生活幸福，万事如意。</div>
+    <div class="iframe-wrapper">
+        <iframe
+            src="https://www.xinchushi.com/product"
+            title="X7-AI Robot Product"
+            allowfullscreen
+            loading="lazy">
+        </iframe>
     </div>
-
-
 
     <footer>
         <div class="container">
@@ -121,7 +91,7 @@
                 <div class="footer-col">
                     <h4 data-i18n="footer.tech">技术支持</h4>
                     <ul>
-                        <li><a href="#" data-i18n="footer.synapse">Synapse OS</a></li>
+                        <li><a href="synapse_os.html" data-i18n="footer.synapse">Synapse OS</a></li>
                         <li><a href="#" data-i18n="footer.hardware">硬件改造方案</a></li>
                         <li><a href="#" data-i18n="footer.support">售后服务</a></li>
                     </ul>
@@ -137,36 +107,13 @@
             <div class="copyright">
                 <span
                     style="font-size: 14px; vertical-align: baseline;">©</span><span
-                    data-i18n="footer.copyright">2026 Panshaker Inc. All Rights Reserved.</span> <br>
+                    data-i18n="footer.copyright">2026 Panshaker Inc.
+                    All Rights Reserved.</span> <br>
                 <span data-i18n="footer.tagline">聚焦北美市场的餐饮自动化基础设施服务商</span>
             </div>
         </div>
     </footer>
 
-
-
-    <audio id="bgm" loop>
-        <source src="assets/media/mymusic.mp3" type="audio/mpeg">
-    </audio>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var audio = document.getElementById("bgm");
-            audio.volume = 0.5;
-
-            var playPromise = audio.play();
-
-            if (playPromise !== undefined) {
-                playPromise.then(_ => {
-                    // Autoplay started
-                }).catch(error => {
-                    // Autoplay prevented, wait for interaction
-                    document.body.addEventListener('click', function () {
-                        audio.play();
-                    }, { once: true });
-                });
-            }
-        });
-    </script>
     <script src="js/device.js"></script>
     <script src="js/i18n.js?v=2"></script>
 </body>
