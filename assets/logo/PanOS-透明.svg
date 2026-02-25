@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.16 140.88">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #0053ff;
+      }
+
+      .cls-4 {
+        font-family: MiSansLatin-Demibold, 'MiSans Latin';
+        font-size: 120px;
+        font-weight: 300;
+      }
+    </style>
+  </defs>
+  <text class="cls-4" transform="translate(0 105.24)"><tspan class="cls-1" x="0" y="0">P</tspan><tspan class="cls-2" x="72.48" y="0">an</tspan><tspan class="cls-3" x="208.8" y="0">OS</tspan></text>
+</svg>
