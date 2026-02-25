@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
-    <title>Synapse OS | Panshaker Services — Next-Gen Restaurant Operating System</title>
+    <title>PanOS | Panshaker Services — Next-Gen Restaurant Operating System</title>
     <meta name="description"
-        content="Synapse OS — the next-generation restaurant operating system by Panshaker Services. AI-powered management, real-time monitoring, and automated kitchen control.">
+        content="PanOS — the next-generation restaurant operating system by Panshaker Services. AI-powered management, real-time monitoring, and automated kitchen control.">
     <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="assets/images/favicon-16x16.png" sizes="16x16">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
@@ -347,7 +347,7 @@
             color: var(--gold);
             margin: 0 0 16px 0;
             letter-spacing: -1px;
-            font-weight: normal;
+            font-weight: 600;
         }
 
         .tier-gold p {
@@ -377,7 +377,7 @@
         .tier-standard h2 {
             font-size: 44px;
             margin-bottom: 16px;
-            font-weight: normal;
+            font-weight: 600;
             color: var(--brand-blue);
         }
 
@@ -928,7 +928,9 @@
                 top: 56px;
                 left: 0;
                 right: 0;
-                bottom: 0;
+                height: calc(100vh - 56px);
+                height: calc(100dvh - 56px);
+                height: calc(var(--nav-vh, 100vh) - 56px);
                 background: rgba(255, 255, 255, 0.98);
                 backdrop-filter: blur(20px);
                 -webkit-backdrop-filter: blur(20px);
@@ -936,9 +938,13 @@
                 align-items: stretch;
                 justify-content: flex-start;
                 padding: 24px 24px 40px;
+                padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
                 gap: 0;
                 display: none;
                 overflow-y: auto;
+                overflow-x: hidden;
+                overscroll-behavior: contain;
+                -webkit-overflow-scrolling: touch;
                 z-index: 1001;
             }
 
@@ -1319,7 +1325,7 @@
     <!-- Hero Section -->
     <section class="hero-os">
         <div class="hero-content-wrapper" style="max-width: 980px; margin: 0 auto;">
-            <img src="assets/images/synapseoslogo.png" alt="Synapse OS Logo" class="hero-logo-img"
+            <img src="assets/logo/panos-logo-transparent.svg" alt="PanOS" class="hero-logo-img"
                 style="width: 400px !important; margin-bottom: 50px !important;">
             <h1 data-i18n="synapse.hero.title"
                 style="font-size: 64px; font-weight: 600; margin: 30px 0 30px 0; line-height: 1.1;">
@@ -1633,7 +1639,7 @@
             <article class="tier-card tier-gold">
                 <div style="position: relative; z-index: 5;">
                     <span class="tagline">The Brain</span>
-                    <h2>Synapse OS Gold<sup style="font-size: 0.5em; margin-left: 2px;">™</sup>
+                    <h2>PanOS Gold<sup style="font-size: 0.5em; margin-left: 2px;">™</sup>
                     </h2>
                     <p data-i18n="synapse.tier.gold.desc">极致个性化的 C2M 引擎 - 口味数字孪生系统</p>
                     <div class="demo-link">
@@ -1649,7 +1655,7 @@
             <article class="tier-card tier-standard">
                 <div style="max-width: 700px;">
                     <span class="tier-tagline">The Hand</span>
-                    <h2>Synapse OS<sup style="font-size: 0.5em; margin-left: 2px;">™</sup></h2>
+                    <h2>PanOS<sup style="font-size: 0.5em; margin-left: 2px;">™</sup></h2>
                     <p data-i18n="synapse.tier.standard.desc">自动化餐厅的标准配置。机器人中控直接下发 G-Code 指令，精准控制油温与翻炒。</p>
                     <div class="demo-link">
                         <a href="#demo"
@@ -1665,7 +1671,7 @@
                 <!-- Lite -->
                 <article class="tier-card tier-lite">
                     <span class="typography-label" style="color: #999;">The Eye</span>
-                    <h3 style="font-size: 40px; margin-bottom: 16px; font-weight: normal;">Synapse OS Lite</h3>
+                    <h3 style="font-size: 40px; margin-bottom: 16px; font-weight: 600;">PanOS Lite</h3>
                     <p style="color: #666; font-size: 16px; margin-bottom: 20px;" data-i18n="synapse.tier.lite.desc">
                         视觉库存监控与智能熔断系统</p>
                     <div class="demo-link">
@@ -1679,7 +1685,7 @@
                 <!-- Care -->
                 <article class="tier-card tier-care">
                     <span class="typography-label" style="color: #999;">The Shield</span>
-                    <h3 style="font-size: 40px; margin-bottom: 16px; font-weight: normal;">Care</h3>
+                    <h3 style="font-size: 40px; margin-bottom: 16px; font-weight: 600;">Care</h3>
                     <p style="color: #666; font-size: 16px; margin-bottom: 20px;" data-i18n="synapse.tier.care.desc">
                         赋能听障群体的无声交互系统</p>
                     <div class="demo-link">
@@ -1699,7 +1705,7 @@
             <h2 class="section-headline" data-i18n="synapse.stories.title" style="color: #1d1d1f; margin-bottom: 30px;">
                 真实案例。真实成果。</h2>
             <p class="section-subhead" data-i18n="synapse.stories.desc" style="color: #86868b; margin-bottom: 40px;">
-                看看餐饮企业如何通过Synapse OS提升效率和收益
+                看看餐饮企业如何通过PanOS提升效率和收益
             </p>
             <a href="#" data-i18n="synapse.common.more"
                 style="color: var(--brand-blue); font-size: 18px; text-decoration: none; font-weight: 500;">了解更多
@@ -1724,13 +1730,13 @@
     <!-- Product Screenshots Section -->
     <section class="screenshots-section">
         <div class="screenshots-container">
-            <h2 class="section-headline" data-i18n="synapse.screens.title">体验 Synapse OS 的强大功能</h2>
+            <h2 class="section-headline" data-i18n="synapse.screens.title">体验 PanOS 的强大功能</h2>
             <p class="section-subhead" data-i18n="synapse.screens.desc">全方位的餐饮智能管理，从订单到出餐，一切尽在掌控</p>
 
             <!-- Screenshot 1: AI Assistant -->
             <div class="screenshot-item fade-in-scroll">
                 <div class="device-frame">
-                    <img src="assets/screenshots/synapse-ai-assistant.png" alt="Synapse AI Assistant" loading="lazy">
+                    <img src="assets/screenshots/synapse-ai-assistant.png" alt="PanOS AI Assistant" loading="lazy">
                 </div>
                 <div class="screenshot-content">
                     <h3 data-i18n="synapse.screens.item1.title">AI 神经中枢</h3>
@@ -1746,7 +1752,7 @@
                     <p data-i18n="synapse.screens.item2.desc">一屏掌握全局运营数据。今日订单数、营业额、客单价、完成率，关键指标实时刷新。智能化数据洞察，助力精准决策。</p>
                 </div>
                 <div class="device-frame">
-                    <img src="assets/screenshots/synapse-dashboard.png" alt="Synapse Dashboard" loading="lazy">
+                    <img src="assets/screenshots/synapse-dashboard.png" alt="PanOS Dashboard" loading="lazy">
                 </div>
             </div>
 
@@ -1866,7 +1872,7 @@
     <!-- Video Demo Section -->
     <section class="video-section">
         <div class="video-container">
-            <h2 class="section-headline" data-i18n="synapse.video.title">看看 Synapse OS 的实际运作</h2>
+            <h2 class="section-headline" data-i18n="synapse.video.title">看看 PanOS 的实际运作</h2>
             <p class="section-subhead" data-i18n="synapse.video.desc">完整演示从点单到出餐的全流程</p>
             <div class="video-wrapper">
                 <video controls preload="metadata" poster="assets/screenshots/synapse-dashboard.png" playsinline
@@ -1949,7 +1955,7 @@
                 <!-- Column 3 -->
                 <div>
                     <h4 data-i18n="synapse.footer.col3.title"
-                        style="font-size: 14px; font-weight: 600; color: #1d1d1f; margin-bottom: 20px;">关于Synapse OS
+                        style="font-size: 14px; font-weight: 600; color: #1d1d1f; margin-bottom: 20px;">关于PanOS
                     </h4>
                     <div style="display: flex; flex-direction: column; gap: 12px;">
                         <a href="about.html" data-i18n="synapse.footer.col3.item1"
@@ -1981,7 +1987,7 @@
                 <p style="font-size: 12px; color: #86868b;">
                     <span
                         style="font-size: 14px; vertical-align: baseline;">©</span>
-                    <span data-i18n="synapse.footer.copyright">2026 Synapse OS. All rights reserved.</span>
+                    <span data-i18n="synapse.footer.copyright">2026 PanOS. All rights reserved.</span>
                 </p>
                 <p style="font-size: 12px; color: #86868b; margin-top: 10px;">
                     <span data-i18n="synapse.footer.designed">Designed for</span> <a href="index.html"
