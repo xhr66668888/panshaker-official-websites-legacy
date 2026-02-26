@@ -104,5 +104,16 @@
   "careers.benefit_13": "帶薪假日",
   "careers.apply_cta": "立即應徵",
   "investors.loading": "我們還在努力，感謝您的支持。",
-  "investors.subtitle": "祝您生活幸福，萬事如意。"
+  "investors.subtitle": "祝您生活幸福，萬事如意。",
+  "contact.name": "姓名",
+  "contact.name_ph": "請輸入您的姓名",
+  "contact.email": "電子郵件",
+  "contact.email_ph": "請輸入您的電子郵件地址",
+  "contact.phone": "電話",
+  "contact.phone_ph": "請輸入您的電話號碼（選填）",
+  "contact.region": "區域",
+  "contact.region_select": "選擇區域",
+  "contact.description": "需求描述",
+  "contact.desc_ph": "請描述您的需求...",
+  "contact.submit": "提交"
 }

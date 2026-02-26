@@ -104,5 +104,16 @@
   "careers.benefit_13": "유급 공휴일",
   "careers.apply_cta": "지원하기",
   "investors.loading": "아직 준비 중입니다. 응원해 주셔서 감사합니다.",
-  "investors.subtitle": "행복과 만사형통을 기원합니다."
+  "investors.subtitle": "행복과 만사형통을 기원합니다.",
+  "contact.name": "이름",
+  "contact.name_ph": "이름을 입력해 주세요",
+  "contact.email": "이메일",
+  "contact.email_ph": "이메일 주소를 입력해 주세요",
+  "contact.phone": "전화번호",
+  "contact.phone_ph": "전화번호를 입력해 주세요 (선택)",
+  "contact.region": "지역",
+  "contact.region_select": "지역을 선택해 주세요",
+  "contact.description": "문의 내용",
+  "contact.desc_ph": "문의 내용을 작성해 주세요...",
+  "contact.submit": "제출하기"
 }

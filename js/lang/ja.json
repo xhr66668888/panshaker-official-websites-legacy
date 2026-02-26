@@ -104,5 +104,16 @@
   "careers.benefit_13": "祝日・休暇手当",
   "careers.apply_cta": "応募する",
   "investors.loading": "まだ準備中です。ご支援に感謝いたします。",
-  "investors.subtitle": "皆さまの幸福とご多幸をお祈りします。"
+  "investors.subtitle": "皆さまの幸福とご多幸をお祈りします。",
+  "contact.name": "お名前",
+  "contact.name_ph": "お名前を入力してください",
+  "contact.email": "メールアドレス",
+  "contact.email_ph": "メールアドレスを入力してください",
+  "contact.phone": "電話番号",
+  "contact.phone_ph": "電話番号を入力してください（任意）",
+  "contact.region": "地域",
+  "contact.region_select": "地域を選択してください",
+  "contact.description": "お問い合わせ内容",
+  "contact.desc_ph": "ご要望をお聞かせください...",
+  "contact.submit": "送信"
 }

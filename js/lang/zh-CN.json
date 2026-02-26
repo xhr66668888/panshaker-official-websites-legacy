@@ -7,29 +7,23 @@
   "nav.careers": "加入团队",
   "nav.investors": "投资者关系",
   "nav.service": "服务",
-
   "hero.headline": "AI 赋能下低人工成本",
   "hero.headline_strong": "商业中餐解决方案",
   "hero.subtitle": "融合硬件自动化与 AI 智能系统，重新定义餐饮行业效率",
   "hero.cta": "了解更多",
-
   "philosophy.title": "不止于餐饮，更是硬科技",
   "philosophy.desc": "我们将餐饮业不可控的人工烹饪环节，转换为 AI 时代高度可靠的工业自动化环节。<br>在北美，书写中华美食的各种可能。",
-
   "solution.price_title": "Panshaker X7",
   "solution.price_desc": "竞品价格 1/2<br>< 2周 低成本改装<br>实现无人化烹饪",
   "solution.synapse_title": "PanOS",
   "solution.synapse_desc": "下一代餐饮操作系统<br>打造中餐出海标准化一条龙服务",
   "solution.learn_more": "了解更多 →",
-
   "ambassador.name": "高雷雷",
   "ambassador.title": "全球大使",
   "ambassador.desc": "前北京国安队队员，餐厅老板",
-
   "esg.title": "无声厨房计划",
   "esg.desc": "赋能听障群体，创造包容性就业环境<br>用科技消除沟通障碍，让每个人都能发光发热",
   "esg.cta": "了解更多",
-
   "footer.company": "Panshaker Services",
   "footer.company_title": "Panshaker Services",
   "footer.about": "关于我们",
@@ -45,7 +39,6 @@
   "footer.location": "Location: San Diego, CA",
   "footer.copyright": "2026 Panshaker Inc. All Rights Reserved.",
   "footer.tagline": "聚焦北美市场的餐饮自动化基础设施服务商",
-
   "home.hero.title": "AI 赋能下低人工成本<br><strong>商业中餐解决方案</strong>",
   "home.hero.subtitle": "融合硬件自动化与 AI 智能系统，重新定义餐饮行业效率",
   "home.hero.cta": "了解更多",
@@ -60,7 +53,6 @@
   "home.esg.title": "无声厨房计划",
   "home.esg.desc": "赋能听障群体，创造包容性就业环境<br>用科技消除沟通障碍，让每个人都能发光发热",
   "home.esg.cta": "了解更多",
-
   "about.banner.title": "公司信息",
   "about.intro.title": "公司介绍",
   "about.intro.p1": "伴勺科技（Panshaker Services）是北美餐饮自动化领域的创新领跑者。我们的使命是「让地道的东方味道跨越国界，让每一座城市都能便捷地享受美食」。通过深度集成工业级自动化硬件与自主研发的 AI 系统，我们让餐饮生产更可靠、更高效。",
@@ -72,7 +64,6 @@
   "about.team.xu.name": "徐浩然",
   "about.team.xu.role": "创始人",
   "about.team.view_profile": "阅读简历 →",
-
   "profile.back_link": "← 返回管理团队",
   "profile.xu.name": "徐浩然",
   "profile.xu.role": "创始人",
@@ -84,7 +75,6 @@
   "profile.unknown.name": "unknown",
   "profile.unknown.role": "CTO",
   "profile.unknown.p1": "unknown，美国宾夕法尼亚大学计算机系博士，天津大学计算机系学士。",
-
   "careers.title": "加入我们",
   "careers.heading": "加入我们",
   "careers.role.title": "资深现场服务工程师",
@@ -113,7 +103,17 @@
   "careers.benefit_12": "伤残保险",
   "careers.benefit_13": "带薪假日",
   "careers.apply_cta": "立即申请",
-
   "investors.loading": "我们还在努力，感谢您的支持。",
-  "investors.subtitle": "祝您生活幸福，万事如意。"
+  "investors.subtitle": "祝您生活幸福，万事如意。",
+  "contact.name": "姓名",
+  "contact.name_ph": "请输入您的姓名",
+  "contact.email": "邮箱",
+  "contact.email_ph": "请输入您的邮箱地址",
+  "contact.phone": "电话",
+  "contact.phone_ph": "请输入您的电话号码（选填）",
+  "contact.region": "区域",
+  "contact.region_select": "选择区域",
+  "contact.description": "需求描述",
+  "contact.desc_ph": "请描述您的需求...",
+  "contact.submit": "提交"
 }
