@@ -65,6 +65,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Smartisan Compact';
     src: url('../fonts/Smartisan_Compact-Thin.ttf') format('truetype');
@@ -146,6 +147,18 @@ html[lang="ko"] body {
     word-break: keep-all;
 }
 
+/* Korean text in language dropdown — always use SF Pro regardless of current page lang */
+[data-lang="ko"] {
+    font-family: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif !important;
+}
+
+/* Korean: bump light (300) weights to regular (400) to avoid overly-thin Korean glyphs */
+html[lang="ko"] p,
+html[lang="ko"] span,
+html[lang="ko"] div {
+    font-weight: 400;
+}
+
 /* Japanese: allow natural line breaks between characters and scale down slightly */
 html[lang="ja"] body {
     word-break: normal;
@@ -187,7 +200,17 @@ a {
 }
 
 /* Force all form and interactive elements to inherit brand font */
-input, textarea, select, button, table, th, td, code, pre, kbd, samp {
+input,
+textarea,
+select,
+button,
+table,
+th,
+td,
+code,
+pre,
+kbd,
+samp {
     font-family: inherit;
 }
 

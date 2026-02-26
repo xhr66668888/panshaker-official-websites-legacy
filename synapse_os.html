@@ -133,6 +133,18 @@
             word-break: keep-all;
         }
 
+        /* Korean text in language dropdown */
+        [data-lang="ko"] {
+            font-family: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif !important;
+        }
+
+        /* Korean: bump light (300) weights to regular (400) */
+        html[lang="ko"] p,
+        html[lang="ko"] span,
+        html[lang="ko"] div {
+            font-weight: 400;
+        }
+
         /* Base Reset & Vars */
         :root {
             --brand-blue: #0E427E;
