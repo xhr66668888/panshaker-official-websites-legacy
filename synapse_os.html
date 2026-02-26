@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>PanOS | Panshaker Services — Next-Gen Restaurant Operating System</title>
     <meta name="description"
         content="PanOS — the next-generation restaurant operating system by Panshaker Services. AI-powered management, real-time monitoring, and automated kitchen control.">
@@ -13,6 +13,13 @@
     <link rel="icon" href="favicon.ico" sizes="any">
     <!-- SEO: Canonical -->
     <link rel="canonical" href="https://www.panshaker.com/synapse_os.html">
+    <!-- SEO: hreflang -->
+    <link rel="alternate" hreflang="zh-CN" href="https://www.panshaker.com/synapse_os.html?lang=zh-CN">
+    <link rel="alternate" hreflang="en" href="https://www.panshaker.com/synapse_os.html?lang=en">
+    <link rel="alternate" hreflang="zh-TW" href="https://www.panshaker.com/synapse_os.html?lang=zh-TW">
+    <link rel="alternate" hreflang="ko" href="https://www.panshaker.com/synapse_os.html?lang=ko">
+    <link rel="alternate" hreflang="ja" href="https://www.panshaker.com/synapse_os.html?lang=ja">
+    <link rel="alternate" hreflang="x-default" href="https://www.panshaker.com/synapse_os.html">
     <!-- SEO: Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="PanOS | Panshaker Services — Next-Gen Restaurant Operating System">
@@ -21,6 +28,12 @@
     <meta property="og:url" content="https://www.panshaker.com/synapse_os.html">
     <meta property="og:site_name" content="Panshaker Services">
     <meta property="og:image" content="https://www.panshaker.com/assets/logo/panos-logo.png">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PanOS | Panshaker Services — Next-Gen Restaurant Operating System">
+    <meta name="twitter:description" content="PanOS — the next-generation restaurant operating system. AI-powered management, real-time monitoring, and automated kitchen control.">
+    <meta name="twitter:image" content="https://www.panshaker.com/assets/logo/panos-logo.png">
     <!-- Fonts -->
     <style>
         @font-face {
@@ -454,6 +467,39 @@
         .tier-gold .demo-link {
             margin-top: 30px;
         }
+
+        /* Demo link hover styles */
+        .demo-link-gold {
+            color: var(--gold);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: color 0.3s;
+        }
+        .demo-link-gold:hover { color: #333; }
+
+        .demo-link-blue {
+            color: var(--brand-blue);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: color 0.3s;
+        }
+        .demo-link-blue:hover { color: #333; }
+
+        .demo-link-dark {
+            color: #1d1d1f;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: color 0.3s;
+        }
+        .demo-link-dark:hover { color: #666; }
+
+        .demo-link-green {
+            color: var(--brand-green);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: color 0.3s;
+        }
+        .demo-link-green:hover { color: #333; }
 
         /* Tier 2: Standard */
         .tier-standard {
@@ -1697,24 +1743,42 @@
                 <!-- Right Side - Images -->
                 <div class="switch-card-right"
                     style="position: relative; height: 600px; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.15); background: #f5f5f5;">
-                    <img src="assets/screenshots/synapse-dashboard.png" alt="快餐服务" class="switch-card-image active"
-                        data-index="0"
-                        style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 1; transition: opacity 0.5s ease;">
-                    <img src="assets/screenshots/synapse-robot-control.png" alt="正餐服务" class="switch-card-image"
-                        data-index="1"
-                        style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s ease;">
-                    <img src="assets/screenshots/synapse-customer-management.png" alt="茶饮甜品店" class="switch-card-image"
-                        data-index="2"
-                        style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s ease;">
-                    <img src="assets/screenshots/synapse-delivery-aggregation.png" alt="智能炒菜餐厅"
-                        class="switch-card-image" data-index="3"
-                        style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s ease;">
-                    <img src="assets/screenshots/synapse-ai-assistant.png" alt="火锅自助餐" class="switch-card-image"
-                        data-index="4"
-                        style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s ease;">
-                    <img src="assets/screenshots/synapse-dashboard.png" alt="连锁餐饮" class="switch-card-image"
-                        data-index="5"
-                        style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s ease;">
+                    <picture class="switch-card-image active" data-index="0"
+                        style="position: absolute; width: 100%; height: 100%; opacity: 1; transition: opacity 0.5s ease;">
+                        <source srcset="assets/screenshots/synapse-dashboard.webp" type="image/webp">
+                        <img src="assets/screenshots/synapse-dashboard.png" alt="快餐服务"
+                            style="width: 100%; height: 100%; object-fit: contain;">
+                    </picture>
+                    <picture class="switch-card-image" data-index="1"
+                        style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.5s ease;">
+                        <source srcset="assets/screenshots/synapse-robot-control.webp" type="image/webp">
+                        <img src="assets/screenshots/synapse-robot-control.png" alt="正餐服务"
+                            style="width: 100%; height: 100%; object-fit: contain;">
+                    </picture>
+                    <picture class="switch-card-image" data-index="2"
+                        style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.5s ease;">
+                        <source srcset="assets/screenshots/synapse-customer-management.webp" type="image/webp">
+                        <img src="assets/screenshots/synapse-customer-management.png" alt="茶饮甜品店"
+                            style="width: 100%; height: 100%; object-fit: contain;">
+                    </picture>
+                    <picture class="switch-card-image" data-index="3"
+                        style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.5s ease;">
+                        <source srcset="assets/screenshots/synapse-delivery-aggregation.webp" type="image/webp">
+                        <img src="assets/screenshots/synapse-delivery-aggregation.png" alt="智能炒菜餐厅"
+                            style="width: 100%; height: 100%; object-fit: contain;">
+                    </picture>
+                    <picture class="switch-card-image" data-index="4"
+                        style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.5s ease;">
+                        <source srcset="assets/screenshots/synapse-ai-assistant.webp" type="image/webp">
+                        <img src="assets/screenshots/synapse-ai-assistant.png" alt="火锅自助餐"
+                            style="width: 100%; height: 100%; object-fit: contain;">
+                    </picture>
+                    <picture class="switch-card-image" data-index="5"
+                        style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.5s ease;">
+                        <source srcset="assets/screenshots/synapse-dashboard.webp" type="image/webp">
+                        <img src="assets/screenshots/synapse-dashboard.png" alt="连锁餐饮"
+                            style="width: 100%; height: 100%; object-fit: contain;">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -1734,9 +1798,7 @@
                     </h2>
                     <p data-i18n="synapse.tier.gold.desc">极致个性化的 C2M 引擎 - 口味数字孪生系统</p>
                     <div class="demo-link">
-                        <a href="#demo"
-                            style="color: var(--gold); text-decoration: underline; text-underline-offset: 4px; transition: color 0.3s;"
-                            onmouseenter="this.style.color='#333'" onmouseleave="this.style.color='var(--gold)'"
+                        <a href="#demo" class="demo-link-gold"
                             data-i18n="synapse.nav.demo">预约演示</a>
                     </div>
                 </div>
@@ -1749,9 +1811,7 @@
                     <h2>PanOS<sup style="font-size: 0.5em; margin-left: 2px;">™</sup></h2>
                     <p data-i18n="synapse.tier.standard.desc">自动化餐厅的标准配置。机器人中控直接下发 G-Code 指令，精准控制油温与翻炒。</p>
                     <div class="demo-link">
-                        <a href="#demo"
-                            style="color: var(--brand-blue); text-decoration: underline; text-underline-offset: 4px; transition: color 0.3s;"
-                            onmouseenter="this.style.color='#333'" onmouseleave="this.style.color='var(--brand-blue)'"
+                        <a href="#demo" class="demo-link-blue"
                             data-i18n="synapse.nav.demo">预约演示</a>
                     </div>
                 </div>
@@ -1766,9 +1826,7 @@
                     <p style="color: #666; font-size: 16px; margin-bottom: 20px;" data-i18n="synapse.tier.lite.desc">
                         视觉库存监控与智能熔断系统</p>
                     <div class="demo-link">
-                        <a href="#"
-                            style="color: #1d1d1f; text-decoration: underline; text-underline-offset: 4px; transition: color 0.3s;"
-                            onmouseenter="this.style.color='#666'" onmouseleave="this.style.color='#1d1d1f'"
+                        <a href="#" class="demo-link-dark"
                             data-i18n="synapse.tier.lite.cta">免费试用</a>
                     </div>
                 </article>
@@ -1780,9 +1838,7 @@
                     <p style="color: #666; font-size: 16px; margin-bottom: 20px;" data-i18n="synapse.tier.care.desc">
                         赋能听障群体的无声交互系统</p>
                     <div class="demo-link">
-                        <a href="#"
-                            style="color: var(--brand-green); text-decoration: underline; text-underline-offset: 4px; transition: color 0.3s;"
-                            onmouseenter="this.style.color='#333'" onmouseleave="this.style.color='var(--brand-green)'"
+                        <a href="#" class="demo-link-green"
                             data-i18n="synapse.common.more_plain">了解更多</a>
                     </div>
                 </article>

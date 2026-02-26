@@ -610,6 +610,14 @@
      * ============================ */
 
     function resolveInitialLang() {
+        // Priority: URL ?lang= > Cookie > Browser Detection > Default
+        try {
+            var params = new URLSearchParams(window.location.search);
+            var urlLang = params.get('lang');
+            if (urlLang && SUPPORTED_LANGS.indexOf(urlLang) !== -1) {
+                return urlLang;
+            }
+        } catch (e) { /* URLSearchParams not supported, skip */ }
         var cookieLang = getCookie(COOKIE_NAME);
         if (cookieLang && SUPPORTED_LANGS.indexOf(cookieLang) !== -1) {
             return cookieLang;

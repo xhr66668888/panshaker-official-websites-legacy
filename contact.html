@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="format-detection" content="telephone=no">
     <title>Contact Us | Panshaker Services</title>
     <meta name="description"
@@ -14,6 +14,13 @@
     <link rel="icon" href="favicon.ico" sizes="any">
     <!-- SEO: Canonical -->
     <link rel="canonical" href="https://www.panshaker.com/contact.html">
+    <!-- SEO: hreflang -->
+    <link rel="alternate" hreflang="zh-CN" href="https://www.panshaker.com/contact.html?lang=zh-CN">
+    <link rel="alternate" hreflang="en" href="https://www.panshaker.com/contact.html?lang=en">
+    <link rel="alternate" hreflang="zh-TW" href="https://www.panshaker.com/contact.html?lang=zh-TW">
+    <link rel="alternate" hreflang="ko" href="https://www.panshaker.com/contact.html?lang=ko">
+    <link rel="alternate" hreflang="ja" href="https://www.panshaker.com/contact.html?lang=ja">
+    <link rel="alternate" hreflang="x-default" href="https://www.panshaker.com/contact.html">
     <!-- SEO: Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Contact Us | Panshaker Services">
@@ -22,6 +29,12 @@
     <meta property="og:url" content="https://www.panshaker.com/contact.html">
     <meta property="og:site_name" content="Panshaker Services">
     <meta property="og:image" content="https://www.panshaker.com/assets/logo/panshaker-logo.png">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contact Us | Panshaker Services">
+    <meta name="twitter:description" content="Contact Panshaker Services — Get in touch with us to explore North American food automation and AI-powered systems.">
+    <meta name="twitter:image" content="https://www.panshaker.com/assets/logo/panshaker-logo.png">
     <link rel="stylesheet" href="assets/styles/shared.css?v=3">
     <style>
         /* 全局样式 */
@@ -40,7 +53,7 @@
         .page-banner {
             padding-top: 180px;
             padding-bottom: 80px;
-            background: url('assets/images/09-JackRacino.jpeg') no-repeat center center;
+            background: url('assets/images/09-JackRacino.webp') no-repeat center center;
             background-size: cover;
             text-align: center;
             position: relative;
@@ -239,7 +252,9 @@
     <section class="section contact-section">
         <div class="container">
             <div class="contact-form-wrapper">
-                <form id="contactForm" action="mailto:contact@panshaker.com" method="post" enctype="text/plain">
+                <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <!-- Honeypot anti-spam field -->
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                     <div class="form-group">
                         <label for="name" data-i18n="contact.name">姓名</label>
                         <input type="text" id="name" name="name" class="form-control" required
@@ -376,19 +391,41 @@
     <script>
         document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var phone = document.getElementById('phone').value;
-            var region = document.getElementById('region').value;
-            var desc = document.getElementById('description').value;
+            var form = this;
+            var btn = form.querySelector('.submit-btn');
+            var originalText = btn.textContent;
+            btn.disabled = true;
+            btn.textContent = '提交中...';
+            btn.style.opacity = '0.7';
 
-            var body = "Name: " + name + "%0D%0A" +
-                "Email: " + email + "%0D%0A" +
-                "Phone: " + phone + "%0D%0A" +
-                "Region: " + region + "%0D%0A" +
-                "Description: " + desc;
-
-            window.location.href = "mailto:contact@panshaker.com?subject=Contact%20Form%20Submission&body=" + body;
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            }).then(function (response) {
+                if (response.ok) {
+                    form.reset();
+                    btn.textContent = '提交成功 ✓';
+                    btn.style.background = '#0E427E';
+                    setTimeout(function () {
+                        btn.textContent = originalText;
+                        btn.style.background = '';
+                        btn.style.opacity = '';
+                        btn.disabled = false;
+                    }, 3000);
+                } else {
+                    throw new Error('Submit failed');
+                }
+            }).catch(function () {
+                btn.textContent = '提交失败，请重试';
+                btn.style.background = '#cc0000';
+                setTimeout(function () {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                    btn.style.opacity = '';
+                    btn.disabled = false;
+                }, 3000);
+            });
         });
     </script>
 </body>

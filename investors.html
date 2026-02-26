@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Investor Relations | Panshaker Services</title>
     <meta name="description"
         content="Panshaker Services investor relations — stay updated on our journey to revolutionize North American food automation.">
@@ -13,6 +13,13 @@
     <link rel="icon" href="favicon.ico" sizes="any">
     <!-- SEO: Canonical -->
     <link rel="canonical" href="https://www.panshaker.com/investors.html">
+    <!-- SEO: hreflang -->
+    <link rel="alternate" hreflang="zh-CN" href="https://www.panshaker.com/investors.html?lang=zh-CN">
+    <link rel="alternate" hreflang="en" href="https://www.panshaker.com/investors.html?lang=en">
+    <link rel="alternate" hreflang="zh-TW" href="https://www.panshaker.com/investors.html?lang=zh-TW">
+    <link rel="alternate" hreflang="ko" href="https://www.panshaker.com/investors.html?lang=ko">
+    <link rel="alternate" hreflang="ja" href="https://www.panshaker.com/investors.html?lang=ja">
+    <link rel="alternate" hreflang="x-default" href="https://www.panshaker.com/investors.html">
     <!-- SEO: Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Investor Relations | Panshaker Services">
@@ -21,6 +28,12 @@
     <meta property="og:url" content="https://www.panshaker.com/investors.html">
     <meta property="og:site_name" content="Panshaker Services">
     <meta property="og:image" content="https://www.panshaker.com/assets/logo/panshaker-logo.png">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Investor Relations | Panshaker Services">
+    <meta name="twitter:description" content="Panshaker Services investor relations — stay updated on our journey.">
+    <meta name="twitter:image" content="https://www.panshaker.com/assets/logo/panshaker-logo.png">
     <link rel="stylesheet" href="assets/styles/shared.css?v=3">
     <!-- Same styles -->
     <style>
@@ -108,7 +121,10 @@
     <div class="egg-container">
         <!-- Placeholder: To be replaced by nasdaq_celebration.png when available -->
         <div class="egg-image-placeholder" id="image-container">
-            <img src="assets/images/relations.jpg" alt="Investor Relations">
+            <picture>
+                <source srcset="assets/images/relations.webp" type="image/webp">
+                <img src="assets/images/relations.jpg" alt="Investor Relations">
+            </picture>
         </div>
 
         <div class="egg-text" data-i18n="investors.loading">我们还在努力，感谢您的支持。</div>

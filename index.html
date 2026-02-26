@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="format-detection" content="telephone=no">
     <title>Panshaker Services — AI-Powered Food Automation Solutions</title>
     <meta name="description"
@@ -14,6 +14,13 @@
     <link rel="icon" href="favicon.ico" sizes="any">
     <!-- SEO: Canonical -->
     <link rel="canonical" href="https://www.panshaker.com/">
+    <!-- SEO: hreflang -->
+    <link rel="alternate" hreflang="zh-CN" href="https://www.panshaker.com/?lang=zh-CN">
+    <link rel="alternate" hreflang="en" href="https://www.panshaker.com/?lang=en">
+    <link rel="alternate" hreflang="zh-TW" href="https://www.panshaker.com/?lang=zh-TW">
+    <link rel="alternate" hreflang="ko" href="https://www.panshaker.com/?lang=ko">
+    <link rel="alternate" hreflang="ja" href="https://www.panshaker.com/?lang=ja">
+    <link rel="alternate" hreflang="x-default" href="https://www.panshaker.com/">
     <!-- SEO: Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Panshaker Services — AI-Powered Food Automation Solutions">
@@ -66,6 +73,9 @@
       ]
     }
     </script>
+    <!-- Resource hints -->
+    <link rel="dns-prefetch" href="//www.xinchushi.com">
+    <link rel="preload" href="assets/fonts/Smartisan_Compact-Regular.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="assets/styles/shared.css?v=3">
     <style>
         /* 布局容器 */
@@ -593,6 +603,75 @@
             }
         }
 
+        /* Hero CTA button hover */
+        .hero-cta {
+            display: inline-block;
+            padding: 16px 48px;
+            background: #62BA46;
+            color: #fff;
+            border-radius: 30px;
+            font-size: 17px;
+            pointer-events: auto;
+            font-weight: 500;
+            box-shadow: 0 8px 24px rgba(98, 186, 70, 0.3);
+            transition: all 0.4s;
+        }
+
+        .hero-cta:hover {
+            background: #0E427E;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(14, 66, 126, 0.4);
+        }
+
+        /* PanOS title hover */
+        .panos-title-link {
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .panos-title-link:hover {
+            color: #0E427E;
+            transform: translateX(10px);
+        }
+
+        /* Learn more button hover */
+        .learn-more-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 28px;
+            background: #0E427E;
+            color: #fff;
+            border-radius: 25px;
+            font-size: 15px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(14, 66, 126, 0.2);
+        }
+
+        .learn-more-btn:hover {
+            background: #62BA46;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(98, 186, 70, 0.3);
+        }
+
+        /* ESG CTA hover */
+        .esg-cta {
+            display: inline-block;
+            padding: 12px 32px;
+            color: #0E427E;
+            border-radius: 4px;
+            font-size: 16px;
+            background: transparent;
+            transition: all 0.3s;
+            font-weight: 500;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .esg-cta:hover {
+            color: #62BA46;
+        }
+
         /* 微信浏览器特殊优化 */
         @media screen and (max-width: 768px) {
 
@@ -746,8 +825,11 @@
                     }
                 }
 
+                let animationId = null;
+                let isRunning = false;
+
                 function animate() {
-                    requestAnimationFrame(animate);
+                    animationId = requestAnimationFrame(animate);
                     ctx.clearRect(0, 0, width, height);
 
                     for (let i = 0; i < particles.length; i++) {
@@ -755,6 +837,42 @@
                         particles[i].draw();
                     }
                     connect();
+                }
+
+                function startAnimation() {
+                    if (!isRunning) {
+                        isRunning = true;
+                        animate();
+                    }
+                }
+
+                function stopAnimation() {
+                    if (isRunning && animationId) {
+                        cancelAnimationFrame(animationId);
+                        animationId = null;
+                        isRunning = false;
+                    }
+                }
+
+                // Pause when page is hidden (saves battery on mobile)
+                document.addEventListener('visibilitychange', function () {
+                    if (document.hidden) {
+                        stopAnimation();
+                    } else {
+                        startAnimation();
+                    }
+                });
+
+                // Pause when hero section is out of viewport
+                if ('IntersectionObserver' in window) {
+                    var heroObserver = new IntersectionObserver(function (entries) {
+                        if (entries[0].isIntersecting) {
+                            if (!document.hidden) startAnimation();
+                        } else {
+                            stopAnimation();
+                        }
+                    }, { threshold: 0.1 });
+                    heroObserver.observe(document.getElementById('hero-section'));
                 }
 
                 // Event Listeners
@@ -773,7 +891,7 @@
                 });
 
                 init();
-                animate();
+                startAnimation();
             })();
         </script>
 
@@ -781,10 +899,7 @@
             <h1 data-i18n-html="home.hero.title">AI 赋能下低人工成本<br><strong>商业中餐解决方案</strong></h1>
             <p data-i18n="home.hero.subtitle" style="max-width: 800px; margin: 30px auto 40px; opacity: 0.9;">融合硬件自动化与
                 AI 智能系统，重新定义餐饮行业效率</p>
-            <a href="service.html" data-i18n="home.hero.cta"
-                style="display:inline-block; padding: 16px 48px; background:#62BA46; color:#fff; border-radius:30px; font-size:17px; pointer-events: auto; font-weight: 500; box-shadow: 0 8px 24px rgba(98, 186, 70, 0.3); transition: all 0.4s;"
-                onmouseenter="this.style.background='#0E427E'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 32px rgba(14, 66, 126, 0.4)'"
-                onmouseleave="this.style.background='#62BA46'; this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 24px rgba(98, 186, 70, 0.3)'">
+            <a href="service.html" data-i18n="home.hero.cta" class="hero-cta">
                 了解更多
             </a>
         </div>
@@ -814,8 +929,11 @@
                 <div class="split-img" style="background: transparent; padding: 0; overflow: hidden;">
                     <div
                         style="width: 100%; height: 100%; background: #f9f9f9; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 20px;">
-                        <img src="assets/images/product.jpg" alt="Product"
-                            style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                        <picture>
+                            <source srcset="assets/images/product.webp" type="image/webp">
+                            <img src="assets/images/product.jpg" alt="Product"
+                                style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -823,28 +941,25 @@
             <div class="split-section">
                 <div class="split-text">
                     <a href="synapse_os.html" style="display: inline-block; text-decoration: none;">
-                        <h3 style="cursor: pointer; transition: all 0.3s; display: inline-block;"
-                            data-i18n="home.solution.synapse_title"
-                            onmouseenter="this.style.color='#0E427E'; this.style.transform='translateX(10px)'"
-                            onmouseleave="this.style.color='inherit'; this.style.transform='translateX(0)'">
+                        <h3 class="panos-title-link" data-i18n="home.solution.synapse_title">
                             PanOS
                         </h3>
                     </a>
                     <p data-i18n-html="home.solution.synapse_desc"
                         style="font-size: 22px; color: #333; font-weight: 500; line-height: 1.6;">
                         下一代餐饮操作系统<br>打造中餐出海标准化一条龙服务</p>
-                    <a href="synapse_os.html" data-i18n="home.solution.learn_more"
-                        style="display: inline-block; margin-top: 25px; padding: 12px 28px; background: #0E427E; color: #fff; border-radius: 25px; font-size: 15px; transition: all 0.3s; box-shadow: 0 4px 12px rgba(14, 66, 126, 0.2);"
-                        onmouseenter="this.style.background='#62BA46'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(98, 186, 70, 0.3)'"
-                        onmouseleave="this.style.background='#0E427E'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(14, 66, 126, 0.2)'">
+                    <a href="synapse_os.html" data-i18n="home.solution.learn_more" class="learn-more-btn">
                         了解更多 →
                     </a>
                 </div>
                 <div class="split-img" style="background: transparent; padding: 0; overflow: hidden;">
                     <div
                         style="width: 100%; height: 100%; background: #f9f9f9; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 20px;">
-                        <img src="assets/images/restaurant.jpg" alt="Restaurant"
-                            style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                        <picture>
+                            <source srcset="assets/images/restaurant.webp" type="image/webp">
+                            <img src="assets/images/restaurant.jpg" alt="Restaurant"
+                                style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -882,8 +997,11 @@
 
             <div class="ambassador-card">
                 <div class="ambassador-img-container">
-                    <img src="assets/images/gaoleilei.jpg" alt="Gao Leilei"
-                        style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+                    <picture>
+                        <source srcset="assets/images/gaoleilei.webp" type="image/webp">
+                        <img src="assets/images/gaoleilei.jpg" alt="Gao Leilei"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+                    </picture>
                 </div>
                 <div class="ambassador-text">
                     <p data-i18n-html="home.ambassador.line"
@@ -901,9 +1019,7 @@
         <div class="container">
             <h2 data-i18n="home.esg.title">无声厨房计划</h2>
             <p data-i18n-html="home.esg.desc">赋能听障群体，创造包容性就业环境<br>用科技消除沟通障碍，让每个人都能发光发热</p>
-            <a href="#" data-i18n="home.esg.cta"
-                style="display:inline-block; padding: 12px 32px; color:#0E427E; border-radius:4px; font-size:16px; background: transparent; transition: all 0.3s; font-weight: 500; text-decoration: underline; text-underline-offset: 4px;"
-                onmouseenter="this.style.color='#62BA46'" onmouseleave="this.style.color='#0E427E'">
+            <a href="#" data-i18n="home.esg.cta" class="esg-cta">
                 了解更多
             </a>
         </div>
