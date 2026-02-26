@@ -6,29 +6,24 @@
   "nav.synapse": "PanOS",
   "nav.careers": "加入團隊",
   "nav.investors": "投資者關係",
-
+  "nav.service": "服務",
   "hero.headline": "AI 賦能下低人工成本",
   "hero.headline_strong": "商業中餐解決方案",
   "hero.subtitle": "融合硬體自動化與 AI 智慧系統，重新定義餐飲行業效率",
   "hero.cta": "了解更多",
-
   "philosophy.title": "不止於餐飲，更是硬科技",
   "philosophy.desc": "我們將餐飲業不可控的人工烹飪環節，轉換為 AI 時代高度可靠的工業自動化環節。<br>在北美，書寫中華美食的各種可能。",
-
   "solution.price_title": "Panshaker X7",
   "solution.price_desc": "競品價格 1/2<br>< 2週 低成本改裝<br>實現無人化烹飪",
   "solution.synapse_title": "PanOS",
   "solution.synapse_desc": "下一代餐飲操作系統<br>打造中餐出海標準化一條龍服務",
   "solution.learn_more": "了解更多 →",
-
   "ambassador.name": "高雷雷",
   "ambassador.title": "全球大使",
   "ambassador.desc": "前北京國安隊隊員，餐廳老闆",
-
   "esg.title": "無聲廚房計劃",
   "esg.desc": "賦能聽障群體，創造包容性就業環境<br>用科技消除溝通障礙，讓每個人都能發光發熱",
   "esg.cta": "了解更多",
-
   "footer.company": "Panshaker Services",
   "footer.company_title": "Panshaker Services",
   "footer.about": "關於我們",
@@ -44,7 +39,6 @@
   "footer.location": "Location: San Diego, CA",
   "footer.copyright": "2026 Panshaker Inc. All Rights Reserved.",
   "footer.tagline": "聚焦北美市場的餐飲自動化基礎設施服務商",
-
   "home.hero.title": "AI 賦能下低人工成本<br><strong>商業中餐解決方案</strong>",
   "home.hero.subtitle": "融合硬體自動化與 AI 智慧系統，重新定義餐飲行業效率",
   "home.hero.cta": "了解更多",
@@ -59,7 +53,6 @@
   "home.esg.title": "無聲廚房計劃",
   "home.esg.desc": "賦能聽障群體，創造包容性就業環境<br>用科技消除溝通障礙，讓每個人都能發光發熱",
   "home.esg.cta": "了解更多",
-
   "about.banner.title": "公司資訊",
   "about.intro.title": "公司介紹",
   "about.intro.p1": "伴勺科技（Panshaker Services）是北美餐飲自動化領域的創新領跑者。我們的使命是「讓地道的東方味道跨越國界，讓每一座城市都能便捷地享受美食」。透過深度整合工業級自動化硬體與自研 AI 系統，讓餐飲生產更可靠、更高效。",
@@ -71,7 +64,6 @@
   "about.team.xu.name": "徐浩然",
   "about.team.xu.role": "創始人",
   "about.team.view_profile": "閱讀簡歷 →",
-
   "profile.back_link": "← 返回管理團隊",
   "profile.xu.name": "徐浩然",
   "profile.xu.role": "創始人",
@@ -83,7 +75,6 @@
   "profile.unknown.name": "unknown",
   "profile.unknown.role": "CTO",
   "profile.unknown.p1": "unknown，美國賓夕法尼亞大學計算機系博士，天津大學計算機系學士。",
-
   "careers.title": "加入我們",
   "careers.heading": "加入我們",
   "careers.role.title": "資深現場服務工程師",
@@ -112,7 +103,6 @@
   "careers.benefit_12": "傷殘保險",
   "careers.benefit_13": "帶薪假日",
   "careers.apply_cta": "立即應徵",
-
   "investors.loading": "我們還在努力，感謝您的支持。",
   "investors.subtitle": "祝您生活幸福，萬事如意。"
 }

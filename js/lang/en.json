@@ -6,29 +6,24 @@
   "nav.synapse": "PanOS",
   "nav.careers": "Careers",
   "nav.investors": "Investor Relations",
-
+  "nav.service": "Services",
   "hero.headline": "AI-Powered Low-Labor-Cost",
   "hero.headline_strong": "Commercial Chinese Cuisine Solutions",
   "hero.subtitle": "Integrating hardware automation with AI intelligent systems to redefine restaurant efficiency",
   "hero.cta": "Learn More",
-
   "philosophy.title": "Beyond Food — It's Hard Tech",
   "philosophy.desc": "We transform the uncontrollable manual cooking process into a highly reliable industrial automation process for the AI era.<br>Writing new possibilities for Chinese cuisine in North America.",
-
   "solution.price_title": "Panshaker X7",
   "solution.price_desc": "Half the price of competitors<br>< 2 weeks low-cost retrofit<br>enabling unmanned cooking",
   "solution.synapse_title": "PanOS",
   "solution.synapse_desc": "Next-gen restaurant operating system<br>One-stop standardized solution for Chinese cuisine overseas",
   "solution.learn_more": "Learn More →",
-
   "ambassador.name": "Gao Leilei",
   "ambassador.title": "Global Ambassador",
   "ambassador.desc": "Former Beijing Guoan FC player, restaurant owner",
-
   "esg.title": "Silent Kitchen Initiative",
   "esg.desc": "Empowering the hearing-impaired community, creating inclusive employment<br>Using technology to break communication barriers, let everyone shine",
   "esg.cta": "Learn More",
-
   "footer.company": "Panshaker Services",
   "footer.company_title": "Panshaker Services",
   "footer.about": "About Us",
@@ -44,7 +39,6 @@
   "footer.location": "Location: San Diego, CA",
   "footer.copyright": "2026 Panshaker Inc. All Rights Reserved.",
   "footer.tagline": "Restaurant Automation Infrastructure Provider for the North American Market",
-
   "home.hero.title": "AI-Powered Low-Labor-Cost<br><strong>Commercial Chinese Cuisine Solutions</strong>",
   "home.hero.subtitle": "Integrating hardware automation with AI intelligent systems to redefine restaurant efficiency",
   "home.hero.cta": "Learn More",
@@ -59,7 +53,6 @@
   "home.esg.title": "Silent Kitchen Initiative",
   "home.esg.desc": "Empowering the hearing-impaired community, creating inclusive employment<br>Using technology to break communication barriers, let everyone shine",
   "home.esg.cta": "Learn More",
-
   "about.banner.title": "Information",
   "about.intro.title": "About Panshaker",
   "about.intro.p1": "Panshaker Services is a leader in North American restaurant automation. Our mission is to bring authentic Eastern flavors across borders so every city can enjoy great food. By integrating industrial-grade automation hardware with our own AI, we deliver reliable, efficient kitchens.",
@@ -71,7 +64,6 @@
   "about.team.xu.name": "Haoran Xu",
   "about.team.xu.role": "Founder",
   "about.team.view_profile": "View Profile →",
-
   "profile.back_link": "← Back to Leadership Team",
   "profile.xu.name": "Haoran Xu",
   "profile.xu.role": "Founder",
@@ -83,7 +75,6 @@
   "profile.unknown.name": "unknown",
   "profile.unknown.role": "CTO",
   "profile.unknown.p1": "unknown holds a Ph.D. in Computer Science from the University of Pennsylvania and a B.S. in Computer Science from Tianjin University.",
-
   "careers.title": "Careers",
   "careers.heading": "Careers",
   "careers.role.title": "Lead Field Service Technician",
@@ -112,7 +103,6 @@
   "careers.benefit_12": "Disability insurance",
   "careers.benefit_13": "Paid holidays",
   "careers.apply_cta": "Apply Now",
-
   "investors.loading": "We're still working hard. Thank you for your support.",
   "investors.subtitle": "Wishing you happiness and all the best."
 }

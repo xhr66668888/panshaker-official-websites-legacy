@@ -1,0 +1,6 @@
+# https://www.panshaker.com/robots.txt
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.panshaker.com/sitemap.xml

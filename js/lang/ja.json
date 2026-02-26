@@ -5,30 +5,25 @@
   "nav.contact": "お問い合わせ",
   "nav.synapse": "PanOS",
   "nav.careers": "採用情報",
-  "nav.investors": "投資家情報",
-
+  "nav.investors": "投資家向け情報",
+  "nav.service": "サービス",
   "hero.headline": "AI搭載の低人件費",
   "hero.headline_strong": "商業中華料理ソリューション",
   "hero.subtitle": "ハードウェアオートメーションとAIインテリジェントシステムの融合で外食産業の効率を再定義",
   "hero.cta": "詳しく見る",
-
   "philosophy.title": "食を超えて、ハードテックへ",
   "philosophy.desc": "外食産業のコントロール不能な手動調理プロセスを、AI時代に適した高信頼の産業オートメーションプロセスに変換します。<br>北米で中華料理の新たな可能性を創造します。",
-
   "solution.price_title": "Panshaker X7",
   "solution.price_desc": "競合の半額<br>2週間以内の低コスト改装で<br>無人調理を実現",
   "solution.synapse_title": "PanOS",
   "solution.synapse_desc": "次世代レストラン運営システム<br>中華料理の海外展開をワンストップで標準化",
   "solution.learn_more": "詳しく見る →",
-
   "ambassador.name": "高雷雷",
   "ambassador.title": "グローバルアンバサダー",
   "ambassador.desc": "元北京国安FCメンバー、レストランオーナー",
-
   "esg.title": "サイレントキッチンプログラム",
   "esg.desc": "聴覚障害者コミュニティのエンパワーメント、包括的な雇用環境の創出<br>テクノロジーでコミュニケーションの壁を取り除き、誰もが輝ける社会へ",
   "esg.cta": "詳しく見る",
-
   "footer.company": "Panshaker Services",
   "footer.company_title": "Panshaker Services",
   "footer.about": "会社概要",
@@ -44,7 +39,6 @@
   "footer.location": "Location: San Diego, CA",
   "footer.copyright": "2026 Panshaker Inc. All Rights Reserved.",
   "footer.tagline": "北米市場向け外食オートメーション基盤プロバイダー",
-
   "home.hero.title": "AI搭載の低人件費<br><strong>商業中華料理ソリューション</strong>",
   "home.hero.subtitle": "ハードウェア自動化とAIインテリジェントシステムを統合し、外食産業の効率を再定義",
   "home.hero.cta": "詳しく見る",
@@ -59,7 +53,6 @@
   "home.esg.title": "サイレントキッチンプログラム",
   "home.esg.desc": "聴覚障害者コミュニティのエンパワーメント、包括的な雇用環境の創出<br>テクノロジーでコミュニケーションの壁をなくし、誰もが輝ける社会へ",
   "home.esg.cta": "詳しく見る",
-
   "about.banner.title": "企業情報",
   "about.intro.title": "会社紹介",
   "about.intro.p1": "Panshaker Services は北米の外食オートメーションをリードする企業です。国境を越えて本格的な東洋の味を届けることを使命に、産業用自動化ハードウェアと自社開発のAIを組み合わせ、信頼性と効率を両立したキッチンを実現します。",
@@ -71,7 +64,6 @@
   "about.team.xu.name": "シュー・ハオラン",
   "about.team.xu.role": "創設者",
   "about.team.view_profile": "プロフィールを見る →",
-
   "profile.back_link": "← 経営チームへ戻る",
   "profile.xu.name": "シュー・ハオラン",
   "profile.xu.role": "創設者",
@@ -83,7 +75,6 @@
   "profile.unknown.name": "unknown",
   "profile.unknown.role": "CTO",
   "profile.unknown.p1": "ペンシルベニア大学計算機科学博士、天津大学計算機科学学士。",
-
   "careers.title": "採用情報",
   "careers.heading": "採用情報",
   "careers.role.title": "リード フィールドサービスエンジニア",
@@ -112,7 +103,6 @@
   "careers.benefit_12": "傷病・障害保険",
   "careers.benefit_13": "祝日・休暇手当",
   "careers.apply_cta": "応募する",
-
   "investors.loading": "まだ準備中です。ご支援に感謝いたします。",
   "investors.subtitle": "皆さまの幸福とご多幸をお祈りします。"
 }
