@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <title>Contact Us | Panshaker Services</title>
+    <meta name="description"
+        content="Contact Panshaker Services — Get in touch with us to explore North American food automation and AI-powered systems.">
+    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/images/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <!-- SEO: Canonical -->
+    <link rel="canonical" href="https://www.panshaker.com/contact.html">
+    <!-- SEO: Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact Us | Panshaker Services">
+    <meta property="og:description"
+        content="Contact Panshaker Services — Get in touch with us to explore North American food automation and AI-powered systems.">
+    <meta property="og:url" content="https://www.panshaker.com/contact.html">
+    <meta property="og:site_name" content="Panshaker Services">
+    <meta property="og:image" content="https://www.panshaker.com/assets/logo/panshaker-logo.png">
+    <link rel="stylesheet" href="assets/styles/shared.css?v=3">
+    <style>
+        /* 全局样式 */
+        body {
+            color: #333;
+            background-color: #f8f8f8;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+        }
+
+        /* Banner */
+        .page-banner {
+            padding-top: 180px;
+            padding-bottom: 80px;
+            background: url('assets/images/09-JackRacino.jpeg') no-repeat center center;
+            background-size: cover;
+            text-align: center;
+            position: relative;
+        }
+
+        .page-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .page-banner h1 {
+            font-size: 44px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Contact Form Section */
+        .contact-section {
+            background: #fff;
+            padding: 80px 0;
+            margin-top: -30px;
+            border-radius: 20px 20px 0 0;
+            position: relative;
+            z-index: 3;
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-form-wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid #eaeaea;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #111;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #d2d2d7;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #1d1d1f;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            font-family: inherit;
+            background: #fafafa;
+            box-sizing: border-box;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #62BA46;
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(98, 186, 70, 0.1);
+        }
+
+        select.form-control {
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="%23666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: #62BA46;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #4da036;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(98, 186, 70, 0.2);
+        }
+
+        /* 底部 */
+        footer {
+            background: #fff;
+            padding: 60px 0 20px;
+            border-top: 1px solid #eee;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-col h4 {
+            color: #0E427E;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .page-banner {
+                padding-top: 140px;
+                padding-bottom: 60px;
+            }
+
+            .page-banner h1 {
+                font-size: 32px !important;
+                padding: 0 20px;
+            }
+
+            .contact-form-wrapper {
+                padding: 25px 20px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <picture>
+                    <source srcset="assets/logo/panshaker-logo.svg" type="image/svg+xml">
+                    <img src="assets/logo/panshaker-logo.png"
+                        srcset="assets/logo/panshaker-logo.png 1x, assets/logo/panshaker-logo@2x.png 2x"
+                        alt="Panshaker Services" class="logo-img">
+                </picture>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" data-i18n="nav.home">首页</a>
+                <a href="x7_ai.html" data-i18n="nav.x7_ai">Panshaker X7</a>
+                <a href="service.html" data-i18n="nav.service">服务</a>
+                <a href="synapse_os.html" data-i18n="nav.synapse">PanOS</a>
+                <a href="about.html" data-i18n="nav.about">关于我们</a>
+                <a href="contact.html" class="active" data-i18n="nav.contact">联系我们</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-banner">
+        <div class="container">
+            <h1 data-i18n="nav.contact">联系我们</h1>
+        </div>
+    </div>
+
+    <section class="section contact-section">
+        <div class="container">
+            <div class="contact-form-wrapper">
+                <form id="contactForm" action="mailto:contact@panshaker.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name" data-i18n="contact.name">Name / 姓名</label>
+                        <input type="text" id="name" name="name" class="form-control" required
+                            data-i18n-placeholder="contact.name_ph" placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" data-i18n="contact.email">Email / 邮箱</label>
+                        <input type="email" id="email" name="email" class="form-control" required
+                            data-i18n-placeholder="contact.email_ph" placeholder="Enter your email address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" data-i18n="contact.phone">Phone / 电话</label>
+                        <input type="tel" id="phone" name="phone" class="form-control"
+                            data-i18n-placeholder="contact.phone_ph" placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="region" data-i18n="contact.region">Region / 区域</label>
+                        <select id="region" name="region" class="form-control" required>
+                            <option value="" disabled selected data-i18n="contact.region_select">Select your region /
+                                选择区域</option>
+                            <optgroup label="United States">
+                                <option value="AL">Alabama</option>
+                                <option value="AK">Alaska</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="CA">California</option>
+                                <option value="CO">Colorado</option>
+                                <option value="CT">Connecticut</option>
+                                <option value="DE">Delaware</option>
+                                <option value="FL">Florida</option>
+                                <option value="GA">Georgia</option>
+                                <option value="HI">Hawaii</option>
+                                <option value="ID">Idaho</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IN">Indiana</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="ME">Maine</option>
+                                <option value="MD">Maryland</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="MI">Michigan</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="NV">Nevada</option>
+                                <option value="NH">New Hampshire</option>
+                                <option value="NJ">New Jersey</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="NY">New York</option>
+                                <option value="NC">North Carolina</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="OH">Ohio</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="OR">Oregon</option>
+                                <option value="PA">Pennsylvania</option>
+                                <option value="RI">Rhode Island</option>
+                                <option value="SC">South Carolina</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TN">Tennessee</option>
+                                <option value="TX">Texas</option>
+                                <option value="UT">Utah</option>
+                                <option value="VT">Vermont</option>
+                                <option value="VA">Virginia</option>
+                                <option value="WA">Washington</option>
+                                <option value="WV">West Virginia</option>
+                                <option value="WI">Wisconsin</option>
+                                <option value="WY">Wyoming</option>
+                            </optgroup>
+                            <optgroup label="Canada">
+                                <option value="ON">Ontario</option>
+                                <option value="QC">Quebec</option>
+                                <option value="BC">British Columbia</option>
+                                <option value="AB">Alberta</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description" data-i18n="contact.description">Description / 需求描述</label>
+                        <textarea id="description" name="description" class="form-control" required
+                            data-i18n-placeholder="contact.desc_ph"
+                            placeholder="Tell us about your needs..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn" data-i18n="contact.submit">Submit / 提交</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4 data-i18n="footer.company_title">Panshaker Services</h4>
+                    <ul>
+                        <li><a href="about.html" data-i18n="footer.about">关于我们</a></li>
+                        <li><a href="careers.html" data-i18n="footer.careers">加入团队</a></li>
+                        <li><a href="investors.html" data-i18n="footer.investors">投资者关系</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.tech">技术支持</h4>
+                    <ul>
+                        <li><a href="synapse_os.html" data-i18n="footer.synapse">PanOS</a></li>
+                        <li><a href="service.html" data-i18n="footer.hardware">硬件改造方案</a></li>
+                        <li><a href="#" data-i18n="footer.support">售后服务</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.contact_title">联系方式</h4>
+                    <ul>
+                        <li><a href="mailto:contact@panshaker.com"><span data-i18n="footer.email">Email:
+                                    contact@panshaker.com</span></a></li>
+                        <li data-i18n="footer.location">Location: San Diego, CA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <span style="font-size: 14px; vertical-align: baseline;">©</span><span data-i18n="footer.copyright">2026
+                    Panshaker Inc. All Rights Reserved.</span> <br>
+                <span data-i18n="footer.tagline">聚焦北美市场的餐饮自动化基础设施服务商</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/device.js"></script>
+    <script src="js/i18n.js?v=2"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var region = document.getElementById('region').value;
+            var desc = document.getElementById('description').value;
+
+            var body = "Name: " + name + "%0D%0A" +
+                "Email: " + email + "%0D%0A" +
+                "Phone: " + phone + "%0D%0A" +
+                "Region: " + region + "%0D%0A" +
+                "Description: " + desc;
+
+            window.location.href = "mailto:contact@panshaker.com?subject=Contact%20Form%20Submission&body=" + body;
+        });
+    </script>
+</body>
+
+</html>
