@@ -139,6 +139,7 @@
   "delivery.advantage.empower": "고객 역량 강화",
   "delivery.advantage.empower_desc": "식자재 공급은 저희에게 맡기고 매장 운영에 집중하세요",
   "delivery.footer_note": "식자재 배송 서비스는 Panshaker X7 볶음 로봇 전용으로 설계되었습니다",
+  "delivery.service_states": "서비스 제공 주: CA · NY",
   "delivery.cta": "문의하기",
   "footer.delivery": "식자재 배송"
 }
