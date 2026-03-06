@@ -26,9 +26,9 @@
 | 语境 | 正确写法 | ❌ 错误写法 |
 |------|---------|------------|
 | 英文品牌名 | **Panshaker Services** | PanShaker Services, Pan Shaker |
-| 中文品牌名 | 伴勺科技 | 半勺科技 |
+| 中文品牌名 | 磐食科技 | 伴勺科技, 半勺科技 |
 | 法律主体 | Panshaker Inc | Panshaker LLC, PanShaker LLC |
-| Tab标题(所有页面) | **Panshaker Services** | 伴勺科技, The Art of Wok |
+| Tab标题(所有页面) | **Panshaker Services** | 磐食科技, The Art of Wok |
 
 ### 1.2 品牌色彩
 
@@ -74,7 +74,7 @@ color: #0E427E;
   - "Panshaker" 颜色: `#0E427E`
   - "Services" 颜色: `#62BA46`
   - 字间距: `-1px`
-- 中文 Logo（hover 切换）: "伴勺" `#0E427E` + "科技" `#62BA46`
+- 中文 Logo（hover 切换）: "磐食" `#0E427E` + "科技" `#62BA46`
 - Favicon: `assets/images/logo-transparent.png`（需提供透明底 PNG 文件）
 
 ### 1.5 字体
@@ -470,7 +470,7 @@ input, textarea { font-size: 16px; }
 - ✅ **Panshaker** (lowercase 's' in shaker)
 - ❌ ~~PanShaker~~ (已弃用)
 - Tab 标题统一为 **Panshaker Services**
-- 不使用"伴勺科技"作为标签页标题（正文内容中可保留）
+- 不使用"磐食科技"作为标签页标题（正文内容中可保留）
 
 ---
 
@@ -502,6 +502,7 @@ input, textarea { font-size: 16px; }
 |------|------|------|
 | 2026-02-20 | 1.0.0 | 初始规范建立。清理项目结构，移除渐变设计，统一品牌名为 Panshaker，隐藏部分团队成员，新增 i18n 和设备检测模块，建立设计与技术规范文档 |
 | 2026-03-XX | 1.0.1 | 统一品牌主体为 Panshaker Inc，修复 Synapse OS 图片与截图文件名，新增透明底 Favicon，抽取共享样式，补齐多语言翻译与页面 data-i18n 覆盖，完善招聘与团队页面文案 |
+| 2026-03-06 | 1.1.0 | 公司中文名由「伴勺科技」更名为「磐食科技」；全站英文内容"Chinese cuisine"改为"Asian cuisine/flavors"，淡化单一中餐定位，面向亚洲餐饮市场；优化 Delivery 页面英文文案，去除机翻风格 |
 
 ---
 

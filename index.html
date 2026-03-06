@@ -1061,7 +1061,8 @@
                 <div class="footer-col">
                     <h4 data-i18n="footer.contact_title">联系方式</h4>
                     <ul>
-                        <li><a href="mailto:contact@panshaker.com"><span data-i18n="footer.email">Email: contact@panshaker.com</span></a></li>
+                        <li><a href="mailto:contact@panshaker.com"><span data-i18n="footer.email">Email:
+                                    contact@panshaker.com</span></a></li>
                         <li data-i18n="footer.location">Location: San Diego, CA</li>
                     </ul>
                 </div>
@@ -1070,13 +1071,32 @@
                 <span style="font-size: 14px; vertical-align: baseline;">©</span><span data-i18n="footer.copyright">2026
                     Panshaker Inc.
                     All Rights Reserved.</span> <br>
-                <span data-i18n="footer.tagline">聚焦北美市场的餐饮自动化基础设施服务商</span>
+                <span data-i18n="footer.tagline">聚焦北美市场的餐饮自动化基础设施服务商</span><br>
+                <span style="margin-top:4px;display:inline-block;" data-i18n="footer.slogan"></span>
             </div>
         </div>
     </footer>
 
     <script src="js/device.js"></script>
     <script src="js/i18n.js?v=2"></script>
+    <script>
+        // Dynamic homepage title based on language
+        (function () {
+            var TITLES = {
+                'zh-CN': 'Panshaker Services — 烟火无界，至味如初',
+                'zh-TW': 'Panshaker Services — 烟火無界，至味如初',
+                'en': 'Panshaker Services — Timeless Flavor, Everywhere.',
+                'ko': 'Panshaker Services — Timeless Flavor, Everywhere.',
+                'ja': 'Panshaker Services — Timeless Flavor, Everywhere.'
+            };
+            function updateTitle() {
+                var lang = (window.PanI18n && PanI18n.currentLang) || 'zh-CN';
+                document.title = TITLES[lang] || TITLES['en'];
+            }
+            updateTitle();
+            document.addEventListener('langchange', updateTitle);
+        })();
+    </script>
 </body>
 
 </html>
