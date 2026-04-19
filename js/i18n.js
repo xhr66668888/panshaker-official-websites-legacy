@@ -18,12 +18,13 @@
     var COOKIE_NAME = 'ps_lang';
     var COOKIE_DAYS = 365;
     var DEFAULT_LANG = 'zh-CN';
-    var SUPPORTED_LANGS = ['zh-CN', 'en', 'zh-TW', 'ko', 'ja'];
+    var SUPPORTED_LANGS = ['zh-CN', 'en', 'zh-TW', 'zh-Hokkien', 'ko', 'ja'];
 
     var LANG_LABELS = {
         'zh-CN': '简体中文',
         'en': 'English',
         'zh-TW': '繁體中文',
+        'zh-Hokkien': '台語 (閩南語)',
         'ko': '한국어',
         'ja': '日本語'
     };
@@ -739,6 +740,7 @@
         'zh-CN': '中文',
         'en': 'EN',
         'zh-TW': '繁體',
+        'zh-Hokkien': '台語',
         'ko': '한국',
         'ja': '日本'
     };

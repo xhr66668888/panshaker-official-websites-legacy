@@ -41,27 +41,7 @@ const ROI_DATA = {
   }
 };
 
-const REVENUE_RANGES = [
-  { mid: 22500 },
-  { mid: 45000 },
-  { mid: 80000 },
-  { mid: 150000 },
-  { mid: 250000 }
-];
 
-const TIER_CONFIG = {
-  1: { name: "快炒 / 快餐", stirFryRatio: 0.95, replaceEfficiency: 0.95, revenuePerRobot: 25000 },
-  2: { name: "传统美式中餐", stirFryRatio: 0.85, replaceEfficiency: 0.90, revenuePerRobot: 25000 },
-  31: { name: "川菜", stirFryRatio: 0.80, replaceEfficiency: 0.85, revenuePerRobot: 30000 },
-  32: { name: "湘菜", stirFryRatio: 0.80, replaceEfficiency: 0.85, revenuePerRobot: 30000 },
-  33: { name: "粤菜", stirFryRatio: 0.75, replaceEfficiency: 0.80, revenuePerRobot: 30000 },
-  34: { name: "台湾菜", stirFryRatio: 0.75, replaceEfficiency: 0.80, revenuePerRobot: 30000 },
-  35: { name: "东北菜", stirFryRatio: 0.75, replaceEfficiency: 0.80, revenuePerRobot: 30000 },
-  36: { name: "其他大陆菜系", stirFryRatio: 0.75, replaceEfficiency: 0.80, revenuePerRobot: 30000 },
-  4: { name: "综合中餐", stirFryRatio: 0.50, replaceEfficiency: 0.60, revenuePerRobot: 40000 },
-  5: { name: "面食为主", stirFryRatio: 0.30, replaceEfficiency: 0.40, revenuePerRobot: 55000 },
-  6: { name: "其他", stirFryRatio: 0.10, replaceEfficiency: 0, revenuePerRobot: 0 }
-};
 
 // Also basic zip to state mapping for fallback
 function getZipState(zipStr) {

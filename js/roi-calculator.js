@@ -8,9 +8,13 @@ const ROI_STATE = {
     revenueRangeMid: 45000,
     tier: 2,
     chefCount: 2,
-    currentPainPoints: []
+    currentPainPoints: [],
+    wageInflation: 0,
+    revGrowth: 0
   }
 };
+
+let currentROILang = "zh-CN";
 
 const REVENUE_RANGES = [
   { label: "$15,000 - $30,000", mid: 22500 },
@@ -20,23 +24,27 @@ const REVENUE_RANGES = [
   { label: "$200,000+", mid: 250000 }
 ];
 
-const PAIN_POINTS = [
-  { id: "p1", label: "厨师难招", text: "您提到厨师难招 — 您不是一个人。2025 年加州中餐馆厨师空缺率高达 38%。Panshaker 永不会“不来上班”。" },
-  { id: "p2", label: "厨师工资年年涨", text: "您提到厨师工资年年涨 — 通胀和最低工资法案让餐饮利润越来越薄。Panshaker 一次投入，锁定未来成本。" },
-  { id: "p3", label: "中午忙不过来，口味不稳定", text: "您提到中午忙不过来，口味不稳定 — 峰值效率是利润杠杆。Panshaker 机器不知疲倦，每一盘都是一样的大厨水准。" },
-  { id: "p4", label: "厨师签证 / 身份问题", text: "您提到厨师身份问题 — 这是整个美国中餐业的结构性挑战。Panshaker 帮您从根源上减少对专职炒锅师傅的依赖。" },
-  { id: "p5", label: "厨师跳槽带走客源", text: "您提到厨师跳槽带走客源 — 让机器复刻您的招牌菜，把核心配方和客源牢牢掌握在自己手里。" },
-  { id: "p6", label: "家族成员在厨房，想解放", text: "您提到想解放厨房里的家族成员 — 餐饮是生意，不该变成套住全家的牢笼。把炒锅交给机器，您和家人去做好管理。" }
-];
+
 
 function initROICalculator() {
   const container = document.getElementById('roi-calculator-section');
   if (!container) return;
+  
+  if (window.PanI18n && window.PanI18n.currentLang) {
+      currentROILang = window.PanI18n.currentLang;
+  }
+  const s = ROI_I18N[currentROILang] || ROI_I18N['zh-CN'];
+  
+  // Set default tier for this lang
+  const availableTiers = Object.keys(s.tierConfig);
+  if (!availableTiers.includes(String(ROI_STATE.input.tier))) {
+      ROI_STATE.input.tier = parseInt(availableTiers[0]);
+  }
 
   container.innerHTML = `
     <!-- 跑马灯 -->
     <div class="roi-marquee">
-        <p>恭喜发财 · 生意兴隆 · 财源广进 · 日进斗金 · 一本万利 · 猪笼入水 · 风生水起 · 掂过碌蔗 · 盘满钵满 · 货如轮转 · 趁大钱 · 好运连连 · 蒸蒸日上 · 客似云来 · 财运亨通 · 和气生财 · 大吉大利 · 金玉满堂 · 步步高升 · 财神报到 · 越开越旺</p>
+        <p>${ROI_I18N['zh-CN'].marquee}</p>
     </div>
 
     <!-- 容器 -->
@@ -45,15 +53,15 @@ function initROICalculator() {
         <!-- Hero View -->
         <div id="roi-hero-view" class="roi-step-view active">
             <div class="roi-hero">
-                <h2>算一算，Panshaker能帮您多赚多少钱</h2>
+                <h2>${s.heroTitle}</h2>
                 
                 <div style="margin-bottom: 40px;">
-                     <button class="roi-btn" onclick="ROIGoToStep('roi-questions-view', 1)">开始计算</button>
+                     <button class="roi-btn" onclick="ROIGoToStep('roi-questions-view', 1)">${s.btnStart}</button>
                 </div>
                 <div class="roi-hero-badges">
-                    <span class="roi-badge">中国市场满意率100%（截止2026/4/15)</span>
-                    <span class="roi-badge">由华盛顿大学团队硬核打造</span>
-                    <span class="roi-badge">加州/纽约/内华达州免费上门</span>
+                    <span class="roi-badge">${s.badge1}</span>
+                    <span class="roi-badge">${s.badge2}</span>
+                    <span class="roi-badge">${s.badge3}</span>
                 </div>
             </div>
         </div>
@@ -62,18 +70,18 @@ function initROICalculator() {
         <div id="roi-questions-view" class="roi-step-view">
             <!-- Step 1: ZIP -->
             <div id="roi-step-1" class="roi-form-group">
-                <h3>1. 您的店在哪里？</h3>
+                <h3>${s.q1Title}</h3>
                 
-                <input type="text" id="roi-input-zip" class="roi-input" placeholder="输入 5 位美国邮编 (如 90012)" value="90012" maxlength="5">
+                <input type="text" id="roi-input-zip" class="roi-input" placeholder="${s.q1Placeholder}" value="90012" maxlength="5">
                 <div style="margin-top: 30px;">
-                    <button class="roi-btn" onclick="ROIProceedStep(2)">下一步</button>
+                    <button class="roi-btn" onclick="ROIProceedStep(2)">${s.btnNext}</button>
                 </div>
             </div>
 
             <!-- Step 2: Revenue -->
             <div id="roi-step-2" class="roi-form-group" style="display:none;">
-                <h3>2. 您的餐厅大概月营业额</h3>
-                <p class="roi-form-hint">选择最符合您情况的区间</p>
+                <h3>${s.q2Title}</h3>
+                <p class="roi-form-hint">${s.q2Hint}</p>
                 <div class="roi-card-grid" id="roi-grid-revenue">
                     ${REVENUE_RANGES.map((r, i) => `
                         <div class="roi-card" onclick="ROISelectRevenue(${i})" id="roi-rev-${i}">
@@ -82,51 +90,51 @@ function initROICalculator() {
                     `).join('')}
                 </div>
                 <div style="margin-top: 30px;">
-                    <button class="roi-btn roi-btn-outline" onclick="ROIProceedStep(1)">返回</button>
+                    <button class="roi-btn roi-btn-outline" onclick="ROIProceedStep(1)">${s.btnBack}</button>
                 </div>
             </div>
 
             <!-- Step 3: Tier -->
             <div id="roi-step-3" class="roi-form-group" style="display:none;">
-                <h3>3. 您的餐厅主要做什么菜系</h3>
-                <p class="roi-form-hint">这将决定机器人能帮您替代多少炒锅工作量</p>
+                <h3>${s.q3Title}</h3>
+                <p class="roi-form-hint">${s.q3Hint}</p>
                 <div class="roi-card-grid" id="roi-grid-tier">
-                    ${Object.keys(TIER_CONFIG).map(tierId => `
+                    ${Object.keys(s.tierConfig).map(tierId => `
                         <div class="roi-card" onclick="ROISelectTier(${tierId})" id="roi-tier-${tierId}">
-                            <div class="roi-card-title">${TIER_CONFIG[tierId].name}</div>
+                            <div class="roi-card-title">${s.tierConfig[tierId].name}</div>
                         </div>
                     `).join('')}
                 </div>
                 <div style="margin-top: 30px;">
-                    <button class="roi-btn roi-btn-outline" onclick="ROIProceedStep(2)">返回</button>
+                    <button class="roi-btn roi-btn-outline" onclick="ROIProceedStep(2)">${s.btnBack}</button>
                 </div>
             </div>
 
             <!-- Step 4: Chef Count -->
             <div id="roi-step-4" class="roi-form-group" style="display:none;">
-                <h3>4. 您现在雇了几位炒锅师傅？</h3>
+                <h3>${s.q4Title}</h3>
                 
                 <div class="roi-card-grid" id="roi-grid-chef">
-                    <div class="roi-card" onclick="ROISelectChef(1)" id="roi-chef-1">1 位</div>
-                    <div class="roi-card selected" onclick="ROISelectChef(2)" id="roi-chef-2">2 位</div>
-                    <div class="roi-card" onclick="ROISelectChef(3)" id="roi-chef-3">3 位</div>
-                    <div class="roi-card" onclick="ROISelectChef(4)" id="roi-chef-4">4 位</div>
-                    <div class="roi-card" onclick="ROISelectChef(5)" id="roi-chef-5">5+ 位</div>
+                    <div class="roi-card" onclick="ROISelectChef(1)" id="roi-chef-1">1 ${s.chefPlural}</div>
+                    <div class="roi-card selected" onclick="ROISelectChef(2)" id="roi-chef-2">2 ${s.chefPlural}</div>
+                    <div class="roi-card" onclick="ROISelectChef(3)" id="roi-chef-3">3 ${s.chefPlural}</div>
+                    <div class="roi-card" onclick="ROISelectChef(4)" id="roi-chef-4">4 ${s.chefPlural}</div>
+                    <div class="roi-card" onclick="ROISelectChef(5)" id="roi-chef-5">5+ ${s.chefPlural}</div>
                 </div>
                 <br>
                 <!-- Optional Pain points -->
                 <div style="margin-top: 20px;">
-                    <p class="roi-form-hint">（可选）您目前最头疼的是什么？</p>
+                    <p class="roi-form-hint">${s.q4Hint}</p>
                     <div class="roi-tag-grid" id="roi-grid-pain">
-                        ${PAIN_POINTS.map(p => `
+                        ${s.painPoints.map(p => `
                             <div class="roi-tag" onclick="ROITogglePain('${p.id}')" id="roi-pain-${p.id}">${p.label}</div>
                         `).join('')}
                     </div>
                 </div>
 
                 <div style="margin-top: 30px;">
-                    <button class="roi-btn roi-btn-outline" onclick="ROIProceedStep(3)">返回</button>
-                    <button class="roi-btn" onclick="ROICalculateAndShow()">&nbsp;&nbsp;生成报告&nbsp;&nbsp;</button>
+                    <button class="roi-btn roi-btn-outline" onclick="ROIProceedStep(3)">${s.btnBack}</button>
+                    <button class="roi-btn" onclick="ROICalculateAndShow()">${s.btnSubmit}</button>
                 </div>
             </div>
 
@@ -135,90 +143,128 @@ function initROICalculator() {
         <!-- Result View -->
         <div id="roi-result-view" class="roi-step-view">
             <div class="roi-result-header">
-                <p id="roi-result-subtitle" style="color: #666; font-size: 24px; font-weight: 500;">您在XX的餐厅<br>3年可以多赚</p>
+                <p id="roi-result-subtitle" style="color: #666; font-size: 24px; font-weight: 500;">${s.resTitlePt1}XX${s.resTitlePt2}</p>
                 <div class="roi-hero-number-wrap" style="margin-top: 40px;">
                     <span style="font-size: 40px; font-weight: bold; color: #0E427E;">$</span>
                     <span class="roi-hero-number" id="roi-number-hero">0</span>
                 </div>
-                <p style="font-size: 12px; color: #999;">数据来源：BLS 2025 劳工统计 · ZipRecruiter 行业工资 · Panshaker 客户实测</p>
+                <p style="font-size: 12px; color: #999;">${s.resDataSrc}</p>
+                
+                <div class="roi-slider-group" style="margin-top: 30px;">
+                    <label>${s.resSliderWage} <span id="roi-val-wage-slider">0%</span></label>
+                    <input type="range" min="0" max="25" step="5" value="0" id="roi-slider-wage" oninput="ROIUpdateSliders()">
+                    <div class="roi-slider-ticks"><span>0%</span><span>5%</span><span>10%</span><span>15%</span><span>20%</span><span>25%</span></div>
+                    
+                    <label style="margin-top: 25px;">${s.resSliderRev} <span id="roi-val-rev-slider">0%</span></label>
+                    <input type="range" min="0" max="25" step="5" value="0" id="roi-slider-rev" oninput="ROIUpdateSliders()">
+                    <div class="roi-slider-ticks"><span>0%</span><span>5%</span><span>10%</span><span>15%</span><span>20%</span><span>25%</span></div>
+                </div>
             </div>
 
             <div class="roi-stats-grid">
                 <div class="roi-stat-card">
-                    <div class="roi-stat-title">人工成本直降</div>
+                    <div class="roi-stat-title">${s.resStat1T}</div>
                     <div class="roi-stat-value" id="roi-val-reduction">0%</div>
-                    <div class="roi-stat-sub" id="roi-val-reduction-sub">每月立省 $0</div>
+                    <div class="roi-stat-sub" id="roi-val-reduction-sub">${s.resStat1S}0</div>
                 </div>
                 <div class="roi-stat-card">
-                    <div class="roi-stat-title">投资回本仅需</div>
-                    <div class="roi-stat-value" id="roi-val-payback">0 个月</div>
-                    <div class="roi-stat-sub">之后全是净赚</div>
+                    <div class="roi-stat-title">${s.resStat2T}</div>
+                    <div class="roi-stat-value" id="roi-val-payback">0 ${s.resStat2M}</div>
+                    <div class="roi-stat-sub">${s.resStat2S}</div>
                 </div>
                 <div class="roi-stat-card">
-                    <div class="roi-stat-title">5 年累计收益</div>
+                    <div class="roi-stat-title">${s.resStat3T}</div>
                     <div class="roi-stat-value" id="roi-val-5year">$0</div>
-                    <div class="roi-stat-sub">相当于再开一家店</div>
+                    <div class="roi-stat-sub">${s.resStat3S}</div>
                 </div>
             </div>
 
-            <!-- Breakdown -->
-            <div class="roi-breakdown-section">
-                <h3 style="font-size: 22px; color: #333; margin-bottom: 20px;">您可能低估了现在的真实成本</h3>
-                <p style="color: #666;">大多数餐厅老板只看到厨师月薪，忽略了其他 60% 的隐性成本。<br>当前每月总人力相关成本：<strong style="color: #d32f2f; font-size: 20px;" id="roi-val-current-cost">$0</strong></p>
-                
-                <div class="roi-bar-container" id="roi-bar-container">
-                    <div class="roi-bar-segment" id="roi-bar-1"></div>
-                    <div class="roi-bar-segment" id="roi-bar-2"></div>
-                    <div class="roi-bar-segment" id="roi-bar-3"></div>
-                    <div class="roi-bar-segment" id="roi-bar-4"></div>
-                    <div class="roi-bar-segment" id="roi-bar-5"></div>
-                    <div class="roi-bar-segment" id="roi-bar-6"></div>
-                </div>
+            <!-- Detailed Insights (Now open) -->
+            <div id="roi-breakdown-wrapper">
+                    <!-- Breakdown -->
+                    <div class="roi-breakdown-section">
+                        <h3 style="font-size: 22px; color: #333; margin-bottom: 20px;">${s.resBrTitle1}</h3>
+                        <p style="color: #666;">${s.resBrSub1}<strong style="color: #d32f2f; font-size: 20px;" id="roi-val-current-cost">$0</strong></p>
+                        
+                        <div class="roi-bar-container" id="roi-bar-container">
+                            <div class="roi-bar-segment" id="roi-bar-1"></div>
+                            <div class="roi-bar-segment" id="roi-bar-2"></div>
+                            <div class="roi-bar-segment" id="roi-bar-3"></div>
+                            <div class="roi-bar-segment" id="roi-bar-4"></div>
+                            <div class="roi-bar-segment" id="roi-bar-5"></div>
+                            <div class="roi-bar-segment" id="roi-bar-6"></div>
+                        </div>
 
-                <div class="roi-legend">
-                    <div class="roi-legend-item"><div class="roi-legend-color" style="background:#0E427E"></div>炒锅师傅全包成本 <span id="roi-leg-1" style="margin-left:auto; font-weight:500;">$0</span></div>
-                    <div class="roi-legend-item"><div class="roi-legend-color" style="background:#2c5ba3"></div>厨师流失摊销 <span id="roi-leg-2" style="margin-left:auto; font-weight:500;">$0</span></div>
-                    <div class="roi-legend-item"><div class="roi-legend-color" style="background:#4a74c8"></div>旺季高峰加班费 <span id="roi-leg-3" style="margin-left:auto; font-weight:500;">$0</span></div>
-                    <div class="roi-legend-item"><div class="roi-legend-color" style="background:#688dee"></div>食材浪费与客诉退单 <span id="roi-leg-4" style="margin-left:auto; font-weight:500;">$0</span></div>
-                    <div class="roi-legend-item"><div class="roi-legend-color" style="background:#85a6ff"></div>病假与事假替班 <span id="roi-leg-5" style="margin-left:auto; font-weight:500;">$0</span></div>
-                    <div class="roi-legend-item"><div class="roi-legend-color" style="background:#a3bfff"></div>SaaS与支付手续费溢价 <span id="roi-leg-6" style="margin-left:auto; font-weight:500;">$0</span></div>
-                </div>
-            </div>
+                        <div class="roi-legend">
+                            <div class="roi-legend-item"><div class="roi-legend-color" style="background:#0E427E"></div>${s.leg1} <span id="roi-leg-1" style="margin-left:auto; font-weight:500;">$0</span></div>
+                            <div class="roi-legend-item"><div class="roi-legend-color" style="background:#2c5ba3"></div>${s.leg2} <span id="roi-leg-2" style="margin-left:auto; font-weight:500;">$0</span></div>
+                            <div class="roi-legend-item"><div class="roi-legend-color" style="background:#4a74c8"></div>${s.leg3} <span id="roi-leg-3" style="margin-left:auto; font-weight:500;">$0</span></div>
+                            <div class="roi-legend-item"><div class="roi-legend-color" style="background:#688dee"></div>${s.leg4} <span id="roi-leg-4" style="margin-left:auto; font-weight:500;">$0</span></div>
+                            <div class="roi-legend-item"><div class="roi-legend-color" style="background:#85a6ff"></div>${s.leg5} <span id="roi-leg-5" style="margin-left:auto; font-weight:500;">$0</span></div>
+                            <div class="roi-legend-item"><div class="roi-legend-color" style="background:#a3bfff"></div>${s.leg6} <span id="roi-leg-6" style="margin-left:auto; font-weight:500;">$0</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Comparison Table -->
+                    <h3 style="font-size: 22px; color: #333; margin: 40px 0 20px;">${s.resBrTitle2}</h3>
+                    <table class="roi-comparison-table">
+                        <tr>
+                            <th></th>
+                            <th>${s.tbTh1}</th>
+                            <th class="panshaker-col">${s.tbTh2}</th>
+                        </tr>
+                        <tr>
+                            <td>${s.tbRow1k}</td>
+                            <td class="roi-table-bad">${s.tbRow1b}</td>
+                            <td class="roi-table-good">${s.tbRow1g}</td>
+                        </tr>
+                        <tr>
+                            <td>${s.tbRow2k}</td>
+                            <td class="roi-table-bad">${s.tbRow2b}</td>
+                            <td class="roi-table-good">${s.tbRow2g}</td>
+                        </tr>
+                    </table>
 
-            <!-- Savings Checklist -->
-            <div>
-                <h3 style="font-size: 22px; color: #333; margin-bottom: 20px;">使用 Panshaker 后帮您省下的成本</h3>
-                <ul class="roi-checklist">
-                    <li>炒锅人工大幅减少，彻底告别依赖</li>
-                    <li>机器永不跳槽、不生病，流失焦虑减少</li>
-                    <li>旺季高峰火力全开，没有加班费</li>
-                    <li>精准烹饪，口味稳定，极度降低退餐率</li>
-                    <li><strong>免费赠送我们自研的商用餐厅管理系统 + 扫码点餐 + 会员系统（完全替代市面上的昂贵高额月费方案）</strong></li>
-                    <li><strong>内建 0 手续费支付通道网关（仅收基础通道费和信用卡费，我们绝无分毫加点抽成溢价）</strong></li>
-                </ul>
-            </div>
+                    <!-- Savings Checklist -->
+                    <div>
+                        <h3 style="font-size: 22px; color: #333; margin-bottom: 20px;">${s.resBrTitle3}</h3>
+                        <ul class="roi-checklist">
+                            <li>${s.chk1}</li>
+                            <li>${s.chk2}</li>
+                            <li>${s.chk3}</li>
+                            <li>${s.chk4}</li>
+                            <li><strong>${s.chk5}</strong></li>
+                            <li><strong>${s.chk6}</strong></li>
+                        </ul>
+                    </div>
+                </div> <!-- End of Breakdown Wrapper -->
             
             <!-- Painpoints dynamic section -->
             <div id="roi-pain-feedback" style="background: #fdfaf0; border-left: 4px solid #f2c94c; padding: 20px; border-radius: 4px; margin-bottom: 40px; display: none;">
-                <!-- dynamic -->
+                <!-- dynamic pain inject -->
             </div>
 
             <!-- Investment Blur -->
             <div class="roi-investment-card">
-                <h3 style="font-size: 26px; margin-bottom: 20px; font-weight: 600;">您的 Panshaker 专属投资方案</h3>
-                <p style="font-size: 16px; opacity: 0.9; margin-bottom: 30px;">根据您的餐厅规模 / 签约时长 / 所在州，我们会为您提供最优报价。</p>
+                <h3 style="font-size: 26px; margin-bottom: 20px; font-weight: 600;">${s.cardTitle}</h3>
+                <p style="font-size: 16px; opacity: 0.9; margin-bottom: 20px;">${s.cardSub}</p>
+                
+                <div id="roi-lease-highlight" style="background: rgba(255,255,255,0.9); color: #333; padding: 20px; border-radius: 8px; margin-bottom: 30px; font-weight: 500; font-size: 16px; border-left: 5px solid #0E427E; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <!-- dynamic rent html -->
+                </div>
+
                 <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 12px; display: inline-block; margin-bottom: 30px; text-align: left;">
-                    <div style="font-size: 18px; margin-bottom: 10px;">回本周期：仅需 <strong style="font-size: 24px;" id="roi-val-blur-pb">3</strong> <strong>个月</strong></div>
-                    <div style="font-size: 18px;">之后每月净利：<strong style="font-size: 24px;" id="roi-val-blur-net">$5,200+</strong></div>
+                    <div style="font-size: 18px; margin-bottom: 10px;">${s.pbTimePrefix}<strong style="font-size: 24px;" id="roi-val-blur-pb">3</strong> <strong>${s.pbTimeSuffix}</strong></div>
+                    <div style="font-size: 18px;">${s.pbNetPrefix}<strong style="font-size: 24px;" id="roi-val-blur-net">$5,200+</strong></div>
                 </div>
                 <br>
-                <a href="contact.html" class="roi-btn" style="background: #fff; color: #0E427E;">获取我的专属报价</a>
+                <a href="contact.html" class="roi-btn" style="background: #fff; color: #0E427E;">${s.btnQuote}</a>
             </div>
 
             <div style="text-align: center; margin-top: 40px;">
-                <p style="font-size: 14px; color: #888;">如果不想现在预约联系，也可以 <a href="#" style="color: #0E427E; text-decoration: underline;">下载 PDF 版 ROI 分析报告</a> (需输入邮箱)</p>
+                <p style="font-size: 14px; color: #888;">${s.pdfTextHtml}</p>
                 <div style="margin-top: 20px;">
-                     <button class="roi-btn roi-btn-outline" onclick="ROIGoToStep('roi-questions-view', 1)">重新计算</button>
+                     <button class="roi-btn roi-btn-outline" onclick="ROIGoToStep('roi-questions-view', 1)">${s.btnRestart}</button>
                 </div>
             </div>
         </div>
@@ -226,25 +272,20 @@ function initROICalculator() {
         <!-- Tier 6 Soft Landing View -->
         <div id="roi-soft-landing" class="roi-step-view">
             <div class="roi-soft-landing">
-                <h3>感谢您的坦诚分享</h3>
-                <p>Panshaker 的核心优势是全自动“炒菜/快炒”。对于您这类炒菜占比较低的业态（火锅 / 烧烤 / 寿司），炒菜机器人的帮助可能有限 —— 我们不会劝您购买不适用的产品。<br><br>但我们的姊妹产品可能仍然对您有用：</p>
-                
-                <div style="text-align:left; max-width: 600px; margin: 0 auto; background: #f0f4f8; padding: 30px; border-radius: 12px; margin-bottom: 40px;">
-                    <ul class="roi-checklist" style="margin-bottom: 0;">
-                        <li>完全免费的 POS + 扫码点餐 + 会员系统（为您每年省 $3,600+）</li>
-                        <li>Tilled 零抽成极速支付通道（砍掉超额费率）</li>
-                        <li>免费客流分析与菜品排行数据后台</li>
-                    </ul>
+                <h3>${s.softTitle}</h3>
+                <p>${s.softP1}</p>
+                <ul>
+                    <li>${s.softS1}</li>
+                    <li>${s.softS2}</li>
+                </ul>
+                <div style="margin-top: 30px;">
+                    <a href="contact.html" class="roi-btn roi-btn-outline">${s.softQuote}</a>
                 </div>
-                
-                <a href="synapse_os.html" class="roi-btn">了解免费 SaaS 与软件方案</a>
-                
-                <div style="margin-top: 40px;">
-                     <button class="roi-btn roi-btn-outline" onclick="ROIGoToStep('roi-questions-view', 1)">修改计算条件</button>
+                <div style="margin-top: 20px;">
+                     <button class="roi-btn" style="background: transparent; color: #666; border: none; box-shadow: none;" onclick="ROIGoToStep('roi-questions-view', 1)">${s.btnRestart}</button>
                 </div>
             </div>
         </div>
-
     </div>
   `;
 
@@ -279,7 +320,13 @@ function ROIProceedStep(step) {
     if (step === 2) {
         ROI_STATE.input.zipCode = document.getElementById('roi-input-zip').value || '90012';
     }
-    window.scrollTo({ top: document.getElementById('roi-main-container').offsetTop - 50, behavior: 'smooth' });
+    
+    // Fix jump to top scroll by using bounded bounding client rectangle relative to page
+    const el = document.getElementById('roi-main-container');
+    if (el) {
+        const y = el.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+    }
 }
 
 // Select Logic
@@ -315,31 +362,40 @@ function ROITogglePain(id) {
 }
 
 // Calculate
-function calculateAggressive(input) {
-  const { zipCode, revenueRangeMid, tier, chefCount } = input;
-  
-  if (tier == 6) { return { isSoftLanding: true }; }
+function calculateAggressive({ zipCode, revenueRangeMid, tier, chefCount, wageInflation, revGrowth }) {
+  const s = ROI_I18N[currentROILang] || ROI_I18N['zh-CN'];
   
   const chefSalaryInfo = lookupChefSalary(zipCode);
-  const chefMonthlyCostStr = chefSalaryInfo.cost;
   const regionName = chefSalaryInfo.region;
+  const baseSalaryMultiplier = 1 + (wageInflation / 100);
+  const revGrowthMultiplier = 1 + (revGrowth / 100);
   
-  const tierInfo = TIER_CONFIG[tier];
+  const chefMonthlyCostStr = chefSalaryInfo.cost * baseSalaryMultiplier;
+  
+  // Make sure tier defaults nicely if they changed language and current tier is invalid
+  let tierInfo = s.tierConfig[tier];
+  if (!tierInfo) {
+      tierInfo = Object.values(s.tierConfig)[0];
+  }
   const { stirFryRatio, replaceEfficiency, revenuePerRobot } = tierInfo;
   
-  const robotCount = Math.max(1, Math.min(5, Math.round(revenueRangeMid / revenuePerRobot)));
+  const projectedRevenue = revenueRangeMid * revGrowthMultiplier;
+  let robotCount = 1;
+  if (tierInfo.revenuePerRobot > 0) {
+      robotCount = Math.max(1, Math.min(5, Math.round(projectedRevenue / tierInfo.revenuePerRobot)));
+  }
   
-  // Current Costs (Loading factor 1.4 applied implicitly as base is full cost, wait, the doc says lookup returns ~75 percentile. Let's make sure it's 1.4x of base)
-  // Actually doc says "查工资（已经是 75th percentile 的上限值）" "Loading factor 从 1.3x 提到 1.4x"
-  // So the base labor cost is directly chefMonthlyCost * chefCount.
   const baseLaborCost = chefMonthlyCostStr * chefCount;
-  const turnoverCost = 375 * chefCount;  // $375/month/chef
-  const peakOvertimeCost = revenueRangeMid > 40000 ? baseLaborCost * 0.15 : 0;
-  const foodWasteCost = tier <= 4 ? revenueRangeMid * 0.02 : 0;
-  const customerComplaintCost = tier <= 4 ? revenueRangeMid * 0.015 : 0;
+  const turnoverCost = 375 * chefCount * baseSalaryMultiplier;  // Scales with wages
+  const peakOvertimeCost = projectedRevenue > 40000 ? baseLaborCost * 0.15 : 0;
+  
+  // Generic fallback tier keys heuristic: 'tier' might be > 100.
+  // Just use a flag if efficiency is > 0.
+  const foodWasteCost = tierInfo.replaceEfficiency > 0 ? projectedRevenue * 0.02 : 0;
+  const customerComplaintCost = tierInfo.replaceEfficiency > 0 ? projectedRevenue * 0.015 : 0;
   const sickLeaveCost = baseLaborCost * 0.08;
   const saasCost = 300;
-  const paymentSurcharge = revenueRangeMid * 0.007;  // 0.7%
+  const paymentSurcharge = projectedRevenue * 0.007;  // 0.7%
   
   const currentMonthlyTotalCost = 
     baseLaborCost + turnoverCost + peakOvertimeCost + 
@@ -365,14 +421,13 @@ function calculateAggressive(input) {
   const threeYearSavings = annualSavings * 3;
   const fiveYearSavings = annualSavings * 5;
   
-  // First year investment (internal calc)
   const firstYearInvestment = 13800 * robotCount;
-  const paybackMonths = Math.ceil(firstYearInvestment / totalMonthlySavings);
+  const paybackMonths = totalMonthlySavings > 0 ? (firstYearInvestment / totalMonthlySavings).toFixed(1) : 999;
   
-  const laborReductionPct = Math.round((laborSaved / baseLaborCost) * 100);
+  const laborReductionPct = baseLaborCost > 0 ? Math.round((laborSaved / baseLaborCost) * 100) : 0;
   
   return {
-      isSoftLanding: false,
+      isSoftLanding: (tierInfo.replaceEfficiency === 0),
       regionName,
       tierName: tierInfo.name,
       threeYearSavings,
@@ -382,6 +437,9 @@ function calculateAggressive(input) {
       laborReductionPct,
       currentMonthlyTotalCost,
       monthlySavings: totalMonthlySavings,
+      saasSaved,
+      paymentSaved,
+      robotCount,
       breakdown: [
           baseLaborCost,
           turnoverCost,
@@ -394,8 +452,9 @@ function calculateAggressive(input) {
 }
 
 // Result Renderer
-function ROICalculateAndShow() {
+function ROICalculateAndShow(isUpdate = false) {
     const res = calculateAggressive(ROI_STATE.input);
+    const s = ROI_I18N[currentROILang] || ROI_I18N['zh-CN'];
     
     if (res.isSoftLanding) {
         ROIGoToStep('roi-soft-landing');
@@ -403,23 +462,35 @@ function ROICalculateAndShow() {
     }
     
     // Fill data
-    document.getElementById('roi-result-subtitle').innerHTML = `您在 ${res.regionName} 的餐厅<br>3年可以多赚`;
+    document.getElementById('roi-result-subtitle').innerHTML = `${s.resTitlePt1}${res.regionName}${s.resTitlePt2}`;
     document.getElementById('roi-val-reduction').innerText = `${res.laborReductionPct}%`;
-    document.getElementById('roi-val-reduction-sub').innerText = `每月立省 $${Math.round(res.breakdown[0] * (res.laborReductionPct/100)).toLocaleString()}`;
-    document.getElementById('roi-val-payback').innerText = `${res.paybackMonths} 个月`;
+    document.getElementById('roi-val-reduction-sub').innerText = `${s.resStat1S}${Math.round(res.breakdown[0] * (res.laborReductionPct/100)).toLocaleString()}`;
+    document.getElementById('roi-val-payback').innerText = `${res.paybackMonths}${s.resStat2M}`;
     document.getElementById('roi-val-5year').innerText = `$${Math.round(res.fiveYearSavings).toLocaleString()}+`;
     
     document.getElementById('roi-val-current-cost').innerText = `$${Math.round(res.currentMonthlyTotalCost).toLocaleString()}`;
     
     document.getElementById('roi-val-blur-pb').innerText = res.paybackMonths;
-    document.getElementById('roi-val-blur-net').innerText = `$${Math.round(res.monthlySavings - 1600).toLocaleString()}+`; // roughly net
+    const netTxt = Math.round(res.monthlySavings - 1800).toLocaleString();
+    if (currentROILang === 'ja') {
+        document.getElementById('roi-val-blur-net').innerText = `$${netTxt}`; // Custom for JP logic
+    } else {
+        document.getElementById('roi-val-blur-net').innerText = `$${netTxt}+`;
+    }
+
+    // Store state for interactive lease updates
+    window.tempROISoftwareBonus = res.saasSaved + res.paymentSaved;
+    window.tempROIRentBase = 1800;
+    ROIRenderLeaseHighlight();
 
     // Pain points
     const painBox = document.getElementById('roi-pain-feedback');
     if (ROI_STATE.input.currentPainPoints.length > 0) {
         painBox.style.display = 'block';
-        const p1 = PAIN_POINTS.find(p => p.id === ROI_STATE.input.currentPainPoints[0]);
-        painBox.innerHTML = `<strong>针对您目前的困扰：</strong><br><br>${p1.text}`;
+        const targetId = ROI_STATE.input.currentPainPoints[0];
+        const pObj = s.painPoints.find(p => p.id === targetId) || s.painPoints[0];
+        const prefix = currentROILang.startsWith('zh') ? "<strong>针对您目前的困扰：</strong><br><br>" : "";
+        painBox.innerHTML = `${prefix}${pObj.text}`;
     } else {
         painBox.style.display = 'none';
     }
@@ -427,11 +498,22 @@ function ROICalculateAndShow() {
     // Breakdown values
     const legVals = res.breakdown.map(v => Math.round(v));
     for (let i=0; i<6; i++) {
-        document.getElementById(`roi-leg-${i+1}`).innerText = `$${legVals[i].toLocaleString()}`;
+        document.getElementById(`roi-leg-1`).innerText = `$${legVals[0].toLocaleString()}`;
+        document.getElementById(`roi-leg-2`).innerText = `$${legVals[1].toLocaleString()}`;
+        document.getElementById(`roi-leg-3`).innerText = `$${legVals[2].toLocaleString()}`;
+        document.getElementById(`roi-leg-4`).innerText = `$${legVals[3].toLocaleString()}`;
+        document.getElementById(`roi-leg-5`).innerText = `$${legVals[4].toLocaleString()}`;
+        document.getElementById(`roi-leg-6`).innerText = `$${legVals[5].toLocaleString()}`;
     }
 
-    ROIGoToStep('roi-result-view');
-    window.scrollTo({ top: document.getElementById('roi-main-container').offsetTop - 50, behavior: 'smooth' });
+    if (!isUpdate) {
+        ROIGoToStep('roi-result-view');
+        const el = document.getElementById('roi-main-container');
+        if (el) {
+            const y = el.getBoundingClientRect().top + window.scrollY - 100;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+    }
 
     // Animate Hero Number
     animateValue(document.getElementById('roi-number-hero'), 0, Math.round(res.threeYearSavings), 1500);
@@ -461,9 +543,53 @@ function animateValue(obj, start, end, duration) {
     window.requestAnimationFrame(step);
 }
 
+// B2B Feature Handlers
+function ROIUpdateSliders() {
+    ROI_STATE.input.wageInflation = parseInt(document.getElementById('roi-slider-wage').value);
+    ROI_STATE.input.revGrowth = parseInt(document.getElementById('roi-slider-rev').value);
+    
+    document.getElementById('roi-val-wage-slider').innerText = ROI_STATE.input.wageInflation + '%';
+    document.getElementById('roi-val-rev-slider').innerText = ROI_STATE.input.revGrowth + '%';
+    
+    ROICalculateAndShow(true); // Is update, don't auto scroll
+}
+
+function ROIRenderLeaseHighlight(customVal) {
+    const rentValStr = customVal !== undefined ? customVal : window.tempROIRentBase;
+    const rentVal = parseInt(rentValStr) || 0;
+    const softwareBonus = window.tempROISoftwareBonus || 0;
+    
+    let netRent = rentVal - softwareBonus;
+    const s = ROI_I18N[currentROILang] || ROI_I18N['zh-CN'];
+    
+    const bonusStr = Math.round(softwareBonus - 300).toLocaleString();
+    let netStr = `$${Math.round(Math.abs(netRent)).toLocaleString()}`;
+    
+    let rentHtml = "";
+    if (netRent > 0) {
+        rentHtml = s.rentTemplateBasic.replace('{rentVal}', rentVal).replace('${softwareBonus_300}', `$${bonusStr}`).replace('${netRent}', netStr);
+    } else {
+        rentHtml = s.rentTemplateZero.replace('{rentVal}', rentVal).replace('${softwareBonus_300}', `$${bonusStr}`).replace('${netRent}', netStr);
+    }
+    
+    rentHtml += `<p style="margin-top:10px; font-size:14px; opacity:0.8;">${s.disclaimerTax}</p>`;
+    
+    document.getElementById('roi-lease-highlight').innerHTML = rentHtml;
+}
+
 // Auto Init on script loaded
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initROICalculator);
 } else {
     initROICalculator();
 }
+
+document.addEventListener('langchange', function(e) {
+    if (window.PanI18n) {
+        currentROILang = window.PanI18n.currentLang;
+        initROICalculator();
+        if (ROI_STATE.currentView === 'roi-result-view') {
+           ROICalculateAndShow(true);
+        }
+    }
+});
