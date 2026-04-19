@@ -107,11 +107,11 @@ function initROICalculator() {
                 <h3>4. 您现在雇了几位炒锅师傅？</h3>
                 
                 <div class="roi-card-grid" id="roi-grid-chef">
-                    <div class="roi-card" onclick="ROISelectChef(1)">1 位</div>
+                    <div class="roi-card" onclick="ROISelectChef(1)" id="roi-chef-1">1 位</div>
                     <div class="roi-card selected" onclick="ROISelectChef(2)" id="roi-chef-2">2 位</div>
-                    <div class="roi-card" onclick="ROISelectChef(3)">3 位</div>
-                    <div class="roi-card" onclick="ROISelectChef(4)">4 位</div>
-                    <div class="roi-card" onclick="ROISelectChef(5)">5+ 位</div>
+                    <div class="roi-card" onclick="ROISelectChef(3)" id="roi-chef-3">3 位</div>
+                    <div class="roi-card" onclick="ROISelectChef(4)" id="roi-chef-4">4 位</div>
+                    <div class="roi-card" onclick="ROISelectChef(5)" id="roi-chef-5">5+ 位</div>
                 </div>
                 <br>
                 <!-- Optional Pain points -->
@@ -248,10 +248,15 @@ function initROICalculator() {
     </div>
   `;
 
-  // Init selection highlight
-  ROISelectRevenue(1);
-  ROISelectTier(2);
-  ROISelectChef(2);
+  // Init selection highlight without triggering navigation
+  ROI_STATE.input.revenueRangeMid = REVENUE_RANGES[1].mid;
+  document.getElementById('roi-rev-1').classList.add('selected');
+  
+  ROI_STATE.input.tier = 2;
+  document.getElementById('roi-tier-2').classList.add('selected');
+  
+  ROI_STATE.input.chefCount = 2;
+  document.getElementById('roi-chef-2').classList.add('selected');
 }
 
 // Nav Logic
@@ -295,7 +300,7 @@ function ROISelectTier(tierId) {
 function ROISelectChef(count) {
     ROI_STATE.input.chefCount = count;
     document.querySelectorAll('#roi-grid-chef .roi-card').forEach(e => e.classList.remove('selected'));
-    event.currentTarget.classList.add('selected');
+    document.getElementById(`roi-chef-` + count) ? document.getElementById(`roi-chef-` + count).classList.add('selected') : null;
 }
 
 function ROITogglePain(id) {
@@ -457,6 +462,8 @@ function animateValue(obj, start, end, duration) {
 }
 
 // Auto Init on script loaded
-document.addEventListener('DOMContentLoaded', () => {
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initROICalculator);
+} else {
     initROICalculator();
-});
+}
