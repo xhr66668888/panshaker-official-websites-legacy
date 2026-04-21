@@ -20,7 +20,7 @@
     <meta property="og:description" content="精准复刻所有中餐炒菜口味，省去后厨最贵的人工。买断或租赁灵活选择，免费送 PanOS 餐饮管理系统。">
     <meta property="og:url" content="https://www.panshaker.com/x7_ai.html">
     <meta property="og:site_name" content="Panshaker Services">
-    <meta property="og:image" content="https://www.panshaker.com/assets/images/product.jpg">
+    <meta property="og:image" content="https://www.panshaker.com/assets/images/product-x7.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Panshaker X7 智能炒菜机器人">
     <meta name="twitter:description" content="精准复刻所有中餐炒菜口味，省去后厨最贵的人工。">
@@ -34,7 +34,7 @@
       "brand": { "@type": "Brand", "name": "Panshaker Services" },
       "manufacturer": { "@type": "Organization", "name": "Panshaker Services" },
       "category": "Commercial Kitchen Equipment",
-      "image": "https://www.panshaker.com/assets/images/product.jpg"
+      "image": "https://www.panshaker.com/assets/images/product-x7.png"
     }
     </script>
     <link rel="stylesheet" href="assets/styles/shared.css?v=3">
@@ -86,6 +86,13 @@
         .col-other { color: #999; }
         .price-high { color: #cc3333; font-weight: 600; }
 
+        /* Video */
+        .x7-video { padding: 100px 0; background: #0a0a0a; color: #fff; text-align: center; }
+        .x7-video h2 { font-size: 36px; font-weight: 700; margin-bottom: 16px; color: #fff; }
+        .x7-video .video-sub { font-size: 18px; color: rgba(255,255,255,0.7); margin-bottom: 50px; }
+        .x7-video .video-wrap { max-width: 960px; margin: 0 auto; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5); background: #000; }
+        .x7-video video { width: 100%; display: block; }
+
         /* CTA */
         .x7-cta { padding: 100px 0; background: linear-gradient(135deg, #0E427E 0%, #1a5a9e 100%); color: #fff; text-align: center; }
         .x7-cta h2 { font-size: 36px; font-weight: 700; margin-bottom: 16px; }
@@ -102,6 +109,10 @@
             .comp-table { font-size: 13px; }
             .comp-table th, .comp-table td { padding: 12px 8px; }
             .x7-cta h2 { font-size: 28px; padding: 0 20px; }
+            .x7-video { padding: 60px 0; }
+            .x7-video h2 { font-size: 28px; padding: 0 20px; }
+            .x7-video .video-sub { font-size: 15px; padding: 0 20px; margin-bottom: 30px; }
+            .x7-video .video-wrap { margin: 0 16px; border-radius: 12px; }
         }
     </style>
 </head>
@@ -137,10 +148,7 @@
             <p class="hero-sub" data-i18n-html="x7.hero.subtitle">用 AI 定义烹饪，科学复刻大厨的锅气与风味<br>一台机器替代一个炒锅位 · 一人可管控多台机器</p>
             <a href="contact.html" class="hero-cta" data-i18n="x7.hero.cta">预约演示</a>
             <div class="x7-hero-img">
-                <picture>
-                    <source srcset="assets/images/product.webp" type="image/webp">
-                    <img src="assets/images/product.jpg" alt="Panshaker X7 智能炒菜机器人" loading="eager">
-                </picture>
+                <img src="assets/images/product-x7.png" alt="Panshaker X7 智能炒菜机器人" loading="eager">
             </div>
         </div>
     </section>
@@ -297,6 +305,19 @@
                 </tbody>
             </table>
             <p style="font-size: 12px; color: #999; margin-top: 16px; text-align: center;" data-i18n="x7.compare.note">以上竞品价格为公开市场参考价，实际价格可能因配置和渠道而异</p>
+        </div>
+    </section>
+
+    <!-- Demo Video -->
+    <section class="x7-video">
+        <div class="container">
+            <h2 data-i18n="x7.video.title">机器外观视频</h2>
+            <p class="video-sub" data-i18n="x7.video.subtitle">360° 全方位展示 Panshaker X7 的工业设计细节</p>
+            <div class="video-wrap">
+                <video controls preload="metadata" playsinline poster="assets/images/product-x7.png">
+                    <source src="assets/media/panshaker-x7-demo.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
     </section>
 
