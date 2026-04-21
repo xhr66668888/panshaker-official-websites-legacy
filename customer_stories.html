@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://www.panshaker.com/customer_stories.html">
     <meta property="og:image" content="https://www.panshaker.com/assets/images/stories/egypt-pyramids.jpg">
 
-    <link rel="stylesheet" href="assets/styles/shared.css?v=4">
+    <link rel="stylesheet" href="assets/styles/shared.css?v=6">
     <style>
         :root {
             --brand-blue: #0E427E;
@@ -167,10 +167,15 @@
             </a>
             <nav class="nav-links">
                 <a href="index.html" data-i18n="nav.home">首页</a>
-                <a href="service.html" data-i18n="nav.service">服务</a>
                 <a href="x7_ai.html" data-i18n="nav.x7_ai">Panshaker X7</a>
-                <a href="synapse_os.html" data-i18n="nav.synapse">PanOS</a>
-                <a href="delivery.html" data-i18n="nav.delivery">食材配送</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-trigger" data-i18n="nav.services">服务 ▾</a>
+                    <div class="nav-dropdown-menu">
+                        <a href="service.html" data-i18n="nav.onboarding">陪跑服务 · 包教会</a>
+                        <a href="synapse_os.html" data-i18n="nav.synapse">PanOS</a>
+                        <a href="delivery.html" data-i18n="nav.delivery">食材配送</a>
+                    </div>
+                </div>
                 <div class="nav-dropdown">
                     <a href="#" class="nav-dropdown-trigger" data-i18n="nav.resources">资讯 ▾</a>
                     <div class="nav-dropdown-menu">
@@ -211,12 +216,12 @@
 
                 <div class="story-card is-pending" aria-disabled="true">
                     <div class="story-cover">
-                        <img src="assets/images/stories/boxed-lunch-counter.svg" alt="档口盒饭" loading="lazy">
+                        <img src="assets/images/stories/hotdeli-counter.jpg" alt="大华超市 Hot Deli 档口" loading="lazy">
                     </div>
                     <div class="story-body">
-                        <div class="story-meta">南加州 · 大华超市档口 · 2026 年 5 月</div>
-                        <h2>中午那九十分钟：一个大华档口的盒饭效率学</h2>
-                        <p class="story-excerpt">十一点四十开始上货，十二点整开单，一点半前必须收摊——大华超市里的盒饭档口，每天只有九十分钟决定一整天的营业额。我们记录了一个南加州档口换上 Panshaker X7 后，这九十分钟的时间表是怎么被重写的。</p>
+                        <div class="story-meta">南加州 · 大华超市 Hot Deli 档口 · 2026 年 5 月</div>
+                        <h2>Hot Deli 柜台后：大华档口的两波高峰，和一台机器能腾出的人</h2>
+                        <p class="story-excerpt">上午十点开档、晚上八点收摊。大华 Hot Deli 档口一天里真正拉开营业额差距的，是午、晚两波高峰。人手一紧，排队就从五分钟变半小时。我们记录了一家南加州门店换上 Panshaker X7 之后，每天这十个小时是怎么被重新排班的。</p>
                         <span class="story-link">阅读全文 →</span>
                     </div>
                 </div>
@@ -228,6 +233,226 @@
                 大米先生 · 闻湘月辣椒拌饭 · 米熊盖饭 · 太兴集团 · 华住酒店集团 · 湖南工商大学 · 最湘宴 · 顺家客连锁快餐 · 百宜坊中餐连锁 · 正斗自选快餐连锁 · 北汽集团 · 小米集团 · 新煮意 · 和合谷 · 胡记大盘鸡
             </div>
         </div>
+    </section>
+
+    <!-- 我们的用户 / Customer Footprint -->
+    <section class="customer-footprint">
+        <div class="container">
+            <div class="cf-head">
+                <h2 data-i18n="about.customers.title">我们的用户</h2>
+                <p data-i18n-html="about.customers.subtitle">Panshaker X7 累计全球部署 <strong class="cf-count">8,766</strong> 台</p>
+            </div>
+
+            <div class="cf-map-wrap">
+                <div class="cf-map">
+                    <img class="cf-map-bg" src="assets/images/us-map.svg" alt="United States customer footprint" loading="lazy">
+                    <svg class="cf-pins" viewBox="0 0 959 593" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                        <!-- California cluster -->
+                        <g class="pin-group">
+                            <circle cx="61" cy="309" r="9"/>
+                            <circle cx="61" cy="309" r="4" class="pin-core"/>
+                        </g>
+                        <g class="pin-group">
+                            <circle cx="70" cy="337" r="8"/>
+                            <circle cx="70" cy="337" r="3.5" class="pin-core"/>
+                        </g>
+                        <g class="pin-group">
+                            <circle cx="105" cy="365" r="11"/>
+                            <circle cx="105" cy="365" r="4.5" class="pin-core"/>
+                        </g>
+                        <g class="pin-group">
+                            <circle cx="113" cy="380" r="10"/>
+                            <circle cx="113" cy="380" r="4" class="pin-core"/>
+                        </g>
+
+                        <!-- Las Vegas, NV -->
+                        <g class="pin-group">
+                            <circle cx="176" cy="332" r="9"/>
+                            <circle cx="176" cy="332" r="4" class="pin-core"/>
+                        </g>
+
+                        <!-- Hawaii (Honolulu) -->
+                        <g class="pin-group">
+                            <circle cx="338" cy="570" r="8"/>
+                            <circle cx="338" cy="570" r="3.5" class="pin-core"/>
+                        </g>
+
+                        <!-- Ohio: Cleveland / Akron / Columbus -->
+                        <g class="pin-group">
+                            <circle cx="706" cy="212" r="8"/>
+                            <circle cx="706" cy="212" r="3.5" class="pin-core"/>
+                        </g>
+                        <g class="pin-group">
+                            <circle cx="712" cy="224" r="7"/>
+                            <circle cx="712" cy="224" r="3" class="pin-core"/>
+                        </g>
+                        <g class="pin-group">
+                            <circle cx="702" cy="240" r="8"/>
+                            <circle cx="702" cy="240" r="3.5" class="pin-core"/>
+                        </g>
+
+                        <!-- Pennsylvania: Pittsburgh + State College + Philly -->
+                        <g class="pin-group">
+                            <circle cx="770" cy="218" r="7"/>
+                            <circle cx="770" cy="218" r="3" class="pin-core"/>
+                        </g>
+                        <g class="pin-group">
+                            <circle cx="800" cy="215" r="7"/>
+                            <circle cx="800" cy="215" r="3" class="pin-core"/>
+                        </g>
+                        <g class="pin-group">
+                            <circle cx="834" cy="223" r="8"/>
+                            <circle cx="834" cy="223" r="3.5" class="pin-core"/>
+                        </g>
+
+                        <!-- NY / NJ cluster -->
+                        <g class="pin-group">
+                            <circle cx="857" cy="210" r="10"/>
+                            <circle cx="857" cy="210" r="4.5" class="pin-core"/>
+                        </g>
+                        <g class="pin-group">
+                            <circle cx="848" cy="220" r="8"/>
+                            <circle cx="848" cy="220" r="3.5" class="pin-core"/>
+                        </g>
+
+                        <!-- NC Triangle (Raleigh/Durham) -->
+                        <g class="pin-group">
+                            <circle cx="790" cy="340" r="8"/>
+                            <circle cx="790" cy="340" r="3.5" class="pin-core"/>
+                        </g>
+
+                        <!-- Florida: Miami / Orlando / Tampa -->
+                        <g class="pin-group">
+                            <circle cx="792" cy="480" r="8"/>
+                            <circle cx="792" cy="480" r="3.5" class="pin-core"/>
+                        </g>
+                        <g class="pin-group">
+                            <circle cx="808" cy="498" r="7"/>
+                            <circle cx="808" cy="498" r="3" class="pin-core"/>
+                        </g>
+                        <g class="pin-group">
+                            <circle cx="820" cy="517" r="9"/>
+                            <circle cx="820" cy="517" r="4" class="pin-core"/>
+                        </g>
+                    </svg>
+                </div>
+
+                <ul class="cf-legend">
+                    <li><span class="cf-dot"></span>加利福尼亚（湾区 / LA / 圣地亚哥）</li>
+                    <li><span class="cf-dot"></span>内华达 · 拉斯维加斯</li>
+                    <li><span class="cf-dot"></span>俄亥俄 · Cleveland / Akron / Columbus</li>
+                    <li><span class="cf-dot"></span>宾夕法尼亚 · Pittsburgh / State College / Philadelphia</li>
+                    <li><span class="cf-dot"></span>纽约 · 新泽西都会圈</li>
+                    <li><span class="cf-dot"></span>北卡 · Research Triangle（Raleigh / Durham / Chapel Hill）</li>
+                    <li><span class="cf-dot"></span>佛罗里达 · Miami / Orlando / Tampa</li>
+                    <li><span class="cf-dot"></span>夏威夷 · Honolulu</li>
+                </ul>
+            </div>
+
+            <div class="cf-note" data-i18n="about.customers.note">数据截至 2026 年 4 月，含北美自营与合作部署、中国市场渠道出货及其他海外市场。</div>
+        </div>
+
+        <style>
+            .customer-footprint {
+                padding: 90px 0 80px;
+                background: #fafbfd;
+                border-top: 1px solid #eef1f6;
+            }
+            .customer-footprint .cf-head {
+                text-align: center;
+                margin-bottom: 44px;
+            }
+            .customer-footprint .cf-head h2 {
+                font-size: 32px;
+                font-weight: 700;
+                color: #0E427E;
+                margin-bottom: 14px;
+                letter-spacing: -0.3px;
+            }
+            .customer-footprint .cf-head p {
+                font-size: 17px;
+                color: #666;
+                font-weight: 300;
+            }
+            .customer-footprint .cf-head .cf-count {
+                color: #0E427E;
+                font-weight: 800;
+                font-size: 22px;
+                letter-spacing: 0.5px;
+                margin: 0 4px;
+            }
+
+            .customer-footprint .cf-map-wrap {
+                display: grid;
+                grid-template-columns: 1.5fr 1fr;
+                gap: 50px;
+                align-items: center;
+                max-width: 1100px;
+                margin: 0 auto;
+            }
+            .customer-footprint .cf-map {
+                position: relative;
+                width: 100%;
+                aspect-ratio: 959 / 593;
+            }
+            .customer-footprint .cf-map-bg,
+            .customer-footprint .cf-pins {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .customer-footprint .cf-pins .pin-group circle:first-child {
+                fill: #0E427E;
+                opacity: 0.22;
+            }
+            .customer-footprint .cf-pins .pin-core {
+                fill: #0E427E;
+                opacity: 0.95;
+            }
+
+            .customer-footprint .cf-legend {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                font-size: 14px;
+                color: #555;
+                line-height: 2.1;
+            }
+            .customer-footprint .cf-legend li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .customer-footprint .cf-dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: #0E427E;
+                flex-shrink: 0;
+            }
+
+            .customer-footprint .cf-note {
+                text-align: center;
+                margin-top: 40px;
+                font-size: 12px;
+                color: #999;
+                letter-spacing: 0.3px;
+                line-height: 1.8;
+            }
+
+            @media (max-width: 768px) {
+                .customer-footprint { padding: 60px 0; }
+                .customer-footprint .cf-head h2 { font-size: 24px; }
+                .customer-footprint .cf-head p { font-size: 15px; }
+                .customer-footprint .cf-head .cf-count { font-size: 19px; }
+                .customer-footprint .cf-map-wrap {
+                    grid-template-columns: 1fr;
+                    gap: 28px;
+                }
+                .customer-footprint .cf-legend { font-size: 13px; line-height: 2; }
+            }
+        </style>
     </section>
 
     <footer>
@@ -267,7 +492,7 @@
     </footer>
 
     <script src="js/device.js"></script>
-    <script src="js/i18n.js?v=4"></script>
+    <script src="js/i18n.js?v=6"></script>
 </body>
 
 </html>

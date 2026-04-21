@@ -37,7 +37,7 @@
       "image": "https://www.panshaker.com/assets/images/product-x7.png"
     }
     </script>
-    <link rel="stylesheet" href="assets/styles/shared.css?v=4">
+    <link rel="stylesheet" href="assets/styles/shared.css?v=6">
     <style>
         /* Page-specific overrides — font inherited from shared.css */
 
@@ -72,6 +72,116 @@
         .value-card .value-num { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #0E427E; color: #fff; font-size: 18px; font-weight: 700; margin-bottom: 18px; }
         .value-card h4 { font-size: 20px; font-weight: 600; margin-bottom: 12px; color: #0E427E; }
         .value-card p { font-size: 15px; color: #666; line-height: 1.7; }
+
+        /* Wok vs Drum */
+        .x7-form { padding: 100px 0; background: #fafafa; }
+        .x7-form h2 { font-size: 36px; font-weight: 700; text-align: center; margin-bottom: 14px; color: #1d1d1f; letter-spacing: -0.5px; }
+        .x7-form .form-sub { font-size: 17px; color: #666; text-align: center; margin-bottom: 56px; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.75; }
+
+        .form-compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            max-width: 1080px;
+            margin: 0 auto 44px;
+        }
+        .form-col {
+            background: #fff;
+            border: 1px solid #eef1f6;
+            border-radius: 16px;
+            padding: 34px 30px;
+        }
+        .form-col.col-drum { border-top: 4px solid #cfd3db; }
+        .form-col.col-wok  { border-top: 4px solid #62BA46; box-shadow: 0 10px 30px rgba(98,186,70,0.10); }
+        .form-col h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+        .form-col.col-drum h3 { color: #666; }
+        .form-col.col-wok  h3 { color: #0E427E; }
+        .form-col .col-kicker {
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #999;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .form-col.col-wok .col-kicker { color: #62BA46; }
+
+        .form-row {
+            padding: 16px 0;
+            border-top: 1px dashed #eef1f6;
+            font-size: 15px;
+            line-height: 1.85;
+            color: #444;
+        }
+        .form-row:first-of-type { border-top: none; padding-top: 8px; }
+        .form-row .row-label {
+            display: block;
+            font-size: 12px;
+            color: #999;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .form-col.col-drum .form-row .row-value { color: #8a8a8a; }
+        .form-col.col-wok  .form-row .row-value { color: #1d1d1f; font-weight: 500; }
+
+        .form-consensus {
+            text-align: center;
+            padding: 24px 20px;
+            margin: 0 auto 40px;
+            max-width: 900px;
+            font-size: 18px;
+            color: #0E427E;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            border-top: 1px solid #eef1f6;
+            border-bottom: 1px solid #eef1f6;
+        }
+        .form-consensus .consensus-accent {
+            color: #C8102E;
+            font-weight: 800;
+        }
+
+        .form-promise {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 22px 28px;
+            background: #fff;
+            border-left: 3px solid #C8102E;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .form-promise .promise-mark {
+            font-size: 13px;
+            font-weight: 800;
+            color: #C8102E;
+            letter-spacing: 3px;
+            flex-shrink: 0;
+        }
+        .form-promise .promise-text {
+            font-size: 15px;
+            color: #C8102E;
+            line-height: 1.75;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .x7-form { padding: 70px 0; }
+            .x7-form h2 { font-size: 26px; padding: 0 20px; }
+            .x7-form .form-sub { font-size: 15px; padding: 0 20px; }
+            .form-compare { grid-template-columns: 1fr; gap: 16px; padding: 0 16px; }
+            .form-col { padding: 26px 22px; }
+            .form-consensus { font-size: 15px; margin: 0 16px 28px; }
+            .form-promise { margin: 0 16px; flex-direction: column; align-items: flex-start; gap: 8px; padding: 20px 22px; }
+        }
 
         /* Compare */
         .x7-compare { padding: 100px 0; background: #fff; }
@@ -131,10 +241,15 @@
             </a>
             <nav class="nav-links">
                 <a href="index.html" data-i18n="nav.home">首页</a>
-                <a href="service.html" data-i18n="nav.service">服务</a>
-                <a href="x7_ai.html" data-i18n="nav.x7_ai" class="active">Panshaker X7</a>
-                <a href="synapse_os.html" data-i18n="nav.synapse">PanOS</a>
-                <a href="delivery.html" data-i18n="nav.delivery">食材配送</a>
+                <a href="x7_ai.html" class="active" data-i18n="nav.x7_ai">Panshaker X7</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-trigger" data-i18n="nav.services">服务 ▾</a>
+                    <div class="nav-dropdown-menu">
+                        <a href="service.html" data-i18n="nav.onboarding">陪跑服务 · 包教会</a>
+                        <a href="synapse_os.html" data-i18n="nav.synapse">PanOS</a>
+                        <a href="delivery.html" data-i18n="nav.delivery">食材配送</a>
+                    </div>
+                </div>
                 <div class="nav-dropdown">
                     <a href="#" class="nav-dropdown-trigger" data-i18n="nav.resources">资讯 ▾</a>
                     <div class="nav-dropdown-menu">
@@ -244,6 +359,83 @@
                     <h4 data-i18n="x7.value.scale_title">灵活获取方式</h4>
                     <p data-i18n="x7.value.scale_desc">买断或租赁，选择适合您的方案。低门槛启动，验证后随时升级。</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 锅式 vs 滚筒式 -->
+    <section class="x7-form">
+        <div class="container">
+            <h2 data-i18n="x7.form.title">锅式 vs 滚筒式 · 中餐炒菜该用哪一种</h2>
+            <p class="form-sub" data-i18n="x7.form.sub">市面上的商用炒菜机器人大致分两派：滚筒式（食材在密闭圆筒里被滚着翻炒）和锅式（凹形铁锅 + 仿大厨翻勺）。下面是两种形态最该被老板们看清楚的几处差别。</p>
+
+            <div class="form-compare">
+                <div class="form-col col-drum">
+                    <div class="col-kicker" data-i18n="x7.form.drum_kicker">滚 筒 式</div>
+                    <h3 data-i18n="x7.form.drum_title">密闭圆筒 · 靠滚动翻料</h3>
+
+                    <div class="form-row">
+                        <span class="row-label" data-i18n="x7.form.row_wok_label">锅 气</span>
+                        <span class="row-value" data-i18n="x7.form.drum_wok">密闭滚筒积水汽、散不掉。做出来像"炖"或"焖"，吃不出中餐最关键的焦香锅气。</span>
+                    </div>
+
+                    <div class="form-row">
+                        <span class="row-label" data-i18n="x7.form.row_heat_label">火 候</span>
+                        <span class="row-value" data-i18n="x7.form.drum_heat">滚筒受热面积大、加热点分散，局部过热、局部夹生是常态。对火候敏感的爆炒类菜根本做不到位。</span>
+                    </div>
+
+                    <div class="form-row">
+                        <span class="row-label" data-i18n="x7.form.row_volume_label">单次出餐量</span>
+                        <span class="row-value" data-i18n="x7.form.drum_volume">销售常拿"一次能装多少斤"说事。看起来数字大，但这个"量"对应的是炖焖品类，并不是真正意义上的爆炒出品。</span>
+                    </div>
+
+                    <div class="form-row">
+                        <span class="row-label" data-i18n="x7.form.row_coverage_label">业 态 覆 盖</span>
+                        <span class="row-value" data-i18n="x7.form.drum_coverage">适合团餐、部队食堂这类对口味宽容度高的场景。社区店、连锁小炒、Hot Deli 档口这些要"地道味道"的业态，滚筒味道做不出来。</span>
+                    </div>
+
+                    <div class="form-row">
+                        <span class="row-label" data-i18n="x7.form.row_industry_label">行 业 共 识</span>
+                        <span class="row-value" data-i18n="x7.form.drum_industry">国内头部玩家——美团旗下的"七鲜小厨"、各大连锁品牌的中央厨房——选的都是锅式方案。</span>
+                    </div>
+                </div>
+
+                <div class="form-col col-wok">
+                    <div class="col-kicker" data-i18n="x7.form.wok_kicker">P A N S H A K E R · 锅 式</div>
+                    <h3 data-i18n="x7.form.wok_title">凹形碳钢铁锅 · 仿大厨翻勺</h3>
+
+                    <div class="form-row">
+                        <span class="row-label" data-i18n="x7.form.row_wok_label">锅 气</span>
+                        <span class="row-value" data-i18n="x7.form.wok_wok">一体成型碳钢凹锅 + 12kW 电磁涡流 15 秒冲到 300°C，气流排湿设计让水汽走掉、焦香留下。"锅气"不再是玄学。</span>
+                    </div>
+
+                    <div class="form-row">
+                        <span class="row-label" data-i18n="x7.form.row_heat_label">火 候</span>
+                        <span class="row-value" data-i18n="x7.form.wok_heat">AI 控温算法 + 温度补偿，锅内温度控制在 ±1°C；三轴异步行星锅铲让食材全域翻动、受热均匀。</span>
+                    </div>
+
+                    <div class="form-row">
+                        <span class="row-label" data-i18n="x7.form.row_volume_label">单次出餐量</span>
+                        <span class="row-value" data-i18n="x7.form.wok_volume">同等甚至更大。单次爆炒 5kg / 240 秒出锅，一名操作员并行 3–4 台，真实场景的出餐总量和口味稳定度都压过滚筒。</span>
+                    </div>
+
+                    <div class="form-row">
+                        <span class="row-label" data-i18n="x7.form.row_coverage_label">业 态 覆 盖</span>
+                        <span class="row-value" data-i18n="x7.form.wok_coverage">家常小炒、连锁中餐、社区店、大华 Hot Deli 档口、酒店宴会、团餐食堂——只要锅气是硬指标的业态，Panshaker X7 都吃得下。</span>
+                    </div>
+
+                    <div class="form-row">
+                        <span class="row-label" data-i18n="x7.form.row_industry_label">行 业 共 识</span>
+                        <span class="row-value" data-i18n="x7.form.wok_industry">中餐几千年来是锅里炒出来的。形态和现实的炒菜一致，味道才能一致 — 这是国内同行验证过的常识。</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-consensus" data-i18n-html="x7.form.consensus">在中国市场，<span class="consensus-accent">滚筒式炒菜机器人不如锅式</span>，这已经是行业共识。</div>
+
+            <div class="form-promise">
+                <span class="promise-mark" data-i18n="x7.form.promise_label">我们的承诺</span>
+                <span class="promise-text" data-i18n="x7.form.promise_text">若 Panshaker X7 无法还原贵店的配方、味道与招牌菜一致性有肉眼/味蕾可辨的差异，整机可退。</span>
             </div>
         </div>
     </section>
@@ -377,7 +569,7 @@
     </footer>
 
     <script src="js/device.js"></script>
-    <script src="js/i18n.js?v=4"></script>
+    <script src="js/i18n.js?v=6"></script>
 </body>
 
 </html>

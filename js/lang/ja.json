@@ -6,7 +6,7 @@
   "nav.synapse": "PanOS",
   "nav.careers": "採用情報",
   "nav.investors": "投資家向け情報",
-  "nav.service": "サービス",
+  "nav.service": "伴走サービス",
   "hero.headline": "AI搭載の低人件費",
   "hero.headline_strong": "商業中華料理ソリューション",
   "hero.subtitle": "ハードウェアオートメーションとAIインテリジェントシステムの融合で外食産業の効率を再定義",
@@ -156,10 +156,12 @@
   "footer.news": "ニュース",
   "nav.customer_stories": "お客様事例",
   "nav.honors": "受賞・認証",
-  "home.promise.seal_label": "誓約",
   "home.promise.title": "私たちの誓約",
-  "home.promise.body": "炒菜ロボット本体事業の年間総合税引後純利益率は 5% を超えません。超過した場合、5% を超える部分を適切な形で Panshaker ユーザーに還元いたします。",
   "about.customers.title": "私たちのお客様",
   "about.customers.subtitle": "Panshaker X7 は世界で累計 <strong class=\"cf-count\">8,766</strong> 台を導入",
-  "about.customers.note": "2026 年 4 月時点。北米の直営・パートナー導入、中国市場のチャネル出荷、その他海外市場を含みます。"
+  "about.customers.note": "2026 年 4 月時点。北米の直営・パートナー導入、中国市場のチャネル出荷、その他海外市場を含みます。",
+  "home.promise.line1": "炒菜ロボット本体事業の年間税引後純利益率は 5% を超えません。",
+  "home.promise.line2": "超過した場合、5% を超える部分を適切な形で Panshaker ユーザーに還元します。",
+  "nav.services": "サービス ▾",
+  "nav.onboarding": "伴走サービス"
 }
