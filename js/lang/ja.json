@@ -158,5 +158,8 @@
   "nav.honors": "受賞・認証",
   "home.promise.seal_label": "誓約",
   "home.promise.title": "私たちの誓約",
-  "home.promise.body": "炒菜ロボット本体事業の年間総合税引後純利益率は 5% を超えません。超過した場合、5% を超える部分を適切な形で Panshaker ユーザーに還元いたします。"
+  "home.promise.body": "炒菜ロボット本体事業の年間総合税引後純利益率は 5% を超えません。超過した場合、5% を超える部分を適切な形で Panshaker ユーザーに還元いたします。",
+  "about.customers.title": "私たちのお客様",
+  "about.customers.subtitle": "Panshaker X7 は世界で累計 <strong class=\"cf-count\">8,766</strong> 台を導入",
+  "about.customers.note": "2026 年 4 月時点。北米の直営・パートナー導入、中国市場のチャネル出荷、その他海外市場を含みます。"
 }

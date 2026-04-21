@@ -250,5 +250,8 @@
   "nav.honors": "荣誉",
   "home.promise.seal_label": "我们承诺",
   "home.promise.title": "我们的承诺",
-  "home.promise.body": "每年炒菜机器人硬件业务的综合税后净利率不超过 5%。如超过，我们将把超出 5% 的部分，以合理的方式返还给 Panshaker 用户。"
+  "home.promise.body": "每年炒菜机器人硬件业务的综合税后净利率不超过 5%。如超过，我们将把超出 5% 的部分，以合理的方式返还给 Panshaker 用户。",
+  "about.customers.title": "我们的用户",
+  "about.customers.subtitle": "Panshaker X7 累计全球部署 <strong class=\"cf-count\">8,766</strong> 台",
+  "about.customers.note": "数据截至 2026 年 4 月，含北美自营与合作部署、中国市场渠道出货及其他海外市场。"
 }

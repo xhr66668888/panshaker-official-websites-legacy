@@ -250,5 +250,8 @@
   "nav.honors": "Honors",
   "home.promise.seal_label": "Our Pledge",
   "home.promise.title": "Our Pledge",
-  "home.promise.body": "Our combined after-tax net margin on wok-robot hardware will not exceed 5% in any fiscal year. If it does, we will return the portion above 5% to Panshaker customers in a reasonable form."
+  "home.promise.body": "Our combined after-tax net margin on wok-robot hardware will not exceed 5% in any fiscal year. If it does, we will return the portion above 5% to Panshaker customers in a reasonable form.",
+  "about.customers.title": "Our Customers",
+  "about.customers.subtitle": "<strong class=\"cf-count\">8,766</strong> Panshaker X7 units deployed worldwide",
+  "about.customers.note": "As of April 2026. Includes North American direct & partner deployments, China channel shipments, and other international markets."
 }

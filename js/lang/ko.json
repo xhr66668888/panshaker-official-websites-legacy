@@ -158,5 +158,8 @@
   "nav.honors": "수상 및 인증",
   "home.promise.seal_label": "약속",
   "home.promise.title": "저희의 약속",
-  "home.promise.body": "매년 조리 로봇 하드웨어 사업의 세후 순이익률은 5%를 넘지 않습니다. 초과 시, 5%를 초과한 부분을 합리적인 방식으로 Panshaker 고객에게 환원합니다."
+  "home.promise.body": "매년 조리 로봇 하드웨어 사업의 세후 순이익률은 5%를 넘지 않습니다. 초과 시, 5%를 초과한 부분을 합리적인 방식으로 Panshaker 고객에게 환원합니다.",
+  "about.customers.title": "우리의 고객",
+  "about.customers.subtitle": "Panshaker X7 전 세계 누적 <strong class=\"cf-count\">8,766</strong>대 설치",
+  "about.customers.note": "2026년 4월 기준. 북미 직접/파트너 배치, 중국 시장 채널 출하, 기타 해외 시장 포함."
 }

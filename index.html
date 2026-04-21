@@ -771,6 +771,34 @@
             box-shadow: 0 12px 32px rgba(14, 66, 126, 0.4);
         }
 
+        /* Hero 承诺 — 红色粗体，无外框，紧贴 CTA 下方 */
+        .hero-promise {
+            max-width: 760px;
+            margin: 32px auto 0;
+            text-align: center;
+            color: #C8102E;
+            pointer-events: auto;
+        }
+        .hero-promise .hero-promise-title {
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            margin-bottom: 6px;
+            color: #C8102E;
+        }
+        .hero-promise .hero-promise-body {
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1.8;
+            color: #C8102E;
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .hero-promise { margin-top: 24px; padding: 0 16px; }
+            .hero-promise .hero-promise-title { font-size: 13px; letter-spacing: 3px; }
+            .hero-promise .hero-promise-body { font-size: 13px; line-height: 1.7; }
+        }
+
         /* PanOS title hover */
         .panos-title-link {
             cursor: pointer;
@@ -1059,52 +1087,11 @@
             <a href="contact.html" data-i18n="home.hero.cta" class="hero-cta">
                 预约演示
             </a>
-        </div>
-    </section>
-
-    <!-- 我们的承诺 / 净利率承诺 -->
-    <section class="profit-promise">
-        <div class="container">
-            <div class="promise-card">
-                <h3 class="promise-title" data-i18n="home.promise.title">我们的承诺</h3>
-                <p class="promise-body" data-i18n="home.promise.body">每年炒菜机器人硬件业务的综合税后净利率不超过 5%。如超过，我们将把超出 5% 的部分，以合理的方式返还给 Panshaker 用户。</p>
+            <div class="hero-promise">
+                <div class="hero-promise-title" data-i18n="home.promise.title">我们的承诺</div>
+                <p class="hero-promise-body" data-i18n="home.promise.body">每年炒菜机器人硬件业务的综合税后净利率不超过 5%。如超过，我们将把超出 5% 的部分，以合理的方式返还给 Panshaker 用户。</p>
             </div>
         </div>
-        <style>
-            .profit-promise {
-                padding: 48px 0;
-                background: #fff;
-            }
-            .profit-promise .promise-card {
-                max-width: 960px;
-                margin: 0 auto;
-                padding: 28px 36px;
-                background: #fff;
-                border: 1px solid #f2d6d6;
-                border-left: 3px solid #C8102E;
-                border-radius: 8px;
-                text-align: left;
-            }
-            .promise-title {
-                font-size: 16px;
-                font-weight: 700;
-                color: #C8102E;
-                letter-spacing: 3px;
-                margin-bottom: 8px;
-            }
-            .promise-body {
-                font-size: 15px;
-                color: #C8102E;
-                line-height: 1.8;
-                font-weight: 400;
-            }
-            @media (max-width: 768px) {
-                .profit-promise { padding: 32px 0; }
-                .profit-promise .promise-card { padding: 22px 20px; }
-                .promise-title { font-size: 14px; letter-spacing: 2px; }
-                .promise-body { font-size: 14px; }
-            }
-        </style>
     </section>
 
     <!-- 行业痛点区域 -->

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>客户故事 | Panshaker Services</title>
     <meta name="description"
-        content="Panshaker 客户故事 — 北美中餐连锁、酒店集团、政企客户如何借助 Panshaker X7 与 PanOS 重塑后厨。">
+        content="Panshaker 客户故事 — 真实的餐厅、真实的人，记录他们用 Panshaker X7 之后改变的一些日常。">
     <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="assets/images/favicon-16x16.png" sizes="16x16">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
@@ -14,9 +14,9 @@
     <link rel="canonical" href="https://www.panshaker.com/customer_stories.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="客户故事 | Panshaker Services">
-    <meta property="og:description" content="Panshaker 的合作伙伴与客户案例故事。">
+    <meta property="og:description" content="Panshaker 客户故事 — 真实的餐厅、真实的人。">
     <meta property="og:url" content="https://www.panshaker.com/customer_stories.html">
-    <meta property="og:image" content="https://www.panshaker.com/assets/logo/panshaker-logo.png">
+    <meta property="og:image" content="https://www.panshaker.com/assets/images/stories/egypt-pyramids.jpg">
 
     <link rel="stylesheet" href="assets/styles/shared.css?v=4">
     <style>
@@ -26,7 +26,7 @@
         }
 
         .page-hero {
-            padding: 150px 0 80px;
+            padding: 150px 0 70px;
             background: #fafafa;
             text-align: center;
             border-bottom: 1px solid #eee;
@@ -48,59 +48,90 @@
         }
 
         .stories-section {
-            padding: 80px 0 100px;
+            padding: 70px 0 100px;
             background: #fff;
         }
-        .coming-block {
-            max-width: 820px;
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 36px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 70px 40px;
-            text-align: center;
-            border: 2px dashed #dfe4ec;
-            border-radius: 20px;
-            background: #fafbfd;
         }
-        .coming-block .kicker {
-            display: inline-block;
-            color: var(--gold-3);
-            letter-spacing: 6px;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 14px;
-            text-transform: uppercase;
+
+        .story-card {
+            background: #fff;
+            border: 1px solid #eef1f6;
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s;
+            color: inherit;
         }
-        .coming-block h2 {
-            font-size: 30px;
+        .story-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 40px rgba(14, 66, 126, 0.1);
+        }
+        .story-cover {
+            aspect-ratio: 4 / 3;
+            background: #eef2f8;
+            overflow: hidden;
+            position: relative;
+        }
+        .story-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .story-card:hover .story-cover img {
+            transform: scale(1.04);
+        }
+        .story-body {
+            padding: 26px 28px 32px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .story-meta {
+            font-size: 12px;
+            color: #999;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .story-card h2 {
+            font-size: 22px;
             color: var(--brand-blue);
-            margin-bottom: 14px;
             font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 14px;
             letter-spacing: -0.3px;
         }
-        .coming-block p {
-            color: #666;
-            font-size: 16px;
-            line-height: 1.8;
-            max-width: 560px;
-            margin: 0 auto 28px;
-        }
-        .coming-block .cta-link {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 30px;
-            background: var(--brand-blue);
-            color: #fff;
+        .story-excerpt {
             font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        .story-link {
+            font-size: 13px;
+            color: var(--brand-blue);
             font-weight: 600;
             letter-spacing: 1px;
-            transition: all 0.3s;
         }
-        .coming-block .cta-link:hover {
-            background: #0a356b;
-            transform: translateY(-2px);
+
+        /* 暂未开放的卡片：外观正常，不可点击 */
+        .story-card.is-pending {
+            cursor: default;
+            pointer-events: none;
         }
 
         .partner-hint {
-            margin-top: 50px;
+            margin: 70px auto 0;
+            max-width: 900px;
             text-align: center;
             color: #888;
             font-size: 14px;
@@ -116,9 +147,8 @@
             .page-hero h1 { font-size: 30px; padding: 0 20px; }
             .page-hero p { font-size: 15px; padding: 0 20px; }
             .stories-section { padding: 50px 0 80px; }
-            .coming-block { padding: 44px 22px; }
-            .coming-block h2 { font-size: 22px; }
-            .coming-block p { font-size: 15px; }
+            .story-grid { grid-template-columns: 1fr; gap: 24px; }
+            .story-card h2 { font-size: 19px; }
         }
     </style>
 </head>
@@ -159,20 +189,42 @@
     <section class="page-hero">
         <div class="container">
             <h1>客户故事</h1>
-            <p>与 Panshaker 同行的品牌与机构 — 我们正在整理这些合作故事，期待与您分享他们如何借助 Panshaker X7 与 PanOS 重塑后厨。</p>
+            <p>记录与我们同行的餐厅，和餐厅背后的人。</p>
         </div>
     </section>
 
     <section class="stories-section">
         <div class="container">
-            <div class="coming-block">
-                <h2>案例故事整理中</h2>
-                <p>从中餐连锁到酒店集团、从高校食堂到政企客户 — 我们正在与合作伙伴一同整理案例内容。上线后将在此更新详细的落地故事与运营数据。</p>
-                <a href="contact.html" class="cta-link">成为合作伙伴 →</a>
+            <div class="story-grid">
+
+                <a href="story_san_diego.html" class="story-card">
+                    <div class="story-cover">
+                        <img src="assets/images/stories/egypt-pyramids.jpg" alt="金字塔" loading="lazy">
+                    </div>
+                    <div class="story-body">
+                        <div class="story-meta">San Diego · 蜀府家宴 · 2026 年 6 月</div>
+                        <h2>离开灶台那天，他们终于有时间去看金字塔</h2>
+                        <p class="story-excerpt">老陈夫妇在圣地亚哥的后厨站了二十六年。2026 年春天，他们第一次合上店门，去了一趟埃及。不是因为退休，而是因为灶台前换了一个不会发脾气、也不会辞职的"厨师"。</p>
+                        <span class="story-link">阅读全文 →</span>
+                    </div>
+                </a>
+
+                <div class="story-card is-pending" aria-disabled="true">
+                    <div class="story-cover">
+                        <img src="assets/images/stories/boxed-lunch-counter.svg" alt="档口盒饭" loading="lazy">
+                    </div>
+                    <div class="story-body">
+                        <div class="story-meta">南加州 · 大华超市档口 · 2026 年 5 月</div>
+                        <h2>中午那九十分钟：一个大华档口的盒饭效率学</h2>
+                        <p class="story-excerpt">十一点四十开始上货，十二点整开单，一点半前必须收摊——大华超市里的盒饭档口，每天只有九十分钟决定一整天的营业额。我们记录了一个南加州档口换上 Panshaker X7 后，这九十分钟的时间表是怎么被重写的。</p>
+                        <span class="story-link">阅读全文 →</span>
+                    </div>
+                </div>
+
             </div>
 
             <div class="partner-hint">
-                <strong>现有合作客户</strong>（部分）：<br>
+                更多合作客户（部分）：<br>
                 大米先生 · 闻湘月辣椒拌饭 · 米熊盖饭 · 太兴集团 · 华住酒店集团 · 湖南工商大学 · 最湘宴 · 顺家客连锁快餐 · 百宜坊中餐连锁 · 正斗自选快餐连锁 · 北汽集团 · 小米集团 · 新煮意 · 和合谷 · 胡记大盘鸡
             </div>
         </div>

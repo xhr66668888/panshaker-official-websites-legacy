@@ -176,5 +176,8 @@
   "nav.honors": "榮譽",
   "home.promise.seal_label": "阮承諾",
   "home.promise.title": "阮的承諾",
-  "home.promise.body": "每年炒菜機器人硬體業務的綜合稅後淨利率無超過 5%。若超過，阮會共超出 5% 的份額，用合理的方式還予 Panshaker 用戶。"
+  "home.promise.body": "每年炒菜機器人硬體業務的綜合稅後淨利率無超過 5%。若超過，阮會共超出 5% 的份額，用合理的方式還予 Panshaker 用戶。",
+  "about.customers.title": "阮的用戶",
+  "about.customers.subtitle": "Panshaker X7 全球累計佈署 <strong class=\"cf-count\">8,766</strong> 台",
+  "about.customers.note": "資料截至 2026 年 4 月，含北美自營與合作佈署、中國市場通路出貨及其他海外市場。"
 }
