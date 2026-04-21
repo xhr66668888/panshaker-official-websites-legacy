@@ -29,32 +29,20 @@
 
         .news-hero {
             padding: 150px 0 80px;
-            background: linear-gradient(135deg, #f5f8fc 0%, #eef4fa 100%);
+            background: #fafafa;
             text-align: center;
-            border-bottom: 1px solid #e5ecf4;
-        }
-        .news-hero .kicker {
-            display: inline-block;
-            padding: 6px 16px;
-            background: rgba(14, 66, 126, 0.08);
-            color: var(--brand-blue);
-            border-radius: 20px;
-            font-size: 12px;
-            letter-spacing: 4px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-transform: uppercase;
+            border-bottom: 1px solid #eee;
         }
         .news-hero h1 {
-            font-size: 48px;
+            font-size: 44px;
             color: var(--brand-blue);
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 14px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
         }
         .news-hero p {
-            font-size: 18px;
-            color: #555;
+            font-size: 17px;
+            color: #666;
             max-width: 700px;
             margin: 0 auto;
             line-height: 1.7;
@@ -65,59 +53,46 @@
 
         /* 置顶新闻 */
         .featured-news {
-            background: linear-gradient(135deg, #0a2e5c 0%, #0E427E 100%);
-            border-radius: 24px;
-            padding: 60px 50px;
+            background: #fff;
+            border: 1px solid #eef1f6;
+            border-left: 4px solid var(--gold-3);
+            border-radius: 12px;
+            padding: 50px 44px;
             margin-bottom: 60px;
-            color: #fff;
             display: grid;
             grid-template-columns: 1.3fr 1fr;
             gap: 50px;
             align-items: center;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(14, 66, 126, 0.2);
-        }
-        .featured-news::before {
-            content: '';
-            position: absolute;
-            top: -40px;
-            right: -40px;
-            width: 220px;
-            height: 220px;
-            background: radial-gradient(circle, rgba(232, 198, 120, 0.25), transparent 65%);
-            border-radius: 50%;
         }
         .featured-news .pin-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 6px 16px;
-            background: rgba(232, 198, 120, 0.2);
-            border: 1px solid rgba(232, 198, 120, 0.5);
-            border-radius: 20px;
-            color: var(--gold-2);
+            padding: 4px 14px;
+            background: rgba(201, 162, 75, 0.1);
+            border-radius: 14px;
+            color: var(--gold-3);
             font-size: 12px;
             letter-spacing: 3px;
             font-weight: 700;
             margin-bottom: 22px;
         }
         .featured-news h2 {
-            font-size: 32px;
-            color: #fff;
+            font-size: 28px;
+            color: var(--brand-blue);
             font-weight: 800;
-            line-height: 1.3;
+            line-height: 1.35;
             margin-bottom: 18px;
-            letter-spacing: -0.5px;
+            letter-spacing: -0.3px;
         }
         .featured-news .feat-meta {
-            color: var(--gold-2);
+            color: #999;
             font-size: 13px;
             margin-bottom: 20px;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
         .featured-news .feat-excerpt {
-            color: rgba(255, 255, 255, 0.88);
+            color: #555;
             font-size: 15px;
             line-height: 1.85;
             margin-bottom: 28px;
@@ -126,61 +101,57 @@
         .featured-news .read-more {
             display: inline-block;
             padding: 12px 30px;
-            background: linear-gradient(135deg, #E8C678, #C9A24B);
-            color: var(--brand-blue);
+            background: var(--brand-blue);
+            color: #fff;
             border-radius: 30px;
-            font-weight: 700;
+            font-weight: 600;
             font-size: 14px;
             letter-spacing: 1px;
             transition: all 0.3s;
         }
         .featured-news .read-more:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 24px rgba(232, 198, 120, 0.35);
+            box-shadow: 0 10px 24px rgba(14, 66, 126, 0.2);
         }
         .cert-badges {
             display: flex;
             flex-direction: column;
-            gap: 16px;
-            position: relative;
-            z-index: 1;
+            gap: 12px;
         }
         .cert-badge {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(232, 198, 120, 0.3);
-            border-radius: 14px;
-            padding: 22px 24px;
+            background: #fafafa;
+            border: 1px solid #eceef3;
+            border-radius: 10px;
+            padding: 16px 20px;
             display: flex;
             align-items: center;
-            gap: 18px;
-            backdrop-filter: blur(10px);
+            gap: 16px;
         }
         .cert-badge .cert-icon {
-            width: 52px;
-            height: 52px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, #E8C678, #C9A24B);
+            width: 46px;
+            height: 46px;
+            border-radius: 8px;
+            background: rgba(201, 162, 75, 0.12);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--brand-blue);
-            font-weight: 900;
-            font-size: 15px;
+            color: var(--gold-3);
+            font-weight: 800;
+            font-size: 13px;
             flex-shrink: 0;
-            box-shadow: 0 4px 12px rgba(232, 198, 120, 0.3);
             letter-spacing: 0;
         }
         .cert-badge .cert-text strong {
             display: block;
-            color: #fff;
-            font-size: 16px;
+            color: var(--brand-blue);
+            font-size: 15px;
             font-weight: 700;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
         .cert-badge .cert-text span {
             font-size: 12px;
-            color: rgba(232, 198, 120, 0.9);
-            letter-spacing: 1px;
+            color: #888;
+            letter-spacing: 0.5px;
         }
 
         /* 新闻卡片网格 */
@@ -222,50 +193,34 @@
             border-color: #d7e3f2;
         }
         .news-thumb {
-            height: 180px;
-            background: linear-gradient(135deg, #0E427E 0%, #1a5a9e 100%);
+            height: 160px;
+            background: #eef2f8;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #fff;
-            font-weight: 800;
-            font-size: 60px;
-            letter-spacing: -2px;
-            position: relative;
-            overflow: hidden;
+            color: var(--brand-blue);
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #eef1f6;
         }
         .news-thumb.theme-gold {
-            background: linear-gradient(135deg, #C9A24B 0%, #8F6F1F 100%);
+            background: #f6f0dc;
+            color: var(--gold-3);
         }
-        .news-thumb.theme-green {
-            background: linear-gradient(135deg, #62BA46 0%, #4ea036 100%);
-        }
-        .news-thumb.theme-cyan {
-            background: linear-gradient(135deg, #1a5a9e 0%, #42a5f5 100%);
-        }
+        .news-thumb.theme-green,
+        .news-thumb.theme-cyan,
         .news-thumb.theme-dark {
-            background: linear-gradient(135deg, #1d2b3d 0%, #2d4a6a 100%);
-        }
-        .news-thumb::after {
-            content: '';
-            position: absolute;
-            top: -40px;
-            right: -40px;
-            width: 160px;
-            height: 160px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent 65%);
-            border-radius: 50%;
+            background: #eef2f8;
+            color: var(--brand-blue);
         }
         .news-thumb .thumb-label {
-            position: relative;
-            z-index: 1;
-            font-size: 22px;
+            font-size: 18px;
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: 700;
             text-align: center;
             padding: 0 16px;
-            line-height: 1.2;
+            line-height: 1.3;
         }
         .news-body {
             padding: 24px 26px 30px;
@@ -450,11 +405,13 @@
                 <a href="x7_ai.html" data-i18n="nav.x7_ai">Panshaker X7</a>
                 <a href="synapse_os.html" data-i18n="nav.synapse">PanOS</a>
                 <a href="delivery.html" data-i18n="nav.delivery">食材配送</a>
-                <div class="nav-dropdown active">
+                <div class="nav-dropdown">
                     <a href="#" class="nav-dropdown-trigger" data-i18n="nav.resources">资讯 ▾</a>
                     <div class="nav-dropdown-menu">
                         <a href="pan_star.html" data-i18n="nav.pan_star">Pan Star 磐星认证</a>
                         <a href="news.html" class="active" data-i18n="nav.news">品牌新闻</a>
+                        <a href="customer_stories.html" data-i18n="nav.customer_stories">客户故事</a>
+                        <a href="honors.html" data-i18n="nav.honors">荣誉</a>
                     </div>
                 </div>
                 <a href="about.html" data-i18n="nav.about">关于我们</a>
@@ -466,7 +423,6 @@
     <!-- Hero -->
     <section class="news-hero">
         <div class="container">
-            <span class="kicker">Panshaker News</span>
             <h1>品牌新闻</h1>
             <p>最新行业动态、认证信息与媒体报道 — 见证 Panshaker 在北美中餐自动化领域的每一步进展。</p>
         </div>
@@ -541,8 +497,8 @@
                             <span class="tag">行业</span>
                             <span>2026.04.16</span>
                         </div>
-                        <h4>《中国商用 AI 炒菜机器人报告》发布，panshaker 列入头部技术派阵营</h4>
-                        <p class="news-excerpt">行业首份《中国商用 AI 炒菜机器人报告》由餐饮老板内参·餐里眼研究院发布。报告指出 2026 年市场规模将达 131.2 亿元，2030 年突破千亿；panshaker 凭借自研 AI 控温与数字菜谱体系被列入"技术派头部阵营"。</p>
+                        <h4>《中国商用 AI 炒菜机器人报告》发布，Panshaker 列入头部技术派阵营</h4>
+                        <p class="news-excerpt">行业首份《中国商用 AI 炒菜机器人报告》由餐饮老板内参·餐里眼研究院发布。报告指出 2026 年市场规模将达 131.2 亿元，2030 年突破千亿；Panshaker 凭借自研 AI 控温与数字菜谱体系被列入"技术派头部阵营"。</p>
                         <a href="javascript:void(0)" class="read-link" data-news-open="report">阅读全文 →</a>
                     </div>
                 </article>
@@ -554,8 +510,8 @@
                             <span class="tag">技术</span>
                             <span>2025.05.15</span>
                         </div>
-                        <h4>panshaker 重构中餐"锅气"：Panshaker X7 以 12kW 电磁涡流 15 秒升温至 300°C</h4>
-                        <p class="news-excerpt">panshaker 团队将中餐烹饪中最玄学的"锅气"拆解为可量化的物理参数 — 12kW 超大功率电磁涡流、±1°C 精准控温、分子级调味系统、30.76 N·M 三轴异步行星锅铲，完整复刻大厨手艺。</p>
+                        <h4>Panshaker 重构中餐"锅气"：Panshaker X7 以 12kW 电磁涡流 15 秒升温至 300°C</h4>
+                        <p class="news-excerpt">Panshaker 团队将中餐烹饪中最玄学的"锅气"拆解为可量化的物理参数 — 12kW 超大功率电磁涡流、±1°C 精准控温、分子级调味系统、30.76 N·M 三轴异步行星锅铲，完整复刻大厨手艺。</p>
                         <a href="javascript:void(0)" class="read-link" data-news-open="wok-gas">阅读全文 →</a>
                     </div>
                 </article>
@@ -567,8 +523,8 @@
                             <span class="tag">媒体</span>
                             <span>2025.06.30</span>
                         </div>
-                        <h4>专访 panshaker：如何用 Panshaker X7 炒菜机器人重构中餐烹饪与经营逻辑</h4>
-                        <p class="news-excerpt">从 5000 余道菜品数据采集，到中科院自动化所机器人专家与国宴级厨师的跨界组合 — panshaker 团队揭开 Panshaker X7 如何帮助北美中餐连锁实现"千店一味"。</p>
+                        <h4>专访 Panshaker：如何用 Panshaker X7 炒菜机器人重构中餐烹饪与经营逻辑</h4>
+                        <p class="news-excerpt">从 5000 余道菜品数据采集，到中科院自动化所机器人专家与国宴级厨师的跨界组合 — Panshaker 团队揭开 Panshaker X7 如何帮助北美中餐连锁实现"千店一味"。</p>
                         <a href="javascript:void(0)" class="read-link" data-news-open="interview">阅读全文 →</a>
                     </div>
                 </article>
@@ -581,7 +537,7 @@
                             <span>2025.10.31</span>
                         </div>
                         <h4>首个《商用智能炒菜机》国家标准发布，Panshaker X7 各项指标全面达标并领先</h4>
-                        <p class="news-excerpt">GB/T 46718-2025《商用智能炒菜机》国家标准正式发布，于 2026 年 11 月起实施。panshaker 参与起草讨论，Panshaker X7 在出品稳定性、控温精度、持续运行寿命等核心指标上均全面达标并处于行业领先水平。</p>
+                        <p class="news-excerpt">GB/T 46718-2025《商用智能炒菜机》国家标准正式发布，于 2026 年 11 月起实施。Panshaker 参与起草讨论，Panshaker X7 在出品稳定性、控温精度、持续运行寿命等核心指标上均全面达标并处于行业领先水平。</p>
                         <a href="javascript:void(0)" class="read-link" data-news-open="national-standard">阅读全文 →</a>
                     </div>
                 </article>
@@ -628,23 +584,23 @@
                     body: '<p>2025 年 10 月 18 日，第 34 届中国厨师节暨 2025 中国厨艺与餐饮博览会在苏州国际博览中心迎来高光时刻。作为本届厨师节的核心活动 —"2025 智能机器人烹饪大赛"上，Panshaker X7 炒菜机器人凭借在赛场上的杰出表现与领先的智能烹饪技术，一举斩获<strong>金奖</strong>与<strong>最佳设计奖</strong>。</p>' +
                         '<p>在考验基本功的炒上海青、麻婆豆腐、宫保鸡丁与小炒肉四道指定家常菜品环节，Panshaker X7 从自动投料、智能温控到全域翻炒，每个环节都衔接无缝，精准还原了菜品的色泽、锅气与口感。</p>' +
                         '<p>在创意菜品比拼中，Panshaker X7 选择了"脆皮咕咾肉"与苏帮菜代表"响油鳝糊" — 这两道菜对火候把控、翻炒力度与投料时机有着近乎苛刻的要求。最终，Panshaker X7 凭借稳定而出色的发挥赢得了评委与观众的一致赞叹，再次印证其在智能烹饪领域的领军地位。</p>' +
-                        '<p>本届中国厨师节作为商务部"中华美食荟"促消费重点活动，规模空前，吸引超过十万名专业观众与全球餐饮界精英。对 panshaker 而言，这次金奖与最佳设计奖是一次精准触达 B 端核心市场的战略胜利，也向全美中餐从业者证明了 Panshaker X7 的顶级烹饪实力。</p>'
+                        '<p>本届中国厨师节作为商务部"中华美食荟"促消费重点活动，规模空前，吸引超过十万名专业观众与全球餐饮界精英。对 Panshaker 而言，这次金奖与最佳设计奖是一次精准触达 B 端核心市场的战略胜利，也向全美中餐从业者证明了 Panshaker X7 的顶级烹饪实力。</p>'
                 },
                 'report': {
-                    title: '《中国商用 AI 炒菜机器人报告》发布，panshaker 列入头部技术派阵营',
+                    title: '《中国商用 AI 炒菜机器人报告》发布，Panshaker 列入头部技术派阵营',
                     meta: '2026 年 04 月 16 日 · 改编自新浪财经',
-                    body: '<p>行业首份《中国商用 AI 炒菜机器人报告》正式发布，报告对商用 AI 炒菜机器人这一新兴赛道进行了系统性解剖，其中 panshaker 被列入<strong>"头部技术派阵营"</strong>。</p>' +
+                    body: '<p>行业首份《中国商用 AI 炒菜机器人报告》正式发布，报告对商用 AI 炒菜机器人这一新兴赛道进行了系统性解剖，其中 Panshaker 被列入<strong>"头部技术派阵营"</strong>。</p>' +
                         '<p><strong>市场规模：从 77 亿到 1096 亿。</strong> 报告数据显示，2025 年中国商用 AI 炒菜机器人市场规模达到 77.2 亿元，同比增长 68%。预计 2026 年将达到 131.2 亿元，2026–2030 年复合年均增长率约 70%，到 2030 年市场规模有望突破 1096 亿元。</p>' +
-                        '<p><strong>竞争格局：百家厂商入局，头部"断层领先"。</strong> 报告不完全统计，目前市面上能够实现大规模交付的 AI 炒菜机器人厂商已超过 100 家。panshaker 所在的"技术派"以自研能力强、资本加持多、发展迅猛为主要特征，在技术成熟度上持续领跑。</p>' +
-                        '<p><strong>两大核心突破：流体控制 + 热力学模型。</strong> 报告指出，商用 AI 炒菜机器人的普及离不开两大底层技术突破。panshaker 在调料精准投放（± 0.5g 以内）、炉温控制（±1°C）与出品一致性上均处于行业领先位置。</p>' +
-                        '<p><strong>首个国家标准：告别野蛮生长。</strong> 2025 年 10 月 31 日，我国首个《商用智能炒菜机》国家标准正式发布。有标准、有准入门槛、有质量保障 — 整个赛道将从"野蛮生长"进入"规范化发展"阶段，panshaker 作为技术派代表将持续受益于这一政策红利。</p>'
+                        '<p><strong>竞争格局：百家厂商入局，头部"断层领先"。</strong> 报告不完全统计，目前市面上能够实现大规模交付的 AI 炒菜机器人厂商已超过 100 家。Panshaker 所在的"技术派"以自研能力强、资本加持多、发展迅猛为主要特征，在技术成熟度上持续领跑。</p>' +
+                        '<p><strong>两大核心突破：流体控制 + 热力学模型。</strong> 报告指出，商用 AI 炒菜机器人的普及离不开两大底层技术突破。Panshaker 在调料精准投放（± 0.5g 以内）、炉温控制（±1°C）与出品一致性上均处于行业领先位置。</p>' +
+                        '<p><strong>首个国家标准：告别野蛮生长。</strong> 2025 年 10 月 31 日，我国首个《商用智能炒菜机》国家标准正式发布。有标准、有准入门槛、有质量保障 — 整个赛道将从"野蛮生长"进入"规范化发展"阶段，Panshaker 作为技术派代表将持续受益于这一政策红利。</p>'
                 },
                 'wok-gas': {
-                    title: 'panshaker 重构中餐"锅气"：Panshaker X7 以 12kW 电磁涡流 15 秒升温至 300°C',
+                    title: 'Panshaker 重构中餐"锅气"：Panshaker X7 以 12kW 电磁涡流 15 秒升温至 300°C',
                     meta: '2025 年 05 月 15 日 · 改编自餐饮界报道',
-                    body: '<p>在餐饮行业"三高一低"（高人力成本、高租金、高能耗、低利润）的困境下，传统中餐现炒的生存空间被预制菜不断挤压，消费者渴望的"锅气"逐渐沦为稀缺品。然而，panshaker 研发的 Panshaker X7 AI 炒菜机器人，以技术硬核突破与生态闭环模式，掀起了一场中餐烹饪的智能化革命。</p>' +
+                    body: '<p>在餐饮行业"三高一低"（高人力成本、高租金、高能耗、低利润）的困境下，传统中餐现炒的生存空间被预制菜不断挤压，消费者渴望的"锅气"逐渐沦为稀缺品。然而，Panshaker 研发的 Panshaker X7 AI 炒菜机器人，以技术硬核突破与生态闭环模式，掀起了一场中餐烹饪的智能化革命。</p>' +
                         '<p><strong>一、解构"锅气"：从玄学到科学</strong></p>' +
-                        '<p>"锅气"曾被认为是难以量化的玄学。panshaker 团队通过解构烹饪过程，将其拆解为可量化的物理参数，以三大核心技术实现精准复刻：</p>' +
+                        '<p>"锅气"曾被认为是难以量化的玄学。Panshaker 团队通过解构烹饪过程，将其拆解为可量化的物理参数，以三大核心技术实现精准复刻：</p>' +
                         '<p>1. <strong>精准控温与极速升温</strong>：搭载自研 AI 智能控温算法，采用 12kW 超大功率电磁涡流加热技术，<strong>15 秒内锅温升至 300°C</strong>，配合温度曲线逼近算法与锅温补偿算法，实现 ±1°C 的精准控温，完美还原"热锅冷油"的爆香锁鲜技艺。</p>' +
                         '<p>2. <strong>分子级调味与动态翻炒</strong>：分子级调味系统通过每秒 1000 次的算法调控，确保调料投放时机与剂量精准无误；三轴异步行星锅铲以 30.76 N·M 力矩模拟大厨翻炒动作，使食材均匀受热并快速融合风味。</p>' +
                         '<p>3. <strong>仿传统锅具设计</strong>：采用一体成型 3mm 厚碳钢凹形铁锅，还原传统炒锅的导热性与气流设计，有效排出水汽，避免因蒸汽滞留影响焦香形成。</p>' +
@@ -652,24 +608,24 @@
                         '<p>Panshaker X7 通过"人效、时效、空间、品效"四维革新，为餐饮企业提供全链条效率优化方案：单台机器 240 秒即可出餐 5kg，一名操作员可管理 3–4 台设备，人力成本降低 58%。</p>'
                 },
                 'interview': {
-                    title: '专访 panshaker：如何用 Panshaker X7 炒菜机器人重构中餐烹饪与经营逻辑',
+                    title: '专访 Panshaker：如何用 Panshaker X7 炒菜机器人重构中餐烹饪与经营逻辑',
                     meta: '2025 年 06 月 30 日 · 改编自中商网专访',
-                    body: '<p>在 panshaker 研发中心的后厨里，操作员将食材轻轻推入卡位，指尖在触控屏上轻点几下。瞬时，12kW 功率的电磁涡流让铁锅在 15 秒内升腾起热浪，三轴异步行星锅铲翻飞起舞。三分钟后，一道飘散着焦香的宫保鸡丁精准盛出 — 色泽、香气与专业厨师现场炒制的菜品如出一辙。</p>' +
-                        '<p>这一幕，正是 panshaker 团队向中餐行业交出的一份答卷。当传承千年的中式烹饪技艺遇上人工智能，一场关于效率与传承的革命正在后厨悄然上演。</p>' +
+                    body: '<p>在 Panshaker 研发中心的后厨里，操作员将食材轻轻推入卡位，指尖在触控屏上轻点几下。瞬时，12kW 功率的电磁涡流让铁锅在 15 秒内升腾起热浪，三轴异步行星锅铲翻飞起舞。三分钟后，一道飘散着焦香的宫保鸡丁精准盛出 — 色泽、香气与专业厨师现场炒制的菜品如出一辙。</p>' +
+                        '<p>这一幕，正是 Panshaker 团队向中餐行业交出的一份答卷。当传承千年的中式烹饪技艺遇上人工智能，一场关于效率与传承的革命正在后厨悄然上演。</p>' +
                         '<p><strong>解构烹饪玄学：从经验到参数</strong></p>' +
-                        '<p>"中餐标准化的核心难点，在于如何将模糊的经验转化为精确的参数。" panshaker 技术总监道出了变革的关键。面对"锅气"这个曾被视作烹饪玄学的概念，团队历时三年用科学手段进行解构 — 部署高速摄像机捕捉翻炒轨迹，运用热成像仪记录温度变化，采集了 <strong>5000 余道传统菜品</strong> 的烹饪数据。</p>' +
-                        '<p>团队核心成员包括中科院自动化所的机器人专家、AI 大模型工程师和传统烹饪大师。这种跨界组合，让 panshaker 能够自主研发 AI 智能控温算法，实现 ±1°C 的精准温控，完美复刻厨师的炒菜火候曲线。</p>' +
+                        '<p>"中餐标准化的核心难点，在于如何将模糊的经验转化为精确的参数。" Panshaker 技术总监道出了变革的关键。面对"锅气"这个曾被视作烹饪玄学的概念，团队历时三年用科学手段进行解构 — 部署高速摄像机捕捉翻炒轨迹，运用热成像仪记录温度变化，采集了 <strong>5000 余道传统菜品</strong> 的烹饪数据。</p>' +
+                        '<p>团队核心成员包括中科院自动化所的机器人专家、AI 大模型工程师和传统烹饪大师。这种跨界组合，让 Panshaker 能够自主研发 AI 智能控温算法，实现 ±1°C 的精准温控，完美复刻厨师的炒菜火候曲线。</p>' +
                         '<p><strong>千店一味：中餐出海的科技底气</strong></p>' +
-                        '<p>panshaker 构建的"机器人 + 菜谱程序 + 智能管理系统 + 落地陪跑"交付闭环，正成为中餐全球化的重要推手。在北美、新加坡等地，多家中餐标准化现炒门店已开始试点运行。"过去担心海外门店难以复制国内口味，现在即使没有经验的厨师，也能做出地道中国味道。" 云端菜谱管理系统实现"千店一味"的标准化复制，总部可一键更新全球门店的烹饪参数。</p>'
+                        '<p>Panshaker 构建的"机器人 + 菜谱程序 + 智能管理系统 + 落地陪跑"交付闭环，正成为中餐全球化的重要推手。在北美、新加坡等地，多家中餐标准化现炒门店已开始试点运行。"过去担心海外门店难以复制国内口味，现在即使没有经验的厨师，也能做出地道中国味道。" 云端菜谱管理系统实现"千店一味"的标准化复制，总部可一键更新全球门店的烹饪参数。</p>'
                 },
                 'national-standard': {
                     title: '首个《商用智能炒菜机》国家标准发布，Panshaker X7 各项指标全面达标并领先',
                     meta: '2025 年 10 月 31 日 · 改编自新浪财经报道',
                     body: '<p>2025 年 10 月 31 日，我国首个《商用智能炒菜机》国家标准 <strong>GB/T 46718-2025</strong> 正式发布，将于 2026 年 11 月 1 日起实施。国家标准的发布标志着商用烹饪设备领域正式迈入更加标准化、规范化的新阶段。</p>' +
                         '<p>有标准、就有准入门槛、有质量保障、有政府背书。该标准涵盖商用智能炒菜机的安全性能、烹饪性能、智能化能力、可靠性、食品接触材料等全面指标。</p>' +
-                        '<p>panshaker 作为国内 AI 炒菜机器人头部企业深度参与了标准草案的讨论。经第三方测评机构对 Panshaker X7 进行逐项比对测试后确认：Panshaker X7 在出品稳定性、控温精度、持续运行寿命、调味精度等核心指标上<strong>全面达标</strong>，并在多个指标上<strong>领先行业最低要求 30% 以上</strong>。</p>' +
+                        '<p>Panshaker 作为国内 AI 炒菜机器人头部企业深度参与了标准草案的讨论。经第三方测评机构对 Panshaker X7 进行逐项比对测试后确认：Panshaker X7 在出品稳定性、控温精度、持续运行寿命、调味精度等核心指标上<strong>全面达标</strong>，并在多个指标上<strong>领先行业最低要求 30% 以上</strong>。</p>' +
                         '<p>国家层面同步释放政策红利：工信部等十七部门《"机器人 +"应用行动实施方案》、商务部等九部门《关于促进餐饮业高质量发展的指导意见》、国家发改委等六部门《关于打造消费新场景培育消费新增长点的措施》，均将 AI 炒菜机器人纳入重点支持领域。北京、上海、深圳等全国多地也针对 AI 炒菜机器人出台了专项补贴政策。</p>' +
-                        '<p>这份标准的发布，意味着 panshaker 在出口海外之外，也将持续受益于国内的规范化发展趋势 — 坏标准意味着好企业被拖累，好标准则让具备真实研发实力的 panshaker 走得更稳、更远。</p>'
+                        '<p>这份标准的发布，意味着 Panshaker 在出口海外之外，也将持续受益于国内的规范化发展趋势 — 坏标准意味着好企业被拖累，好标准则让具备真实研发实力的 Panshaker 走得更稳、更远。</p>'
                 }
             };
 

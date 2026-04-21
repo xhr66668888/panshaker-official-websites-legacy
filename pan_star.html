@@ -32,10 +32,7 @@
         /* Hero */
         .ps-hero {
             padding: 160px 0 100px;
-            background:
-                radial-gradient(circle at 20% 20%, rgba(232, 198, 120, 0.22), transparent 55%),
-                radial-gradient(circle at 80% 80%, rgba(201, 162, 75, 0.18), transparent 55%),
-                linear-gradient(135deg, #0a2e5c 0%, #0E427E 60%, #163e7a 100%);
+            background: linear-gradient(135deg, #0a2e5c 0%, #0E427E 100%);
             color: #fff;
             text-align: center;
             position: relative;
@@ -82,58 +79,44 @@
 
         /* 徽章大图 */
         .star-badge {
-            width: 240px;
-            height: 240px;
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
             margin: 40px auto 0;
-            background:
-                radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.45), transparent 55%),
-                conic-gradient(from 0deg, #F2D78A, #E8C678, #C9A24B, #8F6F1F, #C9A24B, #E8C678, #F2D78A);
+            background: conic-gradient(from 0deg, #F2D78A, #E8C678, #C9A24B, #8F6F1F, #C9A24B, #E8C678, #F2D78A);
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            box-shadow:
-                0 30px 80px rgba(0, 0, 0, 0.35),
-                0 0 0 8px rgba(232, 198, 120, 0.15),
-                0 0 0 12px rgba(232, 198, 120, 0.08);
-        }
-        .star-badge::before {
-            content: '';
-            position: absolute;
-            inset: 14px;
-            border-radius: 50%;
-            border: 2px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
         }
         .star-badge-inner {
-            width: 180px;
-            height: 180px;
+            width: 170px;
+            height: 170px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #0a2e5c 0%, #0E427E 100%);
+            background: #0E427E;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 4px;
-            border: 2px solid rgba(232, 198, 120, 0.5);
         }
         .star-badge-inner .star-main {
-            font-size: 68px;
+            font-size: 64px;
             color: var(--gold-2);
             line-height: 1;
-            text-shadow: 0 2px 8px rgba(232, 198, 120, 0.4);
         }
         .star-badge-inner .badge-text {
             color: var(--gold-2);
-            font-size: 14px;
+            font-size: 13px;
             letter-spacing: 4px;
             font-weight: 700;
             margin-top: 6px;
         }
         .star-badge-inner .badge-pan {
             color: #fff;
-            font-size: 20px;
-            font-weight: 800;
+            font-size: 18px;
+            font-weight: 700;
             letter-spacing: 2px;
         }
 
@@ -188,46 +171,31 @@
         }
 
         .certificate-plaque {
-            background: linear-gradient(160deg, #0a2e5c 0%, #0E427E 100%);
-            border-radius: 20px;
+            background: #0E427E;
+            border-radius: 16px;
             padding: 50px 40px;
             text-align: center;
             color: #fff;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(14, 66, 126, 0.25);
-        }
-        .certificate-plaque::before {
-            content: '';
-            position: absolute;
-            inset: 12px;
-            border: 1px solid rgba(232, 198, 120, 0.35);
-            border-radius: 14px;
-            pointer-events: none;
         }
         .certificate-plaque .plaque-star {
-            font-size: 60px;
+            font-size: 56px;
             color: var(--gold-2);
             margin-bottom: 14px;
-            text-shadow: 0 2px 8px rgba(232, 198, 120, 0.35);
+            line-height: 1;
         }
         .certificate-plaque h4 {
-            font-size: 22px;
-            color: var(--gold-2);
-            letter-spacing: 6px;
-            font-weight: 700;
-            margin-bottom: 8px;
+            display: none;
         }
         .certificate-plaque .plaque-pan {
-            font-size: 36px;
-            font-weight: 900;
+            font-size: 30px;
+            font-weight: 800;
             color: #fff;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             letter-spacing: 3px;
         }
         .certificate-plaque .plaque-en {
             font-size: 13px;
-            color: rgba(232, 198, 120, 0.9);
+            color: var(--gold-2);
             letter-spacing: 3px;
             margin-bottom: 24px;
             font-weight: 600;
@@ -240,8 +208,8 @@
         }
         .certificate-plaque .plaque-by {
             font-size: 13px;
-            color: rgba(255, 255, 255, 0.75);
-            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 1px;
         }
 
         /* 流程四步 */
@@ -268,17 +236,16 @@
         }
         .process-card .step-num {
             display: inline-flex;
-            width: 48px;
-            height: 48px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
-            color: var(--brand-blue);
-            font-weight: 900;
-            font-size: 20px;
+            background: rgba(201, 162, 75, 0.12);
+            color: var(--gold-3);
+            font-weight: 800;
+            font-size: 18px;
             align-items: center;
             justify-content: center;
             margin-bottom: 18px;
-            box-shadow: 0 4px 12px rgba(201, 162, 75, 0.3);
         }
         .process-card h4 {
             font-size: 18px;
@@ -296,9 +263,9 @@
         .guardian-box {
             max-width: 1000px;
             margin: 0 auto;
-            background: linear-gradient(135deg, #fff 0%, #fbf7ec 100%);
-            border: 1px solid #ece0c3;
-            border-radius: 20px;
+            background: #fff;
+            border: 1px solid #eceef3;
+            border-radius: 16px;
             padding: 50px 40px;
             display: grid;
             grid-template-columns: auto 1fr;
@@ -306,17 +273,16 @@
             align-items: center;
         }
         .guardian-seal {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
+            background: rgba(201, 162, 75, 0.12);
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            box-shadow: 0 10px 24px rgba(201, 162, 75, 0.3);
         }
-        .guardian-seal svg { width: 56px; height: 56px; color: var(--brand-blue); }
+        .guardian-seal svg { width: 48px; height: 48px; color: var(--gold-3); }
         .guardian-text h3 { font-size: 24px; color: var(--brand-blue); margin-bottom: 12px; font-weight: 700; }
         .guardian-text p { font-size: 16px; color: #555; line-height: 1.85; }
 
@@ -418,19 +384,19 @@
 
         /* CTA */
         .ps-cta {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #0a2e5c 0%, #0E427E 100%);
+            padding: 90px 0;
+            background: #0E427E;
             color: #fff;
             text-align: center;
         }
         .ps-cta h2 {
-            font-size: 36px;
+            font-size: 32px;
             color: #fff;
             margin-bottom: 18px;
             font-weight: 700;
         }
         .ps-cta p {
-            font-size: 18px;
+            font-size: 17px;
             color: rgba(255, 255, 255, 0.8);
             margin-bottom: 40px;
             max-width: 620px;
@@ -440,19 +406,18 @@
         }
         .ps-cta .cta-btn {
             display: inline-block;
-            padding: 16px 44px;
-            background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
-            color: var(--brand-blue);
+            padding: 14px 40px;
+            background: var(--gold-3);
+            color: #fff;
             border-radius: 30px;
-            font-weight: 700;
-            font-size: 16px;
-            letter-spacing: 2px;
+            font-weight: 600;
+            font-size: 15px;
+            letter-spacing: 1px;
             transition: all 0.3s;
-            box-shadow: 0 10px 30px rgba(201, 162, 75, 0.3);
         }
         .ps-cta .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 14px 40px rgba(201, 162, 75, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(201, 162, 75, 0.35);
         }
 
         @media (max-width: 768px) {
@@ -507,11 +472,13 @@
                 <a href="x7_ai.html" data-i18n="nav.x7_ai">Panshaker X7</a>
                 <a href="synapse_os.html" data-i18n="nav.synapse">PanOS</a>
                 <a href="delivery.html" data-i18n="nav.delivery">食材配送</a>
-                <div class="nav-dropdown active">
+                <div class="nav-dropdown">
                     <a href="#" class="nav-dropdown-trigger" data-i18n="nav.resources">资讯 ▾</a>
                     <div class="nav-dropdown-menu">
                         <a href="pan_star.html" class="active" data-i18n="nav.pan_star">Pan Star 磐星认证</a>
                         <a href="news.html" data-i18n="nav.news">品牌新闻</a>
+                        <a href="customer_stories.html" data-i18n="nav.customer_stories">客户故事</a>
+                        <a href="honors.html" data-i18n="nav.honors">荣誉</a>
                     </div>
                 </div>
                 <a href="about.html" data-i18n="nav.about">关于我们</a>

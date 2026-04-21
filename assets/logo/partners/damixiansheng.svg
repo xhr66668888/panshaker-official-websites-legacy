@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" role="img" aria-label="大米先生">
+  <title>大米先生</title>
+  <rect x="4" y="20" width="8" height="40" rx="2" fill="#2E7D32"/>
+  <text x="26" y="54" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif"
+        font-size="34" font-weight="700" fill="#1d2b3d" letter-spacing="2">大米先生</text>
+</svg>

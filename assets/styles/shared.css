@@ -257,8 +257,7 @@ header {
     z-index: 1001;
 }
 
-.nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown.active .nav-dropdown-menu {
+.nav-dropdown:hover .nav-dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);

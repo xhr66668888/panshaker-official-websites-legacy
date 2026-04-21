@@ -22,8 +22,8 @@
   "ambassador.title": "グローバルアンバサダー",
   "ambassador.desc": "元北京国安FCメンバー、レストランオーナー",
   "esg.title": "サイレントキッチンプログラム",
-  "esg.desc": "聴覚障害者コミュニティのエンパワーメント、包括的な雇用環境の創出<br>テクノロジーでコミュニケーションの壁を取り除き、誰もが輝ける社会へ",
-  "esg.cta": "詳しく見る",
+  "esg.desc": "聴覚障害者コミュニティのエンパワーメント、包括的な雇用環境の創出 — テクノロジーでコミュニケーションの壁を取り除く",
+  "esg.cta": "近日公開",
   "footer.company": "Panshaker Services",
   "footer.company_title": "Panshaker Services",
   "footer.about": "会社概要",
@@ -54,8 +54,11 @@
   "home.solution.learn_more": "詳しく見る →",
   "home.ambassador.line": "高雷雷 | グローバルアンバサダー | 元北京国安FC選手・レストランオーナー",
   "home.esg.title": "サイレントキッチンプログラム",
-  "home.esg.desc": "聴覚障害者コミュニティのエンパワーメント、包括的な雇用環境の創出<br>テクノロジーでコミュニケーションの壁をなくし、誰もが輝ける社会へ",
-  "home.esg.cta": "詳しく見る",
+  "home.esg.desc": "聴覚障害者コミュニティのエンパワーメント、包括的な雇用環境の創出 — テクノロジーでコミュニケーションの壁を取り除く",
+  "home.esg.cta": "近日公開",
+  "home.partners.title": "パートナー",
+  "home.partners.subtitle": "これらのブランドと共に歩めることを光栄に思います",
+  "home.partners.more": "パートナーについて詳しく見る →",
   "about.banner.title": "企業情報",
   "about.intro.title": "会社紹介",
   "about.intro.p1": "Panshaker Services は北米の外食オートメーションをリードする企業です。国境を越えて本格的な東洋の味を届けることを使命に、産業用自動化ハードウェアと自社開発のAIを組み合わせ、信頼性と効率を両立したキッチンを実現します。",
@@ -150,5 +153,7 @@
   "nav.pan_star": "Pan Star 認証",
   "nav.news": "ニュース",
   "footer.pan_star": "Pan Star 認証",
-  "footer.news": "ニュース"
+  "footer.news": "ニュース",
+  "nav.customer_stories": "お客様事例",
+  "nav.honors": "受賞・認証"
 }

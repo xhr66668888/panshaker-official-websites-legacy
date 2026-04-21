@@ -22,8 +22,8 @@
   "ambassador.title": "全球大使",
   "ambassador.desc": "前北京國安隊隊員，餐廳老闆",
   "esg.title": "無聲廚房計劃",
-  "esg.desc": "賦能聽障群體，創造包容性就業環境<br>用科技消除溝通障礙，讓每個人都能發光發熱",
-  "esg.cta": "了解更多",
+  "esg.desc": "賦能聽障群體，創造包容性就業環境 · 用科技消除溝通障礙",
+  "esg.cta": "敬請期待",
   "footer.company": "Panshaker Services",
   "footer.company_title": "Panshaker Services",
   "footer.about": "關於我們",
@@ -116,8 +116,11 @@
   "home.solution.learn_more": "了解更多 →",
   "home.ambassador.line": "高雷雷 | 全球大使 | 前北京國安隊隊員，餐廳老闆",
   "home.esg.title": "無聲廚房計劃",
-  "home.esg.desc": "賦能聽障群體，創造包容性就業環境<br>用科技消除溝通障礙，讓每個人都能發光發熱",
-  "home.esg.cta": "了解更多",
+  "home.esg.desc": "賦能聽障群體，創造包容性就業環境 · 用科技消除溝通障礙",
+  "home.esg.cta": "敬請期待",
+  "home.partners.title": "合作夥伴",
+  "home.partners.subtitle": "我們很榮幸與這些品牌同行",
+  "home.partners.more": "了解更多我們的合作夥伴 →",
   "about.banner.title": "公司資訊",
   "about.intro.title": "公司介紹",
   "about.intro.p1": "磐食科技（Panshaker Services）是北美餐飲自動化領域的創新領跑者。我們的使命是「讓地道的東方味道跨越國界，讓每一座城市都能便捷地享受美食」。透過深度整合工業級自動化硬體與自研 AI 系統，讓餐飲生產更可靠、更高效。",
@@ -242,5 +245,7 @@
   "nav.pan_star": "Pan Star 磐星認證",
   "nav.news": "品牌新聞",
   "footer.pan_star": "Pan Star 磐星認證",
-  "footer.news": "品牌新聞"
+  "footer.news": "品牌新聞",
+  "nav.customer_stories": "客戶故事",
+  "nav.honors": "榮譽"
 }

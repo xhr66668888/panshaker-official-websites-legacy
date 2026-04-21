@@ -23,8 +23,8 @@
   "ambassador.title": "Global Ambassador",
   "ambassador.desc": "Former Beijing Guoan FC player, restaurant owner",
   "esg.title": "The Silent Kitchen",
-  "esg.desc": "Empowering the hearing-impaired community with inclusive employment<br>Using technology to break down communication barriers — so everyone can shine",
-  "esg.cta": "Learn More",
+  "esg.desc": "Empowering the hearing-impaired community with inclusive employment — using technology to break down communication barriers",
+  "esg.cta": "Coming Soon",
   "footer.company": "Panshaker Services",
   "footer.company_title": "Panshaker Services",
   "footer.about": "About",
@@ -118,8 +118,11 @@
   "home.solution.learn_more": "Learn More →",
   "home.ambassador.line": "Gao Leilei | Global Ambassador | Former Beijing Guoan FC player, restaurant owner",
   "home.esg.title": "The Silent Kitchen",
-  "home.esg.desc": "Empowering the hearing-impaired community with inclusive employment<br>Using technology to break down communication barriers — so everyone can shine",
-  "home.esg.cta": "Learn More",
+  "home.esg.desc": "Empowering the hearing-impaired community with inclusive employment — using technology to break down communication barriers",
+  "home.esg.cta": "Coming Soon",
+  "home.partners.title": "Our Partners",
+  "home.partners.subtitle": "We're proud to work alongside these brands",
+  "home.partners.more": "Learn more about our partners →",
   "about.banner.title": "Information",
   "about.intro.title": "About Panshaker",
   "about.intro.p1": "Panshaker Services is leading the charge in North American restaurant automation. Our mission: bring authentic Eastern flavors across borders so every city can enjoy great food. By pairing industrial-grade automation hardware with our own AI, we deliver kitchens that are reliable, efficient, and built to scale.",
@@ -242,5 +245,7 @@
   "nav.pan_star": "Pan Star Certification",
   "nav.news": "News",
   "footer.pan_star": "Pan Star Certification",
-  "footer.news": "News"
+  "footer.news": "News",
+  "nav.customer_stories": "Customer Stories",
+  "nav.honors": "Honors"
 }
