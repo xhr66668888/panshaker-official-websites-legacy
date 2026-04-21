@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Pan Star · 磐星认证 | Panshaker Services</title>
+    <meta name="description"
+        content="磐星认证是由 Panshaker 颁发的中餐口味标准化认证。只授予使用 Panshaker X7 炒菜机器人、经国宴大师团队评测的北美餐厅，让消费者随时随地吃到地道中餐。">
+    <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/images/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="canonical" href="https://www.panshaker.com/pan_star.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pan Star · 磐星认证 | Panshaker Services">
+    <meta property="og:description" content="中餐口味标准化认证 — 让美国的每一道中餐都有保障。">
+    <meta property="og:url" content="https://www.panshaker.com/pan_star.html">
+    <meta property="og:site_name" content="Panshaker Services">
+    <meta property="og:image" content="https://www.panshaker.com/assets/logo/panshaker-logo.png">
+
+    <link rel="stylesheet" href="assets/styles/shared.css?v=3">
+    <style>
+        :root {
+            --gold-1: #F2D78A;
+            --gold-2: #E8C678;
+            --gold-3: #C9A24B;
+            --gold-4: #8F6F1F;
+            --brand-blue: #0E427E;
+        }
+
+        /* Hero */
+        .ps-hero {
+            padding: 160px 0 100px;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(232, 198, 120, 0.22), transparent 55%),
+                radial-gradient(circle at 80% 80%, rgba(201, 162, 75, 0.18), transparent 55%),
+                linear-gradient(135deg, #0a2e5c 0%, #0E427E 60%, #163e7a 100%);
+            color: #fff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .ps-hero .kicker {
+            display: inline-block;
+            padding: 6px 18px;
+            border: 1px solid rgba(232, 198, 120, 0.6);
+            color: var(--gold-2);
+            border-radius: 30px;
+            font-size: 12px;
+            letter-spacing: 6px;
+            font-weight: 600;
+            margin-bottom: 28px;
+            text-transform: uppercase;
+        }
+        .ps-hero h1 {
+            font-size: 64px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #F2D78A 0%, #E8C678 50%, #C9A24B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 18px;
+            line-height: 1.1;
+        }
+        .ps-hero .hero-sub {
+            font-size: 22px;
+            color: rgba(255, 255, 255, 0.86);
+            font-weight: 300;
+            max-width: 760px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+        .ps-hero .hero-ch {
+            font-size: 16px;
+            color: var(--gold-2);
+            letter-spacing: 8px;
+            font-weight: 600;
+            margin-bottom: 50px;
+        }
+
+        /* 徽章大图 */
+        .star-badge {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            margin: 40px auto 0;
+            background:
+                radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.45), transparent 55%),
+                conic-gradient(from 0deg, #F2D78A, #E8C678, #C9A24B, #8F6F1F, #C9A24B, #E8C678, #F2D78A);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow:
+                0 30px 80px rgba(0, 0, 0, 0.35),
+                0 0 0 8px rgba(232, 198, 120, 0.15),
+                0 0 0 12px rgba(232, 198, 120, 0.08);
+        }
+        .star-badge::before {
+            content: '';
+            position: absolute;
+            inset: 14px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+        }
+        .star-badge-inner {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0a2e5c 0%, #0E427E 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            border: 2px solid rgba(232, 198, 120, 0.5);
+        }
+        .star-badge-inner .star-main {
+            font-size: 68px;
+            color: var(--gold-2);
+            line-height: 1;
+            text-shadow: 0 2px 8px rgba(232, 198, 120, 0.4);
+        }
+        .star-badge-inner .badge-text {
+            color: var(--gold-2);
+            font-size: 14px;
+            letter-spacing: 4px;
+            font-weight: 700;
+            margin-top: 6px;
+        }
+        .star-badge-inner .badge-pan {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        /* 通用 Section */
+        .ps-section { padding: 100px 0; }
+        .ps-section.alt { background: #fafafa; }
+        .ps-section h2 { font-size: 40px; font-weight: 700; text-align: center; margin-bottom: 18px; color: var(--brand-blue); letter-spacing: -0.5px; }
+        .ps-section .section-kicker {
+            display: block;
+            text-align: center;
+            color: var(--gold-3);
+            font-size: 13px;
+            letter-spacing: 6px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .ps-section .section-sub {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+            max-width: 820px;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* 什么是磐星 / 双栏 */
+        .what-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .what-text h3 {
+            font-size: 28px;
+            color: var(--brand-blue);
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+        .what-text p {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.9;
+            margin-bottom: 14px;
+        }
+        .what-text .highlight {
+            color: var(--gold-3);
+            font-weight: 700;
+        }
+
+        .certificate-plaque {
+            background: linear-gradient(160deg, #0a2e5c 0%, #0E427E 100%);
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(14, 66, 126, 0.25);
+        }
+        .certificate-plaque::before {
+            content: '';
+            position: absolute;
+            inset: 12px;
+            border: 1px solid rgba(232, 198, 120, 0.35);
+            border-radius: 14px;
+            pointer-events: none;
+        }
+        .certificate-plaque .plaque-star {
+            font-size: 60px;
+            color: var(--gold-2);
+            margin-bottom: 14px;
+            text-shadow: 0 2px 8px rgba(232, 198, 120, 0.35);
+        }
+        .certificate-plaque h4 {
+            font-size: 22px;
+            color: var(--gold-2);
+            letter-spacing: 6px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .certificate-plaque .plaque-pan {
+            font-size: 36px;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 12px;
+            letter-spacing: 3px;
+        }
+        .certificate-plaque .plaque-en {
+            font-size: 13px;
+            color: rgba(232, 198, 120, 0.9);
+            letter-spacing: 3px;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+        .certificate-plaque .plaque-line {
+            width: 60px;
+            height: 2px;
+            background: var(--gold-2);
+            margin: 0 auto 20px;
+        }
+        .certificate-plaque .plaque-by {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.75);
+            letter-spacing: 2px;
+        }
+
+        /* 流程四步 */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .process-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 36px 24px;
+            border: 1px solid #eceef3;
+            transition: all 0.3s;
+            position: relative;
+            text-align: center;
+        }
+        .process-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(14, 66, 126, 0.1);
+            border-color: var(--gold-2);
+        }
+        .process-card .step-num {
+            display: inline-flex;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
+            color: var(--brand-blue);
+            font-weight: 900;
+            font-size: 20px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 12px rgba(201, 162, 75, 0.3);
+        }
+        .process-card h4 {
+            font-size: 18px;
+            color: var(--brand-blue);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .process-card p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* 质量监督 */
+        .guardian-box {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #fff 0%, #fbf7ec 100%);
+            border: 1px solid #ece0c3;
+            border-radius: 20px;
+            padding: 50px 40px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .guardian-seal {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 10px 24px rgba(201, 162, 75, 0.3);
+        }
+        .guardian-seal svg { width: 56px; height: 56px; color: var(--brand-blue); }
+        .guardian-text h3 { font-size: 24px; color: var(--brand-blue); margin-bottom: 12px; font-weight: 700; }
+        .guardian-text p { font-size: 16px; color: #555; line-height: 1.85; }
+
+        /* 价值双栏 */
+        .value-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .value-col {
+            background: #fff;
+            padding: 44px 36px;
+            border-radius: 20px;
+            border: 1px solid #eceef3;
+            transition: all 0.3s;
+        }
+        .value-col:hover {
+            border-color: var(--gold-2);
+            box-shadow: 0 16px 40px rgba(14, 66, 126, 0.08);
+        }
+        .value-col h3 {
+            font-size: 24px;
+            color: var(--brand-blue);
+            margin-bottom: 22px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .value-col h3 .tag-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gold-3);
+        }
+        .value-col ul li {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.7;
+            padding: 10px 0 10px 28px;
+            position: relative;
+            border-bottom: 1px dashed #eee;
+        }
+        .value-col ul li:last-child { border-bottom: none; }
+        .value-col ul li::before {
+            content: '★';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            color: var(--gold-3);
+            font-size: 14px;
+        }
+
+        /* 已认证餐厅占位 */
+        .roster-empty {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 50px 40px;
+            text-align: center;
+            border: 2px dashed #e0d4ab;
+            border-radius: 20px;
+            background: #fbf7ec;
+        }
+        .roster-empty .coming-kicker {
+            color: var(--gold-3);
+            letter-spacing: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .roster-empty h3 {
+            font-size: 28px;
+            color: var(--brand-blue);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .roster-empty p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        .roster-empty .cta-link {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 12px 30px;
+            border-radius: 30px;
+            background: var(--brand-blue);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .roster-empty .cta-link:hover {
+            background: var(--gold-3);
+            transform: translateY(-2px);
+        }
+
+        /* CTA */
+        .ps-cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #0a2e5c 0%, #0E427E 100%);
+            color: #fff;
+            text-align: center;
+        }
+        .ps-cta h2 {
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+        .ps-cta p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+        .ps-cta .cta-btn {
+            display: inline-block;
+            padding: 16px 44px;
+            background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
+            color: var(--brand-blue);
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(201, 162, 75, 0.3);
+        }
+        .ps-cta .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 40px rgba(201, 162, 75, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .ps-hero { padding: 120px 0 70px; }
+            .ps-hero h1 { font-size: 40px; padding: 0 16px; }
+            .ps-hero .hero-sub { font-size: 16px; padding: 0 20px; }
+            .ps-hero .hero-ch { font-size: 13px; letter-spacing: 6px; padding: 0 20px; }
+            .star-badge { width: 180px; height: 180px; }
+            .star-badge-inner { width: 134px; height: 134px; }
+            .star-badge-inner .star-main { font-size: 50px; }
+            .star-badge-inner .badge-pan { font-size: 16px; }
+            .star-badge-inner .badge-text { font-size: 11px; letter-spacing: 3px; }
+
+            .ps-section { padding: 70px 0; }
+            .ps-section h2 { font-size: 28px; padding: 0 20px; }
+            .ps-section .section-sub { font-size: 15px; padding: 0 20px; }
+
+            .what-grid { grid-template-columns: 1fr; gap: 30px; }
+            .certificate-plaque { padding: 40px 24px; }
+            .certificate-plaque .plaque-pan { font-size: 28px; }
+
+            .process-grid { grid-template-columns: 1fr 1fr; }
+            .guardian-box { grid-template-columns: 1fr; gap: 24px; padding: 36px 24px; text-align: center; }
+            .guardian-seal { margin: 0 auto; }
+            .value-grid { grid-template-columns: 1fr; }
+            .value-col { padding: 32px 24px; }
+
+            .roster-empty { padding: 40px 20px; }
+            .roster-empty h3 { font-size: 22px; }
+
+            .ps-cta h2 { font-size: 26px; padding: 0 20px; }
+            .ps-cta p { font-size: 15px; padding: 0 20px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <picture>
+                    <source srcset="assets/logo/panshaker-logo.svg" type="image/svg+xml">
+                    <img src="assets/logo/panshaker-logo.png"
+                        srcset="assets/logo/panshaker-logo.png 1x, assets/logo/panshaker-logo@2x.png 2x"
+                        alt="Panshaker Services" class="logo-img">
+                </picture>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" data-i18n="nav.home">首页</a>
+                <a href="service.html" data-i18n="nav.service">服务</a>
+                <a href="x7_ai.html" data-i18n="nav.x7_ai">Panshaker X7</a>
+                <a href="synapse_os.html" data-i18n="nav.synapse">PanOS</a>
+                <a href="delivery.html" data-i18n="nav.delivery">食材配送</a>
+                <div class="nav-dropdown active">
+                    <a href="#" class="nav-dropdown-trigger" data-i18n="nav.resources">资讯 ▾</a>
+                    <div class="nav-dropdown-menu">
+                        <a href="pan_star.html" class="active" data-i18n="nav.pan_star">Pan Star 磐星认证</a>
+                        <a href="news.html" data-i18n="nav.news">品牌新闻</a>
+                    </div>
+                </div>
+                <a href="about.html" data-i18n="nav.about">关于我们</a>
+                <a href="contact.html" data-i18n="nav.contact">联系我们</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="ps-hero">
+        <div class="container">
+            <span class="kicker">The Pan Star Certification</span>
+            <h1>Pan Star</h1>
+            <p class="hero-ch">磐 星 认 证</p>
+            <p class="hero-sub">在美国，寻找真正地道的中餐。<br>由国宴大师团队与 Panshaker X7 联合评测颁发的中餐口味标准认证。</p>
+            <div class="star-badge">
+                <div class="star-badge-inner">
+                    <span class="star-main">★</span>
+                    <span class="badge-pan">PAN STAR</span>
+                    <span class="badge-text">CERTIFIED</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 什么是磐星 -->
+    <section class="ps-section">
+        <div class="container">
+            <span class="section-kicker">What is Pan Star</span>
+            <h2>什么是「磐星认证」</h2>
+            <p class="section-sub">磐星不是米其林，也不是星级评选。<br>它是一枚专属于 Panshaker 生态的 <span style="color: var(--gold-3); font-weight: 600;">中餐口味标准化认证</span> — 颁发给那些使用 Panshaker X7 炒菜机器人、经过我们国宴大师团队评测的餐厅。</p>
+
+            <div class="what-grid">
+                <div class="what-text">
+                    <h3>从"大厨的手艺"到"可复制的美味"</h3>
+                    <p>每一道进入磐星体系的菜品，都由餐厅主理人与 Panshaker 研发团队<span class="highlight">一起研磨配方</span> — 将火候、调味、翻炒节奏一一拆解，转化为 Panshaker X7 能够精准执行的烹饪曲线。</p>
+                    <p>菜品最终会送达 Panshaker 合作的<span class="highlight">国宴大师团队</span>进行盲评。只有达到"色、香、味、锅气"四维全部合格的菜品，才能纳入磐星认证菜单。</p>
+                    <p>当一家餐厅的核心菜品全部通过磐星评测后，我们会颁发实体铭牌 — 意味着这家店在美国本土，拥有了一枚中餐界的"锅气保证书"。</p>
+                </div>
+                <div class="certificate-plaque">
+                    <div class="plaque-star">★</div>
+                    <h4>PAN STAR</h4>
+                    <div class="plaque-pan">磐 星</div>
+                    <div class="plaque-en">CHINESE FLAVOR CERTIFIED</div>
+                    <div class="plaque-line"></div>
+                    <div class="plaque-by">Certified by Panshaker Services<br>&amp; 国宴大师评审团</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 认证流程 -->
+    <section class="ps-section alt">
+        <div class="container">
+            <span class="section-kicker">Certification Process</span>
+            <h2>四步获得磐星认证</h2>
+            <p class="section-sub">一套透明、科学、可复现的中餐评测流程 — 让地道的味道不再依赖任何一位个体厨师。</p>
+
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="step-num">1</div>
+                    <h4>接入 Panshaker X7</h4>
+                    <p>餐厅引入 Panshaker X7 炒菜机器人，为核心菜单建立标准化烹饪线。</p>
+                </div>
+                <div class="process-card">
+                    <div class="step-num">2</div>
+                    <h4>联合研发配方</h4>
+                    <p>商户主理人与 Panshaker 研发团队共同调配烹饪参数，还原本店原有风味。</p>
+                </div>
+                <div class="process-card">
+                    <div class="step-num">3</div>
+                    <h4>国宴大师盲评</h4>
+                    <p>菜品送达 Panshaker 合作的国宴大师团队，以盲评方式对"色、香、味、锅气"四维打分。</p>
+                </div>
+                <div class="process-card">
+                    <div class="step-num">4</div>
+                    <h4>颁发磐星铭牌</h4>
+                    <p>通过评测的餐厅获得实体磐星铭牌、线上认证页与 Panshaker 官方推荐位。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 持续监督 -->
+    <section class="ps-section">
+        <div class="container">
+            <span class="section-kicker">Ongoing Assurance</span>
+            <h2>认证之后，我们仍然在场</h2>
+            <p class="section-sub">磐星不是一锤子买卖。我们会持续陪伴认证餐厅 — 确保消费者任何时候走进任意一家磐星餐厅，都能吃到同样优秀的味道。</p>
+
+            <div class="guardian-box">
+                <div class="guardian-seal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                </div>
+                <div class="guardian-text">
+                    <h3>定期复评 · 随机暗访 · 不合格即撤销</h3>
+                    <p>每一家磐星餐厅都会接受<strong>每半年一次的定期复评</strong>，以及 Panshaker 督导团队的<strong>不定期暗访抽查</strong>。若发现菜品出现明显口味偏差、卫生问题或擅自更改 Panshaker X7 的核心烹饪曲线，我们会要求限期整改；整改不合格者，磐星认证将被<strong style="color: var(--gold-4);">立即撤销</strong>，并从官方推荐名单中移除。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 双方价值 -->
+    <section class="ps-section alt">
+        <div class="container">
+            <span class="section-kicker">Why It Matters</span>
+            <h2>磐星认证的双向价值</h2>
+
+            <div class="value-grid">
+                <div class="value-col">
+                    <h3><span class="tag-dot"></span>对消费者</h3>
+                    <ul>
+                        <li>无需踩雷 — 磐星餐厅即代表"味道经过专业评测"。</li>
+                        <li>同一道菜，无论何时何地，口味都高度一致。</li>
+                        <li>菜品背后有国宴大师团队的技艺背书。</li>
+                        <li>任何投诉都会进入 Panshaker 督查通道，72 小时内响应。</li>
+                    </ul>
+                </div>
+                <div class="value-col">
+                    <h3><span class="tag-dot"></span>对合作餐厅</h3>
+                    <ul>
+                        <li>获得专属实体铭牌、线上磐星认证页与官网推荐位。</li>
+                        <li>研发团队免费帮助将独家风味转化为标准化菜谱。</li>
+                        <li>新店开业可直接复用已认证菜谱，无需从零起步。</li>
+                        <li>成为 Panshaker 官方媒体、新闻发布中的重点合作伙伴。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 名单占位 -->
+    <section class="ps-section">
+        <div class="container">
+            <span class="section-kicker">Certified Restaurants</span>
+            <h2>首批磐星餐厅</h2>
+            <p class="section-sub">磐星评测体系正在北美分批展开。首批认证名单将很快在本页公布 — 敬请期待。</p>
+            <div class="roster-empty">
+                <div class="coming-kicker">COMING SOON</div>
+                <h3>首批磐星餐厅即将揭晓</h3>
+                <p>如果您的餐厅已经或计划使用 Panshaker X7，<br>欢迎申请加入磐星评测计划，成为北美首批磐星认证餐厅之一。</p>
+                <a href="contact.html" class="cta-link">申请磐星认证 →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="ps-cta">
+        <div class="container">
+            <h2>让您的餐厅，成为美国中餐的味道基准</h2>
+            <p>加入磐星认证计划，让 Panshaker X7 与国宴大师团队为您的菜品品质背书。</p>
+            <a href="contact.html" class="cta-btn">申请成为磐星餐厅 →</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4 data-i18n="footer.company_title">Panshaker Services</h4>
+                    <ul>
+                        <li><a href="about.html" data-i18n="footer.about">关于我们</a></li>
+                        <li><a href="careers.html" data-i18n="footer.careers">加入团队</a></li>
+                        <li><a href="investors.html" data-i18n="footer.investors">投资者关系</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.tech">技术支持</h4>
+                    <ul>
+                        <li><a href="synapse_os.html" data-i18n="footer.synapse">PanOS</a></li>
+                        <li><a href="delivery.html" data-i18n="footer.delivery">食材配送</a></li>
+                        <li><a href="pan_star.html" data-i18n="footer.pan_star">Pan Star 磐星认证</a></li>
+                        <li><a href="news.html" data-i18n="footer.news">品牌新闻</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer.contact_title">联系方式</h4>
+                    <ul>
+                        <li><a href="mailto:contact@panshaker.com"><span data-i18n="footer.email">Email: contact@panshaker.com</span></a></li>
+                        <li><a href="tel:2162550563" data-i18n="footer.hotline">24小时售后服务热线: 216-255-0563</a></li>
+                        <li data-i18n="footer.location">Location: San Diego, CA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <span style="font-size: 14px; vertical-align: baseline;">©</span><span data-i18n="footer.copyright">2026 Panshaker Inc. All Rights Reserved.</span><br>
+                <span data-i18n="footer.tagline">聚焦北美市场的餐饮自动化基础设施服务商</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/device.js"></script>
+    <script src="js/i18n.js?v=3"></script>
+</body>
+
+</html>

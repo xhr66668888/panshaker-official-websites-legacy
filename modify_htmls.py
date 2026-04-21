@@ -51,7 +51,7 @@ def replace_in_file(filepath):
     
     brand_new = '''<p style="font-size: 14px; color: #999; margin-bottom: 24px;">
                 <span data-i18n="about.brand.desc">Panshaker Services 是芯厨师的海外品牌</span><br>
-                <span data-i18n="about.brand.subdesc">logo panshaker是 四川省商务厅出海企业服务站</span>
+                <span data-i18n="about.brand.subdesc">商务厅出海企业服务站</span>
             </p>'''
 
     content = content.replace(brand_orig, brand_new)

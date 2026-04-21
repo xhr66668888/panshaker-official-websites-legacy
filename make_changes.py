@@ -29,7 +29,7 @@ def update_json(filepath):
 
     # Add missing keys
     if 'about.brand.subdesc' not in data:
-        data['about.brand.subdesc'] = 'logo panshaker是 四川省商务厅出海企业服务站'
+        data['about.brand.subdesc'] = '商务厅出海企业服务站'
     if 'footer.support' not in data:
         data['footer.support'] = '售后服务'
     if 'footer.hotline' not in data:

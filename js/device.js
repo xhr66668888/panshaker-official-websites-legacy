@@ -278,11 +278,25 @@
             document.removeEventListener('touchmove', touchMoveBlocker);
         }
 
-        // Close menu when a nav link is clicked
+        // Close menu when a nav link is clicked (but not dropdown triggers)
         var links = navInner.querySelectorAll('.nav-links a');
         for (var i = 0; i < links.length; i++) {
-            links[i].addEventListener('click', function () {
+            links[i].addEventListener('click', function (e) {
+                if (this.classList.contains('nav-dropdown-trigger')) {
+                    e.preventDefault();
+                    return;
+                }
                 closeNav();
+            });
+        }
+
+        // Desktop: allow keyboard / click toggle on dropdown trigger
+        var ddTriggers = navInner.querySelectorAll('.nav-dropdown-trigger');
+        for (var j = 0; j < ddTriggers.length; j++) {
+            ddTriggers[j].addEventListener('click', function (e) {
+                e.preventDefault();
+                var parent = this.closest('.nav-dropdown');
+                if (parent) parent.classList.toggle('active');
             });
         }
 

@@ -144,6 +144,11 @@
   "delivery.service_states": "サービス提供州：CA · NY",
   "delivery.cta": "お問い合わせ",
   "footer.delivery": "食材配送",
-  "about.brand.subdesc": "logo panshaker是 四川省商务厅出海企业服务站",
-  "footer.hotline": "24小时售后服务热线: 216-255-0563"
+  "about.brand.subdesc": "商務庁海外進出企業サービスステーション",
+  "footer.hotline": "24小时售后服务热线: 216-255-0563",
+  "nav.resources": "リソース ▾",
+  "nav.pan_star": "Pan Star 認証",
+  "nav.news": "ニュース",
+  "footer.pan_star": "Pan Star 認証",
+  "footer.news": "ニュース"
 }

@@ -236,6 +236,11 @@
   "synapse.cta.title": "Experience PanOS Today",
   "synapse.cta.desc": "Get the complete PanOS system free with any Panshaker robot purchase",
   "synapse.cta.button": "Request Demo",
-  "about.brand.subdesc": "logo panshaker是 四川省商务厅出海企业服务站",
-  "footer.hotline": "24小时售后服务热线: 216-255-0563"
+  "about.brand.subdesc": "Overseas Enterprise Service Station",
+  "footer.hotline": "24小时售后服务热线: 216-255-0563",
+  "nav.resources": "Resources ▾",
+  "nav.pan_star": "Pan Star Certification",
+  "nav.news": "News",
+  "footer.pan_star": "Pan Star Certification",
+  "footer.news": "News"
 }
