@@ -119,7 +119,7 @@
     <!-- Resource hints -->
     <link rel="dns-prefetch" href="//www.xinchushi.com">
     <link rel="preload" href="assets/fonts/Smartisan_Compact-Regular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="stylesheet" href="assets/styles/shared.css?v=6">
+    <link rel="stylesheet" href="assets/styles/shared.css?v=7">
     <link rel="stylesheet" href="assets/styles/roi-calculator.css">
     <style>
         /* 布局容器 */
@@ -773,8 +773,10 @@
 
         /* Hero 承诺 — 左侧 ≤5% 粗体图标，右侧两行文案，无框 */
         .hero-promise {
+            display: flex;
+            width: fit-content;
+            max-width: 100%;
             margin: 34px auto 0;
-            display: inline-flex;
             align-items: center;
             gap: 20px;
             color: #C8102E;
@@ -1771,7 +1773,7 @@
     </footer>
 
     <script src="js/device.js"></script>
-    <script src="js/i18n.js?v=6"></script>
+    <script src="js/i18n.js?v=7"></script>
     <script defer src="js/roi-i18n.js?v=2"></script>
     <script defer src="js/roi-data.js?v=2"></script>
     <script defer src="js/roi-calculator.js?v=2"></script>
