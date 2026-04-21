@@ -42,11 +42,9 @@
   "footer.copyright": "2026 Panshaker Inc. All Rights Reserved.",
   "footer.tagline": "North America's Premier Restaurant Automation Infrastructure Provider.",
   "footer.slogan": "Timeless Flavor, Everywhere.",
-
   "home.hero.title": "AI-Powered Cooking Robot<br><strong>Restaurant Automation Solutions</strong>",
   "home.hero.subtitle": "Transforming the most unpredictable part of the kitchen into a precise, consistent, and scalable process<br>Every dish, perfectly replicated — without relying on a chef",
   "home.hero.cta": "Book a Demo",
-
   "home.pain.title": "Sound Familiar?",
   "home.pain.subtitle": "Chinese restaurants in North America face unprecedented labor challenges",
   "home.pain.hire_title": "Can't Find Chefs",
@@ -59,7 +57,6 @@
   "home.pain.rush_desc": "Chefs can't keep up during lunch rush — quality drops, wait times rise",
   "home.pain.quality_title": "Inconsistent Quality",
   "home.pain.quality_desc": "Different chefs, different days, different taste — bad for repeat business and brand",
-
   "home.compare.title": "Why Choose Panshaker",
   "home.compare.subtitle": "A true all-in-one solution — not just a cooking machine",
   "home.compare.col_feature": "Comparison",
@@ -75,7 +72,6 @@
   "home.compare.row_payment": "Payment Processing Fee",
   "home.compare.unknown": "Unknown",
   "home.compare.note": "* Competitor B lists at $11,000+ but excludes international shipping, customs duties, local installation, training, and after-sales — actual total cost is significantly higher",
-
   "home.saas.title": "Buy the Robot. Get the Software Free.",
   "home.saas.subtitle": "PanOS — A full-featured restaurant SaaS system<br>Free for every robot customer. No software fees. No payment processing surcharges.",
   "home.saas.qr_title": "Free QR Ordering",
@@ -85,7 +81,6 @@
   "home.saas.robot_title": "Robot Control Hub",
   "home.saas.robot_desc": "Orders go straight to the robot — auto-schedule, precision heating, consistent output",
   "home.saas.savings": "Compared to competitor SaaS, a restaurant with $50,000/month revenue saves<br><strong>$15,000 – $21,000</strong> per year in payment processing fees alone",
-
   "home.acquire.title": "Flexible Ways to Get Started",
   "home.acquire.subtitle": "Buy outright or lease — pick what works for you",
   "home.acquire.buy_title": "Purchase",
@@ -94,7 +89,6 @@
   "home.acquire.lease_title": "Lease",
   "home.acquire.lease_desc": "Monthly lease, flexible deployment. Perfect for trying before committing. Low barrier to start, upgrade anytime.",
   "home.acquire.lease_cta": "Get a Quote",
-
   "home.philosophy.title": "This Ain't Just Food — It's Hard Tech",
   "home.philosophy.desc": "We turn the unpredictable art of manual cooking into a rock-solid, AI-driven industrial process.<br>Bringing authentic Asian flavors to every corner of North America.",
   "home.solution.price_title": "Panshaker X7",
@@ -126,7 +120,6 @@
   "home.esg.title": "The Silent Kitchen",
   "home.esg.desc": "Empowering the hearing-impaired community with inclusive employment<br>Using technology to break down communication barriers — so everyone can shine",
   "home.esg.cta": "Learn More",
-
   "about.banner.title": "Information",
   "about.intro.title": "About Panshaker",
   "about.intro.p1": "Panshaker Services is leading the charge in North American restaurant automation. Our mission: bring authentic Eastern flavors across borders so every city can enjoy great food. By pairing industrial-grade automation hardware with our own AI, we deliver kitchens that are reliable, efficient, and built to scale.",
@@ -213,7 +206,6 @@
   "delivery.footer_note": "Precision-prepped ingredients, designed for the Panshaker X7 cooking robot",
   "delivery.service_states": "Currently serving: CA · NY",
   "delivery.cta": "Contact Us",
-
   "synapse.hero.title": "Full-Featured Restaurant Management",
   "synapse.hero.subtitle": "Free with every robot purchase<br>Zero software fees · Zero payment surcharges · Save $15,000+/year",
   "synapse.hero.cta": "Request Demo",
@@ -243,5 +235,7 @@
   "synapse.ai.chat.ai_list": "• Front: 3 staff (lunch rush +2)<br>• Kitchen: 4 staff<br>• Estimated labor savings: 18%",
   "synapse.cta.title": "Experience PanOS Today",
   "synapse.cta.desc": "Get the complete PanOS system free with any Panshaker robot purchase",
-  "synapse.cta.button": "Request Demo"
+  "synapse.cta.button": "Request Demo",
+  "about.brand.subdesc": "logo panshaker是 四川省商务厅出海企业服务站",
+  "footer.hotline": "24小时售后服务热线: 216-255-0563"
 }

@@ -14,7 +14,7 @@
   "philosophy.title": "不止於餐飲，更是硬科技",
   "philosophy.desc": "我們將餐飲業不可控的人工烹飪環節，轉換為 AI 時代高度可靠的工業自動化環節。<br>在北美，書寫中華美食的各種可能。",
   "solution.price_title": "Panshaker X7",
-  "solution.price_desc": "競品價格 1/2<br>< 2週 低成本改裝<br>實現無人化烹飪",
+  "solution.price_desc": "競品價格 1/2<br>< 2週 低成本改裝<br>徹底解決流失焦慮，告別招工難",
   "solution.synapse_title": "PanOS",
   "solution.synapse_desc": "下一代餐飲操作系统<br>打造亞洲餐飲出海標準化一條龍服務",
   "solution.learn_more": "了解更多 →",
@@ -161,5 +161,7 @@
   "home.why_panshaker.item3.desc": "加州、紐約、內華達州免費到府，阮的工程師二十四小時鬥相共",
   "home.contact.title": "免想遐濟，先開講再講",
   "home.contact.desc": "留個絡絡，阮的專家會佮恁安排無代價的展示（加州/紐約會使到府煮予恁試食）！",
-  "home.contact.btn": "預約看機台"
+  "home.contact.btn": "預約看機台",
+  "about.brand.subdesc": "logo panshaker是 四川省商務廳出海企業服務站",
+  "footer.hotline": "24小時售後服務熱線: 216-255-0563"
 }

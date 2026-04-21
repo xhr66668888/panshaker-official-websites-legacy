@@ -14,7 +14,7 @@
   "philosophy.title": "不止於餐飲，更是硬科技",
   "philosophy.desc": "我們將餐飲業不可控的人工烹飪環節，轉換為 AI 時代高度可靠的工業自動化環節。<br>在北美，書寫中華美食的各種可能。",
   "solution.price_title": "Panshaker X7",
-  "solution.price_desc": "競品價格 1/2<br>< 2週 低成本改裝<br>實現無人化烹飪",
+  "solution.price_desc": "競品價格 1/2<br>< 2週 低成本改裝<br>徹底解決流失焦慮，告別招工難",
   "solution.synapse_title": "PanOS",
   "solution.synapse_desc": "下一代餐飲操作系统<br>打造亞洲餐飲出海標準化一條龍服務",
   "solution.learn_more": "了解更多 →",
@@ -43,7 +43,6 @@
   "home.hero.title": "AI智能炒菜機器人<br><strong>餐飲自動化解決方案</strong>",
   "home.hero.subtitle": "將後廚最不可控的烹飪環節，轉化為精準、穩定、可複製的標準化流程<br>讓每一道菜的出品不再依賴廚師經驗",
   "home.hero.cta": "預約演示",
-
   "home.pain.title": "您是否正在經歷這些問題？",
   "home.pain.subtitle": "北美中餐館正面臨前所未有的用工困境",
   "home.pain.hire_title": "招工難",
@@ -56,7 +55,6 @@
   "home.pain.rush_desc": "午間出餐廚師忙不過來，影響口味和出餐速度",
   "home.pain.quality_title": "口味不穩定",
   "home.pain.quality_desc": "不同廚師、不同時間出品差異大，影響回頭客和口碑",
-
   "home.compare.title": "為什麼選擇 Panshaker",
   "home.compare.subtitle": "與市面同類產品相比，我們提供真正的一站式解決方案",
   "home.compare.col_feature": "對比項",
@@ -72,7 +70,6 @@
   "home.compare.row_payment": "支付抽成",
   "home.compare.unknown": "不明",
   "home.compare.note": "* 競品 B 標價 $11,000+ 起不含中美運費、關稅、境內安裝、培訓和售後，實際到手成本更高",
-
   "home.saas.title": "買機器，免費送餐飲管理系統",
   "home.saas.subtitle": "PanOS — 全功能餐飲 SaaS 系統<br>每台機器客戶免費使用，不收取任何軟體費和支付抽成",
   "home.saas.qr_title": "免費掃碼點餐",
@@ -82,7 +79,6 @@
   "home.saas.robot_title": "機器人中控",
   "home.saas.robot_desc": "訂單直達機器人，自動排菜、精準控溫、標準化出品",
   "home.saas.savings": "相比競品 SaaS 系統，月營收 $50,000 的餐廳每年節省<br><strong>$15,000 – $21,000</strong> 支付手續費",
-
   "home.acquire.title": "靈活的取得方式",
   "home.acquire.subtitle": "買斷或租賃，選擇適合您的方案",
   "home.acquire.buy_title": "買斷方案",
@@ -91,11 +87,10 @@
   "home.acquire.lease_title": "租賃方案",
   "home.acquire.lease_desc": "按月租賃，靈活部署，適合想先試用驗證的客戶。低門檻啟動，隨時升級。",
   "home.acquire.lease_cta": "聯繫取得報價",
-
   "home.philosophy.title": "不止於餐飲，更是硬科技",
   "home.philosophy.desc": "我們將餐飲業不可控的人工烹飪環節，轉換為 AI 時代高度可靠的工業自動化環節。<br>在北美，書寫中華美食的各種可能。",
   "home.solution.price_title": "Panshaker X7",
-  "home.solution.price_desc": "競品價格 1/2<br>< 2週 低成本改裝<br>實現無人化烹飪",
+  "home.solution.price_desc": "競品價格 1/2<br>< 2週 低成本改裝<br>徹底解決流失焦慮，告別招工難",
   "home.solution.synapse_title": "PanOS",
   "home.solution.synapse_desc": "全功能餐飲管理系統<br>購買機器即免費贈送，零軟體費、零支付抽成",
   "home.panos.pos_title": "POS 收銀系統",
@@ -211,7 +206,6 @@
   "delivery.service_states": "服務開通州：CA · NY",
   "delivery.cta": "聯繫我們",
   "footer.delivery": "食材配送",
-
   "synapse.hero.title": "全功能餐飲管理系統",
   "synapse.hero.subtitle": "購買機器即免費贈送<br>零軟體費 · 零支付抽成 · 一年省 $15,000+",
   "synapse.hero.cta": "預約演示",
@@ -241,5 +235,7 @@
   "synapse.ai.chat.ai_list": "• 前台 3人（午高峰+2）<br>• 後廚 4人<br>• 預計節省人力成本 18%",
   "synapse.cta.title": "立即體驗 PanOS",
   "synapse.cta.desc": "購買任意 Panshaker 機器人即可免費獲得完整 PanOS 系統",
-  "synapse.cta.button": "預約演示"
+  "synapse.cta.button": "預約演示",
+  "about.brand.subdesc": "logo panshaker是 四川省商務廳出海企業服務站",
+  "footer.hotline": "24小時售後服務熱線: 216-255-0563"
 }
