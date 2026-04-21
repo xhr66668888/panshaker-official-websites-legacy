@@ -119,7 +119,7 @@
     <!-- Resource hints -->
     <link rel="dns-prefetch" href="//www.xinchushi.com">
     <link rel="preload" href="assets/fonts/Smartisan_Compact-Regular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="stylesheet" href="assets/styles/shared.css?v=3">
+    <link rel="stylesheet" href="assets/styles/shared.css?v=4">
     <link rel="stylesheet" href="assets/styles/roi-calculator.css">
     <style>
         /* 布局容器 */
@@ -1066,114 +1066,43 @@
     <section class="profit-promise">
         <div class="container">
             <div class="promise-card">
-                <div class="promise-seal" aria-hidden="true">
-                    <span class="promise-seal-inner">
-                        <span class="promise-seal-label" data-i18n="home.promise.seal_label">我们承诺</span>
-                        <span class="promise-seal-percent">≤5%</span>
-                    </span>
-                </div>
-                <div class="promise-text">
-                    <h3 data-i18n="home.promise.title">我们的承诺</h3>
-                    <p data-i18n="home.promise.body">每年炒菜机器人硬件业务的综合税后净利率不超过 5%。如超过，我们将把超出 5% 的部分，以合理的方式返还给 Panshaker 用户。</p>
-                </div>
+                <h3 class="promise-title" data-i18n="home.promise.title">我们的承诺</h3>
+                <p class="promise-body" data-i18n="home.promise.body">每年炒菜机器人硬件业务的综合税后净利率不超过 5%。如超过，我们将把超出 5% 的部分，以合理的方式返还给 Panshaker 用户。</p>
             </div>
         </div>
         <style>
             .profit-promise {
-                padding: 56px 0;
+                padding: 48px 0;
                 background: #fff;
             }
             .profit-promise .promise-card {
-                max-width: 1080px;
+                max-width: 960px;
                 margin: 0 auto;
-                padding: 34px 44px;
-                background: linear-gradient(135deg, #B20000 0%, #C8102E 100%);
-                border-radius: 18px;
-                color: #fff;
-                display: grid;
-                grid-template-columns: auto 1fr;
-                gap: 34px;
-                align-items: center;
-                box-shadow: 0 16px 40px rgba(178, 0, 0, 0.25);
-                position: relative;
-                overflow: hidden;
-            }
-            .profit-promise .promise-card::before {
-                content: '';
-                position: absolute;
-                top: -60px;
-                right: -60px;
-                width: 240px;
-                height: 240px;
-                background: radial-gradient(circle, rgba(255, 215, 0, 0.12), transparent 65%);
-                border-radius: 50%;
-                pointer-events: none;
-            }
-            .promise-seal {
-                width: 108px;
-                height: 108px;
-                border-radius: 50%;
+                padding: 28px 36px;
                 background: #fff;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-shrink: 0;
-                position: relative;
-                z-index: 1;
-                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+                border: 1px solid #f2d6d6;
+                border-left: 3px solid #C8102E;
+                border-radius: 8px;
+                text-align: left;
             }
-            .promise-seal-inner {
-                width: 94px;
-                height: 94px;
-                border-radius: 50%;
-                background: #C8102E;
-                border: 2px dashed rgba(255, 255, 255, 0.55);
-                color: #fff;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                line-height: 1.2;
-            }
-            .promise-seal-label {
-                font-size: 12px;
-                letter-spacing: 2px;
-                font-weight: 600;
-                margin-bottom: 2px;
-            }
-            .promise-seal-percent {
-                font-size: 24px;
-                font-weight: 900;
-                letter-spacing: 0;
-            }
-            .promise-text {
-                position: relative;
-                z-index: 1;
-            }
-            .promise-text h3 {
-                font-size: 22px;
-                font-weight: 800;
-                color: #fff;
-                margin-bottom: 10px;
-                letter-spacing: 2px;
-            }
-            .promise-text p {
+            .promise-title {
                 font-size: 16px;
-                color: rgba(255, 255, 255, 0.95);
+                font-weight: 700;
+                color: #C8102E;
+                letter-spacing: 3px;
+                margin-bottom: 8px;
+            }
+            .promise-body {
+                font-size: 15px;
+                color: #C8102E;
                 line-height: 1.8;
-                font-weight: 300;
+                font-weight: 400;
             }
             @media (max-width: 768px) {
-                .profit-promise { padding: 40px 0; }
-                .profit-promise .promise-card {
-                    grid-template-columns: 1fr;
-                    gap: 18px;
-                    padding: 28px 22px;
-                    text-align: center;
-                }
-                .promise-seal { margin: 0 auto; }
-                .promise-text h3 { font-size: 18px; }
-                .promise-text p { font-size: 14px; }
+                .profit-promise { padding: 32px 0; }
+                .profit-promise .promise-card { padding: 22px 20px; }
+                .promise-title { font-size: 14px; letter-spacing: 2px; }
+                .promise-body { font-size: 14px; }
             }
         </style>
     </section>
@@ -1802,7 +1731,7 @@
     </footer>
 
     <script src="js/device.js"></script>
-    <script src="js/i18n.js?v=3"></script>
+    <script src="js/i18n.js?v=4"></script>
     <script defer src="js/roi-i18n.js?v=2"></script>
     <script defer src="js/roi-data.js?v=2"></script>
     <script defer src="js/roi-calculator.js?v=2"></script>

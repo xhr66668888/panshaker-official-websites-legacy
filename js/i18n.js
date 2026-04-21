@@ -661,7 +661,7 @@
         }
 
         var basePath = getBasePath();
-        var url = basePath + 'js/lang/' + lang + '.json';
+        var url = basePath + 'js/lang/' + lang + '.json?v=4';
 
         var xhr = new XMLHttpRequest();
         xhr.open('GET', url, true);
