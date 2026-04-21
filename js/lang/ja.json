@@ -155,5 +155,8 @@
   "footer.pan_star": "Pan Star 認証",
   "footer.news": "ニュース",
   "nav.customer_stories": "お客様事例",
-  "nav.honors": "受賞・認証"
+  "nav.honors": "受賞・認証",
+  "home.promise.seal_label": "誓約",
+  "home.promise.title": "私たちの誓約",
+  "home.promise.body": "炒菜ロボット本体事業の年間総合税引後純利益率は 5% を超えません。超過した場合、5% を超える部分を適切な形で Panshaker ユーザーに還元いたします。"
 }

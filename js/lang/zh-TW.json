@@ -247,5 +247,8 @@
   "footer.pan_star": "Pan Star 磐星認證",
   "footer.news": "品牌新聞",
   "nav.customer_stories": "客戶故事",
-  "nav.honors": "榮譽"
+  "nav.honors": "榮譽",
+  "home.promise.seal_label": "我們承諾",
+  "home.promise.title": "我們的承諾",
+  "home.promise.body": "每年炒菜機器人硬體業務的綜合稅後淨利率不超過 5%。如超過，我們將把超出 5% 的部分，以合理的方式返還給 Panshaker 用戶。"
 }

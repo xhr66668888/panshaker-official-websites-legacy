@@ -57,25 +57,8 @@
             border: 1px solid #eef1f6;
             border-left: 4px solid var(--gold-3);
             border-radius: 12px;
-            padding: 50px 44px;
+            padding: 44px 44px;
             margin-bottom: 60px;
-            display: grid;
-            grid-template-columns: 1.3fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-        .featured-news .pin-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 4px 14px;
-            background: rgba(201, 162, 75, 0.1);
-            border-radius: 14px;
-            color: var(--gold-3);
-            font-size: 12px;
-            letter-spacing: 3px;
-            font-weight: 700;
-            margin-bottom: 22px;
         }
         .featured-news h2 {
             font-size: 28px;
@@ -113,47 +96,6 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 24px rgba(14, 66, 126, 0.2);
         }
-        .cert-badges {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .cert-badge {
-            background: #fafafa;
-            border: 1px solid #eceef3;
-            border-radius: 10px;
-            padding: 16px 20px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        .cert-badge .cert-icon {
-            width: 46px;
-            height: 46px;
-            border-radius: 8px;
-            background: rgba(201, 162, 75, 0.12);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold-3);
-            font-weight: 800;
-            font-size: 13px;
-            flex-shrink: 0;
-            letter-spacing: 0;
-        }
-        .cert-badge .cert-text strong {
-            display: block;
-            color: var(--brand-blue);
-            font-size: 15px;
-            font-weight: 700;
-            margin-bottom: 2px;
-        }
-        .cert-badge .cert-text span {
-            font-size: 12px;
-            color: #888;
-            letter-spacing: 0.5px;
-        }
-
         /* 新闻卡片网格 */
         .news-grid-header {
             display: flex;
@@ -435,37 +377,10 @@
             <!-- Featured / 置顶 -->
             <article class="featured-news" data-news-id="nsf">
                 <div>
-                    <div class="pin-badge">
-                        <span>★</span>
-                        <span>PINNED · 重磅认证</span>
-                    </div>
                     <div class="feat-meta">2026 年 04 月 · Panshaker 官方新闻</div>
                     <h2>Panshaker X7 炒菜机器人正式通过美国 NSF 认证，可在全美任何商用餐厅部署运行</h2>
                     <p class="feat-excerpt">继此前已获得美国 UL 与 FCC 认证之后，Panshaker X7 今日宣布正式通过美国 NSF International 商用厨房电器认证。NSF 被公认为美国商用厨房用电器的"金标准"，其颁发意味着 Panshaker X7 已满足全美商业餐饮运营所要求的卫生、材质、电气与食品接触安全等全部核心指标。至此，Panshaker X7 在北美商用落地已无任何准入障碍。</p>
                     <a href="javascript:void(0)" class="read-more" data-news-open="nsf">阅读全文 →</a>
-                </div>
-                <div class="cert-badges">
-                    <div class="cert-badge">
-                        <div class="cert-icon">NSF</div>
-                        <div class="cert-text">
-                            <strong>NSF International</strong>
-                            <span>美国商用厨房电器金标准</span>
-                        </div>
-                    </div>
-                    <div class="cert-badge">
-                        <div class="cert-icon">UL</div>
-                        <div class="cert-text">
-                            <strong>UL Certified</strong>
-                            <span>美国电器安全认证</span>
-                        </div>
-                    </div>
-                    <div class="cert-badge">
-                        <div class="cert-icon">FCC</div>
-                        <div class="cert-text">
-                            <strong>FCC Certified</strong>
-                            <span>美国联邦通讯委员会认证</span>
-                        </div>
-                    </div>
                 </div>
             </article>
 
@@ -478,7 +393,7 @@
             <div class="news-grid" id="news-grid">
 
                 <article class="news-card" data-news-id="gold-award">
-                    <div class="news-thumb theme-gold"><span class="thumb-label">2025 金奖<br>GOLD AWARD</span></div>
+                    <div class="news-thumb theme-gold"><span class="thumb-label">2025 金奖</span></div>
                     <div class="news-body">
                         <div class="news-meta">
                             <span class="tag gold">获奖</span>
@@ -491,7 +406,7 @@
                 </article>
 
                 <article class="news-card" data-news-id="report">
-                    <div class="news-thumb theme-cyan"><span class="thumb-label">行业报告<br>INDUSTRY REPORT</span></div>
+                    <div class="news-thumb theme-cyan"><span class="thumb-label">行业报告</span></div>
                     <div class="news-body">
                         <div class="news-meta">
                             <span class="tag">行业</span>
@@ -504,7 +419,7 @@
                 </article>
 
                 <article class="news-card" data-news-id="wok-gas">
-                    <div class="news-thumb theme-green"><span class="thumb-label">技术突破<br>GUO QI</span></div>
+                    <div class="news-thumb theme-green"><span class="thumb-label">技术突破</span></div>
                     <div class="news-body">
                         <div class="news-meta">
                             <span class="tag">技术</span>
@@ -517,7 +432,7 @@
                 </article>
 
                 <article class="news-card is-hidden" data-news-id="interview">
-                    <div class="news-thumb theme-dark"><span class="thumb-label">专访<br>INTERVIEW</span></div>
+                    <div class="news-thumb theme-dark"><span class="thumb-label">专访</span></div>
                     <div class="news-body">
                         <div class="news-meta">
                             <span class="tag">媒体</span>
@@ -530,7 +445,7 @@
                 </article>
 
                 <article class="news-card is-hidden" data-news-id="national-standard">
-                    <div class="news-thumb"><span class="thumb-label">国家标准<br>GB/T 46718</span></div>
+                    <div class="news-thumb"><span class="thumb-label">国家标准</span></div>
                     <div class="news-body">
                         <div class="news-meta">
                             <span class="tag">认证</span>

@@ -1062,6 +1062,122 @@
         </div>
     </section>
 
+    <!-- 我们的承诺 / 净利率承诺 -->
+    <section class="profit-promise">
+        <div class="container">
+            <div class="promise-card">
+                <div class="promise-seal" aria-hidden="true">
+                    <span class="promise-seal-inner">
+                        <span class="promise-seal-label" data-i18n="home.promise.seal_label">我们承诺</span>
+                        <span class="promise-seal-percent">≤5%</span>
+                    </span>
+                </div>
+                <div class="promise-text">
+                    <h3 data-i18n="home.promise.title">我们的承诺</h3>
+                    <p data-i18n="home.promise.body">每年炒菜机器人硬件业务的综合税后净利率不超过 5%。如超过，我们将把超出 5% 的部分，以合理的方式返还给 Panshaker 用户。</p>
+                </div>
+            </div>
+        </div>
+        <style>
+            .profit-promise {
+                padding: 56px 0;
+                background: #fff;
+            }
+            .profit-promise .promise-card {
+                max-width: 1080px;
+                margin: 0 auto;
+                padding: 34px 44px;
+                background: linear-gradient(135deg, #B20000 0%, #C8102E 100%);
+                border-radius: 18px;
+                color: #fff;
+                display: grid;
+                grid-template-columns: auto 1fr;
+                gap: 34px;
+                align-items: center;
+                box-shadow: 0 16px 40px rgba(178, 0, 0, 0.25);
+                position: relative;
+                overflow: hidden;
+            }
+            .profit-promise .promise-card::before {
+                content: '';
+                position: absolute;
+                top: -60px;
+                right: -60px;
+                width: 240px;
+                height: 240px;
+                background: radial-gradient(circle, rgba(255, 215, 0, 0.12), transparent 65%);
+                border-radius: 50%;
+                pointer-events: none;
+            }
+            .promise-seal {
+                width: 108px;
+                height: 108px;
+                border-radius: 50%;
+                background: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                position: relative;
+                z-index: 1;
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+            }
+            .promise-seal-inner {
+                width: 94px;
+                height: 94px;
+                border-radius: 50%;
+                background: #C8102E;
+                border: 2px dashed rgba(255, 255, 255, 0.55);
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                line-height: 1.2;
+            }
+            .promise-seal-label {
+                font-size: 12px;
+                letter-spacing: 2px;
+                font-weight: 600;
+                margin-bottom: 2px;
+            }
+            .promise-seal-percent {
+                font-size: 24px;
+                font-weight: 900;
+                letter-spacing: 0;
+            }
+            .promise-text {
+                position: relative;
+                z-index: 1;
+            }
+            .promise-text h3 {
+                font-size: 22px;
+                font-weight: 800;
+                color: #fff;
+                margin-bottom: 10px;
+                letter-spacing: 2px;
+            }
+            .promise-text p {
+                font-size: 16px;
+                color: rgba(255, 255, 255, 0.95);
+                line-height: 1.8;
+                font-weight: 300;
+            }
+            @media (max-width: 768px) {
+                .profit-promise { padding: 40px 0; }
+                .profit-promise .promise-card {
+                    grid-template-columns: 1fr;
+                    gap: 18px;
+                    padding: 28px 22px;
+                    text-align: center;
+                }
+                .promise-seal { margin: 0 auto; }
+                .promise-text h3 { font-size: 18px; }
+                .promise-text p { font-size: 14px; }
+            }
+        </style>
+    </section>
+
     <!-- 行业痛点区域 -->
     <section class="section pain-points" id="pain-points">
         <div class="container">
@@ -1405,21 +1521,16 @@
             <div class="home-news-grid" style="display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 24px;">
                 <a href="news.html" class="home-news-card pinned" style="display: flex; flex-direction: column; background: #fff; border: 1px solid #eef1f6; border-left: 4px solid #C9A24B; border-radius: 12px; overflow: hidden; transition: all 0.3s; min-height: 360px;">
                     <div style="padding: 36px 32px 32px; flex: 1; display: flex; flex-direction: column;">
-                        <div style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; background: rgba(14,66,126,0.08); border-radius: 14px; color: #0E427E; font-size: 11px; letter-spacing: 3px; font-weight: 700; align-self: flex-start; margin-bottom: 18px;">PINNED</div>
                         <div style="color: #999; font-size: 12px; margin-bottom: 14px; letter-spacing: 1px;">2026 年 04 月 · 官方新闻</div>
                         <h3 style="font-size: 22px; color: #0E427E; font-weight: 800; line-height: 1.3; margin-bottom: 16px; letter-spacing: -0.3px;">Panshaker X7 正式通过美国 NSF 认证</h3>
                         <p style="color: #555; font-size: 14px; line-height: 1.75; flex: 1; font-weight: 300;">继 UL、FCC 认证后，Panshaker X7 获得美国商用厨房电器金标准 NSF 认证 — 至此，机器可在全美任何餐厅合规商用运行。</p>
-                        <div style="display: flex; gap: 8px; margin-top: 22px; flex-wrap: wrap;">
-                            <span style="padding: 4px 10px; background: rgba(14,66,126,0.06); color: #0E427E; border-radius: 4px; font-size: 11px; font-weight: 700;">NSF</span>
-                            <span style="padding: 4px 10px; background: rgba(14,66,126,0.06); color: #0E427E; border-radius: 4px; font-size: 11px; font-weight: 700;">UL</span>
-                            <span style="padding: 4px 10px; background: rgba(14,66,126,0.06); color: #0E427E; border-radius: 4px; font-size: 11px; font-weight: 700;">FCC</span>
-                        </div>
+                        <span style="color: #0E427E; font-weight: 600; font-size: 13px; margin-top: 22px;">阅读全文 →</span>
                     </div>
                 </a>
 
                 <a href="news.html" class="home-news-card" style="display: flex; flex-direction: column; background: #fff; border: 1px solid #eef1f6; border-radius: 12px; overflow: hidden; transition: all 0.3s; min-height: 360px;">
-                    <div style="height: 140px; background: #f6f0dc; display: flex; align-items: center; justify-content: center; color: #C9A24B; font-weight: 700; font-size: 18px; letter-spacing: 2px; position: relative;">
-                        <span style="position: relative; z-index: 1; text-align: center; line-height: 1.3;">2025 金奖<br><span style="font-size: 12px; letter-spacing: 3px;">GOLD AWARD</span></span>
+                    <div style="height: 140px; background: #f6f0dc; display: flex; align-items: center; justify-content: center; color: #C9A24B; font-weight: 700; font-size: 20px; letter-spacing: 2px;">
+                        2025 金奖
                     </div>
                     <div style="padding: 24px 24px 28px; flex: 1; display: flex; flex-direction: column;">
                         <div style="display: flex; gap: 10px; font-size: 12px; color: #999; margin-bottom: 12px;">
@@ -1433,8 +1544,8 @@
                 </a>
 
                 <a href="news.html" class="home-news-card" style="display: flex; flex-direction: column; background: #fff; border: 1px solid #eef1f6; border-radius: 12px; overflow: hidden; transition: all 0.3s; min-height: 360px;">
-                    <div style="height: 140px; background: #eef2f8; display: flex; align-items: center; justify-content: center; color: #0E427E; font-weight: 700; font-size: 18px; letter-spacing: 2px; position: relative;">
-                        <span style="position: relative; z-index: 1; text-align: center; line-height: 1.3;">行业报告<br><span style="font-size: 12px; letter-spacing: 3px;">INDUSTRY</span></span>
+                    <div style="height: 140px; background: #eef2f8; display: flex; align-items: center; justify-content: center; color: #0E427E; font-weight: 700; font-size: 20px; letter-spacing: 2px;">
+                        行业报告
                     </div>
                     <div style="padding: 24px 24px 28px; flex: 1; display: flex; flex-direction: column;">
                         <div style="display: flex; gap: 10px; font-size: 12px; color: #999; margin-bottom: 12px;">

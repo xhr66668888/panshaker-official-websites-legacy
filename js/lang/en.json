@@ -247,5 +247,8 @@
   "footer.pan_star": "Pan Star Certification",
   "footer.news": "News",
   "nav.customer_stories": "Customer Stories",
-  "nav.honors": "Honors"
+  "nav.honors": "Honors",
+  "home.promise.seal_label": "Our Pledge",
+  "home.promise.title": "Our Pledge",
+  "home.promise.body": "Our combined after-tax net margin on wok-robot hardware will not exceed 5% in any fiscal year. If it does, we will return the portion above 5% to Panshaker customers in a reasonable form."
 }

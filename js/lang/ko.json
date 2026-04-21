@@ -155,5 +155,8 @@
   "footer.pan_star": "Pan Star 인증",
   "footer.news": "뉴스",
   "nav.customer_stories": "고객 사례",
-  "nav.honors": "수상 및 인증"
+  "nav.honors": "수상 및 인증",
+  "home.promise.seal_label": "약속",
+  "home.promise.title": "저희의 약속",
+  "home.promise.body": "매년 조리 로봇 하드웨어 사업의 세후 순이익률은 5%를 넘지 않습니다. 초과 시, 5%를 초과한 부분을 합리적인 방식으로 Panshaker 고객에게 환원합니다."
 }
