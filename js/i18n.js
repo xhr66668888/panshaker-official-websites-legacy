@@ -588,33 +588,13 @@
         var nav = navigator;
         var browserLangs = nav.languages ? nav.languages : [nav.language || nav.userLanguage || ''];
 
-        // WeChat Android sometimes places 'ja' ahead of 'zh' in navigator.languages
-        // even when the device is intended for Chinese market usage.
-        // If we're in WeChat and the language list contains any 'zh' variant,
-        // prefer Chinese over Japanese to avoid a surprising Japanese default.
-        var isWeChat = /MicroMessenger/i.test(navigator.userAgent);
-        if (isWeChat) {
-            for (var w = 0; w < browserLangs.length; w++) {
-                var wLang = browserLangs[w];
-                if (wLang === 'zh-CN' || wLang === 'zh-TW') return wLang;
-                if (wLang.split('-')[0] === 'zh') return 'zh-CN';
-            }
-        }
-
+        // Only detect Chinese variants; all other languages default to zh-CN
         for (var i = 0; i < browserLangs.length; i++) {
             var lang = browserLangs[i];
-            // Exact match
-            if (SUPPORTED_LANGS.indexOf(lang) !== -1) {
-                return lang;
-            }
-            // Partial match (e.g., 'zh' → 'zh-CN', 'ko-KR' → 'ko')
-            var prefix = lang.split('-')[0];
-            for (var j = 0; j < SUPPORTED_LANGS.length; j++) {
-                if (SUPPORTED_LANGS[j].split('-')[0] === prefix) {
-                    return SUPPORTED_LANGS[j];
-                }
-            }
+            if (lang === 'zh-CN' || lang === 'zh-TW') return lang;
+            if (lang.split('-')[0] === 'zh') return 'zh-CN';
         }
+
         return DEFAULT_LANG;
     }
 

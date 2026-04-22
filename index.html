@@ -771,59 +771,35 @@
             box-shadow: 0 12px 32px rgba(14, 66, 126, 0.4);
         }
 
-        /* Hero 承诺 — 左侧 ≤5% 粗体图标，右侧两行文案，无框 */
+        /* Hero 承诺 — 仅保留纯文字，居中对齐，品牌蓝色 */
         .hero-promise {
             display: flex;
             width: fit-content;
             max-width: 100%;
             margin: 34px auto 0;
             align-items: center;
-            gap: 20px;
-            color: #C8102E;
+            color: #0E427E;
             pointer-events: auto;
-            text-align: left;
-        }
-        .hero-promise-badge {
-            display: inline-flex;
-            align-items: baseline;
-            line-height: 1;
-            color: #C8102E;
-            font-weight: 900;
-            letter-spacing: -2px;
-            padding-right: 18px;
-            border-right: 2px solid rgba(200, 16, 46, 0.3);
-        }
-        .hero-promise-lte {
-            font-size: 38px;
-            font-weight: 900;
-            margin-right: 2px;
-        }
-        .hero-promise-num {
-            font-size: 58px;
-            font-weight: 900;
-        }
-        .hero-promise-pct {
-            font-size: 32px;
-            font-weight: 800;
-            margin-left: 2px;
+            text-align: center;
         }
         .hero-promise-text {
             display: flex;
             flex-direction: column;
             gap: 2px;
+            align-items: center;
         }
         .hero-promise-label {
             font-size: 13px;
             font-weight: 800;
             letter-spacing: 4px;
             margin-bottom: 4px;
-            color: #C8102E;
+            color: #0E427E;
         }
         .hero-promise-line {
             font-size: 15px;
             font-weight: 700;
             line-height: 1.55;
-            color: #C8102E;
+            color: #0E427E;
             white-space: nowrap;
         }
         @media (max-width: 900px) {
@@ -831,14 +807,9 @@
         }
         @media (max-width: 768px) {
             .hero-promise {
-                gap: 14px;
                 margin-top: 26px;
                 padding: 0 16px;
             }
-            .hero-promise-badge { padding-right: 12px; }
-            .hero-promise-lte { font-size: 26px; }
-            .hero-promise-num { font-size: 40px; }
-            .hero-promise-pct { font-size: 22px; }
             .hero-promise-label { font-size: 12px; letter-spacing: 3px; }
             .hero-promise-line { font-size: 13px; line-height: 1.6; }
         }
@@ -1137,9 +1108,6 @@
                 预约演示
             </a>
             <div class="hero-promise">
-                <div class="hero-promise-badge" aria-hidden="true">
-                    <span class="hero-promise-lte">≤</span><span class="hero-promise-num">5</span><span class="hero-promise-pct">%</span>
-                </div>
                 <div class="hero-promise-text">
                     <div class="hero-promise-label" data-i18n="home.promise.title">我们的承诺</div>
                     <div class="hero-promise-line" data-i18n="home.promise.line1">每年炒菜机器人硬件业务的综合税后净利率不超过 5%。</div>
@@ -1285,28 +1253,18 @@
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 60px;">
                 <div style="padding: 36px 28px; background: #fff; border: 1px solid #e5e8ee; border-radius: 16px; box-shadow: 0 8px 24px rgba(14,66,126,0.06); transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(98,186,70,0.12); display: flex; align-items: center; justify-content: center; margin: 0 auto 18px;">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#62BA46" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                    </div>
                     <h3 style="color: #0E427E; font-size: 22px; font-weight: 700; margin-bottom: 12px;">7天无理由退货</h3>
                     <p style="font-size: 15px; color: #555; font-weight: 400; line-height: 1.7;">如果菜谱味道无法 100% 还原本店配方，<br>直接退回，绝不废话！</p>
                 </div>
 
                 <div style="padding: 36px 28px; background: #fff; border: 1px solid #e5e8ee; border-radius: 16px; box-shadow: 0 8px 24px rgba(14,66,126,0.06); transition: transform 0.3s, box-shadow 0.3s;">
-                    <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(201,162,75,0.14); display: flex; align-items: center; justify-content: center; margin: 0 auto 18px;">
-                        <span style="font-size: 26px; color: #C9A24B; font-weight: 900; line-height: 1;">★</span>
-                    </div>
                     <h3 style="color: #0E427E; font-size: 22px; font-weight: 700; margin-bottom: 12px;">3年金牌质保</h3>
                     <p style="font-size: 15px; color: #555; font-weight: 400; line-height: 1.7;">三年内任何非人为损坏，免费上门维修，<br>零部件全包！</p>
                 </div>
 
                 <div style="padding: 36px 28px; background: #f7f9fc; border: 1px solid #e5e8ee; border-radius: 16px; transition: transform 0.3s;">
-                    <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(14,66,126,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 18px;">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0E427E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    </div>
                     <h3 style="color: #0E427E; font-size: 22px; font-weight: 700; margin-bottom: 12px;">24小时极速热线</h3>
-                    <p style="font-size: 15px; color: #555; margin-bottom: 14px; line-height: 1.7;">机器坏了？不会用？断网了？<br>随时拨打专线，立即为您解决问题！</p>
-                    <div style="font-size: 22px; font-weight: 800; color: #0E427E; letter-spacing: 1px;">☎ 216-255-0563</div>
+                    <p style="font-size: 15px; color: #555; line-height: 1.7;">机器坏了？不会用？断网了？<br>随时拨打专线，立即为您解决问题！</p>
                 </div>
             </div>
 
@@ -1433,7 +1391,7 @@
     </section>
 
 
-    <section class="section brands" style="padding-bottom: 80px; background: #fff;">
+    <section class="section brands" style="display: none; padding-bottom: 80px; background: #fff;">
         <div class="container">
             <style>
                 .ambassador-card {
@@ -1757,7 +1715,7 @@
                     <ul>
                         <li><a href="mailto:contact@panshaker.com"><span data-i18n="footer.email">Email:
                                     contact@panshaker.com</span></a></li>
-                        <li><a href="tel:2162550563" data-i18n="footer.hotline">24小时售后服务热线: 216-255-0563</a></li>
+                        <li><a href="tel:2272721415" data-i18n="footer.hotline">24小时售后服务热线: 227-272-1415</a></li>
                         <li data-i18n="footer.location">地址：4200 Brooke Ct, San Diego, CA 92122</li>
                     </ul>
                 </div>

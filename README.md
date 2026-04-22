@@ -31,3 +31,19 @@ To re-enable them:
 The homepage `Business Delivery` block currently uses the same visual asset as the old management section background:
 - `assets/images/managementteam.webp`
 - `assets/images/managementteam.jpg`
+
+## Temporary Hide: Ambassador Section
+
+As of 2026-04-22, the ambassador section on `index.html` is intentionally hidden.
+
+### Current implementation
+- File: `index.html`
+- Section class: `brands`
+- Hidden via inline style: `display: none;`
+- Contains: Gao Leilei global ambassador card with image and text
+
+### How to re-enable in the future
+1. Open `index.html`.
+2. Find the section with `class="brands"` containing the ambassador card.
+3. Remove `display: none;` from the inline `style` attribute.
+4. Save and verify the section is visible on the homepage.
